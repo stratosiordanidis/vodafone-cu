@@ -17,9 +17,9 @@ section#intro
 		+rem(padding-bottom, 30px)
 		background-color: white
 
-		.title
-			// +rem(font-size, 64px)
-			+rem(font-size, 88px)
+		// .title
+		// 	// +rem(font-size, 64px)
+		// 	+rem(font-size, 88px)
 
 		.detail
 			+rem(font-size, 24px)
@@ -81,12 +81,15 @@ section#intro
 			+rem(padding, 60px 75px)
 			text-align: left
 
-			.title.underlined-title.size-xxl
-				+rem(font-size, 88px)
-				color: $color-black
-				font-weight: bold
+			// .title.underlined-title.size-xxl
+			.title.underlined-title
+				// +rem(font-size, 88px)
+				// color: $color-black
+				// font-weight: bold
 
 				&:before
+					+rem(height, 22px)
+					+rem(left, 35px)
 					background-color: $color-red
 					background-image: url('../img/package-bottom.png')
 
@@ -211,10 +214,11 @@ section#there-is-more
 				+rem(padding, 20px)
 				text-align: left
 
-				.title.underlined-title.size-xxl
-					+rem(font-size, 32px)
+				// .title.underlined-title.size-xxl
+				.title.underlined-title
+					// +rem(font-size, 32px)
 					color: $color-black
-					font-weight: bold
+					// font-weight: bold
 
 					&:before
 						// background-color: $color-red
@@ -225,7 +229,7 @@ section#there-is-more
 					display: block
 					+no-rem(font-size, 16px)
 					+rem(margin-top, 22px)
-					font-weight: 200
+					+weight200
 					color: $color-black
 
 			.package-list
@@ -263,6 +267,7 @@ section#there-is-more
 
 			.detail
 				+no-rem(font-size, 16px)
+				+weight200
 				// font-weight: 200
 				+rem(margin-top, 20px)
 

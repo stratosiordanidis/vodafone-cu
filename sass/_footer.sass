@@ -99,7 +99,7 @@ footer
 					+rem(padding-left, 30px)
 					font-family: $font-premier
 					// font-weight: 200
-					font-weight: 100
+					+weight100
 					+no-rem(font-size, 20px)
 					text-align: left
 
@@ -114,7 +114,7 @@ footer
 						// +rem(font-size, 20px)
 						+rem(font-size, 24px)
 						+rem(line-height, 24px)
-						font-weight: 100
+						+weight100
 						+transition(color 0.3s)
 
 
@@ -153,7 +153,7 @@ footer
 
 				a
 					+no-rem(font-size, 20px)
-					font-weight: 100
+					+weight100
 					+transition(color 0.3s)
 
 					&:hover
@@ -212,7 +212,7 @@ footer
 						font-family: $font-premier
 						+no-rem(font-size, 20px)
 						+no-rem(line-height, 26px)
-						font-weight: 100
+						+weight100
 						color: #707379
 
 				.line
@@ -227,7 +227,7 @@ footer
 						font-family: $font-premier
 						+no-rem(font-size, 20px)
 						+no-rem(line-height, 20px)
-						font-weight: 100
+						+weight100
 						color: white
 						left: 0
 						right: 0
@@ -243,7 +243,7 @@ footer
 						font-family: $font-premier
 						+no-rem(font-size, 20px)
 						+no-rem(line-height, 20px)
-						font-weight: 100
+						+weight100
 						background: transparent
 						outline: none
 						color: white
@@ -255,9 +255,10 @@ footer
 							color: white !important
 							background-color: transparent !important
 
-					input:focus+label, input.has-value+label
-						+no-rem(font-size, 16px)
-					// 	+transform(translateY((-20px/16px)*1rem))
+					// input:focus+label, input.has-value+label
+					// 	+no-rem(font-size, 16px)
+					// 	+weight200
+					// // 	+transform(translateY((-20px/16px)*1rem))
 						
 
 
@@ -288,7 +289,7 @@ footer
 			font-family: $font-premier
 			+no-rem(font-size, 20px)
 			// font-weight: 200
-			font-weight: 100
+			+weight100
 			color: #707379
 
 		& > .lang-switch
@@ -300,7 +301,7 @@ footer
 			.eng, .el, a
 				font-family: $font-premier
 				+no-rem(font-size, 20px)
-				font-weight: 100
+				+weight100
 				// color: #707379
 				color: $color-grey
 

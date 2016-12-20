@@ -76,7 +76,8 @@
 		margin: auto
 		font-family: $font-premier
 		+no-rem(font-size, 16px)
-		font-weight: normal
+		// font-weight: normal
+		+weight200
 
 
 .user-info-dash-board
@@ -136,7 +137,8 @@
 	& > .mobile-only > .columns > .col 
 		& > .underlined-title, & > .title
 			+no-rem(font-size, 20px)
-			font-weight: 100
+			// font-weight: 100
+			+weight100
 			&:before
 				background: transparent
 
@@ -196,11 +198,12 @@
 				+rem(line-height, 34px)
 			.subtext
 				+no-rem(font-size, 20px)
-				font-weight: 100
+				// font-weight: 100
+				+weight100
 			.detail
 				display: inline-block
 				font-family: $font-premier
-				font-weight: 200
+				+weight200
 				+no-rem(font-size, 16px)
 				color: #707379
 
@@ -234,7 +237,7 @@
 					margin: 0
 					+no-rem(font-size, 16px)
 					+rem(line-height, 20px)
-					font-weight: 200
+					+weight200
 					color: $color-black
 
 			.slick-dots

@@ -35,28 +35,6 @@
 .fblack
 	font-weight: bolder
 
-//=============================
-
-.h1
-	+rem(font-size, 72px)
-	font-weight: 500
-	+rem(letter-spacing, -3px)
-
-.h2
-	+rem(font-size, 48px)
-	// font-weight: 500
-	// +rem(letter-spacing, -3px)
-
-.h3
-	+rem(font-size, 32px)
-	// font-weight: 500
-	// +rem(letter-spacing, -3px)
-
-.h4
-	+rem(font-size, 20px)
-	font-weight: 100
-	// font-weight: 500
-	// +rem(letter-spacing, -3px)
 
 //=============================
 
@@ -189,6 +167,7 @@
 		// +rem(font-size, 16px)
 		// font-size: inherit
 		font-size: 13px
+		+weight200
 		// +rem(line-height, 26px)
 		line-height: inherit
 		left: 0
@@ -335,7 +314,7 @@ label.movable
 	display: inline-block
 	position: absolute
 	// font-weight: 300
-	font-weight: 100
+	+weight100
 	+rem(top, 6px)
 	+no-rem(font-size, 20px)
 	+transition(all 0.3s)
@@ -349,6 +328,7 @@ input.focused
 input:focus+label.movable, input.focused+label.movable, input.has-value+label.movable
 
 	+no-rem(font-size, 16px)
+	+weight200
 	// +transform(translateY((-20px/16px)*1rem))
 	+transform(translateY(-100%))
 
@@ -421,5 +401,30 @@ input:focus+label.movable, input.focused+label.movable, input.has-value+label.mo
 		+rem(margin-left, 16px)
 		+rem(margin-left, 10px)
 		// +rem(margin-left, 26px)
+
+//=============================
+
+.h1
+	+rem(font-size, 72px)
+	font-weight: 500
+	+rem(letter-spacing, -3px)
+
+.h2
+	+rem(font-size, 48px)
+	// font-weight: 500
+	// +rem(letter-spacing, -3px)
+
+.h3
+	+rem(font-size, 32px)
+	// font-weight: 500
+	// +rem(letter-spacing, -3px)
+
+.h4
+	+rem(font-size, 20px)
+	font-weight: 100
+	// font-weight: 500
+	// +rem(letter-spacing, -3px)
+
+
 
 

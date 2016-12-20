@@ -21,6 +21,7 @@
 
 		& > .detail
 			+rem(font-size, 16px)
+			+weight200
 			+rem(line-height, 20px)
 			// color: $color-black
 			// +rem(margin-top, 6px)
@@ -103,7 +104,8 @@
 				color: $color-black
 				+rem(font-size, 20px)
 				+rem(line-height, 62px)
-				font-weight: 100
+				// font-weight: 100
+				+weight100
 				pointer-events: none
 				+transform(rotateZ(90deg))
 
@@ -182,9 +184,12 @@
 
 					& > p
 						+rem(font-size, 20px)
+						// font-weight: 100
+						+weight100
 
 				.features > li
 					+rem(font-size, 16px)
+					+weight200
 
 				// .detail
 				// 	display: none
@@ -202,6 +207,7 @@
 
 				.action-button > .text
 					+rem(font-size, 16px)
+					+weight200
 
 		.slick-dots
 			+rem(margin-top, 15px)
