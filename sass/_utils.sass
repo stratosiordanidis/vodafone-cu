@@ -1,0 +1,61 @@
+
+@function parseInt($n) /* 2 */
+	@return $n / ($n * 0 + 1)
+
+$html-font-size: ($html-font-size-number * 1px)
+
+
+=rem($property, $values)
+	$px : () /* 3 */
+	$rem: () /* 3 */
+
+	@each $value in $values /* 4 */
+
+		// the following is to overcome the annoying compiler warning
+		$comp: 0
+		@if $value == auto
+			$comp: true
+		@else
+			@if unitless($value)
+				@if $value == 0
+					$comp: true
+				@else
+					$comp: false
+			@else
+				@if $value == 0px or $value == 0rem or $value == 0em
+					$comp: true
+				@else
+					$comp: false
+
+		//@if /*$value == 0 or*/ $value == 0px or $value == 0rem or $value == 0em or $value == auto /* 5 */
+		@if $comp
+			$px : append($px , $value)
+			$rem: append($rem, $value)
+		
+
+		@else
+			$unit: unit($value)    /* 6 */
+			$val: parseInt($value) /* 6 */
+
+			@if $unit == "px"   /* 7 */
+				$px : append($px,  $value)
+				// $rem: append($rem, ($val / 10 + rem))
+				$rem: append($rem, ($val / $html-font-size-number + rem))
+
+			@if $unit == "rem"  /* 7 */
+				// $px : append($px,  ($val * 10 + px))
+				$px : append($px,  ($val * $html-font-size-number + px))
+				$rem: append($rem, $value)
+
+	@if $px == $rem      /* 8 */
+		#{$property}: $px  /* 9 */
+	@else
+		#{$property}: $px  /* 9 */
+		#{$property}: $rem /* 9 */
+
+
+
+=no-rem($property, $values)
+
+	#{$property}: $values 
+

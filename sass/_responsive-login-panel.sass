@@ -1,0 +1,42 @@
+
+@media all and (max-width: $mobile-breakpoint)
+	
+	.login-panel
+		+rem(margin,0 auto)
+
+		.nav-header
+			width: 100%
+			position: relative
+			
+			.back-button
+				display: inline-block
+				position: absolute
+				left: 10px
+				// top: 32px
+				top: 0
+				bottom: 0
+				height: 10px
+				margin: auto
+				padding: 5px
+				font-size: (10px/16px)*1rem !important
+
+				&:before
+					content: $icon-arrow-thin
+					display: inline-block
+					position: relative
+					font-family: 'cu'
+					color: black
+					// +rem(font-size, 24px)
+					font-size: inherit
+					+rotateZ(180deg)
+
+		.tab-contents
+			.tab-content-1
+				+rem(padding,30px 0 0)
+
+				.bg
+					+rem(padding, 30px 0 35px)
+					+rem(margin-top,45px)
+
+					.title
+						+rem(margin-bottom,20px)

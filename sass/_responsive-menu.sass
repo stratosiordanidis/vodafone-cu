@@ -1,0 +1,50 @@
+// @media (max-width:1300px)
+@media (max-width:1000px)
+
+
+	header, .nav-menu
+		+rem(height, $mobile-nav-height)
+
+		width: 100%
+
+	.nav-menu > .desktop-only
+		display: none
+	.nav-menu > .mobile-only
+		display: block
+
+	// .nav-menu > .desktop-only > .menu
+	// 	display: block
+		
+	// .nav-menu > .desktop-only > .menu .level0
+	// 	display: block
+	// 	width: 100%
+		
+	// .nav-menu > .desktop-only > .menu .submenu
+	// 	display: none
+
+	#content
+		+rem(margin-top, $mobile-nav-height)
+		
+
+
+@media (max-width: $mobile-breakpoint)
+	header .cu-logo
+		left: 0
+
+		& > img
+			+rem(height, 40px)
+			width: auto
+
+		
+	header 
+		.cu-logo, .login-button
+			+rem(top, 5px)
+
+		.login-button
+			right: 0
+
+		// .mobile-menu
+		// 	max-height: 1000px
+
+	// header .nav-menu > .menu
+	// 	display: none

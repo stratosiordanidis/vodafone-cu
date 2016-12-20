@@ -1,0 +1,96 @@
+.user-info-dash-board.page-middle-column
+	.mobile-only
+		.columns
+			.col.remaining-col.active
+				a.underlined-title(href='') To υπόλοιπό μου
+			.col.usage-col
+				a.underlined-title(href='') Η χρήση μου
+
+		.tabs
+			.remaining-col.col.active
+				.detail
+					p <span>Αριθμός:</span> 69512345678
+				.cost €7,06
+				a.action-button(href='#')
+					.text Κάνε Online Ανανέωση
+
+			.usage-col.col
+				.widgets
+					.col-1-of-3
+						.number(data-max="1800" data-num="930") 930
+						.subtext MB
+						.detail από 1.5GB
+					.col-1-of-3
+						.number(data-max="1800" data-num="600") 600
+						.subtext Λεπτά
+						.detail από 1500
+					.col-1-of-3
+						.number(data-max="50" data-num="12") 12
+						.subtext SMS
+						.detail από 300
+
+
+	.desktop-only
+		.columns
+
+			.usage-col.col.col-4-of-10
+				.title Η χρήση μου
+
+				.widgets
+					.col-1-of-3
+						.progress-widget
+							object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+							//- include _progress-arc
+							object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
+							//- on IE Edge it does not animate <object> changes, so we have to inline the svg
+							//- .fg-graphic
+							//- 	include _progress-arc
+							.number(data-max="1800" data-num="930") 930
+							.subtext MB
+					.col-1-of-3
+						.progress-widget
+							object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+							//- include _progress-arc
+							object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
+							//- .fg-graphic
+							//- 	include _progress-arc
+							.number(data-max="1800" data-num="600") 600
+							.subtext Λεπτά
+					.col-1-of-3
+						.progress-widget
+							object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+							//- include _progress-arc
+							object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
+							//- .fg-graphic
+							//- 	include _progress-arc
+							.number(data-max="50" data-num="12") 12
+							.subtext SMS
+
+			.remaining-col.col.col-3-of-10
+				.title To υπόλοιπό μου
+				.detail
+					p <span>Αριθμός:</span> 69512345678
+				.cost €7,06
+				a.action-button(href='#')
+					.text Κάνε Online Ανανέωση
+
+			.active-packages-col.col.col-4-of-10
+				.title Tα ενεργά μου πακέτα
+				ul.carousel.no-auto-init
+					li.item
+						.title CU Talk a Lot 600
+						.detail 
+							p Αυτόματη ανανέωση στις 21.9.2016
+					li.item
+						.title Surf &amp; Email 100
+						.detail 
+							p Λήγει στις 21.9.2016
+					li.item
+						.title CU Talk a Lot 600
+						.detail 
+							p Αυτόματη ανανέωση στις 21.9.2016
+					li.item
+						.title Surf &amp; Email 100
+						.detail 
+							p Λήγει στις 21.9.2016
+

@@ -1,0 +1,276 @@
+@import "compass"
+
+@import "vars"
+
+@import "utils"
+
+
+
+
+section#intro
+	+rem(max-width, 1680px)
+	+rem(margin-top, 2px)
+	.wrapper
+		+rem(padding-left, 360px)
+		+rem(padding-top, 53px)
+		+rem(padding-right, 40px)
+		+rem(padding-bottom, 30px)
+		background-color: white
+
+		.title
+			// +rem(font-size, 64px)
+			+rem(font-size, 88px)
+
+		.detail
+			+rem(font-size, 24px)
+			+rem(line-height, 32px)
+			+rem(margin-top, 25px)
+			font-weight: 200
+			+rem(width, 660px)
+			max-width: 95%
+
+			span
+				position: relative
+
+			.underlined-title
+				+rem(font-size, 24px)
+				font-weight: bold
+
+				&:before
+					left: 0
+					background-color: $color-cyan
+					bottom: 0.3em
+
+
+		.links
+			display: block
+			background-color: $color-black
+			+rem(margin-top, 35px)
+
+			& > a
+				display: inline-block
+				+rem(font-size, 24px)
+				font-weight: bold
+				color: white
+				text-decoration: none
+				// +rem(margin-right, 60px)
+				+rem(margin-right, 40px)
+				+rem(padding, 15px 20px)
+				+rem(padding-top, 45px)
+				+transition(0.2s)
+
+				&:hover
+					color: $color-cyan
+
+
+				&:after
+					content: none
+
+
+
+
+
+.alternating-color-sections
+	// & > section
+	& > .page-middle-column
+		+rem(max-width, 1680px)
+		text-align: center
+
+		& > .head-wrapper
+			display: block
+			+rem(padding, 60px 75px)
+			text-align: left
+
+			.title.underlined-title.size-xxl
+				+rem(font-size, 88px)
+				color: $color-black
+				font-weight: bold
+
+				&:before
+					background-color: $color-red
+					background-image: url('../img/package-bottom.png')
+
+			.detail 
+				display: block
+				+no-rem(font-size, 24px)
+				+no-rem(margin-top, 20px)
+				font-weight: 200
+				color: $color-black
+
+		.package-list
+			+rem(padding-bottom, 35px)
+			width: 75%
+			left: 0
+			right: 0
+			margin: auto
+
+			// .slick-list
+			// 	width: 75%
+
+
+		&:nth-child(2n+1)
+			// & > .head-wrapper
+			background-color: white
+
+			&:last-child
+				+rem(margin-bottom, 70px)
+
+
+		&:nth-child(2n+2)
+			.package-list .package-item > .wrapper
+				background-color: white
+
+
+section#there-is-more
+	display: block
+	+rem(width, 1680px)
+	max-width: 100%
+	background-color: white
+	+rem(margin-top, 2px)
+	+rem(padding-bottom, 100px)
+	left: 0
+	right: 0
+	margin-left: auto
+	margin-right: auto
+
+	.head-wrapper
+		+rem(padding, 50px 80px)
+		// +rem(padding-bottom, 50px)
+
+		.title
+			+rem(font-size, 88px)
+			font-weight: bold
+
+		.detail
+			+rem(font-size, 24px)
+			font-weight: 200
+
+
+	.article-box-carousel
+		.slick-dots
+			display: none !important
+
+
+// .alternating-color-sections:nth-child(2n+2)+section#there-is-more
+// 	+rem(margin-top, 70px)
+
+
+@media all and (max-width: $mobile-breakpoint)
+
+	
+	section#intro
+		// +rem(max-width, 1680px)
+		// +rem(margin-top, 2px)
+		.wrapper
+			+rem(padding, 30px 20px)
+			// background-color: white
+
+			.title
+				+rem(font-size, 32px)
+
+			.detail
+				// +rem(font-size, 24px)
+				// +rem(line-height, 32px)
+				+rem(margin-top, 15px)
+				// font-weight: 200
+				// +rem(width, 660px)
+				// max-width: 95%
+				width: auto
+
+				span
+					position: relative
+
+				.underlined-title
+					+rem(font-size, 24px)
+					font-weight: bold
+
+					&:before
+						left: 0
+						background-color: $color-cyan
+						bottom: 0.3em
+
+
+			.links
+				display: none
+
+
+				
+
+
+
+	
+
+	.alternating-color-sections
+		// & > section
+		& > .page-middle-column
+			+rem(max-width, 1680px)
+			text-align: center
+
+			& > .head-wrapper
+				display: block
+				+rem(padding, 20px)
+				text-align: left
+
+				.title.underlined-title.size-xxl
+					+rem(font-size, 32px)
+					color: $color-black
+					font-weight: bold
+
+					&:before
+						// background-color: $color-red
+						// background-image: url('../img/package-bottom.png')
+						+rem(height, 12px)
+
+				.detail 
+					display: block
+					+no-rem(font-size, 16px)
+					+rem(margin-top, 22px)
+					font-weight: 200
+					color: $color-black
+
+			.package-list
+				+rem(padding-bottom, 35px)
+				width: 100%
+				left: 0
+				right: 0
+				margin: auto
+
+				// .slick-list
+				// 	width: 75%
+
+
+	
+	section#there-is-more
+		// display: block
+		// +rem(width, 1680px)
+		width: 100%
+		background-color: white
+		// +rem(margin-top, 2px)
+		+rem(padding-bottom, 30px)
+		left: 0
+		right: 0
+		margin-left: auto
+		margin-right: auto
+
+		.head-wrapper
+			+rem(padding, 20px)
+			+rem(padding-top, 40px)
+			+rem(padding-bottom, 25px)
+
+			.title
+				+rem(font-size, 32px)
+				// font-weight: bold
+
+			.detail
+				+no-rem(font-size, 16px)
+				// font-weight: 200
+				+rem(margin-top, 20px)
+
+
+		.article-box-carousel
+			.slick-dots
+				display: block !important
+
+
+
+

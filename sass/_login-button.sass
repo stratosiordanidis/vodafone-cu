@@ -1,0 +1,245 @@
+
+.login-button
+	display: inline-block
+	position: absolute
+	// +rem(padding, 20px 22px 15px)
+	text-align: center
+	// pointer-events: none
+
+	background: $color-red
+
+	+rem(right, 20px)
+	+rem(top, 20px)
+
+	+no-rem(width, 200px)
+	+no-rem(height, 70px)
+	+transition(all 0.3s)
+	// overflow: hidden
+
+	.mobile-login-msg
+		display: none
+
+	.login-msg
+		display: inline-block
+		// position: relative
+		position: absolute
+		color: white
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		text-align: left
+		cursor: pointer
+		// background: $color-red
+		// +rem(padding, 15px)
+		+transition(0.3s)
+		opacity: 1
+		+no-rem(width, 70px)
+		+no-rem(height, 50px)
+		// +rem(width, 100px)
+		// +rem(height, 80px)
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		margin: auto
+
+		p
+			margin: 0
+			color: white
+			+no-rem(font-size, 16px)
+			text-align: left
+			// +rem(line-height, 24px)
+
+			&:last-child
+				+no-rem(font-size, 32px)
+				font-weight: 200
+
+				span
+					font-weight: bold
+
+		// img(src="img/myCU.png")
+
+	.close
+		display: inline-block
+		position: absolute
+		+no-rem(width, 35px)
+		+no-rem(height, 35px)
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		margin: auto
+		opacity: 0
+
+		pointer-events: none
+		.icon
+			&:after
+				content: $icon-cross
+				display: block
+				position: relative
+				font-family: 'cu'
+				color: $color-red
+				+no-rem(font-size, 35px)
+				+rotateZ(45deg)
+				text-align: center
+
+
+	.welcome-msg
+		display: none
+		text-align: left
+		background: $color-red
+		+no-rem(max-height, 70px)
+		pointer-events: all
+		+transition(0.3s)
+		opacity: 0
+
+		.mobile-msg-wrapper
+			display: none
+
+		.msg-wrapper
+			+no-rem(padding, 15px)
+			+no-rem(height, 40px)
+
+		p
+			margin: 0
+			color: $color-black
+			+no-rem(font-size, 16px)
+			font-weight: bold
+
+
+		.name
+			color: white
+			+no-rem(font-size, 20px)
+			font-weight: bold
+			
+
+		.down-arrow
+
+		.submenu
+			background: #eaeaea
+			// max-height: 0
+			// overflow: hidden
+			opacity: 0
+			+transition(0.3s)
+			pointer-events: none
+
+
+			& > .submenu-item
+				background: white
+				border-top: none
+				text-align: left
+
+				& > a
+					display: block
+					position: relative
+					color: $color-black
+					+no-rem(font-size, 16px)
+					font-weight: bold
+					+no-rem(padding, 15px 20px)
+					// +rem(padding, 15px)
+					// +rem(margin, 5px)
+					+translateX(0)
+					background: white
+
+					+transition(0.3s)
+
+					&:after
+						content: none
+
+					// &:before
+					// 	content: ''
+					// 	display: block
+					// 	position: absolute
+					// 	left: 0
+					// 	right: 0
+					// 	top: 0
+					// 	bottom: 0
+					// 	background: transparent
+					// 	pointer-events: none
+					// 	z-index: -1
+
+					&:hover
+						// +translateX(-20px/16px * 1rem)
+						color: $color-red
+
+						// &:before
+						// 	background-color: $color-red
+
+
+				& > .action-button
+					// +rem(margin, 20px 0px)
+					+no-rem(margin-top, 20px)
+					+translateX(-20px/16px * 1rem)
+					border-color: $color-red
+					background-color: $color-red
+
+					.text
+						color: white
+
+
+				&:last-child
+					border-top: none !important
+
+					& > a
+						+no-rem(padding, 20px)
+
+
+			.submenu-item+.submenu-item
+				border-top: 1px solid #eaeaea
+
+
+
+// .loged-in
+// 	.login-button
+// 		.login-msg
+// 			display: none
+
+// 		.welcome-msg
+// 			display: inline-block
+
+
+.show-login-panel
+	.login-button
+		// +rem(width, 195px)
+		// +rem(height, 80px)
+		background: white
+
+		.login-msg, .welcome-msg
+			// display: none
+			// +rem(width, 195px)
+			// +rem(height, 80px)
+			opacity: 0
+			// padding: 0
+			pointer-events: none
+
+		.close
+			display: inline-block
+			// background: white
+			pointer-events: all
+			opacity: 1
+
+
+
+.logged-in
+	.login-button
+		background-color: $color-red
+
+		.login-msg, .close
+			display: none
+			opacity: 0
+			pointer-events: none
+
+		.welcome-msg
+			display: inline-block
+			opacity: 1
+			pointer-events: all
+
+		&:hover
+			.submenu
+				opacity: 1
+				pointer-events: all
+
+
+
+

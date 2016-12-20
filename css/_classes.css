@@ -1,0 +1,16 @@
+.f28 {
+  font-size: 28px;
+}
+
+.f48 {
+  font-size: 48px;
+  line-height: 60px;
+}
+
+.fbold {
+  font-weight: bold;
+}
+
+.fblack {
+  font-weight: bolder;
+}

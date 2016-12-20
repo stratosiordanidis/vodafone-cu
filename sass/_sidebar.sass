@@ -1,0 +1,342 @@
+// #sidebar-iframe
+// #offer-sidebar
+// aside#offer-sidebar
+aside#sidebar
+	position: fixed
+	pointer-events: none
+	left: 0
+	top: 0
+	bottom: 0
+	right: 0
+	min-height: 100%
+	z-index: -10
+	// overflow-x: hidden
+	overflow: hidden
+
+
+	.sidebar-contents
+		display: block
+		pointer-events: none
+		left: 0
+		top: 0
+		bottom: 0
+		right: 0
+		height: 100%
+		width: 100%
+		overflow: hidden
+
+
+	.click-trap
+		display: block
+		position: fixed
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		background: black
+		opacity: 0
+		+transition(0.3s)
+		pointer-events: none
+
+
+		// fixes a bug in chrome
+		min-height: 110%
+
+	.loader
+		display: inline-block
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		margin: auto
+		width: 100px
+		height: 100px
+		opacity: 0
+		+transition(opacity 0.5s)
+		overflow: hidden
+
+		.spinner
+			display: inline-block
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			margin: auto
+			width: 100px
+			height: 100px
+
+			background: url('../img/spinner.png') no-repeat
+			background-size: contain
+			+keyframes(spin)
+				0%
+					+rotateZ(0deg)
+				100%
+					+rotateZ(360deg)
+
+			+animation(spin 1s linear infinite)
+
+	.sidebar
+		display: block
+		position: absolute
+		right: 0
+		top: 0
+		// bottom: 0
+		// height: 100%
+		min-height: inherit
+		background-color: #eaeaeb
+		+rem(width, 740px)
+		+transition(0.3s)
+		+transform(translateX(150%))
+		min-height: 100%
+
+		& > .close-button
+			display: none
+
+		a
+			// display: inline-block
+			// position: relative
+			// text-decoration: none
+			color: $color-black
+
+			// &:after
+			// 	content: ''
+			// 	display: inline-block
+			// 	position: absolute
+			// 	width: 100%
+			// 	+rem(height, 1px)
+			// 	background-color: $color-black
+			// 	+transition(0.3s)
+			// 	// top: 100%
+			// 	top: 90%
+			// 	// top: 0
+			// 	left: 0
+
+			// &:hover:after
+			// 	background-color: $color-red
+
+
+		.side-graphic
+			display: inline-block
+			position: absolute
+			+rem(width, 80px)
+			+rem(top, 110px)
+			bottom: 0
+			right: 100%
+			background-color: $color-cyan
+			background-image: url('../img/sidebar-graphic.png')
+			background-repeat: no-repeat
+			$ypos: (230px / 16px)*1rem
+			background-position: 0 $ypos
+			background-size: cover
+
+
+
+		// .white-area, .grey-area
+		// 	+rem(padding-left, 40px)
+		// 	+rem(padding-right, 40px)
+
+	// .sidebar.package-sidebar
+	.package-sidebar
+
+		.white-area
+			display: block
+			// width: 100%
+			background: white
+			+rem(padding-bottom, 60px)
+
+			.title-wrapper
+				// display: block
+				position: relative
+				display: flex
+				justify-content: space-between
+				+rem(padding, 40px)
+				+rem(padding-top, 130px)
+				background-color: black
+				+rem(left, -40px)
+
+				.title
+					margin: 0
+					display: inline-block
+					+rem(font-size, 56px)
+					color: white
+					font-weight: bold
+					text-align: left
+
+				.cost
+					display: inline-block
+					text-align: right
+					+rem(font-size, 56px)
+					color: $color-red
+
+				.notice-sticker
+					display: inline-block
+					position: absolute
+					top: 0
+					+rem(left, 40px)
+					background: $color-red
+					+rem(padding, 15px 19px)
+					p 
+						margin: 0
+						padding: 0
+						+no-rem(font-size, 20px)
+						font-weight: 100
+						color: white
+						text-align: left
+
+					p:last-child
+						font-weight: 200
+
+					p:first-child
+						font-weight: bold
+
+					&:empty
+						display: none
+
+			
+
+			.features
+				// +rem(padding, 0 20px)
+				padding: 0
+				margin: 0
+				+rem(margin-left, 40px)
+				+rem(margin-right, 40px)
+				+rem(margin-top, 55px)
+				+rem(margin-bottom, 35px)
+
+				& > li
+					position: relative
+					margin: 0
+					+rem(margin-top, 30px)
+
+					p, small
+						margin: 0
+
+					p
+						display: block
+						position: relative
+						font-family: $font-premier
+						color: $color-black
+						text-align: left
+						+rem(padding-left, 26px)
+						// +rem(line-height, 26px)
+						+rem(line-height, 28px)
+						+rem(font-size, 32px)
+						vertical-align: middle
+
+
+
+					b
+						font-weight: bold
+						
+					span
+						color: $color-red
+						font-weight: bold
+
+					p 
+						+rem(font-size, 32px)
+					span
+						color: $color-red
+					small
+						+no-rem(font-size, 20px)
+						// font-weight: 200
+						font-weight: 100
+						color: black
+
+					&:before
+						display: inline-block
+						position: absolute
+						vertical-align: middle
+						content: $icon-cross
+						font-family: 'cu'
+						color: $color-cyan
+						+no-rem(font-size, 16px)
+						+no-rem(line-height, 26px)
+						left: 0
+						top: 0
+
+			.action-button
+				+rem(border-width, 10px)
+				border-color: $color-red
+				background-color: $color-red
+				cursor: pointer
+				+rem(padding, 15px 20px)
+				+rem(margin-left, 40px)
+				+transition(0.3s)
+
+				.text
+					color: white
+					+rem(font-size, 32px)
+					font-weight: bold
+
+				&:hover
+					background-color: black
+
+
+		.grey-area
+			+rem(padding-left, 70px)
+			+rem(padding-right, 40px)
+
+			+rem(padding-top, 60px)
+			+rem(padding-bottom, 60px)
+			background-color: #eaeaeb
+
+			.title
+				+rem(font-size, 32px)
+			ul
+				li 
+					position: relative
+					+no-rem(font-size, 20px)
+					+no-rem(line-height, 26px)
+					font-weight: 200
+					+rem(margin-top, 30px)
+
+					&:before
+						content: ''
+						display: inline-block
+						position: absolute
+						+rem(width, 8px)
+						+rem(height, 8px)
+						+border-radius(10px)
+						background-color: black
+						+rem(left, -25px)
+						+rem(top, (26px * 0.5) - 4px)
+
+
+
+
+// .show-login-panel
+
+
+// .show-sidebar
+.open-sidebar
+	overflow: hidden
+ 
+	&.sidebar-finished-loading
+
+		aside#sidebar
+			.sidebar
+				pointer-events: all
+				+transform(translateX(0))
+				// +transform(translateX(50%))
+
+	// #offer-sidebar, #sidebar-iframe
+	aside#sidebar
+		overflow-y: auto
+		// pointer-events: all
+		z-index: 1000
+
+		// .click-trap
+		// 	opacity: 0.8
+		// 	pointer-events: all
+			
+	#click-trap-underlay
+		opacity: 0.8
+		pointer-events: all
+
+
+
+
+
+

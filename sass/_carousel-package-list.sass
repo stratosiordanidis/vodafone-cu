@@ -1,0 +1,587 @@
+
+// .tabbed-carousel-list-block.page-middle-column
+.tabbed-carousel-list-block
+	display: block
+	+rem(padding, 60px 74px)
+	+rem(padding-bottom, 80px)
+	background: white
+	+rem(margin-top, 70px)
+	text-align: center
+
+	& > .title
+		// +rem(font-size, 64px)
+		+rem(font-size, 72px)
+		color: $color-black
+		text-align: left
+
+		+rem(letter-spacing, -1px)
+		font-weight: 400
+		
+
+	& > .detail
+		+rem(font-size, 32px)
+		color: $color-black
+		+rem(margin-top, 6px)
+		text-align: left
+		font-weight: 300
+
+	// & > .selection-wrapper
+	.tabbed-control
+		display: block
+		position: relative
+		max-width: 100%
+
+	// & > .selection-wrapper > select.mobile
+	// .tabbed-control > select.mobile
+	// 	display: none
+	// 	// display: block
+
+	// 	// option
+	// 	// 	display: inline-block
+	// 	// 	position: relative
+	// 	// 	+rem(font-size, 32px)
+	// 	// 	font-weight: bold
+	// 	// 	color: $color-red
+	// 	// 	z-index: 1
+
+	// 	// 	&:before
+	// 	// 		content: ''
+	// 	// 		display: block
+	// 	// 		position: absolute
+	// 	// 		width: 100%
+	// 	// 		+rem(height, 10px)
+	// 	// 		background: #eaeaeb
+	// 	// 		+rem(left, 10px)
+	// 	// 		// +rem(bottom, 5px)
+	// 	// 		+rem(bottom, 0px)
+	// 	// 		z-index: -1
+	// 	// 		+transition(background-color 0.3s)
+
+
+	// & > .selection-wrapper > .tabs
+	.tabbed-control > .tab-buttons
+		// display: inline-block
+		display: table
+		width: auto
+		left: 0
+		right: 0
+		margin: auto
+		// @extend .columns
+		+rem(margin-top, 55px)
+
+		.tab-button+.tab-button
+			+rem(margin-left, 40px)
+
+		& > .tab-button
+			display: inline-block
+			// @extend .col
+			
+
+			& > .underlined-title
+				cursor: pointer
+				// display: inline-block
+				// position: relative
+				+rem(font-size, 32px)
+				font-weight: bold
+				// color: $color-black
+				// z-index: 2
+
+				&:before
+					background: transparent
+				// &:before
+				// 	content: ''
+				// 	display: block
+				// 	position: absolute
+				// 	width: 100%
+				// 	+rem(height, 10px)
+				// 	background: #eaeaeb
+				// 	+rem(left, 10px)
+				// 	// +rem(bottom, 5px)
+				// 	+rem(bottom, 0px)
+				// 	z-index: -1
+				// 	+transition(background-color 0.3s)
+
+			&.active > .underlined-title:before, &:hover > .underlined-title:before
+				background-color: $color-red
+
+			& > .package-list
+				display: none
+
+			// &.active > .carousel-package-list
+			// 	display: block
+
+	// & > .carousel-package-list
+	.tab-contents
+		+rem(margin-top, 60px)
+
+
+
+
+
+.tabbed-carousel-list-block .tab-content
+	display: none
+
+	&.active
+		display: block
+
+// .carousel-package-list, .package-list
+// .tabbed-carousel-list-block .tab-content.active, 
+// .active .package-list
+.package-list
+	display: inline-block
+	position: relative
+	white-space: nowrap
+	// +rem(padding-bottom, 86px)
+	+rem(padding-bottom, 52px)
+	// +rem(width, 1100px)
+	max-width: 100%
+	left: 0
+	right: 0
+	margin-left: auto
+	margin-right: auto
+
+	&.slick-dotted
+		padding-bottom: 0
+	
+	&.slick-initialized > .slick-list
+		overflow: visible
+		text-align: center
+
+	.slick-track
+		text-align: left
+
+	.slick-track > .slick-slide
+		float: none
+
+	.slick-dots
+		// +rem(margin-top, 70px)
+		+rem(margin-top, 40px)
+
+	&.slick-slider
+		-webkit-user-select: initial
+		-moz-user-select: initial
+		-ms-user-select: initial
+		user-select: initial
+
+	.package-item
+		display: inline-block
+		white-space: normal
+		position: relative
+		font-family: $font-premier
+		vertical-align: top
+		+rem(max-width, 450px)
+		+rem(min-height, 350px)
+		// +rem(margin-left, 20px)
+		// +rem(margin-right, 20px)
+		// +rem(margin-left, 60px)
+		// +rem(margin-right, 60px)
+		+rem(margin-left, 30px)
+		+rem(margin-right, 30px)
+		+rem(padding-left, 20px)
+		+rem(padding-right, 20px)
+		+rem(margin-top, 30px)
+		// +rem(margin-bottom, 10px)
+		// +transition(margin-left 0.5s)
+		+transition(0.3s)
+		// width: 300px !important
+		// width: ((300px / 16px) * 1rem) !important
+		width: 360px !important
+		width: ((360px / 16px) * 1rem) !important
+		outline: none
+		opacity: 1
+
+		&:after
+			content: ''
+			display: block
+			position: relative
+			width: 100%
+			background: $color-cyan
+			background-size: cover
+			+rem(height, 10px)
+			// +rem(top, 10px)
+			left: 0
+			+transition(0.5s)
+
+
+		& > .wrapper
+			+display-flex()
+			+flex-direction(column)
+			+align-items(stretch)
+			-webkit-box-align: stretch
+			-ms-flex-align: stretch
+			align-items: stretch
+			display: -webkit-box
+			display: -ms-flexbox
+			display: flex
+			-webkit-box-orient: vertical
+			-webkit-box-direction: normal
+			-ms-flex-direction: column
+			flex-direction: column
+			-webkit-box-pack: justify
+			-ms-flex-pack: justify
+			justify-content: space-between
+			min-height: inherit
+			max-height: inherit
+			min-width: inherit
+			max-width: inherit
+			background: #f4f4f4
+
+		.top, .bottom
+			display: block
+			// -ms-flex-negative: 0
+			// flex-shrink: 0
+
+		.top
+			// +display-flex()
+			// +flex-direction(column)
+			// +rem(margin-bottom, 50px)
+			+rem(margin-bottom, 30px)
+			cursor: pointer
+
+			$offset: 50px
+			.icon-arrow-head
+				display: inline
+				// position: absolute
+				position: relative
+				// left: 100%
+				// +rem(right, 10px)
+				right: 0
+				+rem(bottom, 3px)
+				+rem(margin-left, 5px)
+				// +rem(font-size, 20px)
+				+no-rem(font-size, 16px)
+				// font-weight: 300
+				color: white
+				// top: 0
+				// bottom: 0
+				// margin: auto
+
+
+				&:after
+					content: ''
+					display: inline-block
+					// +rem(width, $offset)
+					width: 0
+					// +rem(height, 1.7px)
+					+rem(height, 2px)
+					background-color: white
+					top: 0
+					bottom: 0
+					margin: auto
+					position: absolute
+					// +transform(  translateY(-(2/16)*1rem) )
+					+transition(0.3s)
+
+				&:before
+					content: $icon-arrow-head
+					+transition(0.3s)
+					position: relative
+					+rem(line-height, 2.8rem)
+					// +rem(left, ($offset + 1px))
+					left: 0
+					// +transform(translateY(-0.1rem))
+
+			&:hover
+
+				.icon-arrow-head
+					&:before
+						// left: 0
+						+rem(left, ($offset + 1px))
+
+					&:after
+						// width: 0
+						+rem(width, $offset)
+
+
+
+			.notice-sticker
+				display: inline-block
+				position: absolute
+				+rem(left, 20px)
+				+rem(top, -10px)
+				// +rem(padding, 10px 15px)
+				+rem(padding, 8px 13px)
+				+transition(0.5s)
+				// background: $color-red
+				background: $color-cyan
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fb2626+0,a46868+100 */
+				// background: #fb2626 /* Old browsers */
+				// background: -moz-linear-gradient(left,  #fb2626 0%, #a46868 100%) /* FF3.6-15 */
+				// background: -webkit-linear-gradient(left,  #fb2626 0%,#a46868 100%) /* Chrome10-25,Safari5.1-6 */
+				// background: linear-gradient(to right,  #fb2626 0%,#a46868 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb2626', endColorstr='#a46868',GradientType=1 ) /* IE6-9 */
+
+				&:empty
+					display: none
+
+				& > p
+					margin: 0
+					padding: 0
+					font-family: $font-premier
+					// +rem(font-size, 16px)
+					// +no-rem(font-size, 17px)
+					+no-rem(font-size, 14px)
+					color: white
+					color: $color-black
+					line-height: normal
+					font-weight: bold
+					text-align: left
+					+transition(0.3s)
+
+					&+&
+						+rem(margin-top, 4px)
+
+					&:last-child
+						font-weight: normal
+
+					&:first-child
+						font-weight: bold
+
+			&  > .title
+				// display: inline-block
+				+display-flex()
+				position: relative
+				vertical-align: bottom
+				font-family: inherit
+				width: 100%
+				background: url('../img/package-title.png') no-repeat
+				background-size: cover
+				+rem(min-height, 100px)
+				+rem(left, -20px)
+				+rem(top, -20px)
+				+transition(0.5s)
+
+				& > p
+					+rem(font-size, 32px)
+					// font-weight: bold
+					font-weight: 500
+					color: white
+					text-align: left
+					+rem(padding, 12px 18px)
+					+rem(padding-left, 28px)
+					// +rem(min-height, 60px)
+					margin-top: auto
+					margin-bottom: 0
+					+transition(0.3s)
+
+
+			.features
+				+rem(padding, 0 20px)
+
+				& > li
+					display: block
+					position: relative
+					font-family: $font-premier
+					color: $color-black
+					text-align: left
+					+no-rem(padding-left, 26px)
+					// +rem(line-height, 26px)
+					+no-rem(line-height, 28px)
+					+no-rem(font-size, 20px)
+					// font-weight: 300
+					font-weight: 100
+					vertical-align: middle
+					+transition(0.3s)
+
+					// &:before
+					// 	display: inline-block
+					// 	position: absolute
+					// 	vertical-align: middle
+					// 	content: $icon-cross
+					// 	font-family: 'cu'
+					// 	color: $color-cyan
+					// 	+rem(font-size, 16px)
+					// 	+rem(line-height, 26px)
+					// 	left: 0
+					// 	top: 0
+					// 	+transition(0.3s)
+
+					b
+						font-weight: bold
+						// +transition(0.3s)
+						
+					span
+						color: $color-red
+						font-weight: bold
+						// +transition(0.3s)
+
+
+			& > .detail 
+				display: block
+				+rem(padding, 0 20px)
+				+no-rem(margin-left, 26px)
+
+
+				&, a
+					+no-rem(font-size, 16px)
+					+no-rem(line-height, 18px)
+					color: $color-black
+					text-align: left
+					+transition(0.3s)
+
+				// a
+				// 	text-decoration: underline
+
+
+		.bottom
+			// display: block
+			// -ms-flex-negative: 0
+			// flex-shrink: 0
+			// // +display-flex()
+			// // +align-self(flex-end)
+
+			.cost
+				font-family: $font-premier
+				+rem(font-size, 48px)
+				font-weight: normal
+				color: $color-black
+				text-align: left
+				+rem(padding-left, 20px)
+				// +rem(padding-bottom, 25px)
+				+rem(padding-bottom, 20px)
+				+rem(letter-spacing, -1px)
+				+transition(0.3s)
+
+
+			.action-button
+				font-family: $font-premier
+				background: $color-red
+				border-color: $color-red
+				position: absolute
+				// +rem(right, -20px)
+				+rem(right, 0px)
+				// +rem(bottom, 20px)
+				+rem(bottom, 30px)
+				// +rem(padding, 11px 20px)
+				// +rem(padding, 10px 15px)
+
+				// &:hover
+				// 	background-color: black
+
+				.text
+					// +no-rem(font-size, 20px)
+					color: white
+					+transition(0.3s)
+
+	&.slick-initialized
+
+		// .slick-before+.slick-active
+		// .slick-before:last-child
+		// .slide-before-last
+		// 	+rem(margin-right, 150px)
+
+		// .slick-active+.slick-after
+		// 	+rem(margin-left, 150px)
+
+		& > .slick-list
+			z-index: 1
+
+		.slick-arrow
+
+			position: absolute
+			+rem(width, 115px)
+			+rem(height, 105px)
+			color: transparent
+			font-size: 0
+			border: none
+			outline: none
+			// position: relative
+			z-index: 2
+			background: transparent
+			opacity: 1
+			+transition(0.3s)
+
+			&.slick-disabled
+				opacity: 0.5
+
+
+			&:before
+				display: block
+				content: $icon-triangle
+				font-family: 'cu'
+				color: $color-cyan
+				+rem(font-size, 100px)
+				pointer-events: none
+				text-align: right
+
+			&:after
+				display: block
+				position: absolute
+				content: $icon-carousel-arrow
+				// content: $icon-triangle
+				font-family: 'cu'
+				color: $color-black
+				+rem(font-size, 35px)
+				pointer-events: none
+
+			&.slick-next
+				+rem(right, -80px +40px )
+				// +rem(right, 130px )
+				+rem(top, 120px)
+				&:after
+					+rem(bottom, 28px)
+					+rem(right, 30px)
+
+			&.slick-prev
+				+rem(left, -80px  )
+				+rem(top, 120px)
+				&:before, &:after
+					+rotateZ(180deg)
+
+				&:after
+					+rem(top, 28px)
+					+rem(left, 30px)
+
+
+		// &.slick-dotted
+		// 	$left-offset: 140px
+		// 	+rem(left, $left-offset)
+
+		// 	.slick-dots
+		// 		position: relative
+		// 		+rem(left, - $left-offset)
+
+		// 	.slick-arrow
+
+		// 		&.slick-next
+		// 			// +rem(right, -80px + ($left-offset*0.5) )
+		// 			+rem(right, $left-offset + 30px )
+
+		// 		&.slick-prev
+		// 			+rem(left, -80px - ($left-offset*0.5) + 30px )
+
+		// .slick-track > .slick-slide:first-child
+		// 	+rem(margin-left, 2*60px)
+		// .slick-track > .slick-slide
+		// 	+rem(left, 140px)
+
+
+		.package-item:not(.slick-active)
+			opacity: 0
+			
+			// // &  > .title > p, & > .detail > a, .bottom .cost, .bottom .action-button .text
+			// *, li, li:before, a, p, .text, .title, .detail
+			// 	color: transparent
+
+			// .icon-arrow-head:after
+			// 	content: none
+
+			// &.slick-before
+			// 	&:after
+			// 		+rem(left, -20px)
+
+			// 	.top .notice-sticker
+			// 		+rem(left, -20px)
+
+			// 	.top > .title
+			// 		+rem(left, -70px)
+
+			// &.slick-after
+			// 	&:after
+			// 		+rem(left, 20px)
+
+			// 	.top .notice-sticker
+			// 		+rem(left, 60px)
+
+			// 	.top > .title
+			// 		+rem(left, 70px)

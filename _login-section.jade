@@ -1,0 +1,54 @@
+section.login-section
+	figure.bg.register-box
+		form
+			p Είσαι στην απ’ έξω;
+			p Μπες στον κόσμο του <b>CU</b>
+			input(type="submit" value="Κάνε Εγγραφή")
+	.tabbed-box
+		input(type="radio" name="login-tab" value="login" checked)
+		.tab-wrapper
+			form(action="#")
+				h1 Είσοδος στο <b>ΜyCU</b>
+				.line.field
+					.icon.user
+					input(type="text" name="name" value="" required)
+					label(for="name") Όνομα Χρήστη
+				.line.field
+					.icon.password
+					input(type="text" name="password" value="" required)
+					label(for="password") Κωδικός
+
+				.line
+					input(type="submit" value="Είσοδος")
+							
+		input(type="radio" name="login-tab" value="change-pass" )
+		.tab-wrapper
+			form(action="#")
+				h1 Αλλαγή <b>Password</b>
+				p Για λόγους ασφαλείας θα πρέπει να λάβεις νέο password με SMS, στο νούμερο του κινητού που είχες δηλώσει κατά την εγγραφή σου. Μην ανησυχείς, μετά θα σου ζητηθεί να το αλλάξεις ούτως ή άλλως και θα βάλεις ένα δικό σου.
+				.line.field
+					.icon.user
+					input(type="text" name="name" value="" required)
+					label(for="name") Όνομα Χρήστη
+
+				.line
+					input(type="submit" value="Συνέχεια")
+
+		input(type="radio" name="login-tab" value="forgot-name" )
+		.tab-wrapper
+			form(action="#")
+				h1 Υπενθύμιση <b>Username</b>
+				p Ξέχασες το username σου? No problemo! Συμπλήρωσε τα παρακάτω στοιχεία όπως ακριβώς τα είχες δηλώσει κατά την εγγραφή σου στο vodafonecu.gr και το username σου θα αποσταλεί με <b>sms</b>.
+				.line.field
+					.icon.mobile
+					input(type="text" name="mobile-number" value="" required)
+					label(for="name") Κινητό Vodafone CU 
+				.line.field
+					.icon.mail
+					input(type="text" name="email" value="" required)
+					label(for="name") E-mail
+
+				.line
+					input(type="submit" value="Συνέχεια")
+
+

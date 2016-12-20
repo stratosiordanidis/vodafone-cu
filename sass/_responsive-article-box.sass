@@ -1,0 +1,205 @@
+@media all and (max-width: $mobile-breakpoint)
+
+	.article-box
+		display: block
+		width: 100%
+		max-width: 100%
+		margin: 0
+		+rem(margin-top, 30px)
+		// +rem(max-height, 265px)
+		// +rem(height, 265px)
+		height: auto
+		max-height: none
+		+rem(height, 265px)
+
+		&:first-child
+			margin-left: 0
+		&:last-child
+			margin-right: 0
+
+		& > .bg
+			width: 75%
+			+rem(height, 255px)
+
+		& > .fg
+			$min-h: (10px/16px)*1rem
+			width: 50%
+			min-height: 0
+			// height: calc(100% - #{$min-h})
+			// height: calc(100% - 10px)
+			+rem(height, 255px)
+
+			& > .text-wrapper
+				+rem(margin-left, 15px)
+				+rem(margin-right, 15px)
+				min-width: 0
+				+rem(padding-top, 20px)
+				+rem(padding-bottom, 10px)
+				min-height: 0
+				// height: 100%
+				+rem(height, 210px - 30px)
+
+				& > .title
+					+rem(font-size, 20px)
+					font-weight: 100
+					+rem(line-height, 26px)
+					+rem(max-height, 26px*6)
+
+				& > .detail
+					display: none
+
+		&.fullwidth
+			& > .bg
+				width: 75%
+
+			& > .fg
+				$min-h: (10px/16px)*1rem
+				width: 50%
+				min-height: 0
+				
+			& > .fg > .text-wrapper
+				+rem(height, 210px - 30px)
+				& > .title
+					+rem(font-size, 20px)
+					font-weight: 100
+					+rem(line-height, 26px)
+					+rem(max-height, 26px*6)
+
+			& > .fg > .icon
+				display: none
+
+		.action-button
+			display: inline-block
+			position: relative
+			margin-bottom: 0
+			padding: 0
+			left: 0
+			border: none
+			background: transparent
+			+rem(margin-left, 15px)
+			+rem(margin-bottom, 10px)
+			// +rem(margin-top, 30px)
+			+rem(margin-top, 10px)
+
+			& > .text
+				+rem(font-size, 16px)
+				left: 0
+				position: relative
+
+			& > .icon-arrow-head
+				display: none
+
+
+		$gap-updown: 10px
+
+		&.layout-left-top
+			text-align: left
+			
+			& > .bg
+				right: 0
+				bottom: 0
+
+				left: 25%
+				+rem(top, $gap-updown)
+
+			& > .fg
+				+rem(margin-bottom, $gap-updown)
+
+		&.layout-left-bottom
+			text-align: left
+			
+			& > .bg
+				right: 0
+				top: 0
+
+				left: 25%
+				+rem(bottom, $gap-updown)
+
+			& > .fg
+				+rem(margin-top, $gap-updown)
+
+		&.layout-right-top
+			text-align: right
+
+			& > .bg
+				left: 0
+				bottom: 0
+
+				right: 25%
+				+rem(top, $gap-updown)
+
+			& > .fg
+				text-align: right
+				+rem(margin-bottom, $gap-updown)
+
+		&.layout-right-bottom
+			text-align: right
+
+			& > .bg
+				left: 0
+				top: 0
+
+				right: 25%
+				+rem(bottom, $gap-updown)
+
+			& > .fg
+				+rem(margin-top, $gap-updown)
+
+
+	.article-box-row
+		+rem(padding, 0 5px)
+		display: block
+
+		.article-box+.article-box
+			top: 0
+
+
+	
+
+	.article-box-carousel
+		// display: block
+		// white-space: nowrap
+
+		.article-box+.article-box
+			+rem(margin-left, 10px)
+
+		.article-box
+			display: inline-block
+			+rem(width, 250px)
+			+rem(margin-left, 10px)
+			+rem(margin-right, 10px)
+			margin-top: 0
+			// outline: none
+			
+			& > .fg
+				+rem(width, 155px)
+
+		.article-box > .fg > .text-wrapper
+			+rem(height, 210px)
+
+		.slick-list
+			overflow: visible
+
+		.slick-track
+			+rem(left, 10px)
+
+		&.slick-initialized
+
+			// .slick-before+.slick-active
+			// .slick-before:last-child
+			// .slide-before-last
+			// 	+rem(margin-right, 150px)
+
+			// .slick-active+.slick-after
+			// 	+rem(margin-left, 150px)
+
+			// & > .slick-list
+			// 	z-index: 1
+
+			.slick-arrow
+				display: none !important
+
+			.slick-dots
+				+rem(margin-top, 30px)
+
+

@@ -1,0 +1,1179 @@
+@import "compass"
+
+@import "vars"
+
+@import "utils"
+
+// @import "normalize"
+
+// @import "classes"
+
+// @import "columns"
+
+
+@media (max-width: $mobile-breakpoint)
+
+	// html.mobile-panel-open, .mobile-panel-open body
+	// 	width: 100%
+	// 	height: 100%
+	// 	overflow: hidden
+
+	
+	// // .layer-0
+	// // 	z-index: 50
+
+	// .layer-1
+	// 	// z-index: 60
+	// 	z-index: 300
+
+	// .layer-2
+	// 	// z-index: 70
+	// 	z-index: 400
+	
+
+	// .panel
+	// 	display: block
+	// 	width: 100%
+	// 	// position: absolute
+	// 	position: fixed
+	// 	top: 0
+	// 	height: auto
+	// 	left: 0
+	// 	background: #09090a
+	// 	// left: 105%
+	// 	+transform(translate3D(105%, 0, 0))
+	// 	+transition(0.3s)
+	// 	pointer-events: none
+	// 	background: #0b0b0c
+	// 	min-height: 100%
+	// 	// overflow-x: hidden
+	// 	// overflow-y: auto
+	// 	overflow: hidden
+	// 	height: 100%
+	// 	min-height: 100%
+	// 	// max-height: 100%
+	// 	// z-index: -100
+
+
+	// 	.progress-widget
+	// 		+rem(width, 180px)
+	// 		+rem(height, 180px)
+
+
+	// 	.bg-graphic, .fg-graphic 
+	// 		display: inline-block
+	// 		+transform-origin(100%, 50%)
+	// 		+rem(width, 90px)
+	// 		+rem(height, 180px)
+	// 		+transform(scale(1, 1))
+	// 		padding-right: 50%
+	// 		svg
+	// 			width: inherit
+	// 			height: inherit
+	// 			.progress-arc
+	// 				stroke-width: 12
+
+	// 	.nav-header+div
+	// 		+rem(margin-top, 64px)
+
+	// 	.nav-header
+	// 		background: #0f0f10
+	// 		position: fixed
+	// 		left: 0
+	// 		right: 0
+	// 		top: 0
+
+	// 	.content-wrapper
+	// 		display: block
+	// 		width: 100%
+	// 		$navheight: (64/16)*1rem
+	// 		height: calc(100% - #{$navheight})
+	// 		background: black
+
+	// 		overflow-x: hidden
+	// 		overflow-y: auto
+	// 		-webkit-overflow-scrolling: touch
+
+	// 	&.active
+	// 		+transform(translateX(0%))
+	// 		// +transform(translate3D(0, 0, 0))
+	// 		// left: 0
+	// 		pointer-events: all
+
+
+	// .panel-link
+	// 	display: block
+	// 	position: relative
+	// 	+rem(padding, 20px)
+	// 	+rem(padding-right, 40px)
+	// 	padding-left: 0
+	// 	+rem(margin-left, 20px)
+
+	// 	border-bottom: 2px solid black
+
+	// 	&:after
+	// 		content: $icon-arrow-head
+	// 		font-family: 'cu'
+	// 		color: white
+	// 		+rem(font-size, 18px)
+	// 		display: inline-block
+	// 		position: absolute
+	// 		+rem(right, 20px)
+	// 		top: 0
+	// 		bottom: 0
+	// 		margin: auto
+	// 		pointer-events: none
+	// 		+rem(width, 13px)
+	// 		+rem(height, 18px)
+
+	// 	& > .title, & > .detail
+	// 		text-align: left
+
+	// 	& > .title
+	// 		+rem(font-size, 24px)
+	// 		font-weight: normal
+	// 		color: white
+
+	// 	& > .detail
+	// 		+rem(font-size, 16px)
+	// 		font-weight: 200
+			color: $color-cyan
+
+
+	.page-dashboard
+		margin: 0
+	
+		#content
+			margin: 0
+
+	.page-dashboard .mobile-layout
+		display: block
+		width: 100%
+		// overflow-x: scroll
+		background: #09090a
+
+		text-align: center
+		// +rem(margin-top, 70px)
+		margin: 0
+
+		.bg-graphic svg
+			.progress-arc
+				fill: none
+				stroke: $color-grey
+				stroke-width: 5
+				stroke-miterlimit: 10
+
+		.fg-graphic svg
+			.progress-arc
+				fill: none
+				stroke: #FF2424
+				stroke-width: 5
+				stroke-miterlimit: 10
+				stroke-dasharray: 180
+				stroke-dashoffset: 180
+				// -moz-transition: stroke-dashoffset 1s
+				// -o-transition: stroke-dashoffset 1s
+				// -webkit-transition: stroke-dashoffset 1s
+				// transition: stroke-dashoffset 1s
+				// -moz-transition-timing-function: ease-in-out
+				// -o-transition-timing-function: ease-in-out
+				// -webkit-transition-timing-function: ease-in-out
+				// transition-timing-function: ease-in-out
+
+		section
+			// background-color: #141415
+			background-color: #09090a
+
+	
+		// // .layer-0
+		// // 	z-index: 50
+
+		// .layer-1
+		// 	// z-index: 60
+		// 	z-index: 300
+
+		// .layer-2
+		// 	// z-index: 70
+		// 	z-index: 400
+	
+
+		// .panel
+		// 	display: block
+		// 	width: 100%
+		// 	// position: absolute
+		// 	position: fixed
+		// 	top: 0
+		// 	height: auto
+		// 	left: 0
+		// 	background: #09090a
+		// 	// left: 105%
+		// 	+transform(translate3D(105%, 0, 0))
+		// 	+transition(0.3s)
+		// 	pointer-events: none
+		// 	background: #0b0b0c
+		// 	min-height: 100%
+		// 	// overflow-x: hidden
+		// 	// overflow-y: auto
+		// 	overflow: hidden
+		// 	height: 100%
+		// 	min-height: 100%
+		// 	// max-height: 100%
+		// 	// z-index: -100
+
+
+		// 	.progress-widget
+		// 		+rem(width, 180px)
+		// 		+rem(height, 180px)
+
+
+		// 	.bg-graphic, .fg-graphic 
+		// 		display: inline-block
+		// 		+transform-origin(100%, 50%)
+		// 		+rem(width, 90px)
+		// 		+rem(height, 180px)
+		// 		+transform(scale(1, 1))
+		// 		padding-right: 50%
+		// 		svg
+		// 			width: inherit
+		// 			height: inherit
+		// 			.progress-arc
+		// 				stroke-width: 12
+
+		// 	.nav-header+div
+		// 		+rem(margin-top, 64px)
+
+		// 	.nav-header
+		// 		background: #0f0f10
+		// 		position: fixed
+		// 		left: 0
+		// 		right: 0
+		// 		top: 0
+
+		// 	.content-wrapper
+		// 		display: block
+		// 		width: 100%
+		// 		$navheight: (64/16)*1rem
+		// 		height: calc(100% - #{$navheight})
+		// 		background: black
+
+		// 		overflow-x: hidden
+		// 		overflow-y: auto
+		// 		-webkit-overflow-scrolling: touch
+
+		// 	&.active
+		// 		+transform(translateX(0%))
+		// 		// +transform(translate3D(0, 0, 0))
+		// 		// left: 0
+		// 		pointer-events: all
+
+
+		// +keyframes(entering-anim)
+		// 	0%
+		// 		+transform(translate3D(105%, 0, 0))
+
+		// 	100%
+		// 		+transform(translate3D(0%, 0, 0))
+
+
+		p
+			margin: 0
+
+		.section
+			background: transparent
+
+		.section-wrapper
+			display: block
+			width: 100%
+			padding: 0
+			margin: 0
+
+
+		#base-panel
+			display: inline-block
+			position: relative
+			width: 100%
+			// left: 0
+			// top: 0
+			height: auto
+			overflow-x: hidden
+			// +transform(translateX(105%))
+			// +transition(0.3s)
+			// pointer-events: none
+			// background: #0b0b0c
+			// min-height: 100%
+
+		// .panel-link
+		// 	display: block
+		// 	position: relative
+		// 	+rem(padding, 20px)
+		// 	+rem(padding-right, 40px)
+		// 	padding-left: 0
+		// 	+rem(margin-left, 20px)
+
+		// 	border-bottom: 2px solid black
+
+		// 	&:after
+		// 		content: $icon-arrow-head
+		// 		font-family: 'cu'
+		// 		color: white
+		// 		+rem(font-size, 18px)
+		// 		display: inline-block
+		// 		position: absolute
+		// 		+rem(right, 20px)
+		// 		top: 0
+		// 		bottom: 0
+		// 		margin: auto
+		// 		pointer-events: none
+		// 		+rem(width, 13px)
+		// 		+rem(height, 18px)
+
+		// 	& > .title, & > .detail
+		// 		text-align: left
+
+		// 	& > .title
+		// 		+rem(font-size, 24px)
+		// 		font-weight: normal
+		// 		color: white
+
+		// 	& > .detail
+		// 		+rem(font-size, 16px)
+		// 		font-weight: 200
+		// 		color: $color-cyan
+
+
+		.header-button
+			display: block
+			& > .title
+				+rem(font-size, 24px)
+				color: white
+
+			& > .detail
+				+rem(font-size, 24px)
+				color: $color-cyan
+
+
+		.remaining-section 
+			+rem(padding-top, 100px)
+
+			.title
+				+rem(font-size, 32px)
+				font-weight: normal
+
+			.detail
+				+rem(font-size, 20px)
+				// font-weight: 200
+				font-weight: 100
+
+			.choice
+				width: 115px
+
+			.panel-link
+				display: inline-block
+				border: none
+				margin-left: 0
+
+				&:after
+					content: none
+
+			.choices
+				overflow-x: scroll
+				-webkit-overflow-scrolling: touch
+
+			.choice
+				padding-left: 0
+				padding-right: 0
+
+			.bg-graphic, .fg-graphic
+				+transform-origin(100%, 50%)
+				+scale(0.9, 0.9)
+
+
+			.progress-widget
+				+rem(margin-top, 30px)
+				padding-right: 50%
+				
+				// svg
+
+				// .bg-graphic
+				// 	svg
+				// 		stroke: $color-grey
+
+				// object.bg-graphic
+				// //- include _progress-arc
+				// .fg-graphic
+				// 	svg
+				// 		// stroke: green
+				// 		stroke-width: 5px
+				.number
+					+rem(font-size, 48px)
+					// font-weight: 600
+					font-weight: normal
+					color: white
+
+				.subtext 
+					+rem(font-size, 20px)
+					// font-weight: 200
+					font-weight: 100
+					bottom: 31%
+
+				.arrow
+					display: block
+					position: absolute
+					left: 0
+					right: 0
+					bottom: 20%
+
+					&:after
+						content: $icon-arrow-thin
+						display: inline-block
+						position: relative
+						font-family: 'cu'
+						color: $color-grey
+						+rem(font-size, 9px)
+
+
+
+
+		.renew-section
+
+			.title
+				+rem(font-size, 32px)
+
+				.underlined-title:before
+					+rem(height, 10px)
+
+			.detail
+				+rem(font-size, 20px)
+				font-weight: 100
+				color: $color-grey
+
+			.action-button
+				.text
+					+rem(font-size, 20px)
+					font-weight: 900
+
+		.panic-button-section
+			+rem(padding, 0px 40px)
+			+rem(padding-bottom, 55px)
+
+
+			.title
+				+rem(font-size, 24px)
+				font-weight: normal
+				color: white
+				text-align: center
+
+			.subtext
+				line-height: 1.2
+				+rem(margin-top, 10px)
+
+			.subtext, a.detail
+				+rem(font-size, 20px)
+				font-weight: 200
+				color: $color-grey
+				text-align: center
+
+
+			.panic-button
+				display: block
+				position: relative
+				text-align: center
+				left: 0
+				right: 0
+				margin: auto
+				+rem(margin-top, 20px)
+				+rem(margin-bottom, 20px)
+
+				img
+					display: block
+					text-align: center
+					left: 0
+					right: 0
+					margin: auto
+
+				.arrow
+					display: none
+					+rem(width, 80px)
+					+rem(height, 67px)
+
+				+keyframes(bounce)
+					0%
+						+translateY(0rem)
+					50%
+						+translateY(1rem)
+					100%
+						+translateY(0rem)
+
+
+				&.show-arrow
+					.arrow
+						display: block
+						+animation(bounce 1s ease-in-out both infinite)
+
+
+				.button
+					+rem(width, 128px)
+					+rem(height, 94px)
+
+			// .action-button
+			// 	.img
+			// 		display: inline-block
+				// img
+
+
+			a.detail
+				text-decoration: underline
+
+		.panel-buttons-section
+
+			.panel-link:first-child
+				border-top: 2px solid black
+
+			.history-link
+				.detail
+					color: $color-grey
+
+		.progress-wrapper
+			.progress-widget
+				+rem(margin-top, 30px)
+				padding: 0
+				
+				// object.bg-graphic
+				//- include _progress-arc
+				// .fg-graphic
+				// 	svg
+				// 		// stroke: green
+				// 		stroke-width: 5px
+				.number
+					+rem(font-size, 80px)
+					// font-weight: 600
+					font-weight: normal
+					color: white
+
+				.subtext 
+					+rem(font-size, 20px)
+					font-weight: bold
+					// bottom: 11%
+					bottom: 27%
+					color: white
+
+			.label
+				+rem(margin-top, 20px)
+				+rem(margin-bottom, 30px)
+				+rem(font-size, 32px)
+				font-weight: bold
+				color: white
+				text-align: center
+
+		.list-wrapper
+			background-color: black
+			& > .title
+				display: block
+				+rem(font-size, 20px)
+				// font-weight: 200
+				font-weight: 100
+				color: $color-grey
+				text-align: center
+				+rem(padding, 40px)
+
+			.item-list
+				.item
+					+rem(padding, 40px)
+					+rem(padding-bottom, 35px)
+					border-bottom: 1px solid #09090a
+
+					.title, .subtext, .detail
+						text-align: center
+
+					.title
+						display: inline-block
+						position: relative
+						+rem(font-size, 64px)
+						color: white
+						font-weight: normal
+
+
+						sup
+							position: absolute
+							+rem(font-size, 20px)
+							font-weight: bold
+							color: white
+							+rem(top, 6px)
+							left: 105%
+
+
+
+					.subtext
+						display: block
+						+rem(font-size, 20px)
+						// font-weight: 200
+						font-weight: 100
+						color: white
+
+					.detail
+						display: block
+						+rem(font-size, 20px)
+						// font-weight: 200
+						font-weight: 100
+						color: $color-grey
+
+			.pack-info-item
+				+rem(padding, 30px 20px)
+				// +rem(padding-bottom, 50px)
+
+				.title
+					display: none
+
+				.value
+					display: block
+					+rem(font-size, 64px)
+					color: white
+					text-align: center
+					font-size: normal
+
+				.subtext, .detail
+					display: block
+					text-align: center
+					+rem(font-size, 20px)
+					// font-weight: 200
+					font-weight: 100
+
+				.subtext
+					color: white
+
+				.detail
+					color: $color-grey
+
+			.pack-info-item+.pack-info-item
+				border-top: 1px solid #09090a
+
+
+		.title-wrapper.packet-header
+			+rem(padding-top, 30px)
+			+rem(padding-bottom, 50px)
+
+			.value
+				display: block
+				+rem(font-size, 64px)
+				color: white
+				text-align: center
+				font-weight: normal
+
+			.title
+				display: block
+				text-align: center
+				color: $color-cyan
+				+rem(font-size, 32px)
+				font-weight: 200
+
+
+		#panel-speech
+			.list-wrapper
+				a.panel-link
+					margin: 0
+					+rem(padding, 25px)
+					border-top: 1px solid #161718
+					.value
+						display: block
+						color: white
+						text-align: center
+
+					.detail
+						text-align: center
+
+					&:last-child
+						border-bottom: 1px solid #161718
+
+
+		#panel-bonus
+			// .choices
+			// 	.choice
+					
+			// 		.title
+			// 		.subtext
+			// 		.subtext
+			// 		.detail
+			// 		.action-text
+
+			.title 
+				display: block
+				text-align: center
+				+rem(padding, 20px)
+
+				p
+					margin: 0
+					padding: 0
+					+rem(font-size, 20px)
+					// font-weight: 200
+					font-weight: 100
+					color: $color-grey
+
+
+
+			.choices
+				font-size: 0
+				text-align: center
+				// white-space: nowrap 
+				
+				display: block
+				left: 0
+				right: 0
+				margin: auto
+				+rem(padding, 0 5px)
+
+			.choice
+				display: block
+				// display: inline-block
+				vertical-align: middle
+				position: relative
+
+				+rem(padding, 45px)
+				border-style: solid
+				+rem(border-width, 5px)
+				+transition(0.3s)
+				// +rem(max-width, 380px)
+				// +rem(height, 100px)
+
+				border-color: black
+				background-color: black
+
+				width: auto
+				max-width: 100%
+				cursor: pointer
+
+				&.active
+					border-color: $color-cyan
+
+
+				.title
+					+rem(font-size, 24px)
+					+rem(line-height, 30px)
+					// font-weight: 200
+					font-weight: 100
+					color: white
+
+				.subtext
+					+rem(font-size, 20px)
+					+rem(line-height, 24px)
+					// font-weight: 200
+					font-weight: 100
+					color: $color-grey
+
+					b
+						font-weight: bold
+
+				.detail
+					position: absolute
+					left: 0
+					right: 0
+					+rem(bottom, 15px)
+					color: $color-red
+					+rem(font-size, 20px)
+					font-weight: bold
+					opacity: 1
+					+transition(opacity 0.3s)
+					text-align: center
+
+				&.active
+					.detail
+						opacity: 0
+
+		.table-wrapper
+			background-color: black
+			+rem(padding, 20px)
+
+			.row
+				// display: block
+				display: table
+				// width: 100%
+				width: 100%
+				border: none
+				border-bottom: 0px solid #1b1b1b
+				+rem(border-bottom-width, 1px)
+				+rem(padding-top, 15px )
+				+rem(padding-bottom, 15px )
+				// padding-left: 25%
+				// padding-right: 25%
+				text-align: center
+
+				& > .cell
+					// display: inline-block
+					display: table-cell
+					width: 50%
+					text-align: center
+					+rem(font-size, 20px)
+					// font-weight: 200
+					font-weight: 100
+					color: white
+
+					&:first-child
+						font-weight: bold
+
+			.row:first-child
+				& > .cell
+					color: $color-grey
+					font-weight: bold
+
+
+		.current-coupon-list
+			background-color: #09090a
+
+		.past-coupon-list
+			background-color: black
+
+		.coupon
+			display: block
+			position: relative
+			+rem(margin,  0 20px)
+			width: auto
+
+			.first
+				display: block
+				position: relative
+				text-align: center
+				width: 100%
+				+rem(height, 80px)
+
+				.pic
+					display: inline-block
+					+rem(width, 80px)
+					+rem(height, 80px)
+					background-size: contain
+					left: 0
+					right: 0
+					margin: auto
+
+			.second
+				+rem(padding-top, 20px)
+				.title
+					+rem(padding, 0 50px)
+					// +rem(font-size, 20px)
+					+rem(line-height, 30px)
+					font-weight: 100
+				//- a.detail(href='#')
+			.third
+				+rem(padding-top, 20px)
+				.title
+					font-weight: 100
+
+				.code
+				.detail
+					+rem(padding-top, 10px)
+
+		.coupon+.coupon
+			border-top: 2px solid black
+			
+		.past-coupon-list
+			& > .title
+				+rem(padding, 35px 20px)
+				display: block
+				text-align: center
+				+rem(font-size, 24px)
+				color: white
+				font-weight: normal
+
+			.third
+				// .title
+					
+				.code,  .detail
+					color: $color-grey
+
+			.coupon+.coupon
+				border-top: 2px solid #161718
+
+		#panel-pare-naxeis
+			.head-wrapper
+				background-color: black
+				+rem(padding, 20px)
+
+				p
+					+rem(font-size, 20px)
+					font-weight: 200
+					text-align: center
+
+				.detail p
+					color: $color-grey
+
+				.subtext
+					+rem(margin-top, 20px)
+					+rem(margin-bottom, 20px)
+
+				.subtext p
+					color: white
+					span
+						color: $color-red
+
+			.panel-link
+				// +rem(margin-left, 10px)
+				+rem(padding-left, 57px)
+				border-top: 2px solid #161718
+				+rem(min-height, 40px)
+
+				&:last-child
+					border-bottom: 2px solid #161718
+				
+
+
+			.circle 
+				display: inline-block
+				position: absolute
+				+rem(width, 50px)
+				+rem(height, 50px)
+				+border-radius((30px/16px)*1em)
+				background-color: $color-cyan
+				background-repeat: no-repeat
+				background-size: cover
+				text-align: center
+				top: 0
+				bottom: 0
+				+rem(left, -10px)
+				// left: 0
+				margin: auto
+
+
+				p
+					position: relative
+					margin: 0
+					+rem(font-size, 24px)
+					color: black
+					+rem(padding-top, 15px)
+					// +rem(line-height, 80px)
+
+					sup
+						+rem(font-size, 10px)
+						vertical-align: top
+
+			.title
+				// +rem(margin-top, 15px)
+				margin-top: 0
+				+rem(font-size, 24px)
+				color: white
+				font-weight: 200
+				vertical-align: middle
+
+			.detail
+				// +rem(margin-top, 10px)
+				margin-top: 0
+				+rem(font-size, 16px)
+				color: $color-grey
+				font-weight: 200
+
+				b
+					font-weight: bold
+
+
+			.fill-in-data
+				display: none
+			// .data(data-personid="234234" data-firstname="" data-lastname="" data-phone="6951234567")
+			// .control-button
+				
+			
+			.circle.add-more
+				background-color: $color-red
+
+				&:after
+					content: $icon-cross
+					display: inline-block
+					// +rem(font-size, 40px)
+					+rem(font-size, 16px)
+					font-family: 'cu'
+					color: black
+					+rem(padding-top, 28px)
+
+
+				&+.detail
+					font-weight: bold
+					color: $color-red
+
+
+			.choice-3
+				.circle
+					background-color: $color-red
+
+				.title
+					color: $color-red
+					+rem(font-size, 24px)
+					+rem(margin-top, 9px)
+
+		#panel-user-form
+
+			form
+				text-align: center
+				+rem(padding, 20px)
+				width: auto
+				max-width: 100%
+				left: 0
+				right: 0
+				margin: auto
+
+				.hidden
+					display: none
+
+				.field
+					display: block
+					position: relative
+					width: 100%
+
+				.input.field
+					+rem(padding-top, 24px)
+
+				input[type="text"]
+					background-color: transparent
+					border: none
+					border-radius: 0
+					+rem(padding-top, 10px)
+					+rem(padding-bottom, 9px)
+					+rem(height, 17px)
+					width: 100%
+					outline: none
+					text-align: center
+
+					+rem(border-bottom-width, 2px)
+					border-bottom-color: $color-grey
+					border-bottom-style: solid
+
+					color: white
+					+rem(font-size, 20px)
+					// font-weight: normal
+					font-weight: 100
+					+transition(0.3s)
+
+					&:focus
+						border-bottom-color: $color-cyan
+
+				label
+					display: inline-block
+					position: absolute
+					color: $color-grey
+					+rem(font-size, 20px)
+					// +rem(font-size, 16px)
+					// font-weight: 200
+					font-weight: 100
+					left: 0
+					right: 0
+					// top: 0
+					+rem(bottom, 9px)
+					// +rem(bottom, 34px)
+					margin: auto
+					pointer-events: none
+					+transition(0.3s)
+
+				// input[value=""]+label
+				// 	+rem(bottom, 9px)
+				// 	+rem(font-size, 20px)
+
+				input:focus+label, .has-value+label
+					+rem(bottom, 34px)
+					+rem(font-size, 16px)
+					// font-weight: 100
+					font-weight: 200
+
+
+				.field.submit > input
+					+rem(border-width, 2px)
+					border-color: $color-red
+					border-style: solid
+					background-color: $color-red
+					+transition(0.3s)
+					+rem(font-size, 20px)
+					// font-weight: normal
+					font-weight: 100
+					color: white
+					text-align: center
+					+rem(padding, 10px 60px)
+					+rem(margin-top, 40px)
+					border-radius: 0
+
+					&:hover
+						background-color: black
+
+
+
+				.field.remove > input
+					+rem(margin-top, 35px)
+					+rem(font-size, 20px)
+					// font-weight: 200
+					font-weight: 100
+					color: $color-red
+					+rem(padding, 10px 60px)
+					border: none
+					background-color: transparent
+
+
+		.package-panel
+			background: black
+
+			.feature-wrapper
+				background: black
+				+rem(padding-top, 55px)
+				+rem(margin-left, 20px)
+				+rem(margin-right, 20px)
+				opacity: 1
+
+
+				li
+					+rem(padding-left, 25px)
+
+			.cost
+				+rem(margin-top, 20px)
+				+rem(margin-left, 25px)
+				+rem(font-size, 32px)
+				color: $color-red
+				font-weight: normal
+				text-align: left
+
+			.action-button
+				border: none
+				border-top: 2px solid #09090a
+				background: transparent
+				+rem(margin-top, 35px)
+				+rem(padding, 30px)
+
+				.text
+					+rem(font-size, 20px)
+					// font-weight: 200
+					font-weight: 100
+					color: $color-red
+					background: transparent
+					+rem(max-width, 190px)
+
+	// // .mobile-header, .nav-header
+	// .nav-header
+	// 	display: block
+	// 	position: relative
+	// 	+rem(padding, 20px 0px)
+
+	// 	& > .title
+	// 		display: block
+	// 		text-align: center
+	// 		font-size: (24px/16px)*1rem !important
+	// 		color: white
+	// 		font-weight: 500
+
+	// 	& > .back-button
+	// 		display: inline-block
+	// 		position: absolute
+	// 		left: 10px
+	// 		// top: 32px
+	// 		top: 0
+	// 		bottom: 0
+	// 		height: 10px
+	// 		margin: auto
+	// 		padding: 5px
+	// 		font-size: (10px/16px)*1rem !important
+
+	// 		&:before
+	// 			content: $icon-arrow-thin
+	// 			display: inline-block
+	// 			position: relative
+	// 			font-family: 'cu'
+	// 			color: white
+	// 			// +rem(font-size, 24px)
+	// 			font-size: inherit
+	// 			+rotateZ(180deg)
+
+
+
+
+
+

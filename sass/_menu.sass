@@ -1,0 +1,472 @@
+
+header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	+rem(height, $nav-height)
+	background: white
+	// background: yellow
+	z-index: $header-zindex
+	+transition(background-color 0.3s)
+
+	.cu-logo
+		display: inline-block
+		position: absolute
+		+rem(left, 20px)
+		+rem(top, 20px)
+		z-index: 1
+		
+		img
+			// +rem(width, 264px)
+			+rem(height, 124px)
+			width: auto
+			+transition(0.3s)
+
+
+// html:not(.mobile) .sticky-nav
+// 	header > .cu-logo > img
+// 		+rem(height, 70px)
+// 		width: auto
+
+
+@media all and (max-width:1680px)	
+	header > .cu-logo > img
+		+rem(height, 70px)
+		width: auto
+
+
+// .open-submenu
+// 	header
+// 		// background-color: $color-light-grey
+// 		background-color: $color-menu-grey
+
+
+// header
+// 	.login-button
+// 		display: none
+
+section.login-section
+	display: none
+
+
+
+
+
+.nav-menu
+	height: inherit
+	width: 100%
+	border-bottom: 2px solid transparentize(#707379, 0.85)
+	+transition(0.3s)
+
+	+keyframes(grey-reveal)
+		0%
+			height: 0
+		100%
+			height: 100%
+
+
+	.desktop-only
+		height: inherit
+		width: inherit
+
+	&:before
+		// content: none
+		content: ''
+		display: block
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		height: 0%
+		pointer-events: none
+		background: $color-menu-grey
+		z-index: -1
+		+transition(0.2s)
+
+	.submenu-drawer
+		display: block
+		position: absolute
+		left: 0
+		right: 0
+		top: 100%
+		background: white
+		z-index: -1
+		+transition(0.2s)
+		+transition-delay(0.1s)
+		+transition-timing-function(ease-in-out)
+	
+	.menu
+		height: inherit
+		display: flex
+		flex-direction: row
+		flex-wrap: nowrap
+		justify-content: center
+		text-align: center
+
+		& > .level0
+			display: inline-block
+			position: relative
+			+rem(margin, auto 25px)
+			vertical-align: middle
+			// +transition(opacity 0.3s)
+			// opacity: 0
+
+			& > .menu-item
+				color: $color-black
+				font-family: $font-premier
+				+rem(font-size, 28px)
+				font-weight: bold
+				text-decoration: none
+				text-transform: uppercase
+				white-space: nowrap
+				z-index: 2
+				cursor: pointer
+				outline: none
+				+transition(0.2s)
+
+				&:before
+					content: ''
+					background: $color-black
+					position: absolute
+					+rem(left, -10px)
+					+rem(right, -40px)
+					+rem(top, -10px)
+					// +rem(bottom, -60px)
+					+rem(bottom, 40px)
+					z-index: -1
+					pointer-events: none
+					+transition(0.2s)
+					+transition-delay(0.05s)
+
+				&:after
+					content: none
+
+				&:hover
+					color: $color-red
+
+				span
+					// font-weight: normal
+					font-weight: 300
+
+				&+&
+					+rem(margin-left, 25px)
+
+				// &.open
+
+			&.open > .menu-item, &.active > .menu-item
+				color: white
+
+				&:before
+					content: ''
+					// background: $color-black
+					// position: absolute
+					// +rem(left, -10px)
+					// +rem(top, -10px)
+					// +rem(right, -40px)
+					// +rem(bottom, -60px)
+					+rem(bottom, -40px)
+					// z-index: -1
+					
+
+
+
+	.submenu-wrapper
+		display: inline-block
+		position: absolute
+		background: white
+		left: 0
+		right: 0
+		+rem(top, $nav-height)
+		height: auto
+		overflow: hidden
+		max-height: 0
+		+transition(0.5s)
+
+
+	.submenu
+		display: block
+		position: absolute
+		height: auto
+		max-height: 0
+		pointer-events: none
+		// max-height: auto
+		overflow: hidden
+		// +rem(padding-top, 0)
+		padding-top: 0
+		// +rem(margin-top, 19px)
+		+rem(margin-top, 21px)
+		// opacity: 0
+		
+		// +transition(0.3s)
+
+		// z-index: -3
+		// +transition(max-height 0.5s)
+
+		// &:before
+		// 	content: ''
+		// 	width: 5000%
+		// 	// background: green
+		// 	background: white
+		// 	/* height: auto; */
+		// 	top: 0
+		// 	bottom: 0
+		// 	position: absolute
+		// 	z-index: -1
+		// 	left: -1000%
+		// 	max-height: 0
+		// 	+transition(max-height 0.5s)
+
+		& > .level1
+			display: block
+			text-align: left
+			+rem(line-height, 60px)
+			opacity: 0
+			+transition(opacity 0.3s)
+
+		.submenu-item
+			color: $color-black
+			+rem(font-size, 48px)
+			// +rem(line-height, 60px)
+			+rem(line-height, 48px)
+			// font-weight: bold
+			font-weight: 400
+			+rem(letter-spacing, -1px)
+			white-space: nowrap
+			cursor: pointer
+			outline: none
+			+transition(0.3s)
+
+			&:after
+				content: none
+
+			&:hover
+				color: $color-red
+
+
+	// .open+.submenu-wrapper
+	// 	max-height: 100vh
+	
+	// .open+.submenu
+	.open .submenu
+		height: auto
+		overflow: visible
+		pointer-events: all
+		// background: white
+		max-height: 100vh
+		// z-index: -2
+		// +rem(padding-top, 60px)
+		+rem(padding-top, 40px)
+		+rem(padding-bottom, 30px)
+
+		&:before
+			max-height: 100vh
+
+	//=======================================
+
+	.menu-button
+		text-align: center
+		+no-rem(height, 22px)
+		+no-rem(width, 40px)
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		margin: auto
+		+no-rem(padding, 0px 40px)
+
+		.burger
+
+			& > .line, &:before, &:after
+				position: absolute
+				+no-rem(width, 40px)
+				+no-rem(height, 2px)
+				background-color: $color-black
+				left: 0
+				right: 0
+				margin: auto
+				text-align: center
+				+transition(0.2s)
+
+
+			$offset: 5px
+
+			& > .line
+				+no-rem(top, 10px)
+				// top: 50%
+				left: 0
+				right: 0
+
+			&:before, &:after
+				content: ''
+				+transform-origin((13px/16px*1rem), 0)
+
+			&:before
+				display: inline-block
+				+no-rem(top, $offset)
+				// +transform-origin(14px, 0)
+
+			&:after
+				display: inline-block
+				+no-rem(bottom, $offset)
+				// +transform-origin(14px, 0)
+
+
+
+
+	.mobile-menu
+		max-height: 0
+		height: auto
+		overflow: hidden
+		+transition(max-height 0.3s)
+
+		.menu
+			display: block
+			background: white
+			position: relative
+			// +rem(padding-top, $mobile-nav-height)
+			+rem(margin-top, $mobile-nav-height)
+
+
+			& > .level0
+				display: block
+
+				&:first-child
+					+rem(padding-top, 15px)
+
+				& > .menu-item
+					display: block
+					text-align: center
+					+no-rem(line-height, 50px)
+					// +no-rem(font-size, 20px)
+					font-weight: 100
+
+
+					&:before
+						content: none
+				&.open > .menu-item
+					color: $color-red
+
+
+		.social-icons
+			// float: right
+			display: block
+			position: relative
+			// +rem(right, 30px)
+			// +rem(top, 40px)
+
+			+rem(padding-top, 40px)
+			+rem(padding-bottom, 40px)
+
+			// white-space: nowrap
+			background: white
+			text-align: center
+
+			// .item+.item
+			// 	+rem(margin-left, 45px)
+
+			& > .item
+				display: inline-block
+			
+				& > .icon
+					display: inline-block
+					position: relative
+					color: white
+					// +rem(padding-left, 30px)
+					font-family: $font-premier
+					// font-weight: 200
+					font-weight: 100
+					+no-rem(font-size, 20px)
+					text-align: left
+					+rem(padding, 20px)
+
+					&:before
+						content: ''
+						display: inline-block
+						// position: absolute
+						left: 0
+						top: 0
+						color: $color-black
+						font-family: 'cu'
+						// +rem(font-size, 20px)
+						+rem(font-size, 24px)
+						+rem(line-height, 24px)
+
+					&:after
+						content: none
+
+
+				.icon.fb:before
+					content: $icon-facebook
+
+				.icon.instagram:before
+					content: $icon-instagram
+
+				.icon.snapchat:before
+					content: $icon-snapchat
+
+				.icon.youtube:before
+					content: $icon-youtube
+
+// #menu-underlay
+#click-trap-underlay
+	display: block
+	// position: absolute
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	background: black
+	pointer-events: none
+	opacity: 0
+	z-index: 9
+	+transition(opacity 0.3s)
+
+.open-submenu
+	.nav-menu
+		// border-bottom-width: 0
+		border-bottom-color: transparent
+
+		// +keyframes(grey-reveal)
+		// 	0%
+		// 		height: 0
+		// 	0%
+		// 		height: 100%
+
+		&:before
+			// content: ''
+			// display: block
+			// position: absolute
+			// left: 0
+			// right: 0
+			// top: 0
+			height: 100%
+			// background: $color-menu-grey
+			// +animation(grey-reveal 3s ease forwards)
+
+
+		.menu-button
+			.burger
+				& > .line
+					+scale(0, 1)
+
+				&:before
+					+transform(rotateZ(45deg) translateX(1px/16px*1rem))
+
+				&:after
+					+transform(rotateZ(-45deg) translateX(-1px/16px*1rem))
+					// +rotateZ(-45deg)
+					// +translateX(-1px)
+
+		.mobile-menu
+			// max-height: 1000px
+			+rem(max-height, 600px)
+
+	// #menu-underlay
+	#click-trap-underlay
+		opacity: 0.5
+		pointer-events: all
+
+

@@ -1,0 +1,249 @@
+
+
+.progress-widget
+	display: inline-block
+	position: relative
+	padding-right: 50%
+	+rem(padding-right, 65px)
+	text-align: center
+
+	svg, object, & > .bg-graphic, & > .fg-graphic
+		display: block
+		// +rem(width, 65px)
+		// +rem(height, 130px)
+		+rem(width, 65px)
+		+rem(height, 130px)
+
+	$arc-scale: 1.1
+	& > .bg-graphic
+		position: relative
+		+scale($arc-scale, $arc-scale)
+
+	& > .fg-graphic
+		position: absolute
+		left: 0
+		top: 0
+		+scale($arc-scale, $arc-scale)
+
+		svg, svg .progress-arc
+			// svg .progress-arc
+			fill: transparent
+			fill: none
+			// stroke: #EAEAEB
+			// stroke: black
+			stroke: $color-red
+			stroke-width: 15
+			stroke-miterlimit: 10
+			// 1000px in length
+			// stroke-dasharray: 100
+			// stroke-dasharray: 185
+			stroke-dasharray: 180
+			stroke-dashoffset: 180
+			// stroke-dashoffset: 50
+			// +animation(progress-arc-fill 5s ease forwards)
+			+transition(stroke-dashoffset 1s)
+			+transition-timing-function(ease-in-out)
+
+	.number
+		display: inline-block
+		position: absolute
+		color: $color-black
+		font-family: $font-premier
+		+rem(font-size, 64px)
+		// font-weight: bold
+		font-weight: 400
+		left: 0
+		top: 0
+		// +rem(top, 40px)
+		// top: 30%
+		top: 23%
+		right: 0
+		// bottom: 0
+		margin: auto
+		+rem(letter-spacing, -4px)
+
+
+	.subtext
+		display: inline-block
+		position: absolute
+		color: $color-black
+		left: 0
+		// top: 0
+		right: 0
+		// +rem(bottom, 35px)
+		bottom: 21%
+		// bottom: 19%
+		margin: auto
+		font-family: $font-premier
+		+no-rem(font-size, 16px)
+		font-weight: normal
+
+
+.user-info-dash-board
+	display: block
+	position: relative
+	background: white
+	// +rem(padding-top, 87px)
+	// +rem(padding-top, 157px)
+	+rem(padding, 40px)
+	+rem(padding-top, 80px)
+	// +rem(padding-bottom, 40px)
+	text-align: center
+	// +rem(max-width, 1680px)
+	+rem(max-width, 1600px)
+
+	.detail, .title
+		text-align: center
+
+	$before-gap: 40px
+	// &:before, &:after
+	// 	content: ''
+	// 	// +rem(width, 42px)
+	// 	+rem(width, $before-gap)
+	// 	height: 100%
+	// 	display: block
+	// 	position: absolute
+	// 	background: white
+	// 	top: 0
+
+	// &:before
+	// 	+rem(left, -$before-gap)
+
+	// &:after
+	// 	+rem(right, -$before-gap)
+
+	& .desktop-only > .columns
+		align-items: flex-start
+
+	& .desktop-only > .columns > .col
+		text-align: center
+		vertical-align: top
+		display: inline-block
+
+		& > .underlined-title, & > .title
+			// @extend .underlined-title
+			display: inline-block
+			position: relative
+			+rem(font-size, 32px)
+			// font-weight: bold
+			color: $color-black
+			z-index: 1
+
+			font-weight: 200
+			&:after
+				content: none
+
+	& > .mobile-only > .columns > .col 
+		& > .underlined-title, & > .title
+			+no-rem(font-size, 20px)
+			font-weight: 100
+			&:before
+				background: transparent
+
+	& > .mobile-only > .columns > .col.active > .underlined-title
+		&:before
+			background-color: $color-red
+
+
+	& > .mobile-only > .tabs > .col 
+		display: none
+
+		&.active
+			display: block
+
+
+	.remaining-col
+		& > .detail > p
+			margin-top: 0
+			+rem(font-size, 24px)
+			font-weight: 200
+
+			span
+				color: $color-red
+
+		& > .cost
+			color: $color-black
+			+rem(font-size, 64px)
+			// font-weight: bold
+			font-weight: 400
+			+rem(letter-spacing, -4px)
+
+		& > .action-button
+			background-color: $color-red
+			border-color: $color-red
+
+			& > .text
+				color: white
+
+			// &:hover
+			// 	background-color: black
+
+	.mobile-only
+		text-align: center
+
+	.mobile-only > .tabs 
+		text-align: center
+
+		// .remaining-col
+		// 	& > .detail
+		// 		p span
+		// 			.cost
+		// 			.action-button
+					
+		.usage-col
+			.number
+				+rem(font-size, 56px)
+				+rem(line-height, 34px)
+			.subtext
+				+no-rem(font-size, 20px)
+				font-weight: 100
+			.detail
+				display: inline-block
+				font-family: $font-premier
+				font-weight: 200
+				+no-rem(font-size, 16px)
+				color: #707379
+
+	.usage-col
+		& > .widgets
+			+rem(margin-top, 15px)
+
+	.mobile-only > .tabs 
+		.usage-col > .widgets
+			+rem(margin-top, 35px)
+
+
+	.active-packages-col
+		overflow: hidden
+
+		.carousel
+			display: block
+			white-space: nowrap
+			+rem(margin-top, 60px)
+
+			.item
+				display: inline-block
+				white-space: normal
+
+				& > .title
+					+rem(font-size, 32px)
+					font-weight: 200
+					color: $color-black
+
+				& > .detail > p
+					margin: 0
+					+no-rem(font-size, 16px)
+					+rem(line-height, 20px)
+					font-weight: 200
+					color: $color-black
+
+			.slick-dots
+				+rem(margin-top, 33px)
+
+	.widgets
+		white-space: nowrap
+
+		& > div
+			white-space: normal
+			display: inline-block
+			text-align: center

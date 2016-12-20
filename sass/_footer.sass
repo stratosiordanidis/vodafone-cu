@@ -1,0 +1,328 @@
+
+footer
+	display: block
+	width: 100%
+	position: relative
+	+rem(max-width, 1600px)
+	left: 0
+	right: 0
+	margin: auto
+
+	& > .bg
+		display: block
+		position: absolute
+		background: $color-red
+		// width: 100%
+		// height: 100%
+		// +rem(border-bottom-width, 20px)
+		// border-bottom-color: $color-red
+
+		background-image: url('../img/footer-bg.png')
+		background-repeat: no-repeat
+		background-position: 0 0
+		background-size: cover
+		+rem(top, -20px)
+		// +rem(left, -360px)
+		// +rem(left, -40rem)
+		+rem(left, -35rem)
+		bottom: 0
+		+rem(right, 320px)
+
+		&:before
+			content: ''
+			height: 100%
+			width: 1000%
+			background: $color-red
+			display: block
+			position: absolute
+			right: 100%
+			top: 0
+
+
+
+
+	& > .fg
+		position: relative
+		background: black
+		text-align: center
+		+rem(max-width, 1600px)
+		left: 0
+		right: 0
+		margin: auto
+		+rem(padding-top, 20px)
+		+rem(padding-bottom, 35px)
+		+rem(padding-left, 30px)
+		+rem(padding-right, 30px)
+		background-image: url('../img/footer-fg-pic.jpg')
+		background-size: contain
+		background-position: 0 100%
+
+
+		// &:after // clearfix
+		// 	visibility: hidden
+		// 	display: block
+		// 	font-size: 0
+		// 	content: " "
+		// 	clear: both
+		// 	height: 0
+
+		&:after
+			content: ''
+			height: 100%
+			width: 1000%
+			background: black
+			display: block
+			position: absolute
+			left: 100%
+			top: 0
+		
+
+		& > .social-icons
+			// float: right
+			display: inline-block
+			position: absolute
+			+rem(right, 30px)
+			+rem(top, 40px)
+
+			.item+.item
+				+rem(margin-left, 45px)
+
+			& > .item
+				display: inline-block
+
+				
+
+				& > .icon
+					display: inline-block
+					position: relative
+					color: white
+					+rem(padding-left, 30px)
+					font-family: $font-premier
+					// font-weight: 200
+					font-weight: 100
+					+no-rem(font-size, 20px)
+					text-align: left
+
+					&:before
+						content: ''
+						display: inline-block
+						position: absolute
+						left: 0
+						top: 0
+						color: white
+						font-family: 'cu'
+						// +rem(font-size, 20px)
+						+rem(font-size, 24px)
+						+rem(line-height, 24px)
+						font-weight: 100
+						+transition(color 0.3s)
+
+
+				.icon.fb:before
+					content: $icon-facebook
+
+				.icon.instagram:before
+					content: $icon-instagram
+
+				.icon.snapchat:before
+					content: $icon-snapchat
+
+				.icon.youtube:before
+					content: $icon-youtube
+
+
+				&:hover
+					& > .icon:before
+						color: $color-red
+
+
+		& > .links
+			// float: left
+			display: inline-block
+			position: absolute
+			+rem(left, 35px)
+			+rem(top, 35px)
+
+
+			.link, a
+				display: inline-block
+				text-decoration: none
+				font-family: $font-premier
+				font-weight: 200
+				color: white
+
+				a
+					+no-rem(font-size, 20px)
+					font-weight: 100
+					+transition(color 0.3s)
+
+					&:hover
+						color: $color-red
+
+			.link+.link
+				+rem(margin-left, 35px)
+
+
+		& > .center
+			display: inline-block
+			text-align: center
+			max-width: 100%
+
+			a.logo
+				display: inline-block
+				left: 0
+				right: 0
+				margin: auto
+				+rem(margin-top, 6px)
+
+				img
+					+rem(height, 55px)
+					width: auto
+
+			form
+				display: block
+				text-align: center
+				+rem(margin-top, 25px)
+				max-width: 100%
+
+				.title
+					display: inline-block
+					text-align: center
+					font-family: $font-premier
+					+rem(font-size, 32px)
+					+rem(line-height, 20px)
+					font-weight: 200
+					color: white
+
+				.detail
+					display: block
+					text-align: center
+					left: 0
+					right: 0
+					margin: auto
+					+rem(margin-top, 10px)
+					// +rem(margin-bottom, 20px)
+					+rem(margin-bottom, 30px)
+					// +rem(width, 460px)
+					+rem(width, 490px)
+					max-width: 90%
+					p
+						margin: 0
+						padding: 0
+						font-family: $font-premier
+						+no-rem(font-size, 20px)
+						+no-rem(line-height, 26px)
+						font-weight: 100
+						color: #707379
+
+				.line
+					display: block
+					text-align: center
+					position: relative
+
+				.line.field
+					label
+						display: inline-block
+						position: absolute
+						font-family: $font-premier
+						+no-rem(font-size, 20px)
+						+no-rem(line-height, 20px)
+						font-weight: 100
+						color: white
+						left: 0
+						right: 0
+						margin: auto
+						pointer-events: none
+						// +transition(all 0.3s)
+
+
+					input[type="text"]
+						+rem(width, 320px)
+						border: none
+						border-bottom: 2px solid #707379
+						font-family: $font-premier
+						+no-rem(font-size, 20px)
+						+no-rem(line-height, 20px)
+						font-weight: 100
+						background: transparent
+						outline: none
+						color: white
+						+rem(padding, 8px)
+						text-align: center
+						max-width: 90%
+
+						&:-webkit-autofill
+							color: white !important
+							background-color: transparent !important
+
+					input:focus+label, input.has-value+label
+						+no-rem(font-size, 16px)
+					// 	+transform(translateY((-20px/16px)*1rem))
+						
+
+
+				.line
+					input[type="submit"]
+						@extend .button
+						color: $color-red
+						font-family: $font-premier
+						+no-rem(font-size, 20px)
+						+no-rem(line-height, 20px)
+						font-weight: 900
+						text-align: center
+						border: none
+						background: transparent
+						outline: none
+						cursor: pointer
+						+rem(padding, 15px 45px)
+						+rem(margin-top, 15px)
+						+rem(margin-bottom, 15px)
+						max-width: 90%
+
+		& > .copyright
+			display: inline-block
+			position: absolute
+			+rem(left, 30px)
+			+rem(bottom, 30px)
+
+			font-family: $font-premier
+			+no-rem(font-size, 20px)
+			// font-weight: 200
+			font-weight: 100
+			color: #707379
+
+		& > .lang-switch
+			display: inline-block
+			position: absolute
+			+rem(right, 30px)
+			+rem(bottom, 30px)
+
+			.eng, .el, a
+				font-family: $font-premier
+				+no-rem(font-size, 20px)
+				font-weight: 100
+				// color: #707379
+				color: $color-grey
+
+			a
+				color: white
+				text-decoration: none
+
+			.eng
+
+
+			.el
+				a
+
+html[lang="el"] footer > .fg > .lang-switch
+	.eng
+		display: inline-block
+	.el
+		display: none
+
+
+html[lang="en"] footer > .fg > .lang-switch
+	.el
+		display: inline-block
+	.eng
+		display: none

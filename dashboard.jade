@@ -1,0 +1,1339 @@
+doctype html
+html(lang="el").loged-in.show-offer-sidebar--
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		//- meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+
+		meta(property="og:title" content="Vodafone CU")
+		meta(property="og:description" content="<description goes here>")
+		meta(property="twitter:title" content="Vodafone CU")
+		meta(property="twitter:description" content="<description goes here>")
+
+		title Vodafone CU - Dashboard
+
+		//- link(href="img/fav_icon.png" rel="icon")
+
+		link(href="css/tooltipster.bundle.min.css" rel="stylesheet")
+		link(href="css/fonts.css" rel="stylesheet")
+			
+		link(href="css/slick.css" rel="stylesheet")
+		//- link(href="css/owl.carousel.min.css" rel="stylesheet")
+
+		link(href="css/styles.css" rel="stylesheet")
+		link(href="css/responsive.css" rel="stylesheet")
+
+		link(href="css/dashboard.css" rel="stylesheet")
+		link(href="css/responsive-panels.css" rel="stylesheet")
+		link(href="css/responsive-dashboard.css" rel="stylesheet")
+
+
+		//- include _ga
+
+		script(src="js/device.min.js")
+			
+	body
+		include _login-panel.jade
+		//- #page.page-dashboard
+		include _header.jade
+
+
+		#content.page-dashboard
+
+			.desktop-layout.desktop-only
+				section.remaining-section.choices-section
+					.section-wrapper
+						.title.level0-title Σου απομένουν
+						.detail Αριθμός: 654654654564
+
+						//- .choices.columns
+						//- .choices.carousel(data-fit-to-slides='1' data-slides-to-scroll='1' data-slides-to-show='3' data-arrows='0' data-dots='0'  data-swipe='1')
+						.choices
+							.choice.choice-1
+								.progress-widget
+									//- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+									.bg-graphic
+										include _progress-arc
+									//- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
+									.fg-graphic
+										include _progress-arc
+									.number(data-max="800" data-num="421") 421'
+									.subtext 
+								.label.level1-title ΟΜΙΛΙΑ
+								.control-button-wrapper
+									.control-button
+									
+							.choice.choice-2
+								.progress-widget
+									//- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+									.bg-graphic
+										include _progress-arc
+									//- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
+									.fg-graphic
+										include _progress-arc
+									.number(data-max="100" data-num="23") 23
+									.subtext 
+								.label.level1-title SMS
+								.control-button-wrapper
+									.control-button
+
+							.choice.choice-3
+								.progress-widget
+									//- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+									.bg-graphic
+										include _progress-arc
+									//- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
+									.fg-graphic
+										include _progress-arc
+									.number(data-max="1600" data-num="60") 60
+									.subtext MB
+								.label.level1-title DATA
+								.control-button-wrapper
+									.control-button
+
+
+							.panic-button-wrapper
+								.title Panic Button
+								.subtext Πάτα το και πάρε unlimited <b>DATA ΔΩΡΕΑΝ</b> για 1 ώρα!
+								a.panic-button(href='#').show-arrow
+									//- .text Ανανέωση Υπολοίπου
+									img.arrow(src='img/panic-button-arrow.png')
+									img.button(src='img/panic-button.png')
+								a.detail(href='#') Τι είναι τούτο;
+
+
+				section.remaining-section.options-section.tabbed-options
+					.section-wrapper
+						//- .mobile-only.mobile-header
+						//- 	.title Σου απομένουν
+						//- 	.back-button
+						.options.center
+							.option.option-1
+
+								.title Δες τα ενεργά πακέτα Ομιλίας, αλλά και τη σειρά με την οποία καταναλώνονται.
+
+								.tabbed-control
+									.tab-buttons.carousel(data-mobile='0' data-fit-to-slides='1' data-slides-to-scroll='1' data-slides-to-show='4' data-arrows='0' data-dots='0'  data-swipe='0')
+										.tab-button.tab-1.active
+											.wrapper
+												.title προς CU
+												.value.f80 112’
+												.detail από 240’
+										.tab-button.tab-2
+											.wrapper
+												.title προς Vodafone
+												.value.f80 100’
+												.detail από 240’
+										.tab-button.tab-3
+											.wrapper
+												.title προς Όλους
+												.value.f80 100’
+												.detail από 200’
+										.tab-button.tab-4
+											.wrapper
+												.title προς Εξωτερικό
+												.value.f80 80’
+
+									.tab-contents
+										.tab-content.tab-content-1.active
+											//- .mobile-only.mobile-header
+											//- 	.title ΟΜΙΛΙΑ
+											//- 	.back-button
+											.title προς CU
+											.carousel(data-mobile='0' data-fit-to-slides='1' data-slides-to-show='1' data-align-center='1' data-dots='0'  data-swipe='0')
+												.tab-item.tab-1
+													.title <b>Bonus</b> Talk to Vodafone
+													.value.f80 60’
+													.subtext από 240’
+													.detail Λήγει στις 21.10.2016
+												.tab-item.tab-2
+													.title Tab 1
+													.value.f80 100’
+													.subtext από 400’
+													.detail Έως και 21.10.2016
+												.tab-item.tab-3
+													.title CU Talk a Lot 600
+													.value.f80 100’
+													.subtext από 400’
+													.detail Έως και 21.10.2016
+												.tab-item.tab-4
+													.title CU Talk a Lot 600
+													.value.f80 50’
+													.subtext από 400’
+													.detail Έως και 21.10.2016
+												.tab-item.tab-5
+													.title CU Talk a Lot 600
+													.value.f80 80’
+													.subtext από 400’
+													.detail Έως και 21.10.2016
+												.tab-item.tab-6
+													.title CU Talk a Lot 600
+													.value.f80 90’
+													.subtext από 400’
+													.detail Έως και 21.10.2016
+												.tab-item.tab-7
+													.title CU Talk a Lot 600
+													.value.f80 500’
+													.subtext από 400’
+													.detail Έως και 21.10.2016
+												.tab-item.tab-8
+													.title CU Talk a Lot 600
+													.value.f80 100’
+													.subtext από 400’
+													.detail Έως και 21.10.2016
+
+										.tab-content.tab-content-2
+											//- .mobile-only.mobile-header
+											//- 	.title ΟΜΙΛΙΑ
+											//- 	.back-button
+											.title προς Vodafone
+											.carousel(data-mobile='0' data-fit-to-slides='1' data-slides-to-show='4' data-dots='0'  data-swipe='0')
+												.tab-item.tab-1
+													.title <b>Bonus</b> Talk to Vodafone
+													.value.f80 60’
+													.subtext από 240’
+													.detail Λήγει στις 21.10.2016
+												.tab-item.tab-2
+													.title Tab 1
+													.value.f80 100’
+													.subtext από 400’
+													.detail Έως και 21.10.2016
+												.tab-item.tab-3
+													.title CU Talk a Lot 600
+													.value.f80 100’
+													.subtext από 400’
+													.detail Έως και 21.10.2016
+
+
+										.tab-content.tab-content-3
+											//- .mobile-only.mobile-header
+											//- 	.title ΟΜΙΛΙΑ
+											//- 	.back-button
+											.title προς Όλους
+											.carousel(data-mobile='0' data-fit-to-slides='1' data-slides-to-show='4' data-dots='0'  data-swipe='0')
+												.tab-item.tab-1
+													.title <b>Bonus</b> Talk to Vodafone
+													.value.f80 60’
+													.subtext από 240’
+													.detail Λήγει στις 21.10.2016
+												.tab-item.tab-2
+													.title Tab 1
+													.value.f80 100’
+													.subtext από 400’
+													.detail Έως και 21.10.2016
+
+
+
+										.tab-content.tab-content-4
+											//- .mobile-only.mobile-header
+											//- 	.title ΟΜΙΛΙΑ
+											//- 	.back-button
+											.title προς Εξωτερικό
+											.carousel(data-fit-to-slides='1' data-slides-to-show='4' data-dots='0'  data-swipe='0')
+												.tab-item.tab-1
+													.title <b>Bonus</b> Talk to Vodafone
+													.value.f80 60’
+													.subtext από 240’
+													.detail Λήγει στις 21.10.2016
+												.tab-item.tab-2
+													.title Tab 1
+													.value.f80 100’
+													.subtext από 400’
+													.detail Έως και 21.10.2016
+												.tab-item.tab-3
+													.title CU Talk a Lot 600
+													.value.f80 100’
+													.subtext από 400’
+													.detail Έως και 21.10.2016
+
+
+							.option.option-2
+
+								.title Δες τα ενεργά πακέτα Sms, αλλά και τη σειρά με την οποία καταναλώνονται.
+
+								.item-list.carousel(data-mobile='0' data-fit-to-slides='0' data-slides-to-show='3' data-dots='0'  data-swipe='0')
+									.item
+										.title 321<sup>MB</sup>
+										.subtext Just Surf Bonus 500MB
+										.detail Έως και 21.0.2016
+
+									.item
+										.title 654<sup>MB</sup>
+										.subtext Δωρεάν 600’ προς CU + 600ΜΒ 
+										.detail Έως και 21.0.2016
+
+									.item
+										.title 987<sup>MB</sup>
+										.subtext Δώρo 100MB 
+										.detail Έως και 21.0.2016
+
+							.option.option-3
+
+								.title Δες τα ενεργά πακέτα Data, αλλά και τη σειρά με την οποία καταναλώνονται.
+
+								.item-list.carousel(data-fit-to-slides='0' data-slides-to-show='3' data-dots='0'  data-swipe='0')
+									.item
+										.title 290<sup>MB</sup>
+										.subtext Just Surf Bonus 500MB
+										.detail Έως και 21.0.2016
+
+									.item
+										.title 600<sup>MB</sup>
+										.subtext Δωρεάν 600’ προς CU + 600ΜΒ 
+										.detail Έως και 21.0.2016
+
+									.item
+										.title 100<sup>MB</sup>
+										.subtext Δώρo 100MB 
+										.detail Έως και 21.0.2016
+
+
+				section.renew-section.choices-section
+					.section-wrapper
+						.title Υπόλοιπο <span class="underlined-title">7,06€</span>
+						.detail Λήγει στις 21.9.2016
+						.action-button
+							.text Ανανέωση Υπολοίπου
+
+				section#dummy-section.options-section
+
+				section.active-packages-section.choices-section
+					.section-wrapper
+						//- .mobile-only.back-button
+						//- 	.title Ενεργά Πακέτα
+						//- 	.detail Έχεις 3 ενεργά πακέτα
+
+						.head-wrapper
+							.underlined-title Ενεργά Πακέτα
+							//- .detail
+							//- 	p Μη σταματάς να ανανεώνεις και να κερδίζεις Bonus! Δεν είσαι τύπος “Surf”;
+							//- 	p Άλλαξε Bonus απλά με ένα κλικ στο “Bonus Talk2Vodafone”.
+
+							//- .subtext
+							//- 	p Έχεις άλλες <span>2</span> διαθέσιμες αλλαγές αυτό το μήνα
+
+						.choices.center-960.carousel(data-fit-to-slides='0' data-slides-to-show='3' data-dots='0' data-as-nav-for='.active-packages-section.options-section .carousel' data-swipe='0')
+							.choice.choice-1
+								
+								.label Αυτόματη Ανανέωση
+								.title CU Talk a Lot 600
+								.detail Επόμενη Aνανέωση στις 21.9.2016
+								.control-button-wrapper
+									.control-button
+									
+							.choice.choice-2
+								
+								.label
+								.title CU Talk a Lot 600
+								.detail Επόμενη Aνανέωση στις 21.9.2016
+								.control-button-wrapper
+									.control-button
+
+							.choice.choice-3
+								
+								.label Αυτόματη Ανανέωση
+								.title CU Talk a Lot 600
+								.detail Επόμενη Aνανέωση στις 21.9.2016
+								.control-button-wrapper
+									.control-button
+
+
+
+							.choice.choice-4
+								
+								.label Αυτόματη Ανανέωση
+								.title CU Talk a Lot 600
+								.detail Επόμενη Aνανέωση στις 21.9.2016
+								.control-button-wrapper
+									.control-button
+
+
+				section.active-packages-section.options-section
+
+					.section-wrapper
+						//- .mobile-only.mobile-header
+						//- 	.title Ενεργά Πακέτα
+						//- 	.back-button
+
+						.options.center-960.carousel(data-fit-to-slides='0' data-slides-to-show='3' data-dots='0' data-as-nav-for='.active-packages-section.choices-section .carousel' data-arrows='0' data-swipe='0')
+							.option.option-1
+
+								.feature-wrapper
+									ul.features
+										li.plus <b>500 Λεπτά</b> προς CU
+										li.plus <b>500 SMS ή MMS</b> προς CU
+										li.plus <b>100 Λεπτά</b> προς CU
+										li.plus <b>100 SMS</b> σε όλους
+										li.plus <b>60MB Internet</b> προς CU
+									.detail ενεργοποιόντας την <a href='#'>αυτόματη ανανέωση</a>
+
+									.cost €3,02
+
+									.action-button
+										.text Απενεργοποίηση αυτόματης ανανέωσης
+
+							.option.option-2
+
+								.feature-wrapper
+									ul.features
+										li.plus <b>500 Λεπτά</b> προς CU
+										li.plus <b>500 SMS ή MMS</b> προς CU
+										li.plus <b>100 Λεπτά</b> προς CU
+										li.plus <b>100 SMS</b> σε όλους
+										li.plus <b>60MB Internet</b> προς CU
+									.detail ενεργοποιόντας την <a href='#'>αυτόματη ανανέωση</a>
+
+									.cost €3,02
+
+									.action-button
+										.text Απενεργοποίηση αυτόματης ανανέωσης
+
+							.option.option-3
+
+								.feature-wrapper
+									ul.features
+										li.plus <b>500 Λεπτά</b> προς CU
+										li.plus <b>500 SMS ή MMS</b> προς CU
+										li.plus <b>100 Λεπτά</b> προς CU
+										li.plus <b>100 SMS</b> σε όλους
+										li.plus <b>60MB Internet</b> προς CU
+									.detail ενεργοποιόντας την <a href='#'>αυτόματη ανανέωση</a>
+
+									.cost €3,02
+
+									.action-button
+										.text Απενεργοποίηση αυτόματης ανανέωσης
+
+
+							.option.option-4
+
+								.feature-wrapper
+									ul.features
+										li.plus <b>500 Λεπτά</b> προς CU
+										li.plus <b>500 SMS ή MMS</b> προς CU
+										li.plus <b>100 Λεπτά</b> προς CU
+										li.plus <b>100 SMS</b> σε όλους
+										li.plus <b>60MB Internet</b> προς CU
+									.detail ενεργοποιόντας την <a href='#'>αυτόματη ανανέωση</a>
+
+									.cost €3,02
+
+									.action-button
+										.text Απενεργοποίηση αυτόματης ανανέωσης
+
+
+
+				section.bonus-section.choices-section
+					.section-wrapper
+						//- .mobile-only.header-button
+						//- 	.title Bonus ανανέωσης
+						//- 	.detail 500ΜΒ Internet
+
+						.head-wrapper
+							.underlined-title Βonus Ανανέωσης
+							.detail
+								p Μη σταματάς να ανανεώνεις και να κερδίζεις Bonus! Δεν είσαι τύπος “Surf”;
+								p Άλλαξε Bonus απλά με ένα κλικ στο “Bonus Talk2Vodafone”.
+
+							//- .subtext
+							//- 	p Έχεις άλλες <span>2</span> διαθέσιμες αλλαγές αυτό το μήνα
+
+						.choices.permanent
+							.choice.choice-1
+								
+								.title Just Surf Bonus
+								.subtext <b>500MB</b> με κάθε ανανέωση <b>10€</b>
+								.subtext <b>1GB</b> με κάθε ανανέωση <b>20€</b>
+								.detail Θέλω αυτό το Bonus
+									
+							.choice.choice-2
+								
+								.title CU Talk a Lot 600
+								.subtext <b>120’</b> προς Vodafone &amp; CU με κάθε ανανέωση <b>10€</b>
+								.subtext <b>240’</b> προς Vodafone &amp; CU &amp; <b>60ΜΒ</b> με κάθε ανανέωση <b>20€</b>
+								.detail Θέλω αυτό το Bonus
+
+								.action-text Θέλω αυτό το Bonus
+
+				section#dummy-section.options-section
+
+				section.history-section.choices-section
+					.section-wrapper
+						//- .mobile-only.header-button
+						//- 	.title Ιστορικό ανανέωσης
+						//- 	.detail Τελευταία ανανέωση 10€ στις 21.01.2016
+							
+
+						.head-wrapper
+							.underlined-title Ιστορικό Ανανέωσης
+							//- .detail
+							//- 	p Μη σταματάς να ανανεώνεις και να κερδίζεις Bonus! Δεν είσαι τύπος “Surf”;
+							//- 	p Άλλαξε Bonus απλά με ένα κλικ στο “Bonus Talk2Vodafone”.
+
+							//- .subtext
+							//- 	p Έχεις άλλες <span>2</span> διαθέσιμες αλλαγές αυτό το μήνα
+
+						.choices.columns
+							.choice.choice-1.col
+								
+								//- .label Αυτόματη Ανανέωση
+								.detail Τελευταία Ανανέωση
+								.title 10€ στις 21.9.2016
+								.control-button-wrapper
+									.control-button Προηγούμενες ανανεώσεις
+
+				section.history-section.options-section
+					.section-wrapper
+						.options.center-640
+							.option.option-1
+
+								.table-wrapper
+									.row
+										.cell Ποσό
+										.cell Ημερομηνία
+									.row
+										.cell €10
+										.cell 21.9.2016
+									.row
+										.cell €15
+										.cell 21.9.2016
+									.row
+										.cell €5
+										.cell 21.9.2016
+									.row
+										.cell €20
+										.cell 21.9.2016
+									.row
+										.cell €10
+										.cell 21.9.2016
+									
+						.pager-wrapper
+							.pager
+								a.prev-button(href='#')
+								ul.indeces
+									li.active: a(href='#') 1
+									li: a(href='#') 2
+									li: a(href='#') 3
+									li: a(href='#') 4
+									li: a(href='#') 5
+									li: a(href='#') 6
+								a.next-button(href='#')
+
+
+				section.mycu-around-section.choices-section
+					.section-wrapper
+						//- .mobile-only.header-button
+						//- 	.title MyCU Around
+						//- 	.detail Έχεις 3 ενεργούς κωδικούς
+							
+
+						.head-wrapper
+							.underlined-title MyCU Around
+							.detail
+								p Σου τα ‘χουμε μαζεμένα! Όλοι οι ενεργοί κωδικοί σου είναι εδώ!
+								p Χρησιμοποίησέ τους πριν λήξουν!
+
+							//- .subtext
+							//- 	p Έχεις άλλες <span>2</span> διαθέσιμες αλλαγές αυτό το μήνα
+
+						.list
+							.columns.coupon
+								.col.first
+									.pic-wrapper
+										.pic(style="background-image:url('img/coupon-default.png')")
+										.pic(style="background-image:url('img/coupon-partner-1.png')")
+								.col.second
+									.title Πάρε 10% έκπτωση στα καταστήματα Factory Outlet
+									a.detail(href='#') Μάθε περισσότερα
+								.col.third
+									.title Ο κωδικός σου
+									.code CU1234567
+									.detail Λήγει στις 21.9.2016
+							
+							.columns.coupon
+								.col.first
+									.pic-wrapper
+										.pic(style="background-image:url('img/coupon-default.png')")
+										.pic(style="background-image:url('img/coupon-partner-2.png')")
+								.col.second
+									.title Κάνε την παραγγελία σου στο e-food και πάρε 5€ έκπτωση
+									a.detail(href='#') Μάθε περισσότερα
+								.col.third
+									.title Ο κωδικός σου
+									.code CU1234567
+									.detail Λήγει στις 21.9.2016
+						.choices
+							.choice.choice-1
+								
+								.control-button-wrapper
+									.control-button Προηγούμενοι κωδικοί
+
+
+				section.mycu-around-section.options-section
+					.section-wrapper
+
+						.options
+							.option.option-1
+
+								.list
+									.columns.coupon
+										.col.first
+											.pic-wrapper
+												.pic(style="background-image:url('img/coupon-default.png')")
+												.pic(style="background-image:url('img/coupon-partner-1.png')")
+										.col.second
+											.title Πάρε 10% έκπτωση στα καταστήματα Factory Outlet
+											a.detail(href='#') Μάθε περισσότερα
+										.col.third
+											.title Ο κωδικός σου
+											.code CU1234567
+											.detail.error Έχει λήξει
+									
+									.columns.coupon
+										.col.first
+											.pic-wrapper
+												.pic(style="background-image:url('img/coupon-default.png')")
+												.pic(style="background-image:url('img/coupon-partner-2.png')")
+										.col.second
+											.title Κάνε την παραγγελία σου στο e-food και πάρε 5€ έκπτωση
+											a.detail(href='#') Μάθε περισσότερα
+										.col.third
+											.title Ο κωδικός σου
+											.code CU1234567
+											.detail.error Έχει λήξει
+
+						.pager-wrapper
+							.pager
+								a.prev-button(href='#')
+								ul.indeces
+									li.active: a(href='#') 1
+									li: a(href='#') 2
+									li: a(href='#') 3
+									li: a(href='#') 4
+									li: a(href='#') 5
+									li: a(href='#') 6
+								a.next-button(href='#')
+
+
+				section.pare-naxeis-section.choices-section
+					.section-wrapper
+						//- .mobile-only.header-button
+						//- 	.title Πάρε να ‘χεις
+						//- 	.detail Έχεις 2 ενεργούς φίλους
+							
+
+						.head-wrapper
+							.underlined-title Πάρε να ’χεις
+							.detail
+								p Διάλεξε 3 CU φίλους που θες να λαμβάνουν αυτόματα δωράκι 100ΜΒ, με κάθε ανανέωσή σου από 10€ και πάνω! Κι αν αλλάξεις γνώμη, τον επόμενο μήνα τους αλλάζεις!
+
+							.subtext
+								p Έχεις άλλες <span>2</span> διαθέσιμες αλλαγές αυτό το μήνα
+
+						.choices.columns
+							.choice.choice-1.col
+								
+								.circle 
+									p 1<sup>ος</sup>
+								.title Μαριάνθη Ραυτοπούλου
+								.detail Αριθμός: <b>6951234567</b>
+								// note: data-[aName] matches the form <input> with name="aName"
+								.fill-in-data(data-personid="234234" data-firstname="Μαριάνθη" data-lastname="Ραυτοπούλου" data-phone="6951234567")
+								.control-button-wrapper
+									.control-button
+									
+							.choice.choice-2.col
+								
+								.circle
+									p 2<sup>ος</sup>
+								.title Mike Polizos
+								.detail Αριθμός: <b>695 123 45 67</b>
+								.fill-in-data(data-personid="234234" data-firstname="Mike" data-lastname="Polizos" data-phone="6951234567")
+								.control-button-wrapper
+									.control-button
+
+							.choice.choice-3.col
+								
+								.circle.add-more
+								//- .title Μαριάνθη Ραυτοπούλου
+								.detail Βάλε 3<sup>o</sup> στην παρέα!
+								.control-button-wrapper
+									.control-button
+
+
+				section.pare-naxeis-section.options-section.tabbed-options
+					.section-wrapper
+
+						.options
+							.option.option-1
+
+								form(action="#" method="POST")
+									input.hidden(name="personid" value="" type="text")
+
+									.input.field.name
+										input(name="firstname" type="text" tabindex="1")
+										label(for="firstname") Όνομα
+									.input.field.surname
+										input(name="lastname" type="text" tabindex="2")
+										label(for="lastname") Επώνυμο
+									.input.field.phone
+										input(name="phone" type="text" tabindex="3")
+										label(for="phone") Αριθμός
+
+									.field.submit
+										input(name="store" type="submit" value="Αποθήκευση" tabindex="4")
+
+									.field.remove
+										input(name="remove" type="submit" value="Αφαίρεση φίλου" tabindex="5")
+
+
+				#pare-naxeis-options-padding
+
+
+			.mobile-layout.mobile-only
+				#base-panel.layer-0.active
+					section.remaining-section.choices-section
+						.section-wrapper
+							.title.level0-title Σου απομένουν
+							.detail Αριθμός: 654654654564
+
+							//- .choices.columns
+							//- .choices.carousel(data-fit-to-slides='1' data-slides-to-scroll='1' data-slides-to-show='3' data-arrows='0' data-dots='0'  data-swipe='1')
+							.choices
+								a.panel-link.choice.choice-1(href='#panel-speech')
+									.progress-widget
+										//- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+										.bg-graphic
+											include _progress-arc
+										//- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
+										.fg-graphic
+											include _progress-arc
+										//- on IE Edge it does not animate <object> changes, so we have to inline the svg
+										//- .fg-graphic
+										//- 	include _progress-arc
+										.number(data-max="800" data-num="421") 421
+										.subtext Λεπτά
+										.arrow
+									//- .label.level1-title ΟΜΙΛΙΑ
+										
+								a.panel-link.choice.choice-2(href='#panel-sms')
+									.progress-widget
+										//- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+										.bg-graphic
+											include _progress-arc
+										//- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
+										.fg-graphic
+											include _progress-arc
+										.number(data-max="100" data-num="23") 23
+										.subtext
+										.arrow
+									//- .label.level1-title SMS
+
+								a.panel-link.choice.choice-3(href='#panel-data')
+									.progress-widget
+										//- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+										.bg-graphic
+											include _progress-arc
+										//- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
+										.fg-graphic
+											include _progress-arc
+										.number(data-max="1600" data-num="60") 60
+										.subtext MB
+										.arrow
+									//- .label.level1-title DATA
+
+					
+					section.renew-section.choices-section
+						.section-wrapper
+							.title Υπόλοιπο <b class="underlined-title">7,06€</b>
+							.detail Λήγει στις 21.9.2016
+							.action-button
+								.text Ανανέωση Υπολοίπου
+
+
+					section.panic-button-section.choices-section
+						.section-wrapper
+							.title Panic Button
+							.subtext Πάτα το και πάρε unlimited <b>DATA ΔΩΡΕΑΝ</b> για 1 ώρα!
+							a.panic-button(href='#').show-arrow
+								//- .text Ανανέωση Υπολοίπου
+								img.arrow(src='img/panic-button-arrow.png')
+								img.button(src='img/panic-button.png')
+							a.detail(href='#') Τι είναι τούτο;
+
+					section.panel-buttons-section
+						.section-wrapper
+							a.panel-link(href='#panel-active-packages')
+								.title Ενεργά πακέτα
+								.detail Έχεις 3 ενεργά πακέτα
+							a.panel-link(href='#panel-bonus')
+								.title Bonus ανανέωσης
+								.detail 500ΜΒ Internet
+							a.panel-link.history-link(href='#panel-history')
+								.title Ιστορικό ανανέωσης
+								.detail Τελευταία ανανέωση 10€ στις 21.01.2016
+							a.panel-link(href='#panel-mycu-around')
+								.title MyCU Around
+								.detail Έχεις 3 ενεργούς κωδικούς
+							a.panel-link(href='#panel-pare-naxeis')
+								.title Πάρε να ‘χεις
+								.detail Έχεις 2 ενεργούς φίλους
+
+
+				
+				#panel-speech.panel.layer-1
+					.nav-header
+						.title Σου απομένουν
+						.back-button
+					
+					.content-wrapper
+						.progress-wrapper
+							.progress-widget
+								//- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+								//- //- include _progress-arc
+								//- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
+								//- //- on IE Edge it does not animate <object> changes, so we have to inline the svg
+								//- //- .fg-graphic
+								//- //- 	include _progress-arc
+								.bg-graphic
+									include _progress-arc
+								.fg-graphic
+									include _progress-arc
+								.number(data-max="800" data-num="421") 421
+								.subtext Λεπτά 
+							.label.level1-title ΟΜΙΛΙΑ
+
+						.list-wrapper
+							.title Δες τα ενεργά πακέτα Data, αλλά και τη σειρά με την οποία καταναλώνονται
+
+							a.panel-link(href='#panel-speech-sub-1')
+								.value.f80 112’
+								.detail προς CU
+
+							a.panel-link(href='#panel-speech-sub-2')
+								.value.f80 100’
+								.detail προς Vodafone
+
+							a.panel-link(href='#panel-speech-sub-3')
+								.value.f80 100’
+								.detail προς Όλους
+
+							a.panel-link(href='#panel-speech-sub-4')
+								.value.f80 100’
+								.detail προς Εξωτερικό
+
+
+				#panel-sms.panel.layer-1
+					.nav-header
+						.title Σου απομένουν
+						.back-button
+					
+					.content-wrapper
+						.progress-wrapper
+							.progress-widget
+								.bg-graphic
+									include _progress-arc
+								.fg-graphic
+									include _progress-arc
+								.number(data-max="100" data-num="23") 23
+								.subtext 
+							.label.level1-title SMS
+
+						.list-wrapper
+
+							.title Δες τα ενεργά πακέτα Sms, αλλά και τη σειρά με την οποία καταναλώνονται.
+
+							.item-list
+								.item
+									.title 321<sup>MB</sup>
+									.subtext Just Surf Bonus 500MB
+									.detail Έως και 21.0.2016
+
+								.item
+									.title 654<sup>MB</sup>
+									.subtext Δωρεάν 600’ προς CU + 600ΜΒ 
+									.detail Έως και 21.0.2016
+
+								.item
+									.title 987<sup>MB</sup>
+									.subtext Δώρo 100MB 
+									.detail Έως και 21.0.2016
+
+
+				#panel-data.panel.layer-1
+					.nav-header
+						.title Σου απομένουν
+						.back-button
+					
+					.content-wrapper
+						.progress-wrapper
+							.progress-widget
+								.bg-graphic
+									include _progress-arc
+								.fg-graphic
+									include _progress-arc
+								.number(data-max="1600" data-num="60") 60
+								.subtext MB
+							.label.level1-title DATA
+
+						.list-wrapper
+
+							.title Δες τα ενεργά πακέτα Data, αλλά και τη σειρά με την οποία καταναλώνονται.
+
+							.item-list
+								.item
+									.title 290<sup>MB</sup>
+									.subtext Just Surf Bonus 500MB
+									.detail Έως και 21.0.2016
+
+								.item
+									.title 600<sup>MB</sup>
+									.subtext Δωρεάν 600’ προς CU + 600ΜΒ 
+									.detail Έως και 21.0.2016
+
+								.item
+									.title 100<sup>MB</sup>
+									.subtext Δώρo 100MB 
+									.detail Έως και 21.0.2016
+
+
+				#panel-active-packages.panel.layer-1
+					.nav-header
+						.title Ενεργά πακέτα
+						.back-button
+					
+					.content-wrapper
+						.list-wrapper
+
+							.link-list
+								a.panel-link(href='#package-1')
+									.title CU Talk a Lot 600
+									.detail <span>Αυτόματη Ανανέωση</span> στις 21.9.2016
+
+								a.panel-link(href='#package-2')
+									.title Surf &amp; Email 600
+									.detail Λήγει στις 21.9.2016
+
+								a.panel-link(href='#package-3')
+									.title CU Talk a Lot 600
+									.detail Λήγει στις 21.9.2016
+
+				#panel-bonus.panel.layer-1
+					.nav-header
+						.title Bonus ανανέωσης
+						.back-button
+					
+					.content-wrapper
+						.title 
+							p Μη σταματάς να ανανεώνεις και να κερδίζεις Bonus! Δεν είσαι τύπος “Surf”; 
+							p Άλλαξε Bonus απλά με ένα κλικ στο “Bonus Talk2Vodafone”.
+
+
+						.choices.permanent
+							.choice.choice-1.active
+								
+								.title Just Surf Bonus
+								.subtext <b>500MB</b> με κάθε ανανέωση <b>10€</b>
+								.subtext <b>1GB</b> με κάθε ανανέωση <b>20€</b>
+								.detail Θέλω αυτό το Bonus
+								.action-text Θέλω αυτό το Bonus
+									
+							.choice.choice-2
+								
+								.title CU Talk a Lot 600
+								.subtext <b>120’</b> προς Vodafone &amp; CU με κάθε ανανέωση <b>10€</b>
+								.subtext <b>240’</b> προς Vodafone &amp; CU &amp; <b>60ΜΒ</b> με κάθε ανανέωση <b>20€</b>
+								.detail Θέλω αυτό το Bonus
+
+								.action-text Θέλω αυτό το Bonus
+
+
+				#panel-history.panel.layer-1
+					.nav-header
+						.title Ιστορικό Ανανέωσης
+						.back-button
+
+					.content-wrapper
+						.table-wrapper
+							.row
+								.cell Ποσό
+								.cell Ημερομηνία
+							.row
+								.cell €10
+								.cell 21.9.2016
+							.row
+								.cell €15
+								.cell 21.9.2016
+							.row
+								.cell €5
+								.cell 21.9.2016
+							.row
+								.cell €20
+								.cell 21.9.2016
+							.row
+								.cell €10
+								.cell 21.9.2016
+
+
+
+				#panel-mycu-around.panel.layer-1
+					.nav-header
+						.title MyCU Around
+						.back-button
+					
+					.content-wrapper
+						.current-coupon-list
+							.coupon
+								.first
+									.pic(style="background-image:url('img/coupon-partner-2.png')")
+								.second
+									.title Πάρε 10% έκπτωση στα καταστήματα Factory Outlet
+									//- a.detail(href='#') Μάθε περισσότερα
+								.third
+									.title Ο κωδικός σου
+									.code CU1234567
+									.detail Λήγει στις 21.9.2016
+							
+							.coupon
+								.first
+									.pic(style="background-image:url('img/coupon-partner-2.png')")
+								.second
+									.title Κάνε την παραγγελία σου στο e-food και πάρε 5€ έκπτωση
+									//- a.detail(href='#') Μάθε περισσότερα
+								.third
+									.title Ο κωδικός σου
+									.code CU1234567
+									.detail Λήγει στις 21.9.2016
+						
+						.past-coupon-list
+							.title Προηγούμενοι κωδικοί
+
+							.coupon
+								.first
+									.pic(style="background-image:url('img/coupon-partner-2.png')")
+								.second
+									.title Πάρε 10% έκπτωση στα καταστήματα Factory Outlet
+									//- a.detail(href='#') Μάθε περισσότερα
+								.third
+									.title Ο κωδικός σου
+									.code CU1234567
+									.detail.error Έχει λήξει
+							
+							.coupon
+								.first
+									.pic(style="background-image:url('img/coupon-partner-2.png')")
+								.second
+									.title Κάνε την παραγγελία σου στο e-food και πάρε 5€ έκπτωση
+									//- a.detail(href='#') Μάθε περισσότερα
+								.third
+									.title Ο κωδικός σου
+									.code CU1234567
+									.detail.error Έχει λήξει
+
+
+				#panel-pare-naxeis.panel.layer-1
+					.nav-header
+						.title Πάρε να ‘χεις
+						.back-button
+
+					.content-wrapper
+						.head-wrapper
+							.detail
+								p Διάλεξε 3 CU φίλους που θες να λαμβάνουν αυτόματα δωράκι 100ΜΒ, με κάθε ανανέωσή σου από 10€ και πάνω! Κι αν αλλάξεις γνώμη, τον επόμενο μήνα τους αλλάζεις!
+
+							.subtext
+								p Έχεις άλλες <span>2</span> διαθέσιμες αλλαγές αυτό το μήνα
+
+						.list-wrapper
+							a.panel-link.choice-1(href='#panel-user-form')
+								
+								.circle 
+									p 1<sup>ος</sup>
+								.title Μαριάνθη Ραυτοπούλου
+								.detail Αριθμός: <b>6951234567</b>
+								.fill-in-data(data-personid="234234" data-firstname="Μαριάνθη" data-lastname="Ραυτοπούλου" data-phone="6951234567")
+									
+							a.panel-link.choice-2(href='#panel-user-form')
+								
+								.circle
+									p 2<sup>ος</sup>
+								.title Mike Polizos
+								.detail Αριθμός: <b>695 123 45 67</b>
+								.fill-in-data(data-personid="234234" data-firstname="Mike" data-lastname="Polizos" data-phone="6951234567")
+
+							a.panel-link.choice-3(href='#panel-user-form')
+								
+								//- .circle.add-more
+								.circle 
+									p 3<sup>ος</sup>
+								.title Βάλε 3Ο στην παρέα!
+								//- .control-button
+					
+
+
+
+
+				#panel-speech-sub-1.panel.layer-2
+					.nav-header
+						.title ΟΜΙΛΙΑ
+						.back-button
+
+
+					.content-wrapper
+
+						.title-wrapper.packet-header
+							.value.f80 112’
+							.title προς CU
+
+						.list-wrapper
+
+							.title Δες τα ενεργά πακέτα Data, αλλά και τη σειρά με την οποία καταναλώνονται.
+
+							.item-list
+								.pack-info-item.item-1
+									.title <b>Bonus</b> Talk to Vodafone
+									.value.f80 60’
+									.subtext από 240’
+									.detail Λήγει στις 21.10.2016
+								.pack-info-item.item-2
+									.title Tab 1
+									.value.f80 100’
+									.subtext από 400’
+									.detail Έως και 21.10.2016
+								.pack-info-item.item-3
+									.title CU Talk a Lot 600
+									.value.f80 100’
+									.subtext από 400’
+									.detail Έως και 21.10.2016
+								.pack-info-item.item-4
+									.title CU Talk a Lot 600
+									.value.f80 50’
+									.subtext από 400’
+									.detail Έως και 21.10.2016
+								.pack-info-item.item-5
+									.title CU Talk a Lot 600
+									.value.f80 80’
+									.subtext από 400’
+									.detail Έως και 21.10.2016
+								.pack-info-item.item-6
+									.title CU Talk a Lot 600
+									.value.f80 90’
+									.subtext από 400’
+									.detail Έως και 21.10.2016
+								.pack-info-item.item-7
+									.title CU Talk a Lot 600
+									.value.f80 500’
+									.subtext από 400’
+									.detail Έως και 21.10.2016
+								.pack-info-item.item-8
+									.title CU Talk a Lot 600
+									.value.f80 100’
+									.subtext από 400’
+									.detail Έως και 21.10.2016
+
+
+				#panel-speech-sub-2.panel.layer-2
+					.nav-header
+						.title ΟΜΙΛΙΑ
+						.back-button
+
+					.content-wrapper
+
+						.title-wrapper.packet-header
+							.value.f80 100’
+							.title προς Vodafone
+
+						.list-wrapper
+
+							.title Δες τα ενεργά πακέτα Data, αλλά και τη σειρά με την οποία καταναλώνονται.
+
+							.item-list
+								.pack-info-item.item-1
+									.title <b>Bonus</b> Talk to Vodafone
+									.value.f80 60’
+									.subtext από 240’
+									.detail Λήγει στις 21.10.2016
+								.pack-info-item.item-2
+									.title Tab 1
+									.value.f80 100’
+									.subtext από 400’
+									.detail Έως και 21.10.2016
+								.pack-info-item.item-3
+									.title CU Talk a Lot 600
+									.value.f80 100’
+									.subtext από 400’
+									.detail Έως και 21.10.2016
+
+
+				#panel-speech-sub-3.panel.layer-2
+					.nav-header
+						.title ΟΜΙΛΙΑ
+						.back-button
+
+					.content-wrapper
+						.title-wrapper.packet-header
+							.value.f80 100’
+							.title προς Όλους
+
+						.list-wrapper
+
+							.title Δες τα ενεργά πακέτα Data, αλλά και τη σειρά με την οποία καταναλώνονται.
+
+							.item-list
+								.pack-info-item.item-1
+									.title <b>Bonus</b> Talk to Vodafone
+									.value.f80 60’
+									.subtext από 240’
+									.detail Λήγει στις 21.10.2016
+								.pack-info-item.item-2
+									.title Tab 1
+									.value.f80 100’
+									.subtext από 400’
+									.detail Έως και 21.10.2016
+
+
+				#panel-speech-sub-4.panel.layer-2
+					.nav-header
+						.title ΟΜΙΛΙΑ
+						.back-button
+
+					.content-wrapper
+						.title-wrapper.packet-header
+							.value.f80 100’
+							.title προς Εξωτερικό
+
+						.list-wrapper
+
+							.title Δες τα ενεργά πακέτα Data, αλλά και τη σειρά με την οποία καταναλώνονται.
+
+							.item-list
+								.pack-info-item.item-1
+									.title <b>Bonus</b> Talk to Vodafone
+									.value.f80 60’
+									.subtext από 240’
+									.detail Λήγει στις 21.10.2016
+								.pack-info-item.item-2
+									.title Tab 1
+									.value.f80 100’
+									.subtext από 400’
+									.detail Έως και 21.10.2016
+								.pack-info-item.item-3
+									.title CU Talk a Lot 600
+									.value.f80 100’
+									.subtext από 400’
+									.detail Έως και 21.10.2016
+
+
+				#package-1.package-panel.panel.layer-2
+					.nav-header
+						.title Ενεργά πακέτα
+						.back-button
+					
+					.content-wrapper
+						.feature-wrapper
+							ul.features
+								li.plus <b>500 Λεπτά</b> προς CU
+								li.plus <b>500 SMS ή MMS</b> προς CU
+								li.plus <b>100 Λεπτά</b> προς CU
+								li.plus <b>100 SMS</b> σε όλους
+								li.plus <b>60MB Internet</b> προς CU
+							
+							.cost €3,02
+
+							.action-button
+								.text Απενεργοποίηση αυτόματης ανανέωσης
+
+
+				#package-2.package-panel.panel.layer-2
+					.nav-header
+						.title Ενεργά πακέτα
+						.back-button
+					
+					.content-wrapper
+						.feature-wrapper
+							ul.features
+								li.plus <b>500 Λεπτά</b> προς CU
+								li.plus <b>500 SMS ή MMS</b> προς CU
+								li.plus <b>100 Λεπτά</b> προς CU
+								li.plus <b>100 SMS</b> σε όλους
+								li.plus <b>60MB Internet</b> προς CU
+							
+							.cost €5,00
+
+							.action-button
+								.text Απενεργοποίηση αυτόματης ανανέωσης
+
+
+				#package-3.package-panel.panel.layer-2
+					.nav-header
+						.title Ενεργά πακέτα
+						.back-button
+					
+					.content-wrapper
+						.feature-wrapper
+							ul.features
+								li.plus <b>500 Λεπτά</b> προς CU
+								li.plus <b>500 SMS ή MMS</b> προς CU
+								li.plus <b>100 Λεπτά</b> προς CU
+								li.plus <b>100 SMS</b> σε όλους
+								li.plus <b>60MB Internet</b> προς CU
+							
+							.cost €15,00
+
+							.action-button
+								.text Απενεργοποίηση αυτόματης ανανέωσης
+
+
+				#package-4.package-panel.panel.layer-2
+					.nav-header
+						.title Ενεργά πακέτα
+						.back-button
+					
+					.content-wrapper
+						.feature-wrapper
+							ul.features
+								li.plus <b>500 Λεπτά</b> προς CU
+								li.plus <b>500 SMS ή MMS</b> προς CU
+								li.plus <b>100 Λεπτά</b> προς CU
+								li.plus <b>100 SMS</b> σε όλους
+								li.plus <b>60MB Internet</b> προς CU
+							
+							.cost €85,00
+
+							.action-button
+								.text Απενεργοποίηση αυτόματης ανανέωσης
+
+
+				#panel-user-form.panel.layer-2
+					.nav-header
+						.title Ενεργά πακέτα
+						.back-button
+
+					.content-wrapper
+						form(action="#" method="POST")
+							input.hidden(name="personid" value="" type="text")
+
+							.input.field.name
+								input(name="firstname" type="text" tabindex="1")
+								label(for="firstname") Όνομα
+							.input.field.surname
+								input(name="lastname" type="text" tabindex="2")
+								label(for="lastname") Επώνυμο
+							.input.field.phone
+								input(name="phone" type="text" tabindex="3")
+								label(for="phone") Αριθμός
+
+							.field.submit
+								input(name="store" type="submit" value="Αποθήκευση" tabindex="4")
+
+							.field.remove
+								input(name="remove" type="submit" value="Αφαίρεση φίλου" tabindex="5")
+
+
+
+
+
+			include _footer.jade
+			script(src="js/dashboard-page.js")
+
+

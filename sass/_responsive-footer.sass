@@ -1,0 +1,84 @@
+
+
+@media all and (max-width: 900px)
+	footer > .bg
+		&:before
+			content: none
+
+		left: 0
+		right: 0
+		+rem(bottom, -40px)
+		top: 100%
+		background-position: 0 50%
+		background-size: initial
+		background-size: 200%
+
+	footer > .fg
+		+rem(margin-bottom, 40px)
+
+		& > .social-icons
+			display: -webkit-box
+			display: -ms-flexbox
+			display: flex
+			margin-left: auto
+			margin-right: auto
+			align-items: center
+			position: relative
+			left: 0
+			right: 0
+			margin-left: auto
+			margin-right: auto
+			+rem(width, 550px)
+			max-width: 100%
+			top: 0
+
+			& > .item
+				display: block
+				-ms-flex-preferred-size: 0
+				flex-basis: 0
+				-webkit-box-flex: 1
+				-ms-flex-positive: 1
+				flex-grow: 1
+				-ms-flex-negative: 1
+				flex-shrink: 1
+
+			.item+.item
+				+rem(margin-left, 35px)
+
+			& > .item > .icon
+				width: 0
+				font-size: 0
+				+rem(padding, 5px)
+
+				&:before
+					content: ''
+					display: inline-block
+					position: relative
+					// left: 0
+					// top: 0
+					+rem(font-size, 20px)
+					font-weight: 100
+
+		& > .links
+			display: block
+			position: relative
+			left: 0
+			right: 0
+			margin-left: auto
+			margin-right: auto
+			text-align: center
+			+rem(margin-top, 30px)
+			top: 0
+
+			.link + .link
+				margin: auto
+
+			& > .link
+				display: block
+				+rem(padding-top, 14px)
+				+rem(padding-bottom, 14px)
+				margin: auto
+	
+		& > .center
+			+rem(margin-top, 20px)
+			+rem(margin-bottom, 50px)

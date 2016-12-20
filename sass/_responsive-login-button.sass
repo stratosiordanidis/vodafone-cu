@@ -1,0 +1,187 @@
+
+@media (max-width:$mobile-breakpoint)
+
+	.login-button
+		display: inline-block
+		// +rem(padding, 20px 22px 15px)
+		text-align: center
+		right: 0
+		
+		+rem(width, 80px)
+		+rem(height, 40px)
+
+		.login-msg
+			display: none
+
+		.mobile-login-msg
+			display: inline-block
+			position: relative
+			color: white
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			text-align: left
+			cursor: pointer
+			background: $color-red
+			// +rem(padding, 15px 10px)
+			+rem(padding, 10px)
+			+transition(0.3s)
+
+			p
+				margin: 0
+				color: white
+				+rem(font-size, 20px)
+				text-align: left
+				font-weight: bold
+				// +rem(line-height, 24px)
+
+		.close
+			.icon
+
+		.welcome-msg
+			display: none
+			text-align: left
+			background: $color-red
+			+rem(max-height, 70px)
+			// +transition(0.3s)
+
+			.mobile-msg-wrapper
+				// +rem(padding, 15px)
+				+rem(padding, 10px)
+				// +rem(height, 40px)
+
+
+			.msg-wrapper
+				display: none
+
+			p
+				margin: 0
+				color: white
+				+rem(font-size, 20px)
+				font-weight: 200
+
+				span
+					font-weight: bold
+
+			.down-arrow
+
+			.submenu
+				display: none
+			// 	background: #eaeaea
+			// 	// max-height: 0
+			// 	// overflow: hidden
+			// 	pointer-events: none
+			// 	opacity: 0
+			// 	+transition(0.3s)
+
+
+			// 	& > .submenu-item
+			// 		background: white
+			// 		border-top: none
+			// 		text-align: left
+
+			// 		& > a
+			// 			display: block
+			// 			position: relative
+			// 			color: $color-black
+			// 			+rem(font-size, 16px)
+			// 			font-weight: bold
+			// 			+rem(padding, 15px 20px)
+			// 			// +rem(padding, 15px)
+			// 			// +rem(margin, 5px)
+			// 			+translateX(0)
+			// 			background: white
+
+			// 			+transition(0.3s)
+
+			// 			// &:before
+			// 			// 	content: ''
+			// 			// 	display: block
+			// 			// 	position: absolute
+			// 			// 	left: 0
+			// 			// 	right: 0
+			// 			// 	top: 0
+			// 			// 	bottom: 0
+			// 			// 	background: transparent
+			// 			// 	pointer-events: none
+			// 			// 	z-index: -1
+
+			// 			&:hover
+			// 				// +translateX(-20px/16px * 1rem)
+			// 				color: $color-red
+
+			// 				// &:before
+			// 				// 	background-color: $color-red
+
+
+			// 		& > .action-button
+			// 			// +rem(margin, 20px 0px)
+			// 			+rem(margin-top, 20px)
+			// 			+translateX(-20px/16px * 1rem)
+			// 			border-color: $color-red
+			// 			background-color: $color-red
+
+			// 			.text
+			// 				color: white
+
+
+			// 		&:last-child
+			// 			border-top: none !important
+
+			// 			& > a
+			// 				+rem(padding, 20px)
+
+
+			// 	.submenu-item+.submenu-item
+			// 		border-top: 1px solid #eaeaea
+
+			// &:hover
+			// 	.submenu
+			// 		opacity: 1
+			// 		pointer-events: all
+
+
+
+	.loged-in
+		.login-button
+			.mobile-login-msg
+				display: none
+
+			.mobile-msg-wrapper
+				display: inline-block
+
+
+	.show-login-panel
+		.login-button
+			// +rem(width, 195px)
+			// +rem(height, 80px)
+			background: white
+
+			.mobile-login-msg, .mobile-msg-wrapper
+				// display: none
+				// +rem(width, 195px)
+				// +rem(height, 80px)
+				opacity: 0
+				// padding: 0
+				pointer-events: none
+
+			.close
+				display: inline-block
+				// background: white
+				pointer-events: all
+				opacity: 1
+
+
+
+	.logged-in
+		.login-button
+			background-color: $color-red
+
+			.mobile-login-msg, .close
+				opacity: 0
+				pointer-events: none
+
+			.mobile-msg-wrapper
+				opacity: 1
+				pointer-events: all

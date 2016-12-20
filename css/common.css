@@ -1,0 +1,24 @@
+.f28 { font-size: 28px; }
+
+.f48, header nav ul.menu > li .submenu > li a { font-size: 48px; line-height: 60px; }
+
+.fbold { font-weight: bold; }
+
+.fblack { font-weight: bolder; }
+
+a { text-decoration: none; }
+
+ul, li { margin: 0; padding: 0; list-style: none; }
+
+header { position: fixed; top: 0; left: 0; right: 0; }
+header .cu-logo { display: inline-block; position: absolute; left: 20px; top: 20px; }
+header .cu-logo img { width: 264px; height: 124px; }
+header .login-button { display: inline-block; position: absolute; right: 20px; top: 20px; }
+header nav ul.menu { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; text-align: center; }
+header nav ul.menu > li { display: inline-block; position: relative; }
+header nav ul.menu > li > a { color: #09090a; font-family: "P F Premier Text", sans-serif; font-size: 28px; font-weight: 700; text-transform: uppercase; z-index: 2; }
+header nav ul.menu > li > a + header nav ul.menu > li > a { margin-left: 25px; }
+header nav ul.menu > li .submenu { display: block; position: absolute; }
+header nav ul.menu > li .submenu > li { display: block; }
+header nav ul.menu > li .submenu > li a { color: #09090a; }
+header nav ul.menu > li .submenu > li a:hover { color: #ff2424; }

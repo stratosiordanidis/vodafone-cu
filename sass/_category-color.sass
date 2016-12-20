@@ -1,0 +1,48 @@
+
+
+=set-category-color($color)
+	
+	.fg
+		background-color: $color
+
+	.fg > .text-wrapper > .category-title
+		color: $color
+
+	&.info-holder
+		& > .bg
+			background-color: $color
+
+			.title span
+				color: $color
+
+		& > .fg
+			background-color: $color
+			
+			.text-wrapper
+				.title span
+					color: $color
+			.action-button
+				background-color: $color
+				border-color: $color
+
+	span
+		color: $color
+
+	.action-button
+		background-color: $color
+		border-color: $color
+
+	@media all and (max-width: $mobile-breakpoint)
+		.action-button > .text
+			color: $color !important
+
+
+.category-purple
+	+set-category-color($color-purple)
+
+.category-cyan
+	+set-category-color($color-cyan)
+
+.category-red
+	+set-category-color($color-red)
+

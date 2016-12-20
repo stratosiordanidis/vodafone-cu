@@ -1,0 +1,76 @@
+.tabbed-carousel-list-block.page-middle-column
+	.title Πακέτα Καρτοκινητής
+	.detail Data για να σερφάρισμα στα βαθιά, με τα πακέτα mobile internet.
+	//- .selection-wrapper
+	//- 	select.mobile
+	//- 		option(value='Data') Data
+	//- 		option(value='Ομιλία') Ομιλία
+	//- 		option(value='SMS') SMS
+	//- 		option(value='International') International
+	//- 		option(value='Προσφορές') Προσφορές
+
+	//- 	ul.tabs.no-auto-carousel
+	//- 		li.tab
+	//- 			.underlined-title(href='#') Data
+	//- 			include _package-list-DATA.jade
+
+	//- 		li.tab
+	//- 			.underlined-title(href='#') Ομιλία
+	//- 			include _package-list-SPEECH.jade
+
+	//- 		li.tab
+	//- 			.underlined-title(href='#') SMS
+	//- 			include _package-list-SMS.jade
+
+	//- 		li.tab
+	//- 			.underlined-title(href='#') International
+	//- 			include _package-list-INTERNATIONAL.jade
+
+	//- 		li.tab
+	//- 			.underlined-title(href='#') Προσφορές
+	//- 			include _package-list-OFFERS.jade
+
+
+	//- .carousel-package-list
+
+
+	.tabbed-control(data-trigger="")
+
+		select.tab-options.mobile-only
+			option(value='Data').tab-option Data
+			option(value='Ομιλία').tab-option Ομιλία
+			option(value='SMS').tab-option SMS
+			option(value='International').tab-option International
+			option(value='Προσφορές').tab-option Προσφορές
+
+		//- .tab-buttons.desktop-only
+		.tab-buttons
+			.tab-button.tab-1.active
+				.underlined-title(href='#') Data
+			.tab-button.tab-2
+				.underlined-title(href='#') Ομιλία
+			.tab-button.tab-3
+				.underlined-title(href='#') SMS
+			.tab-button.tab-4
+				.underlined-title(href='#') International
+			.tab-button.tab-5
+				.underlined-title(href='#') Προσφορές
+
+
+		.tab-contents
+			.tab-content.tab-content-1.active
+				include _package-list-DATA.jade
+
+			.tab-content.tab-content-2
+				include _package-list-SPEECH.jade
+
+			.tab-content.tab-content-3
+				include _package-list-SMS.jade
+
+			.tab-content.tab-content-4
+				include _package-list-INTERNATIONAL.jade
+
+			.tab-content.tab-content-5
+				include _package-list-OFFERS.jade
+
+

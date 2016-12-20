@@ -1,0 +1,154 @@
+$pfpremier-font-path: "pf_premier" !default;
+$icomoon-font-path: "fonts" !default;
+
+$icon-login_email: "\e907";
+$icon-login_password: "\e908";
+$icon-login_phone: "\e909";
+$icon-login_username: "\e90a";
+$icon-arrow-thin: "\e906";
+$icon-cross: "\e905";
+$icon-instagram: "\e903";
+$icon-snapchat: "\e904";
+$icon-triangle: "\e902";
+$icon-arrow-head: "\e900";
+$icon-carousel-arrow: "\e901";
+$icon-facebook: "\ea91";
+$icon-youtube: "\ea9d";
+
+
+
+@font-face {
+  font-family: 'PF-Premier-Text';
+  src:  url('#{$pfpremier-font-path}/PF Premier Text Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PF-Premier-Text';
+  src:  url('#{$pfpremier-font-path}/PF Premier Text Light.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PF-Premier-Text';
+  src:  url('#{$pfpremier-font-path}/PF Premier Text.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PF-Premier-Text';
+  src:  url('#{$pfpremier-font-path}/PF Premier Text Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PF-Premier-Text';
+  src:  url('#{$pfpremier-font-path}/PF Premier Text Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PF-Premier-Text';
+  src:  url('#{$pfpremier-font-path}/PF Premier Text Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'cu';
+  src:  url('#{$icomoon-font-path}/cu.eot?6c0ee8');
+  src:  url('#{$icomoon-font-path}/cu.eot?6c0ee8#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/cu.ttf?6c0ee8') format('truetype'),
+    url('#{$icomoon-font-path}/cu.woff?6c0ee8') format('woff'),
+    url('#{$icomoon-font-path}/cu.svg?6c0ee8#cu') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'cu' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-login_email {
+  &:before {
+    content: $icon-login_email;
+  }
+}
+.icon-login_password {
+  &:before {
+    content: $icon-login_password;
+  }
+}
+.icon-login_phone {
+  &:before {
+    content: $icon-login_phone;
+  }
+}
+.icon-login_username {
+  &:before {
+    content: $icon-login_username;
+  }
+}
+.icon-arrow-thin {
+  &:before {
+    content: $icon-arrow-thin;
+  }
+}
+.icon-cross {
+  &:before {
+    content: $icon-cross;
+  }
+}
+.icon-instagram {
+  &:before {
+    content: $icon-instagram;
+  }
+}
+.icon-snapchat {
+  &:before {
+    content: $icon-snapchat;
+  }
+}
+.icon-triangle {
+  &:before {
+    content: $icon-triangle;
+  }
+}
+.icon-arrow-head {
+  &:before {
+    content: $icon-arrow-head;
+  }
+}
+.icon-carousel-arrow {
+  &:before {
+    content: $icon-carousel-arrow;
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook;
+  }
+}
+.icon-youtube {
+  &:before {
+    content: $icon-youtube;
+  }
+}
+

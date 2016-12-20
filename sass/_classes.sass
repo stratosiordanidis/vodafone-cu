@@ -1,0 +1,425 @@
+.f24
+	+rem(font-size, 24px)
+
+.f28
+	+rem(font-size, 28px)
+
+.f48
+	+rem(font-size, 48px)
+	+rem(line-height, 60px)
+
+.f64
+	+rem(font-size, 64px)
+
+.f80
+	+rem(font-size, 80px)
+
+@media (max-width:$mobile-breakpoint)
+	.f24
+		+rem(font-size, 12px)
+
+	.f28
+		+rem(font-size, 14px)
+
+	.f48
+		+rem(font-size, 24px)
+		+rem(line-height, 30px)
+
+	.f64
+		+rem(font-size, 32px)
+
+
+.fbold
+	font-weight: bold
+
+.fblack
+	font-weight: bolder
+
+//=============================
+
+.h1
+	+rem(font-size, 72px)
+	font-weight: 500
+	+rem(letter-spacing, -3px)
+
+.h2
+	+rem(font-size, 48px)
+	// font-weight: 500
+	// +rem(letter-spacing, -3px)
+
+.h3
+	+rem(font-size, 32px)
+	// font-weight: 500
+	// +rem(letter-spacing, -3px)
+
+.h4
+	+rem(font-size, 20px)
+	font-weight: 100
+	// font-weight: 500
+	// +rem(letter-spacing, -3px)
+
+//=============================
+
+.block
+	display: block
+
+.hidden
+	display: none
+
+.desktop-only
+	display: block
+
+	@media (max-width:$mobile-breakpoint)
+		display: none
+
+
+.mobile-only
+	display: none
+
+	@media (max-width:$mobile-breakpoint)
+		display: block
+
+
+.center
+	max-width: 100%
+	left: 0
+	right: 0
+	margin-left: auto
+	margin-right: auto
+	text-align: center
+
+.center-1280
+	@extend .center
+	+rem(width, 1280px)
+
+.center-960
+	@extend .center
+	+rem(width, 960px)
+
+.center-640
+	@extend .center
+	+rem(width, 640px)
+
+
+
+.slick-track
+	left: 0
+	right: 0
+	margin-left: auto
+	margin-right: auto
+	font-size: 0
+
+	.slick-slide
+		float: none
+		outline: none
+
+		a
+			&:after
+				content: none
+
+.is-vertical
+	-webkit-box-orient: vertical
+	-webkit-box-direction: normal
+	-ms-flex-direction: column
+	flex-direction: column
+
+
+.is-fullheight
+	min-height: 100vh
+
+.is-fullwidth
+	min-width: 100vw
+
+.is-vcentered
+	-webkit-box-align: center
+	-ms-flex-align: center
+	-ms-grid-row-align: center
+	align-items: center
+
+
+.is-loading 
+	color: transparent !important
+	pointer-events: none
+
+	+keyframes(spinAround)
+		from
+			+transform(rotate(0deg))
+		to
+			+transform(rotate(359deg))
+
+	&:after
+		-webkit-animation: spinAround 500ms infinite linear
+		animation: spinAround 500ms infinite linear
+		border: 2px solid #dbdbdb
+		border-radius: 290486px
+		border-right-color: transparent
+		border-top-color: transparent
+		content: ""
+		display: block
+		height: 16px
+		position: relative
+		width: 16px
+		left: 50%
+		margin-left: -8px
+		margin-top: -8px
+		position: absolute
+		top: 50%
+		position: absolute !important
+
+.ellipsis
+	// white-space: nowrap
+	overflow: hidden
+	// IE 6+, FF 7+, Op 11+, Saf 1.3+, Chr 1+
+	text-overflow: ellipsis
+	// for Opera 9 & 10
+	-o-text-overflow: ellipsis
+
+
+.plus
+	position: relative
+	padding-left: 1.3em
+
+	&:before
+		display: inline-block
+		position: absolute
+		vertical-align: middle
+		content: $icon-cross
+		font-family: 'cu'
+		color: $color-cyan
+		// +rem(font-size, 16px)
+		// font-size: inherit
+		font-size: 13px
+		// +rem(line-height, 26px)
+		line-height: inherit
+		left: 0
+		top: 0
+		bottom: 0
+		+transition(0.3s)
+
+a
+	display: inline-block
+	position: relative
+	text-decoration: none
+	// color: $color-black
+
+	&:after
+		content: ''
+		display: inline-block
+		position: absolute
+		width: 100%
+		+rem(height, 1px)
+		background-color: $color-black
+		+transition(0.3s)
+		// top: 100%
+		top: 90%
+		// top: 0
+		left: 0
+
+	&:hover:after
+		background-color: $color-red
+
+
+.title
+	color: $color-black
+	text-align: left
+	position: relative
+	font-weight: bold
+
+
+.underlined-title
+	display: inline-block
+	position: relative
+	+rem(font-size, 32px)
+	// font-weight: bold
+	color: $color-black
+	z-index: 1
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		width: 100%
+		+rem(height, 10px)
+		background: #eaeaeb
+		+rem(left, 10px)
+		// +rem(bottom, 5px)
+		// +rem(bottom, 0px)
+		bottom: 0
+		z-index: -1
+		+transition(background-color 0.3s)
+
+a.underlined-title:after
+	content: none
+
+
+.underlined-title.size-xxl
+	display: inline-block
+	position: relative
+	+rem(font-size, 88px)
+	// font-weight: bold
+	color: $color-black
+	z-index: 1
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		width: 100%
+		height: 0.3em
+		background: #eaeaeb
+		// +rem(left, 10px)
+		left: 0.45em
+		// +rem(bottom, 5px)
+		// +rem(bottom, 0px)
+		bottom: 0
+		z-index: -1
+		+transition(background-color 0.3s)
+
+.detail
+	color: $color-black
+	text-align: left
+
+
+.button
+	-moz-appearance: none
+	-webkit-appearance: none
+	-webkit-box-align: center
+	-ms-flex-align: center
+
+
+.action-button
+	display: inline-block
+	position: relative
+	+no-rem(padding, 12px 25px)
+	// +rem(border-width, 5px)
+	border-style: solid
+	cursor: pointer
+	+transition(background-color 0.3s)
+	border: none
+
+	&:after
+		content: none
+
+	&:before
+		content: ''
+		display: inline-block
+		position: absolute
+		left: 0
+		top: 0
+		bottom: 0
+		right: 100%
+		background-color: black
+		+transition(right 0.3s)
+		pointer-events: none
+
+	.text
+		display: inline-block
+		position: relative
+		// font-size: 16px
+		font-size: 20px
+
+	.icon-arrow-head
+		position: absolute
+		display: none
+
+	&:hover
+		// background-color: $color-black
+		&:before
+			right: 0
+
+// input:-webkit-autofill
+// 	-webkit-box-shadow: 0 0 0px 1000px white inset
+// 	// background-color: transparent
+
+label.movable
+	display: inline-block
+	position: absolute
+	// font-weight: 300
+	font-weight: 100
+	+rem(top, 6px)
+	+no-rem(font-size, 20px)
+	+transition(all 0.3s)
+
+input[type="text"]
+	+transition(border-bottom 0.3s)
+
+input.focused
+	border-bottom-color: $color-cyan !important
+
+input:focus+label.movable, input.focused+label.movable, input.has-value+label.movable
+
+	+no-rem(font-size, 16px)
+	// +transform(translateY((-20px/16px)*1rem))
+	+transform(translateY(-100%))
+
+
+.tabbed-control
+	.tab-contents
+		.tab-content:not(.active)
+			display: none
+
+
+.sidebar-info
+	display: none !important
+
+
+.slick-arrow
+	cursor: pointer
+
+.slick-dots
+	text-align: center
+	left: 0
+	right: 0
+	margin-left: auto
+	margin-right: auto
+
+	white-space: nowrap
+	& > li
+		display: inline-block
+		position: relative
+		outline: none
+		cursor: pointer
+		+no-rem(padding, 7px)
+
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+			margin: auto
+			+rem(width, 16px)
+			+rem(height, 16px)
+			+border-radius( 30px )
+			+transform(scale(0.6, 0.6))
+			background: $color-black
+			+transition(0.3s)
+			pointer-events: none
+			outline: none
+
+		& > button
+			font-size: 0
+			color: transparent
+			border: none
+			outline: none
+			cursor: pointer
+			// +rem(width, 16px)
+			// +rem(height, 16px)
+			background: transparent
+
+		&:hover:after
+			background-color: $color-cyan
+			
+
+		&.slick-active:after
+			+transform(scale(1, 1))
+			background-color: $color-cyan
+
+	li+li
+		+rem(margin-left, 16px)
+		+rem(margin-left, 10px)
+		// +rem(margin-left, 26px)
+
+

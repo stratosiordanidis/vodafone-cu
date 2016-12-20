@@ -1,0 +1,37 @@
+.tabbed-control(data-trigger="")
+
+	select.tab-options.mobile
+		option(value='Data').tab-option Data
+		option(value='Ομιλία').tab-option Ομιλία
+		option(value='SMS').tab-option SMS
+		option(value='International').tab-option International
+		option(value='Προσφορές').tab-option Προσφορές
+
+	.tab-buttons.desktop-only
+		.tab-button.tab-1.active
+			.underlined-title(href='#') Data
+		.tab-button.tab-2
+			.underlined-title(href='#') Ομιλία
+		.tab-button.tab-3
+			.underlined-title(href='#') SMS
+		.tab-button.tab-4
+			.underlined-title(href='#') International
+		.tab-button.tab-5
+			.underlined-title(href='#') Προσφορές
+
+
+	.tab-contents
+		.tab-content.tab-content-1
+			include _package-list-DATA.jade
+
+		.tab-content.tab-content-2
+			include _package-list-SPEECH.jade
+
+		.tab-content.tab-content-3
+			include _package-list-SMS.jade
+
+		.tab-content.tab-content-4
+			include _package-list-INTERNATIONAL.jade
+
+		.tab-content.tab-content-5
+			include _package-list-OFFERS.jade

@@ -1,0 +1,92 @@
+aside#sidebar
+	.loader
+		.spinner
+	//- .click-trap
+	
+
+	// sidebars are opened when the user clicks on an <a> with a href containing either "#opensidebar?" or '/sidebar/' 
+	// or an element with [data-open-sidebar] 
+
+	// a custom window event is triggered like so: $(window).trigger('load-side-url', href);
+	// When you handle the 'load-side-url' event you replace the contents of aside#sidebar > .sidebar-contents
+	// with an HTML node-tree that starts with a node containing one of the following class-sets
+	// .sidebar.package-sidebar, .sidebar.offer-sidebar, .sidebar.generic-sidebar
+	// When the sidebar has been loaded you call $(window).trigger('sidebar-loaded');
+
+	// to signify the sidebar's title, set in the [data-sidebar-title] of the element clicked.
+
+	// NOTE: anything with the class .hidden will have display: none
+
+
+	.sidebar-contents
+
+
+		// the following is just an example of the contents you can add dynamically
+		// you can leave it empty
+
+		//- .sidebar.package-sidebar
+		//- 	.side-graphic
+		//- 	.white-area
+		//- 		.title-wrapper
+		//- 			.title Surf &amp; Email 160
+		//- 			.cost €5,04
+		//- 			.notice-sticker
+		//- 				p Πρασφορά μοναδικη!
+		//- 		ul.features
+		//- 			li 
+		//- 				p <b>100 Λεπτά</b>
+		//- 			li 
+		//- 				p <b>500 Λεπτά</b>
+		//- 				p <small> ενεργοποιόντας την <a href='#'>αυτόματη ανανέωση</a></small>
+		//- 			li 
+		//- 				p <b>500 SMS ή MMS</b> Δώρο
+		//- 				p <small> (έως 29/9)</small>
+
+		//- 		.action-button
+		//- 			.text Ενεργοποίησέ το
+		//- 	.grey-area
+		//- 		.title Tell me more, tell me more!
+		//- 		ul
+		//- 			li Σε περίπτωση που ξεπεράσεις τα MB του πακέτου ισχύουν οι χρεώσεις του <a href='#'>Internet &nbsp; Όλη μέρα.</a>
+		//- 			li Τα ΜΒ του πακέτου ισχύουν για 30 μέρες από την αγορά του και αν δεν τα χρησιμοποιήσεις όλα μέσα σε έναν μήνα, τα MB που σου έχουν μείνει δεν μεταφέρονται στον επόμενο μήνα.
+		//- 			li Το πακέτο είναι συμβατό με όλα τα πακέτα χρήσης καρτοκινητής και με οποιοδήποτε bonus. Αν υπάρχουν διαθέσιμα ΜΒ από άλλα πακέτα ή bonus τότε προτεραιότητα έχουν τα MB με την συντομότερη ημερομηνία λήξης.
+		//- 			li Τα ΜΒ του πακέτου δεν ισχύουν όταν βρίσκεσαι στο εξωτερικό.
+		//- 			li Η προσφορά των 500MB αντί των 100MB, ισχύει έως 30/09/2016.
+
+
+// this is for testing only. 
+// remove it on production
+#sidebar-sample.hidden
+	.sidebar.package-sidebar
+		.side-graphic
+		.white-area
+			.title-wrapper
+				.title Surf &amp; Email 160
+				.cost €5,04
+				.notice-sticker
+					p Πρασφορά μοναδικη!
+			ul.features
+				li 
+					p <b>100 Λεπτά</b>
+				li 
+					p <b>500 Λεπτά</b>
+					p <small> ενεργοποιόντας την <a href='#'>αυτόματη ανανέωση</a></small>
+				li 
+					p <b>500 SMS ή MMS</b> Δώρο
+					p <small> (έως 29/9)</small>
+
+			.action-button
+				.text Ενεργοποίησέ το
+		.grey-area
+			.title Tell me more, tell me more!
+			ul
+				li Σε περίπτωση που ξεπεράσεις τα MB του πακέτου ισχύουν οι χρεώσεις του <a href='#'>Internet &nbsp; Όλη μέρα.</a>
+				li Τα ΜΒ του πακέτου ισχύουν για 30 μέρες από την αγορά του και αν δεν τα χρησιμοποιήσεις όλα μέσα σε έναν μήνα, τα MB που σου έχουν μείνει δεν μεταφέρονται στον επόμενο μήνα.
+				li Το πακέτο είναι συμβατό με όλα τα πακέτα χρήσης καρτοκινητής και με οποιοδήποτε bonus. Αν υπάρχουν διαθέσιμα ΜΒ από άλλα πακέτα ή bonus τότε προτεραιότητα έχουν τα MB με την συντομότερη ημερομηνία λήξης.
+				li Τα ΜΒ του πακέτου δεν ισχύουν όταν βρίσκεσαι στο εξωτερικό.
+				li Η προσφορά των 500MB αντί των 100MB, ισχύει έως 30/09/2016.
+
+//- #sidebar-iframe
+//- 	.click-trap
+//- 	.sidebar
+//- 		iframe(src="" allowtransparency="true")
