@@ -132,7 +132,7 @@
 	position: relative
 	white-space: nowrap
 	// +rem(padding-bottom, 86px)
-	+rem(padding-bottom, 52px)
+	+no-rem(padding-bottom, 52px)
 	// +rem(width, 1100px)
 	max-width: 100%
 	left: 0
@@ -155,7 +155,7 @@
 
 	.slick-dots
 		// +rem(margin-top, 70px)
-		+rem(margin-top, 40px)
+		+no-rem(margin-top, 40px)
 
 	&.slick-slider
 		-webkit-user-select: initial
@@ -169,17 +169,17 @@
 		position: relative
 		font-family: $font-premier
 		vertical-align: top
-		+rem(max-width, 450px)
-		+rem(min-height, 350px)
+		+no-rem(max-width, 450px)
+		+no-rem(min-height, 350px)
 		// +rem(margin-left, 20px)
 		// +rem(margin-right, 20px)
 		// +rem(margin-left, 60px)
 		// +rem(margin-right, 60px)
-		+rem(margin-left, 30px)
-		+rem(margin-right, 30px)
-		+rem(padding-left, 20px)
-		+rem(padding-right, 20px)
-		+rem(margin-top, 30px)
+		+no-rem(margin-left, 30px)
+		+no-rem(margin-right, 30px)
+		+no-rem(padding-left, 20px)
+		+no-rem(padding-right, 20px)
+		+no-rem(margin-top, 30px)
 		// +rem(margin-bottom, 10px)
 		// +transition(margin-left 0.5s)
 		+transition(0.3s)
@@ -197,7 +197,7 @@
 			width: 100%
 			background: $color-cyan
 			background-size: cover
-			+rem(height, 10px)
+			+no-rem(height, 10px)
 			// +rem(top, 10px)
 			left: 0
 			+transition(0.5s)
@@ -235,7 +235,7 @@
 			// +display-flex()
 			// +flex-direction(column)
 			// +rem(margin-bottom, 50px)
-			+rem(margin-bottom, 30px)
+			+no-rem(margin-bottom, 30px)
 			cursor: pointer
 
 			$offset: 50px
@@ -246,8 +246,8 @@
 				// left: 100%
 				// +rem(right, 10px)
 				right: 0
-				+rem(bottom, 3px)
-				+rem(margin-left, 5px)
+				+no-rem(bottom, 3px)
+				+no-rem(margin-left, 5px)
 				// +rem(font-size, 20px)
 				+no-rem(font-size, 16px)
 				+weight200
@@ -264,7 +264,7 @@
 					// +rem(width, $offset)
 					width: 0
 					// +rem(height, 1.7px)
-					+rem(height, 2px)
+					+no-rem(height, 2px)
 					background-color: white
 					top: 0
 					bottom: 0
@@ -277,7 +277,7 @@
 					content: $icon-arrow-head
 					+transition(0.3s)
 					position: relative
-					+rem(line-height, 2.8rem)
+					+no-rem(line-height, 2.8rem)
 					// +rem(left, ($offset + 1px))
 					left: 0
 					// +transform(translateY(-0.1rem))
@@ -287,21 +287,21 @@
 				.icon-arrow-head
 					&:before
 						// left: 0
-						+rem(left, ($offset + 1px))
+						+no-rem(left, ($offset + 1px))
 
 					&:after
 						// width: 0
-						+rem(width, $offset)
+						+no-rem(width, $offset)
 
 
 
 			.notice-sticker
 				display: inline-block
 				position: absolute
-				+rem(left, 20px)
-				+rem(top, -10px)
+				+no-rem(left, 20px)
+				+no-rem(top, -10px)
 				// +rem(padding, 10px 15px)
-				+rem(padding, 8px 13px)
+				+no-rem(padding, 8px 13px)
 				+transition(0.5s)
 				// background: $color-red
 				background: $color-cyan
@@ -330,7 +330,7 @@
 					+transition(0.3s)
 
 					&+&
-						+rem(margin-top, 4px)
+						+no-rem(margin-top, 4px)
 
 					&:last-child
 						font-weight: normal
@@ -347,19 +347,19 @@
 				width: 100%
 				background: url('../img/package-title.png') no-repeat
 				background-size: cover
-				+rem(min-height, 100px)
-				+rem(left, -20px)
-				+rem(top, -20px)
+				+no-rem(min-height, 100px)
+				+no-rem(left, -20px)
+				+no-rem(top, -20px)
 				+transition(0.5s)
 
 				& > p
-					+rem(font-size, 32px)
+					+no-rem(font-size, 32px)
 					// font-weight: bold
 					font-weight: 500
 					color: white
 					text-align: left
-					+rem(padding, 12px 18px)
-					+rem(padding-left, 28px)
+					+no-rem(padding, 12px 18px)
+					+no-rem(padding-left, 28px)
 					// +rem(min-height, 60px)
 					margin-top: auto
 					margin-bottom: 0
@@ -367,7 +367,7 @@
 
 
 			.features
-				+rem(padding, 0 20px)
+				+no-rem(padding, 0 20px)
 
 				& > li
 					display: block
@@ -409,7 +409,7 @@
 
 			& > .detail 
 				display: block
-				+rem(padding, 0 20px)
+				+no-rem(padding, 0 20px)
 				+no-rem(margin-left, 26px)
 
 
@@ -434,14 +434,14 @@
 
 			.cost
 				font-family: $font-premier
-				+rem(font-size, 48px)
+				+no-rem(font-size, 48px)
 				font-weight: normal
 				color: $color-black
 				text-align: left
-				+rem(padding-left, 20px)
+				+no-rem(padding-left, 20px)
 				// +rem(padding-bottom, 25px)
-				+rem(padding-bottom, 20px)
-				+rem(letter-spacing, -1px)
+				+no-rem(padding-bottom, 20px)
+				+no-rem(letter-spacing, -1px)
 				+transition(0.3s)
 
 
@@ -451,9 +451,9 @@
 				border-color: $color-red
 				position: absolute
 				// +rem(right, -20px)
-				+rem(right, 0px)
+				+no-rem(right, 0px)
 				// +rem(bottom, 20px)
-				+rem(bottom, 30px)
+				+no-rem(bottom, 30px)
 				// +rem(padding, 11px 20px)
 				// +rem(padding, 10px 15px)
 
@@ -481,8 +481,8 @@
 		.slick-arrow
 
 			position: absolute
-			+rem(width, 115px)
-			+rem(height, 105px)
+			+no-rem(width, 115px)
+			+no-rem(height, 105px)
 			color: transparent
 			font-size: 0
 			border: none
@@ -502,7 +502,7 @@
 				content: $icon-triangle
 				font-family: 'cu'
 				color: $color-cyan
-				+rem(font-size, 100px)
+				+no-rem(font-size, 100px)
 				pointer-events: none
 				text-align: right
 
@@ -513,26 +513,26 @@
 				// content: $icon-triangle
 				font-family: 'cu'
 				color: $color-black
-				+rem(font-size, 35px)
+				+no-rem(font-size, 35px)
 				pointer-events: none
 
 			&.slick-next
-				+rem(right, -80px +40px )
+				+no-rem(right, -80px +40px )
 				// +rem(right, 130px )
-				+rem(top, 120px)
+				+no-rem(top, 120px)
 				&:after
-					+rem(bottom, 28px)
-					+rem(right, 30px)
+					+no-rem(bottom, 28px)
+					+no-rem(right, 30px)
 
 			&.slick-prev
-				+rem(left, -80px  )
-				+rem(top, 120px)
+				+no-rem(left, -80px  )
+				+no-rem(top, 120px)
 				&:before, &:after
 					+rotateZ(180deg)
 
 				&:after
-					+rem(top, 28px)
-					+rem(left, 30px)
+					+no-rem(top, 28px)
+					+no-rem(left, 30px)
 
 
 		// &.slick-dotted
