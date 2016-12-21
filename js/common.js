@@ -1364,6 +1364,168 @@ function setupAccordion()
 }
 
 
+
+function setupMobilePanels()
+{
+	var activeClass = 'active';
+	var prevHash = '';
+	// $('.mobile-layout .panel-link')
+	$('.panel-link')
+		.on('click', function(e)
+	{
+		var $this = $(this);
+		var href = $this.attr('href') || '';
+
+		var $panel = $(href);
+
+		if ($panel.length > 0)
+		{
+			e.preventDefault();
+			// $panel.addClass('active');
+
+			var hash = window.location.hash || '';
+
+			if (href == '#panel-user-form')
+			{
+				var $fillin = $this.find('.fill-in-data');
+
+				$(href + ' input[type="text"]').each(function(index, el)
+				{
+					var $el = $(el);
+					var name = 'data-' + ($el.attr('name') || '');
+
+					var data = $fillin.attr(name) || '';
+					data = data.trim();
+					$el.val(data);
+					if (data.length > 0)
+					{
+						$el.addClass('has-value');
+					}
+					else
+					{
+						$el.removeClass('has-value');
+					}
+					// if ($fillin.length > 0)
+					// {
+					// }
+					// else
+					// {
+					// 	$el.val('');
+					// }
+				})
+			}
+
+			var $el = $(href);
+
+			if ($el.length > 0)
+			{
+				$el.find('.progress-widget > .fg-graphic').each(function(idx, el)
+					{
+						// setProgressArcNumber(0, el, true);
+
+						setTimeout(function()
+						{
+							setProgressArcNumber(idx, el);
+						}, 300);
+					});
+			}
+
+			hash += href;
+			if(history.pushState) 
+			{
+				history.pushState(null, null, hash);
+				$(window).trigger("hashchange");
+			}
+			else 
+			{
+				location.hash = hash;
+			}
+
+		}
+	});
+
+
+	History.Adapter.bind(window, 'statechange', function() 
+	{
+		var state = History.getState();
+		// updateContent(History.getState());
+		var url = state.data.url;
+		console.log('statechange '+url);
+	});
+
+	History.Adapter.bind(window, 'onanchorchange', function() 
+	{
+		var state = History.getState();
+		// updateContent(History.getState());
+		var url = state.data.url;
+		console.log('onanchorchange '+url);
+	});
+
+
+	$(window).bind("hashchange", function(e)
+	{
+		console.log('hashchange '+location.hash);
+
+		var hash = window.location.hash || '';
+		$('.panel.'+activeClass).removeClass(activeClass);
+
+		// $('#base-panel').addClass(activeClass);
+		// if ( hash.length == 0 )
+		// {
+		// 	$('#base-panel').addClass('active');
+		// }
+
+		var parts = hash.split('#');
+		var panelsOpen = 0;
+		for (var i = 0; i < parts.length; i++)
+		{
+			if ( parts[i].length > 2 )
+			{
+				var $panel = $('#'+parts[i]);
+				console.log('#'+parts[i]+' set to active');
+				$panel.addClass(activeClass);
+				panelsOpen++;	
+			}
+		}
+
+		if (panelsOpen > 0)
+		{
+			$('html').addClass('mobile-panel-open');
+		}
+		else
+		{
+			$('html').removeClass('mobile-panel-open');
+		}
+
+		// var panelSel = parts[parts.length - 1];
+		// var $panel = $(panelSel);
+
+	});
+
+	// $('.mobile-layout .panel .nav-header .back-button')
+	$('.panel .nav-header .back-button')
+		.on('click', function(e)
+	{
+		// var $this = $(this);
+		// var $panel = $this.closest('.panel');
+		
+		$(this).closest('.panel').find('.progress-widget > .fg-graphic').each(function(idx, el)
+		{
+			setProgressArcNumber(0, el, true);
+		});
+
+		// $panel.removeClass(activeClass);
+		History.back();
+	});
+
+	$('.progress-widget .fg-graphic').each(function(index, el)
+	{
+		setProgressArcNumber(index, el);
+	});
+
+}
+
+
 function setupHashNavigation()
 {
 	var navOffset = $('header .nav-menu').height();
@@ -1508,6 +1670,8 @@ $(document).ready(function()
 	setupInputs();
 	setupNavigationMenu();
 	setupHeaderCarousel();
+
+	setupMobilePanels();
 
 	// setupTabbedCarouselLists();
 

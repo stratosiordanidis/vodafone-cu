@@ -1,157 +1,225 @@
 @media all and (max-width: $mobile-breakpoint)
 
 	.article-box
-		display: block
-		width: 100%
-		max-width: 100%
-		margin: 0
-		+rem(margin-top, 30px)
-		// +rem(max-height, 265px)
-		// +rem(height, 265px)
-		height: auto
-		max-height: none
-		+rem(height, 265px)
+		&, &.fullwidth
+			display: block
+			width: 100%
+			max-width: 100%
+			margin: 0
+			+rem(margin-top, 30px)
+			// +rem(max-height, 265px)
+			// +rem(height, 265px)
+			// height: auto
 
-		&:first-child
-			margin-left: 0
-		&:last-child
-			margin-right: 0
+			max-height: none
+			// +rem(height, 265px)
 
-		& > .bg
-			width: 75%
-			+rem(height, 255px)
+			position: relative
+			padding-bottom: (265/310)*100%
+			height: 0
 
-		& > .fg
-			$min-h: (10px/16px)*1rem
-			width: 50%
-			min-height: 0
-			// height: calc(100% - #{$min-h})
-			// height: calc(100% - 10px)
-			+rem(height, 255px)
 
-			& > .text-wrapper
-				+rem(margin-left, 15px)
-				+rem(margin-right, 15px)
-				min-width: 0
-				+rem(padding-top, 20px)
-				+rem(padding-bottom, 10px)
-				min-height: 0
-				// height: 100%
-				+rem(height, 210px - 30px)
+			&:first-child
+				margin-left: 0
+			&:last-child
+				margin-right: 0
 
-				& > .title
-					+rem(font-size, 20px)
-					// font-weight: 100
-					+weight100
-					+rem(line-height, 26px)
-					+rem(max-height, 26px*6)
-
-				& > .detail
-					display: none
-
-		&.fullwidth
 			& > .bg
+				position: absolute
 				width: 75%
+				// +rem(height, 255px)
+				height: auto
+
+				left: 0%
+				// right: 0%
+				top: 0
+				bottom: 0
 
 			& > .fg
+				position: absolute
+				left: 50%
+				right: 0%
+				top: 0%
+				bottom: 0%
+
 				$min-h: (10px/16px)*1rem
 				width: 50%
 				min-height: 0
+				// height: calc(100% - #{$min-h})
+				// height: calc(100% - 10px)
+				// +rem(height, 255px)
+				height: auto
+
+				& > .text-wrapper
+					+rem(margin-left, 15px)
+					+rem(margin-right, 15px)
+					min-width: 0
+					+rem(padding-top, 20px)
+					+rem(padding-bottom, 10px)
+					min-height: 0
+					// height: 100%
+					+rem(height, 210px - 30px)
+
+					position: absolute
+					left: 0
+					right: 0
+					top: 0
+					// bottom: 40px
+					bottom: 55px
+					height: auto
+
+
+					& > .title
+						+rem(font-size, 20px)
+						// font-weight: 100
+						+weight100
+						+rem(line-height, 26px)
+						+rem(max-height, 26px*6)
+
+					& > .detail
+						display: none
+
+			&.fullwidth
+				// & > .bg
+				// 	width: 75%
+
+				// & > .fg
+				// 	$min-h: (10px/16px)*1rem
+				// 	width: 50%
+				// 	min-height: 0
+					
+				// & > .fg > .text-wrapper
+				// 	+rem(height, 210px - 30px)
+
+				// 	& > .title
+				// 		+rem(font-size, 20px)
+				// 		// font-weight: 100
+				// 		+weight100
+				// 		+rem(line-height, 26px)
+				// 		+rem(max-height, 26px*6)
+
+				& > .fg > .icon
+					display: none
+
+			.action-button
+				display: inline-block
+				// position: relative
+				margin-bottom: 0
+				padding: 0
+				// left: 0
+				border: none
+				background: transparent
+				// +rem(margin-left, 15px)
+				// +rem(margin-bottom, 10px)
+				// // +rem(margin-top, 30px)
+				// +rem(margin-top, 10px)
+
+				position: absolute
+				left: 15px
+				bottom: 23px
 				
-			& > .fg > .text-wrapper
-				+rem(height, 210px - 30px)
-				& > .title
-					+rem(font-size, 20px)
-					// font-weight: 100
-					+weight100
-					+rem(line-height, 26px)
-					+rem(max-height, 26px*6)
 
-			& > .fg > .icon
-				display: none
+				& > .text
+					+rem(font-size, 16px)
+					+weight200
+					left: 0
+					position: relative
 
-		.action-button
-			display: inline-block
-			position: relative
-			margin-bottom: 0
-			padding: 0
-			left: 0
-			border: none
-			background: transparent
-			+rem(margin-left, 15px)
-			+rem(margin-bottom, 10px)
-			// +rem(margin-top, 30px)
-			+rem(margin-top, 10px)
-
-			& > .text
-				+rem(font-size, 16px)
-				+weight200
-				left: 0
-				position: relative
-
-			& > .icon-arrow-head
-				display: none
+				& > .icon-arrow-head
+					display: none
 
 
-		$gap-updown: 10px
+			$gap-updown: 10px
 
-		&.layout-left-top
-			text-align: left
-			
-			& > .bg
-				right: 0
-				bottom: 0
+			&.layout-left-top
+				text-align: left
+				
+				& > .bg
+					left: 25%
+					right: 0
+					top: 0
+					bottom: 0
 
-				left: 25%
-				+rem(top, $gap-updown)
+					// left: 25%
+					+rem(top, $gap-updown)
 
-			& > .fg
-				+rem(margin-bottom, $gap-updown)
+				& > .fg
+					left: 0
+					right: 25%
+					top: 0
+					bottom: 0
+					
+					+rem(margin-bottom, $gap-updown)
 
-		&.layout-left-bottom
-			text-align: left
-			
-			& > .bg
-				right: 0
-				top: 0
 
-				left: 25%
-				+rem(bottom, $gap-updown)
+			&.layout-left-bottom
+				text-align: left
+				
+				& > .bg
+					top: 0
+					bottom: 0
+					left: 25%
+					right: 0
 
-			& > .fg
-				+rem(margin-top, $gap-updown)
+					// left: 25%
+					+rem(bottom, $gap-updown)
 
-		&.layout-right-top
-			text-align: right
+				& > .fg
+					left: 0
+					right: 25%
+					top: 0
+					bottom: 0
+					+rem(margin-top, $gap-updown)
 
-			& > .bg
-				left: 0
-				bottom: 0
-
-				right: 25%
-				+rem(top, $gap-updown)
-
-			& > .fg
+			&.layout-right-top
 				text-align: right
-				+rem(margin-bottom, $gap-updown)
 
-		&.layout-right-bottom
-			text-align: right
+				& > .bg
+					left: 0
+					right: 25%
+					top: 0
+					bottom: 0
 
-			& > .bg
-				left: 0
-				top: 0
+					+rem(top, $gap-updown)
 
-				right: 25%
-				+rem(bottom, $gap-updown)
+				& > .fg
+					right: 0
+					left: 50%
+					top: 0
+					bottom: 0
 
-			& > .fg
-				+rem(margin-top, $gap-updown)
+					text-align: right
+					+rem(margin-bottom, $gap-updown)
+
+			&.layout-right-bottom
+				text-align: right
+
+				& > .bg
+					// left: 0
+					// top: 0
+					// right: 25%
+					left: 0
+					right: 25%
+					top: 0
+					bottom: 0
+
+					+rem(bottom, $gap-updown)
+
+				& > .fg
+					right: 0
+					left: 50%
+					top: 0
+					bottom: 0
+
+					+rem(margin-top, $gap-updown)
 
 
 	.article-box-row
 		+rem(padding, 0 5px)
 		display: block
+		width: auto
+		margin-top: 0
+
 
 		.article-box+.article-box
 			top: 0
