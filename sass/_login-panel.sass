@@ -11,8 +11,8 @@
 	z-index: -10
 
 
-	+rem(margin, 150px auto 100px)
-	+rem(width, 670px)
+	+no-rem(margin, 150px auto 100px)
+	+no-rem(width, 670px)
 	max-width: 100%
 	// position: relative
 
@@ -21,9 +21,9 @@
 		font-size: 0
 
 		.tab-button
-			+rem(height,60px)
+			+no-rem(height,60px)
 			// width: 33.3333%
-			+rem(width,670px / 3)
+			+no-rem(width,670px / 3)
 			max-width: 33.3333%
 			display: inline-block
 			background-color: #eaeaeb
@@ -38,7 +38,7 @@
 
 			.underlined-title
 				+no-rem(font-size,20px)
-				+rem(padding-top,18px)
+				+no-rem(padding-top,18px)
 				color: #09090a
 
 				&:before
@@ -49,14 +49,14 @@
 		.tab-content
 			display: none
 			// padding: 58px 0 40px
-			+rem(padding, 58px 0 40px)
+			+no-rem(padding, 58px 0 40px)
 			background-color: #ffffff
 
 			&.active
 				display: block
 
 			.title
-				+rem(font-size,32px)
+				+no-rem(font-size,32px)
 				margin: 0 auto
 				font-weight: 300
 				text-align: center
@@ -67,11 +67,11 @@
 				left: 0
 				right: 0
 				margin: auto
-				+rem(margin-top, 5px)
-				// +rem(margin-bottom, 20px)
-				+rem(margin-bottom, 40px)
-				// +rem(width, 460px)
-				+rem(width, 490px)
+				+no-rem(margin-top, 5px)
+				// +no-rem(margin-bottom, 20px)
+				+no-rem(margin-bottom, 40px)
+				// +no-rem(width, 460px)
+				+no-rem(width, 490px)
 				max-width: 90%
 
 				& > p
@@ -84,7 +84,7 @@
 				position: relative
 
 			.line.field
-				+rem(width, 300px)
+				+no-rem(width, 300px)
 				margin: 0 auto
 
 				label
@@ -114,10 +114,10 @@
 					background: transparent
 					outline: none
 					color: #09090a
-					+rem(padding, 8px)
+					+no-rem(padding, 8px)
 					text-align: center
 					max-width: 90%
-					+rem(margin-bottom,25px) 
+					+no-rem(margin-bottom,25px) 
 					// font-weight: 500
 					// font-weight: 100
 					+weight100
@@ -143,7 +143,7 @@
 					left: 9px
 					top: 0
 					color: black
-					+rem(padding-left, 30px)
+					+no-rem(padding-left, 30px)
 					font-family: $font-premier
 					// font-weight: 200
 					// font-weight: 100
@@ -159,12 +159,12 @@
 						top: 0
 						color: black
 						font-family: 'cu'
-						// +rem(font-size, 20px)
-						+rem(font-size, 24px)
-						+rem(line-height, 24px)
+						// +no-rem(font-size, 20px)
+						+no-rem(font-size, 24px)
+						+no-rem(line-height, 24px)
 
 			input[type="submit"]
-				+rem(width, 300px)
+				+no-rem(width, 300px)
 				border: none
 				font-family: $font-premier
 				+no-rem(font-size, 20px)
@@ -173,32 +173,32 @@
 				background: #ff2424
 				outline: none
 				color: #ffffff
-				+rem(padding, 15px 0)
+				+no-rem(padding, 15px 0)
 				text-align: center
 				max-width: 90%
-				//+rem(margin-top,20px)
+				//+no-rem(margin-top,20px)
 				cursor: pointer
 
 		.tab-content-1
 			form
 				& > .title
-					+rem(margin-bottom,40px)
+					+no-rem(margin-bottom,40px)
 				& > .detail
 					display: none
 
 			.white-bottom
 				text-align: center
-				+rem(margin-top,35px)
+				+no-rem(margin-top,35px)
 
 				a.forgot-link
 					cursor: pointer
 
 					&:first-child
-						+rem(margin-right,10px)
+						+no-rem(margin-right,10px)
 
 
 					&:last-child
-						+rem(margin-left,10px)
+						+no-rem(margin-left,10px)
 
 			.bg
 				background-color: #eaeaeb
@@ -212,17 +212,17 @@
 					padding: 0
 
 				.title
-					+rem(font-size,32px)
+					+no-rem(font-size,32px)
 					color: black
 					text-align: center
-					+rem(margin,5px 0 10px)
+					+no-rem(margin,5px 0 10px)
 					font-weight: 300
 
 				a.action-button
 					background-color: #000000
-					+rem(width,240px)
+					+no-rem(width,240px)
 					margin: 0
-					+rem(padding,15px 0) 
+					+no-rem(padding,15px 0) 
 					border: none
 					text-align: center
 
@@ -237,20 +237,20 @@
 			+no-rem(font-size,20px)
 			color: black
 			text-align: center
-			+rem(margin-top,40px)
+			+no-rem(margin-top,40px)
 
 		.title
-			+rem(font-size,32px)
+			+no-rem(font-size,32px)
 			color: black
 			text-align: center
-			+rem(margin,5px 0 10px)
+			+no-rem(margin,5px 0 10px)
 			font-weight: 300
 
 		a.action-button
 			background-color: #000000
-			+rem(width,240px)
+			+no-rem(width,240px)
 			margin: 0
-			+rem(padding,15px 0) 
+			+no-rem(padding,15px 0) 
 			border: none
 			text-align: center
 

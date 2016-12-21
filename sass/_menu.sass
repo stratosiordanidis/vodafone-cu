@@ -69,6 +69,9 @@ section.login-section
 	.desktop-only
 		height: inherit
 		width: inherit
+		width: auto
+		+no-rem(padding-left, 145px)
+		+no-rem(padding-right, 145px)
 
 	&:before
 		// content: none
@@ -101,16 +104,38 @@ section.login-section
 		display: flex
 		flex-direction: row
 		flex-wrap: nowrap
-		justify-content: center
+		// justify-content: center
 		text-align: center
+		justify-content: space-between
+		// width: 960px
+		// max-width: 100%
+		// left: 145px
+		// right: 145px
+		margin: auto
+		+rem(max-width, 960px)
+
+		// @media (max-width: 1300px)
+		// 	+no-rem(margin-left, 145px)
+		// 	+no-rem(margin-right, 145px)
 
 		& > .level0
 			display: inline-block
 			position: relative
-			+rem(margin, auto 25px)
+			// +rem(margin, auto 25px)
+			margin: auto
 			vertical-align: middle
 			// +transition(opacity 0.3s)
 			// opacity: 0
+
+			// @media (max-width: 1300px)
+			// 	+rem(margin, auto 20px)
+
+			// @media (max-width: 1200px)
+			// 	+rem(margin, auto 15px)
+
+			// @media (max-width: 1100px)
+			// 	+rem(margin, auto 10px)
+				
 
 			& > .menu-item
 				color: $color-black
@@ -125,6 +150,15 @@ section.login-section
 				outline: none
 				+transition(0.2s)
 
+				// @media (max-width: 1300px)
+				// 	+rem(font-size, 27px)
+
+				// @media (max-width: 1200px)
+				// 	+rem(font-size, 26px)
+
+				// @media (max-width: 1100px)
+				// 	+rem(font-size, 25px)
+
 				&:before
 					content: ''
 					background: $color-black
@@ -138,6 +172,15 @@ section.login-section
 					pointer-events: none
 					+transition(0.2s)
 					+transition-delay(0.05s)
+
+					@media (max-width: 1300px)
+						+rem(right, -20px)
+
+					// @media (max-width: 1200px)
+					// 	+rem(right, -15px)
+
+					// @media (max-width: 1100px)
+					// 	+rem(right, -10px)
 
 				&:after
 					content: none
