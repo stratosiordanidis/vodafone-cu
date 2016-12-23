@@ -39,30 +39,33 @@
 				.widgets
 					.col-1-of-3
 						.progress-widget
-							object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
-							//- include _progress-arc
-							object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
-							//- on IE Edge it does not animate <object> changes, so we have to inline the svg
-							//- .fg-graphic
-							//- 	include _progress-arc
+							canvas.circle-chart(width="200" height="200" data-arc-lengths="8 19 3" data-arc-colors="#5b23fb #fd2322 #06d9d7" data-arc-labels="Red|Blue|Green")
+							//- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+							//- //- include _progress-arc
+							//- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
+							//- //- on IE Edge it does not animate <object> changes, so we have to inline the svg
+							//- //- .fg-graphic
+							//- //- 	include _progress-arc
 							.number(data-max="1800" data-num="930") 930
 							.subtext MB
 					.col-1-of-3
 						.progress-widget
-							object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
-							//- include _progress-arc
-							object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
-							//- .fg-graphic
-							//- 	include _progress-arc
+							canvas.circle-chart(width="200" height="200" data-arc-lengths="10 7 3" data-arc-colors="#5b23fb #fd2322 #06d9d7" data-arc-labels="Red|Blue|Green")
+							//- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+							//- //- include _progress-arc
+							//- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
+							//- //- .fg-graphic
+							//- //- 	include _progress-arc
 							.number(data-max="1800" data-num="600") 600
 							.subtext Λεπτά
 					.col-1-of-3
 						.progress-widget
-							object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
-							//- include _progress-arc
-							object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
-							//- .fg-graphic
-							//- 	include _progress-arc
+							canvas.circle-chart(width="200" height="200" data-arc-lengths="2 5 4" data-arc-colors="#5b23fb #fd2322 #06d9d7" data-arc-labels="Red|Blue|Green")
+							//- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+							//- //- include _progress-arc
+							//- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
+							//- //- .fg-graphic
+							//- //- 	include _progress-arc
 							.number(data-max="50" data-num="12") 12
 							.subtext SMS
 

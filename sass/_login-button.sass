@@ -16,6 +16,8 @@
 	+transition(all 0.3s)
 	// overflow: hidden
 
+	
+
 	.mobile-login-msg
 		display: none
 
@@ -97,6 +99,18 @@
 
 		.mobile-msg-wrapper
 			display: none
+			text-align: center
+
+			p
+				margin: 0
+				color: white
+				+rem(font-size, 32px)
+				font-weight: 200
+				line-height: 70px
+				text-align: center
+
+				span
+					font-weight: bold
 
 		.msg-wrapper
 			+no-rem(padding, 15px)
@@ -189,6 +203,17 @@
 
 			.submenu-item+.submenu-item
 				border-top: 1px solid #eaeaea
+
+
+	// @media (max-width: 1250px)
+	@media (max-width: 1390px)
+		+no-rem(width, 130px)
+
+		.msg-wrapper
+			display: none
+
+		.welcome-msg .mobile-msg-wrapper
+			display: block
 
 
 

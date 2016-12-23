@@ -46,23 +46,33 @@
 			+rem(max-height, 70px)
 			// +transition(0.3s)
 
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			right: 0
+			margin: auto
+
 			.mobile-msg-wrapper
 				// +rem(padding, 15px)
 				+rem(padding, 10px)
 				// +rem(height, 40px)
+				pointer-events: none
 
+				p
+					margin: 0
+					color: white
+					+rem(font-size, 20px)
+					font-weight: 200
+					line-height: inherit
+					line-height: initial
+
+					span
+						font-weight: bold
 
 			.msg-wrapper
 				display: none
 
-			p
-				margin: 0
-				color: white
-				+rem(font-size, 20px)
-				font-weight: 200
-
-				span
-					font-weight: bold
 
 			.down-arrow
 

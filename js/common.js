@@ -1170,6 +1170,65 @@ function setupTabbedControls()
 
 }
 
+function setupProgressCircles()
+{
+	$('.circle-chart').each(function(index, el)
+	{
+		var $this = $(el);
+
+		if (Chart)
+		{
+			var ctx = el.getContext('2d');
+
+			var labels = $this.attr('data-arc-labels') || '';
+			labels = labels.split('|');
+
+			var leghths = $this.attr('data-arc-lengths') || '';
+			leghths = leghths.split(' ');
+
+			var colors = $this.attr('data-arc-colors') || '';
+			colors = colors.split(' ');
+
+			var widths = leghths.slice();
+			for (var i = 0; i < widths.length; i++) widths[i] = 7;
+
+			var data = {
+				labels: labels,
+				datasets: [
+					{
+						data: leghths,
+						backgroundColor: colors
+						// ,hoverBackgroundColor: [
+						// 	"#FF6384",
+						// 	"#36A2EB",
+						// 	"#FFCE56"
+						// ]
+						// ,borderWidth: widths
+						// borderColor
+						// hoverBackgroundColor
+						// hoverBorderColor
+						// hoverBorderWidth
+						// ,borderWidth: widths
+					}]
+			};
+			var options = {
+				cutoutPercentage: 90,
+				legend: {
+				            display: false
+				        },
+				animation:{
+				       animateScale:true
+				   }
+			};
+			var myDoughnutChart = new Chart(ctx, {
+				type: 'doughnut',
+				data: data,
+				options: options
+			});
+		}
+	});
+}
+
 function setupGenericCarousel($object)
 {
 	$object = $object || $('.carousel');
@@ -1367,6 +1426,7 @@ function setupAccordion()
 
 function setupMobilePanels()
 {
+	var mobileWidth = 960;
 	var activeClass = 'active';
 	var prevHash = '';
 	// $('.mobile-layout .panel-link')
@@ -1378,7 +1438,9 @@ function setupMobilePanels()
 
 		var $panel = $(href);
 
-		if ($panel.length > 0)
+		var winWidth = $(window).width();
+
+		if ($panel.length > 0 && winWidth <= mobileWidth)
 		{
 			e.preventDefault();
 			// $panel.addClass('active');
@@ -1464,6 +1526,9 @@ function setupMobilePanels()
 
 	$(window).bind("hashchange", function(e)
 	{
+		if ( $(window).width() > mobileWidth )
+			return;
+
 		console.log('hashchange '+location.hash);
 
 		var hash = window.location.hash || '';
@@ -1503,7 +1568,8 @@ function setupMobilePanels()
 	});
 
 	// $('.mobile-layout .panel .nav-header .back-button')
-	$('.panel .nav-header .back-button')
+	// $('.panel .nav-header .back-button')
+	$('.back-button')
 		.on('click', function(e)
 	{
 		// var $this = $(this);
@@ -1687,12 +1753,14 @@ $(document).ready(function()
 	setupGenericCarousel();
 	setupSidebar();
 	setupHashNavigation();
+	setupProgressCircles()
 
 	if (window.frameElement)
 	{
 		// this is in an IFrame
 		sendMsgToParent('document.ready');
 	}
+
 
 	// DUMMY handler used during dev. you must remove it on production
 	$(window).on('load-side-url', function(e, href)
@@ -1715,10 +1783,11 @@ $(document).ready(function()
 		}, 4*1000);
 	});
 
+	$('.not-initialized').removeClass('not-initialized');
 });
 
-$(window).on('load', function()
-{
-	setupUserInfoDashboard();
-});
+// $(window).on('load', function()
+// {
+// 	setupUserInfoDashboard();
+// });
 

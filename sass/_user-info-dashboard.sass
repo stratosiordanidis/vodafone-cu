@@ -3,8 +3,9 @@
 .progress-widget
 	display: inline-block
 	position: relative
-	padding-right: 50%
-	+rem(padding-right, 65px)
+	// padding-right: 50%
+	// +rem(padding-right, 65px)
+	+rem(margin-right, 65px)
 	text-align: center
 
 	svg, object, & > .bg-graphic, & > .fg-graphic
@@ -13,6 +14,12 @@
 		// +rem(height, 130px)
 		+rem(width, 65px)
 		+rem(height, 130px)
+
+	.circle-chart
+		display: block
+		// position: absolute
+		+rem(width, 200px)
+		+rem(height, 200px)
 
 	$arc-scale: 1.1
 	& > .bg-graphic

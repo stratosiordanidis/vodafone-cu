@@ -1,0 +1,452 @@
+doctype html
+html(lang="el").loged-in.show-offer-sidebar--
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		//- meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+
+		meta(property="og:title" content="Vodafone CU")
+		meta(property="og:description" content="<description goes here>")
+		meta(property="twitter:title" content="Vodafone CU")
+		meta(property="twitter:description" content="<description goes here>")
+
+			
+		title Vodafone CU 
+
+		//- link(href="img/fav_icon.png" rel="icon")
+
+		link(href="css/tooltipster.bundle.min.css" rel="stylesheet")
+		link(href="css/fonts.css" rel="stylesheet")
+			
+		link(href="css/slick.css" rel="stylesheet")
+		//- link(href="css/owl.carousel.min.css" rel="stylesheet")
+
+		link(href="css/styles.css" rel="stylesheet")
+		link(href="css/responsive.css" rel="stylesheet")
+		link(href="css/online-topup.css" rel="stylesheet")
+		link(href="css/responsive-online-topup.css" rel="stylesheet")
+		link(href="css/responsive-panels.css" rel="stylesheet")
+
+		//- include _ga
+
+		script(src="js/device.min.js")
+			
+	body
+		include _login-panel.jade
+
+		include _header.jade
+
+		#content.page-topup.mobile-layout
+
+			include _header-carousel.jade
+
+
+			//--------------------
+			.expandable-offers.selected
+				.boxes
+					h1 Online Ανανέωση
+					h2 Διάλεξε το ποσό που θέλεις και ανανέωσε τσακ-μπαμ!
+
+					ul.columns
+						li.panel-link.col(href='#panel-five')
+							.foreground
+								.background
+								.price-area
+									//- p.title
+									//- 	<strong>Bonus Ανανέωσης<br>500MB</strong> ή <strong>100'</strong> προς όλους
+									
+									.icon-arrow-head.mobile-only
+
+									.price 5
+										span.euro-symbol &euro;
+
+								.payment-area
+									
+									.clip-wrap
+										.wrapper
+
+											.payment-method
+												.title Τρόπος πληρωμής
+												.radio
+													input#creditcard_5(type="radio",name="payment")
+													label(for="creditcard_5") Credit Card
+												.radio
+													input#oneclickpaypal_5(type="radio",name="payment")
+													label(for="oneclickpaypal_5") OneClick Paypal
+													.user-info
+														.email johndoe@domain.com
+														a.change-email Αλλαγή
+												.radio
+													input#paypal_5(type="radio",name="payment")
+													label(for="paypal_5") Paypal
+
+											.email-confirm
+												.title E-mail επιβεβαίωσης
+												.user-info
+													.email johndoe@domain.com
+													a.change-email Αλλαγή
+											
+
+									.buttons
+										a.action-button.select
+											.text
+												| Επιλογή
+
+										a.action-button.continue
+											.text
+												| Συνέχεια
+
+										a.cancel
+											| Ακύρωση
+
+						li.panel-link.col.bonus(href='#panel-ten')
+							.foreground
+								.background
+								.price-area
+									p.title
+										<strong>Bonus Ανανέωσης<br>500MB</strong> ή <strong>100'</strong> προς όλους
+
+									.icon-arrow-head
+									
+									.price 10
+										span.euro-symbol &euro;
+
+								.payment-area
+									
+									.clip-wrap
+										.wrapper
+
+											.payment-method
+												.title Τρόπος πληρωμής
+												.radio
+													input#creditcard_10(type="radio",name="payment")
+													label(for="creditcard_10") Credit Card
+												.radio
+													input#oneclickpaypal_10(type="radio",name="payment")
+													label(for="oneclickpaypal_10") OneClick Paypal
+													.user-info
+														.email johndoe@domain.com
+														a.change-email Αλλαγή
+												.radio
+													input#paypal_10(type="radio",name="payment")
+													label(for="paypal_10") Paypal
+
+											.email-confirm
+												.title E-mail επιβεβαίωσης
+												.user-info
+													.email johndoe@domain.com
+													a.change-email Αλλαγή
+												
+
+									.buttons
+										a.action-button.select
+											.text
+												| Επιλογή
+
+										a.action-button.continue
+											.text
+												| Συνέχεια
+
+										a.cancel
+											| Ακύρωση
+
+						li.panel-link.col.bonus(href='#panel-fifteen')
+							.foreground
+								.background
+								.price-area
+									p.title
+										<strong>Bonus Ανανέωσης<br>500MB</strong> ή <strong>100'</strong> προς όλους
+
+									.icon-arrow-head
+									
+									.price 15
+										span.euro-symbol &euro;
+
+								.payment-area
+									
+									.clip-wrap
+										.wrapper
+
+											.payment-method
+												.title Τρόπος πληρωμής
+												.radio
+													input#creditcard_15(type="radio",name="payment_15")
+													label(for="creditcard_15") Credit Card
+												.radio
+													input#oneclickpaypal_15(type="radio",name="payment_15")
+													label(for="oneclickpaypal_15") OneClick Paypal
+													.user-info
+														.email johndoe@domain.com
+														a.change-email Αλλαγή
+												.radio
+													input#paypal_15(type="radio",name="payment_15")
+													label(for="paypal_15") Paypal
+
+											.email-confirm
+												.title E-mail επιβεβαίωσης
+												.user-info
+													.email johndoe@domain.com
+													a.change-email Αλλαγή
+
+
+									.buttons
+										a.action-button.select
+											.text
+												| Επιλογή
+
+										a.action-button.continue
+											.text
+												| Συνέχεια
+
+										a.cancel
+											| Ακύρωση
+
+						li.panel-link.col.bonus.active(href='#panel-twenty')
+							.foreground
+								.background
+								.price-area
+									p.title
+										<strong>Bonus Ανανέωσης<br>500MB</strong> ή <strong>100'</strong> προς όλους
+
+									.icon-arrow-head
+									
+									.price 20
+										span.euro-symbol &euro;
+
+								.payment-area
+
+									.clip-wrap
+										.wrapper
+
+											.payment-method
+												.title Τρόπος πληρωμής
+												.radio
+													input#creditcard_20(type="radio",name="payment_20" checked)
+													label(for="creditcard_20") Credit Card
+												.radio
+													input#oneclickpaypal_20(type="radio",name="payment_20")
+													label(for="oneclickpaypal_20") OneClick Paypal
+													.user-info
+														.email johndoe@domain.com
+														a.change-email Αλλαγή
+												.radio
+													input#paypal_20(type="radio",name="payment_20")
+													label(for="paypal_20") Paypal
+
+											.email-confirm
+												.title E-mail επιβεβαίωσης
+												.user-info
+													.email johndoe@domain.com
+													a.change-email Αλλαγή
+												
+
+									.buttons
+										a.action-button.select
+											.text
+												| Επιλογή
+
+										a.action-button.continue
+											.text
+												| Συνέχεια
+
+										a.cancel
+											| Ακύρωση
+
+						li.panel-link.col.bonus(href='#panel-thirty')
+							.foreground
+								.background
+								.price-area
+									p.title
+										<strong>Bonus Ανανέωσης<br>500MB</strong> ή <strong>100'</strong> προς όλους
+
+									.icon-arrow-head
+									
+									.price 30
+										span.euro-symbol &euro;
+
+								.payment-area
+
+									.clip-wrap
+										.wrapper
+
+											.payment-method
+												.title Τρόπος πληρωμής
+												.radio
+													input#creditcard_30(type="radio",name="payment_30")
+													label(for="creditcard_30") Credit Card
+												.radio
+													input#oneclickpaypal_30(type="radio",name="payment_30")
+													label(for="oneclickpaypal_30") OneClick Paypal
+													.user-info
+														.email johndoe@domain.com
+														a.change-email Αλλαγή
+												.radio
+													input#paypal_30(type="radio",name="payment_30")
+													label(for="paypal_30") Paypal
+
+											.email-confirm
+												.title E-mail επιβεβαίωσης
+												.user-info
+													.email johndoe@domain.com
+													a.change-email Αλλαγή
+												
+
+									.buttons
+										a.action-button.select
+											.text
+												| Επιλογή
+
+										a.action-button.continue
+											.text
+												| Συνέχεια
+
+										a.cancel
+											| Ακύρωση
+
+				.subnotes
+					<span class="red">*</span>Στο ποσό ανανέωσης συμπεριλαμβάνεται ΦΠΑ &amp; φόρος κινητής τηλεφωνίας
+
+				#panel-five.panel.layer-1.mobile-only
+					.nav-header
+						.title Online Aνανέωση
+						.back-button
+					
+					.content-wrapper
+						.price-area
+							p.title
+								<strong>Bonus Ανανέωσης<br>500MB</strong> ή <strong>100'</strong> προς όλους
+
+							.icon-arrow-head
+							
+							.price 5
+								span.euro-symbol &euro;
+
+						.payment-area
+							.clip-wrap
+								.wrapper
+
+									.payment-method
+										.title Τρόπος πληρωμής
+										.radio
+											input#m_creditcard_30(type="radio",name="payment_30")
+											label(for="m_creditcard_30") Credit Card
+										.radio
+											input#m_oneclickpaypal_30(type="radio",name="payment_30")
+											label(for="m_oneclickpaypal_30") OneClick Paypal
+											.user-info
+												.email johndoe@domain.com
+												a.change-email Αλλαγή
+										.radio
+											input#m_paypal_30(type="radio",name="payment_30")
+											label(for="m_paypal_30") Paypal
+
+									.email-confirm
+										.title E-mail επιβεβαίωσης
+										.user-info
+											.email johndoe@domain.com
+											a.change-email Αλλαγή
+										
+
+							.buttons
+								a.action-button.continue
+									.text
+										| Συνέχεια
+
+								a.cancel.back-button
+									| Ακύρωση
+
+							.subnotes
+								<span class="red">*</span>Στο ποσό ανανέωσης συμπεριλαμβάνεται ΦΠΑ &amp; φόρος κινητής τηλεφωνίας
+
+
+				#panel-ten.panel.layer-1.mobile-only
+					.nav-header
+						.title Online Aνανέωση
+						.back-button
+					
+					.content-wrapper
+						| 123
+
+				#panel-fifteen.panel.layer-1.mobile-only
+					.nav-header
+						.title Online Aνανέωση
+						.back-button
+					
+					.content-wrapper
+						| 123
+
+				#panel-twenty.panel.layer-1.mobile-only
+					.nav-header
+						.title Online Aνανέωση
+						.back-button
+					
+					.content-wrapper
+						| 123
+
+				#panel-thirty.panel.layer-1.mobile-only
+					.nav-header
+						.title Online Aνανέωση
+						.back-button
+					
+					.content-wrapper
+						| 123
+
+			#notes-terms.accordion.desktop-only
+				
+				.option.active
+					.title
+						.icon-arrow-head
+						| Ψιλά Γράμματα
+					ul
+						li Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong>
+						li Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.
+						li Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.
+						li Το Bonus δεν ισχύει για χρήση στο εξωτερικό.
+
+				.option
+					.title
+						.icon-arrow-head
+						| Όροι χρήσης Online Ανανέωσης Xρόνου Oμιλίας
+					ul
+						li Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong>
+						li Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.
+						li Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.
+						li Το Bonus δεν ισχύει για χρήση στο εξωτερικό.
+
+			#note-terms-mobile.mobile-only
+				.option.panel-link(href="#panel-option")
+					.title
+						.icon-arrow-head
+						| Ψιλά Γράμματα
+				.option.option-last.panel-link(href="#panel-option-2")
+					.title
+						.icon-arrow-head
+						| Όροι χρήσης Online Ανανέωσης Xρόνου Oμιλίας
+
+
+				#panel-option.panel.layer-1
+					.nav-header
+						.title Ψιλά Γράμματα
+						.back-button
+					
+					.content-wrapper
+						| 123
+
+
+				#panel-option-2.panel.layer-1
+					.nav-header
+						.title Όροι χρήσης
+						.back-button
+					
+					.content-wrapper
+						| 123
+
+
+
+		include _sidebar.jade
+
+		include _footer.jade
+
+
+
+	script(src="js/dashboard-page.js")

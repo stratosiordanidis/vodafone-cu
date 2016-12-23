@@ -8,87 +8,87 @@
 	.nav-header.mobile-only
 		.back-button
 
-	.tabbed-control(data-trigger="")
+	.login-control(data-trigger="")
 
-		.tab-buttons.desktop-only
-			.tab-button.tab-1.active
-				.underlined-title(href='#') Είσοδος
-			.tab-button.tab-2
-				.underlined-title(href='#') Ξέχασα τον κωδικό μου
-			.tab-button.tab-3
-				.underlined-title(href='#') Ξέχασα το Όνομα Χρήστη
+		//- .tab-buttons.desktop-only
+		//- 	.tab-button.tab-1.active
+		//- 		.underlined-title(href='#') Είσοδος
+		//- 	.tab-button.tab-2
+		//- 		.underlined-title(href='#') Ξέχασα τον κωδικό μου
+		//- 	.tab-button.tab-3
+		//- 		.underlined-title(href='#') Ξέχασα το Όνομα Χρήστη
 
-		.tab-contents
-			.tab-content.tab-content-1.active
+		//- .login-contents
+		//- 	.login-content.tab-content-1.active
+		.white
+			form(action='#' method='POST').enter
+				.title Είσοδος στο <b>ΜyCU</b>
+				.detail
+					p Για να μην τα μαθαίνεις από αλλού, βάλε τα στοιχεία σου και εμείς θα σου στέλνουμε όλα τα CU νέα, πριν από τους άλλους!
+				.line.field.name-field
+					i.icon.icon-login_username
+					input(type='text' name='name' required)
+					label.movable(for='name') Όνομα Χρήστη
+				.line.field.pass-field
+					i.icon.icon-login_password
+					input(type='password' name='password' required)
+					label.movable(for='password') Κωδικός
+				.line
+					input(type='submit' name='Είσοδος' value="Είσοδος")
 
-				form(action='#' method='POST').enter
-					.title Είσοδος στο <b>ΜyCU</b>
-					.detail
-						p Για να μην τα μαθαίνεις από αλλού, βάλε τα στοιχεία σου και εμείς θα σου στέλνουμε όλα τα CU νέα, πριν από τους άλλους!
-					.line.field.name-field
-						i.icon.icon-login_username
-						input(type='text' name='name' required)
-						label.movable(for='name') Όνομα Χρήστη
-					.line.field.pass-field
-						i.icon.icon-login_password
-						input(type='password' name='password' required)
-						label.movable(for='password') Κωδικός
-					.line
-						input(type='submit' name='Είσοδος' value="Είσοδος")
+			//- .mobile-only
+			.white-bottom
+				a.forgot-link(href="#" target="_blank") Ξέχασα τον κωδικό μου
+				a.forgot-link(href="#" target="_blank") Ξέχασα το Όνομα Χρήστη
+		.bg
+			.detail Είσαι στην απ’ έξω;
+			.title Μπες στον κόσμο του <b>CU</b>
+			a.action-button(href='#')
+				.text Κάνε Εγγραφή
 
-				.mobile-only
-					.white-bottom
-						a.forgot-link(data-tab-button-link=".tab-button.tab-2") Ξέχασα τον κωδικό μου
-						a.forgot-link(data-tab-button-link=".tab-button.tab-3") Ξέχασα το Όνομα Χρήστη
-					.bg
-						.detail Είσαι στην απ’ έξω;
-						.title Μπες στον κόσμο του <b>CU</b>
-						a.action-button(href='#')
-							.text Κάνε Εγγραφή
+			//- .tab-content.tab-content-2
 
-			.tab-content.tab-content-2
+			//- 	form(action='#' method='POST').enter
+			//- 		.title Αλλαγή <b>Password</b>
+			//- 		.detail
+			//- 			p Για λόγους ασφαλείας θα πρέπει να λάβεις νέο password με SMS, στο νούμερο του κινητού που είχες δηλώσει κατά την εγγραφή σου. Μην ανησυχείς, μετά θα σου ζητηθεί να το αλλάξεις ούτως ή άλλως και θα βάλεις ένα δικό σου.
+			//- 		.line.field.name-field
+			//- 			i.icon.icon-login_username
+			//- 			input(type='text' name='name' required)
+			//- 			label.movable(for='name') Όνομα Χρήστη
 
-				form(action='#' method='POST').enter
-					.title Αλλαγή <b>Password</b>
-					.detail
-						p Για λόγους ασφαλείας θα πρέπει να λάβεις νέο password με SMS, στο νούμερο του κινητού που είχες δηλώσει κατά την εγγραφή σου. Μην ανησυχείς, μετά θα σου ζητηθεί να το αλλάξεις ούτως ή άλλως και θα βάλεις ένα δικό σου.
-					.line.field.name-field
-						i.icon.icon-login_username
-						input(type='text' name='name' required)
-						label.movable(for='name') Όνομα Χρήστη
-
-					.line
-						input(type='submit' name='Συνέχεια')
+			//- 		.line
+			//- 			input(type='submit' name='Συνέχεια')
 
 
-			.tab-content.tab-content-3
+			//- .tab-content.tab-content-3
 
-				form(action='#' method='POST').enter
-					.title Υπενθύμιση <b>Username</b>
-					.detail
-						p Ξέχασες το username σου? No problemo! Συμπλήρωσε τα παρακάτω στοιχεία όπως ακριβώς τα είχες δηλώσει κατά την εγγραφή σου στο vodafonecu.gr και το username σου θα αποσταλεί με <b>sms</b>.
-					.line.field.name-field
-						i.icon.icon-login_username
-						input(type='text' name='last-name' required)
-						label.movable(for='last-name') Επώνυμο
-					.line.field.name-field
-						i.icon.icon-login_username
-						input(type='text' name='name' required)
-						label.movable(for='name') Όνομα
-					.line.field.mobile-field
-						i.icon.icon-login_phone
-						input(type='text' name='mobile' required)
-						label.movable(for='mobile') Κινητό Vodafone CU 
-					.line.field.email-field
-						i.icon.icon-login_email
-						input(type='text' name='email' required)
-						label.movable(for='email') E-mail
+			//- 	form(action='#' method='POST').enter
+			//- 		.title Υπενθύμιση <b>Username</b>
+			//- 		.detail
+			//- 			p Ξέχασες το username σου? No problemo! Συμπλήρωσε τα παρακάτω στοιχεία όπως ακριβώς τα είχες δηλώσει κατά την εγγραφή σου στο vodafonecu.gr και το username σου θα αποσταλεί με <b>sms</b>.
+			//- 		.line.field.name-field
+			//- 			i.icon.icon-login_username
+			//- 			input(type='text' name='last-name' required)
+			//- 			label.movable(for='last-name') Επώνυμο
+			//- 		.line.field.name-field
+			//- 			i.icon.icon-login_username
+			//- 			input(type='text' name='name' required)
+			//- 			label.movable(for='name') Όνομα
+			//- 		.line.field.mobile-field
+			//- 			i.icon.icon-login_phone
+			//- 			input(type='text' name='mobile' required)
+			//- 			label.movable(for='mobile') Κινητό Vodafone CU 
+			//- 		.line.field.email-field
+			//- 			i.icon.icon-login_email
+			//- 			input(type='text' name='email' required)
+			//- 			label.movable(for='email') E-mail
 
-					.line
-						input(type='submit' name='Συνέχεια')
+			//- 		.line
+			//- 			input(type='submit' name='Συνέχεια')
 
-	.bg.desktop-only
-		.detail Είσαι στην απ’ έξω;
-		.title Μπες στον κόσμο του <b>CU</b>
-		a.action-button(href='#')
-			.text Κάνε Εγγραφή
+	//- .bg.desktop-only
+	//- 	.detail Είσαι στην απ’ έξω;
+	//- 	.title Μπες στον κόσμο του <b>CU</b>
+	//- 	a.action-button(href='#')
+	//- 		.text Κάνε Εγγραφή

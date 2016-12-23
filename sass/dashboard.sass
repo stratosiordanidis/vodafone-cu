@@ -19,6 +19,9 @@
 	section
 		display: block
 
+		a:after
+			content: none
+
 		&.choices-section
 			+rem(padding-top, 55px)
 			// +rem(padding-bottom, 55px)
@@ -42,7 +45,7 @@
 			right: 0
 			margin: auto
 			max-width: 100%
-			+rem(width, 2000px)
+			// +rem(width, 2000px)
 			+rem(padding, 0 80px)
 
 		&:nth-child(4n+1)
@@ -504,9 +507,10 @@
 		.options
 			display: inline-block
 			// width: calc(100% - 10rem)
-			width: auto
 			max-width: 100%
 			vertical-align: bottom
+			// width: auto
+			width: 100%
 
 		.option
 			display: none
@@ -1289,7 +1293,8 @@
 				display: inline-block
 				width: inherit
 				+no-rem(font-size, 10px)
-				+no-rem(line-height, 18px)
+				// +no-rem(line-height, 18px)
+				line-height: 0
 
 				color: inherit
 
@@ -1571,6 +1576,10 @@
 						stroke: $color-cyan
 
 
+.page-dashboard.not-initialized
+	.remaining-section.options-section
+		.option
+			display: inline-block
 
 
 
