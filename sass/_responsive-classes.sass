@@ -1,0 +1,27 @@
+@media (max-width:$mobile-breakpoint)
+	.f24
+		+rem(font-size, 12px)
+
+	.f28
+		+rem(font-size, 14px)
+
+	.f48
+		+rem(font-size, 24px)
+		+rem(line-height, 30px)
+
+	.f64
+		+rem(font-size, 32px)
+
+
+	.morris-tooltip
+		display: none
+
+
+.desktop-only
+	@media (max-width:$mobile-breakpoint)
+		display: none
+
+
+.mobile-only
+	@media (max-width:$mobile-breakpoint)
+		display: block

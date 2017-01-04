@@ -1,0 +1,68 @@
+doctype html
+html(lang="el").loged-in.show-offer-sidebar--
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		//- meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+
+		meta(property="og:title" content="Vodafone CU")
+		meta(property="og:description" content="<description goes here>")
+		meta(property="twitter:title" content="Vodafone CU")
+		meta(property="twitter:description" content="<description goes here>")
+
+			
+		title Vodafone CU 
+
+		//- link(href="img/fav_icon.png" rel="icon")
+
+		link(href="css/tooltipster.bundle.min.css" rel="stylesheet")
+		link(href="css/fonts.css" rel="stylesheet")
+			
+		link(href="css/slick.css" rel="stylesheet")
+		//- link(href="css/owl.carousel.min.css" rel="stylesheet")
+
+		link(href="css/styles.css" rel="stylesheet")
+		link(href="css/responsive.css" rel="stylesheet")
+		link(href="css/online-topup.css" rel="stylesheet")
+		link(href="css/responsive-online-topup.css" rel="stylesheet")
+		link(href="css/responsive-panels.css" rel="stylesheet")
+
+		//- include _ga
+
+		script(src="js/device.min.js")
+			
+	body
+		include _login-panel.jade
+
+		include _header.jade
+
+		#content.page-topup.mobile-layout
+
+			include _header-carousel.jade
+
+
+			//--------------------
+			.thank-you
+				.main-title Σ’ευχαριστούμε!
+				.second-title H Online Ανανέωσή σου ολοκληρώθηκε με επιτυχία.
+				
+				.separator
+
+				.second-title
+					| Το νέο σου υπόλοιπο είναι 
+					span.red €11,04
+
+				.links
+					a(href="#") Δες περισσότερα στο <strong>ΜyCU</strong>   
+					span  ή 
+					a(href="#") Κάνε άλλη Online Aνανέωση
+			
+
+
+		include _sidebar.jade
+
+		include _footer.jade
+
+
+
+	script(src="js/dashboard-page.js")

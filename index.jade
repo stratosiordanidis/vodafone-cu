@@ -27,6 +27,8 @@ html(lang="el").logged-in.open-sidebar-
 		//- include _ga
 
 		script(src="js/device.min.js")
+
+		include _head_includes.jade
 			
 	body
 		include _login-panel.jade
@@ -78,7 +80,8 @@ html(lang="el").logged-in.open-sidebar-
 
 				.article-box.category-cyan.layout-left-top.col.fullwidth
 					
-					.bg(style="background-image: url('img/article-img-3.jpg')" data-youtube-id="xrzXIaTt99U"  data-facebook-video="http://fb.video.com/sfsdfdf")
+					.bg.video-thumb(style="background-image: url('img/article-img-3.jpg')" data-youtube-id="xrzXIaTt99U"  data-facebook-video="http://fb.video.com/sfsdfdf")
+						.video-button
 					.fg
 						.text-wrapper
 							.category-title CU Around

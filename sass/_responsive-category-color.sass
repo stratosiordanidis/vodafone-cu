@@ -1,0 +1,18 @@
+
+
+=set-resp-category-color($color)
+
+	@media all and (max-width: $mobile-breakpoint)
+		.action-button > .text
+			color: $color !important
+
+
+.category-purple
+	+set-resp-category-color($color-purple)
+
+.category-cyan
+	+set-resp-category-color($color-cyan)
+
+.category-red
+	+set-resp-category-color($color-red)
+

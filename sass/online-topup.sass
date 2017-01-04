@@ -37,7 +37,7 @@
 			display: none
 
 	.boxes
-		& > h1
+		.main-title
 			text-align: center
 			+rem(font-size,72px)
 			color: #09090a
@@ -46,7 +46,7 @@
 			+rem(letter-spacing,-2px)
 			+rem(line-height,72px)
 
-		& > h2
+		.second-title
 			text-align: center
 			+rem(font-size,32px)
 			color: #09090a
@@ -407,9 +407,25 @@
 					+rem(top,17px)
 					+rem(left,-13px)
 
+		.paragraph
+			+rem(font-size,20px)
+			color: #09090a
+			font-weight: 100
+			position: relative
+			+rem(line-height,32px)
+			+rem(padding,5px 0 20px 100px)
+			+opacity(0)
+			max-height: 0
+			overflow: hidden
+
+
 	.option.active
 
 		ul
+			+opacity(1)
+			max-height: 100%
+
+		.paragraph
 			+opacity(1)
 			max-height: 100%
 
@@ -513,3 +529,50 @@
 					+rem(left,14px)
 					+rem(top,-3px)
 					+transition(0.3s)
+
+
+//--------- THANK YOU PAGE
+
+.thank-you
+	+rem(width,1680px)
+	margin: 0 auto
+	+rem(padding-top,70px)
+
+	.main-title
+		text-align: center
+		+rem(font-size,72px)
+		color: #09090a
+		font-weight: 400
+		margin: 0 auto
+		+rem(letter-spacing,-2px)
+		+rem(line-height,72px)
+
+	.second-title
+		text-align: center
+		+rem(font-size,32px)
+		color: #09090a
+		font-weight: 300
+		+rem(margin,0 auto)
+
+		.red
+			color: $color-red
+			font-weight: 600
+
+	.separator
+		display: block
+		+rem(width,160px)
+		+rem(height,2px)
+		background-color: #d2d2d4
+		+rem(margin,35px auto)
+
+	.links
+		display: block
+		text-align: center
+		+rem(margin,8px auto 35px)
+
+		a
+			+rem(font-size,20px)
+			font-weight: 100
+
+		span
+			+rem(margin,0 5px)

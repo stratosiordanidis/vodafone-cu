@@ -40,24 +40,92 @@ footer
 
 
 
+
+#package-activation-flow.panel.layer-4
+	.nav-header.mobile-only
+		.title Ενεργοποίηση Πακέτου
+		.back-button
+
+	.panel-content
+		.background
+		.main-area
+
+			.title Ενεργοποίηση Πακέτου
+			.subtitle Surf &amp; Email 100
+			.price &euro;5,04
+
+		.normal-case
+			.detail 
+				p Τώρα έχεις <b>500ΜΒ Βonus</b> ενεργοποιόντας με αυτόματη ανανέωση
+			.choices
+				.choice.first
+					.text: p Θέλεις να ανανεώνεται αυτόματα κάθε μήνα;
+					a.action-button
+						.text Μηνιαία Ανανέωση
+						.icon-arrow-head
+				.divider ή
+				.choice.last
+					.text: p Θέλεις να ενεργοποιήσεις μόνο για αυτή τη φορά;
+					a.action-button
+						.text Απλή Ενεργοποίηση
+						.icon-arrow-head
+
+		.warning-case
+			.detail 
+				p To απόλοιπό σου δεν είναι αρκετό για να ενεργοποιήσεις το πακέτο <b>Surf &amp; Email 100</b>
+				p Tώρα έχεις <span>€3,96</span> διαθέσιμο υπόλοιπο
+			.choices
+				.choice.first
+					//- .text Θέλεις να ανανεώνεται αυτόματα κάθε μήνα;
+					a.action-button
+						.text Κάνε Online Ανανέωση
+						.icon-arrow-head
+				.divider ή
+				.choice.last
+					.text
+						p Κάλεσε στο <b>1252</b> επιλογή <b>4</b>  ή στείλε δωρεάν <b>SMS</b> στο <b>1330</b> για <b>επέκταση υπολοίπου</b>.
+					a.action-button
+						.text OK
+						.icon-arrow-head
+
+					a(href="#") Μάθε περισσότερα
+
+		.thankyou-case
+			.detail 
+				p H ενεργοποίηση πακέτου <b>Surf &amp; Email 100</b>
+				p ολοκληρώθηκε με επιτυχία!
+			.divider
+			.detail 
+				p Το νέο σου υπόλοιπο είναι <span>€1,04</span>
+
+			a.see-more(href="#") Δες περισσότερα στο <b>MyCU</b>
+
+
 //- #menu-underlay
 
 #click-trap-underlay
 
 
 
-script(src="js/vendor/jquery-1.12.4.min.js")
+//- script(src="js/vendor/jquery-1.12.4.min.js")
+script(src="js/vendor/jquery-2.2.4.min.js")
 script(src="js/debounce.js")
 script(src="js/browser.js")
-script(src="js/vendor/history.js")
-script(src="js/vendor/history.adapter.jquery.js")
+//- script(src="js/vendor/history.js")
+//- script(src="js/vendor/history.adapter.jquery.js")
 //- script(src="js/vendor/truncate.min.js")
 script(src="js/vendor/jquery.dotdotdot.min.js")
 //- script(src="js/vendor/slick.min.js")
 script(src="js/slick.js")
 script(src="js/vendor/TweenMax.min.js")
 script(src="js/vendor/ScrollToPlugin.js")
-script(src="js/vendor/Chart.min.js")
+//- script(src="js/vendor/Chart.min.js")
+
+//- Alternative Chart lib
+script(src="js/vendor/raphael-2.2.1.min.js")
+//- script(src="js/vendor/morris.min.js")
+script(src="js/vendor/morris.js")
+	
 //- script(src="js/vendor/validate.js")
 script(src="js/js.cookie.js")
 

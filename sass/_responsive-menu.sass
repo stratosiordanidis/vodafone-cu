@@ -1,3 +1,27 @@
+
+
+@media all and (max-width:1680px)	
+	header > .cu-logo > img
+		+rem(height, 70px)
+		width: auto
+
+
+.nav-menu .menu > .level0 > .menu-item
+	@media (max-width: 1150px)
+		+rem(font-size, 24px)
+
+	&:before
+		@media (max-width: 1300px)
+			+rem(right, -20px)
+
+		@media (max-width: 1200px)
+			+rem(right, -15px)
+
+		@media (max-width: 1100px)
+			+rem(right, -10px)
+
+
+
 // @media (max-width:1300px)
 // @media (max-width:1000px)
 @media (max-width:$mobile-breakpoint)

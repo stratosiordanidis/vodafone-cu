@@ -14,19 +14,6 @@
 .f80
 	+rem(font-size, 80px)
 
-@media (max-width:$mobile-breakpoint)
-	.f24
-		+rem(font-size, 12px)
-
-	.f28
-		+rem(font-size, 14px)
-
-	.f48
-		+rem(font-size, 24px)
-		+rem(line-height, 30px)
-
-	.f64
-		+rem(font-size, 32px)
 
 
 .fbold
@@ -47,15 +34,15 @@
 .desktop-only
 	display: block
 
-	@media (max-width:$mobile-breakpoint)
-		display: none
+	// @media (max-width:$mobile-breakpoint)
+	// 	display: none
 
 
 .mobile-only
 	display: none
 
-	@media (max-width:$mobile-breakpoint)
-		display: block
+	// @media (max-width:$mobile-breakpoint)
+	// 	display: block
 
 
 .center
@@ -402,6 +389,96 @@ input:focus+label.movable, input.focused+label.movable, input.has-value+label.mo
 		+rem(margin-left, 16px)
 		+rem(margin-left, 10px)
 		// +rem(margin-left, 26px)
+
+//=============================
+
+.breadcrumb
+	a
+		color: #707379
+		+rem(font-size,20px)
+		+rem(padding-right,10px)
+
+		&:before
+			content: $icon-arrow-thin
+			display: inline-block
+			font-family: 'cu'
+			+rem(font-size, 6px)
+			color: #707379
+			background-color: transparent
+			position: relative
+			width: auto
+			+rem(top,-3px)
+			left: 0
+			+rem(padding-right,11px)
+
+		&:hover
+			color: black
+			&:before
+				color: black
+
+		&.active
+			color: black
+			&:before
+				color: black
+
+		&:nth-child(1)
+			&:before
+				content: none
+
+
+
+//=============================
+
+.morris-tooltip
+	display: inline-block
+	position: absolute
+	padding: 10px
+	background: $color-grey
+	color: white
+	font-size: 14px
+	pointer-events: none
+	+transition(opacity 0.3s)
+	opacity: 0
+	z-index: 3
+
+	$dim: 15px
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		width: 0
+		height: 0
+		// background: $color-grey
+		pointer-events: none
+
+	&.active
+		opacity: 1
+
+	&.left.bottom:before
+		border-top: $dim solid $color-grey
+		border-right: $dim solid transparent
+		left: 100%
+		top: 0
+
+	&.left.top:before
+		border-bottom: $dim solid $color-grey
+		border-right: $dim solid transparent
+		left: 100%
+		bottom: 0
+
+	&.right.bottom:before
+		border-top: $dim solid $color-grey
+		border-left: $dim solid transparent
+		right: 100%
+		top: 0
+
+	&.right.top:before
+		border-bottom: $dim solid $color-grey
+		border-left: $dim solid transparent
+		right: 100%
+		bottom: 0
+
 
 //=============================
 

@@ -31,6 +31,8 @@ html(lang="el").loged-in.show-offer-sidebar--
 		//- include _ga
 
 		script(src="js/device.min.js")
+
+		include _head_includes.jade
 			
 	body
 		include _login-panel.jade
@@ -51,7 +53,8 @@ html(lang="el").loged-in.show-offer-sidebar--
 						.choices
 							.choice.choice-1
 								.progress-widget
-									canvas.circle-chart(width="200" height="200" data-arc-lengths="8 19 3" data-arc-colors="#5b23fb #fd2322 #06d9d7" data-arc-labels="Red|Blue|Green")
+									.circle-chart(data-arc-lengths="8 19 3" data-arc-colors="#5b23fb #fd2322 #06d9d7" data-arc-labels="Red|Blue|Green" )
+										//- canvas(width="200" height="200")
 									//- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
 									//- .bg-graphic
 									//- 	include _progress-arc
@@ -66,7 +69,8 @@ html(lang="el").loged-in.show-offer-sidebar--
 									
 							.choice.choice-2
 								.progress-widget
-									canvas.circle-chart(width="200" height="200" data-arc-lengths="8 19 3" data-arc-colors="#5b23fb #fd2322 #06d9d7" data-arc-labels="Red|Blue|Green")
+									.circle-chart(width="200" height="200" data-arc-lengths="8 19 3" data-arc-colors="#5b23fb #fd2322 #06d9d7" data-arc-labels="Red|Blue|Green")
+										//- canvas(width="200" height="200")
 									//- //- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
 									//- .bg-graphic
 									//- 	include _progress-arc
@@ -81,7 +85,8 @@ html(lang="el").loged-in.show-offer-sidebar--
 
 							.choice.choice-3
 								.progress-widget
-									canvas.circle-chart(width="200" height="200" data-arc-lengths="8 19 3" data-arc-colors="#5b23fb #fd2322 #06d9d7" data-arc-labels="Red|Blue|Green")
+									.circle-chart(width="200" height="200" data-arc-lengths="8 19 3" data-arc-colors="#5b23fb #fd2322 #06d9d7" data-arc-labels="Red|Blue|Green")
+										//- canvas(width="200" height="200")
 									//- //- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
 									//- .bg-graphic
 									//- 	include _progress-arc
@@ -116,7 +121,7 @@ html(lang="el").loged-in.show-offer-sidebar--
 								.title Δες τα ενεργά πακέτα Ομιλίας, αλλά και τη σειρά με την οποία καταναλώνονται.
 
 								.tabbed-control
-									.tab-buttons.carousel(data-mobile='0' data-fit-to-slides='1' data-slides-to-scroll='1' data-slides-to-show='4' data-arrows='0' data-dots='0'  data-swipe='0')
+									.tab-buttons.carousel(data-mobile='0' data-fit-to-slides='1' data-slides-to-scroll='1' data-slides-to-show='4' data-arrows='0' data-dots='0'  data-swipe='1')
 										.tab-button.tab-1.active
 											.wrapper
 												.title προς CU
@@ -701,19 +706,20 @@ html(lang="el").loged-in.show-offer-sidebar--
 							.detail Αριθμός: 654654654564
 
 							//- .choices.columns
-							//- .choices.carousel(data-fit-to-slides='1' data-slides-to-scroll='1' data-slides-to-show='3' data-arrows='0' data-dots='0'  data-swipe='1')
-							.choices
+							//- .choices
+							.choices.carousel(data-fit-to-slides='1' data-align-center='1' data-slides-to-scroll='1' data-slides-to-show='3' data-arrows='0' data-dots='1' data-initial-slide='1' data-swipe='1')
 								a.panel-link.choice.choice-1(href='#panel-speech')
 									.progress-widget
-										//- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
-										.bg-graphic
-											include _progress-arc
-										//- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
-										.fg-graphic
-											include _progress-arc
-										//- on IE Edge it does not animate <object> changes, so we have to inline the svg
+										//- //- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+										//- .bg-graphic
+										//- 	include _progress-arc
+										//- //- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
 										//- .fg-graphic
 										//- 	include _progress-arc
+										//- //- on IE Edge it does not animate <object> changes, so we have to inline the svg
+										//- //- .fg-graphic
+										//- //- 	include _progress-arc
+										.circle-chart(data-arc-lengths="8 19 3" data-arc-colors="#5b23fb #fd2322 #06d9d7" data-arc-labels="Red|Blue|Green" )
 										.number(data-max="800" data-num="421") 421
 										.subtext Λεπτά
 										.arrow
@@ -721,12 +727,13 @@ html(lang="el").loged-in.show-offer-sidebar--
 										
 								a.panel-link.choice.choice-2(href='#panel-sms')
 									.progress-widget
-										//- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
-										.bg-graphic
-											include _progress-arc
-										//- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
-										.fg-graphic
-											include _progress-arc
+										//- //- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+										//- .bg-graphic
+										//- 	include _progress-arc
+										//- //- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
+										//- .fg-graphic
+										//- 	include _progress-arc
+										.circle-chart(data-arc-lengths="8 19 3" data-arc-colors="#5b23fb #fd2322 #06d9d7" data-arc-labels="Red|Blue|Green" )
 										.number(data-max="100" data-num="23") 23
 										.subtext
 										.arrow
@@ -734,12 +741,13 @@ html(lang="el").loged-in.show-offer-sidebar--
 
 								a.panel-link.choice.choice-3(href='#panel-data')
 									.progress-widget
-										//- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
-										.bg-graphic
-											include _progress-arc
-										//- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
-										.fg-graphic
-											include _progress-arc
+										//- //- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+										//- .bg-graphic
+										//- 	include _progress-arc
+										//- //- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
+										//- .fg-graphic
+										//- 	include _progress-arc
+										.circle-chart(data-arc-lengths="8 19 3" data-arc-colors="#5b23fb #fd2322 #06d9d7" data-arc-labels="Red|Blue|Green" )
 										.number(data-max="1600" data-num="60") 60
 										.subtext MB
 										.arrow
@@ -792,16 +800,17 @@ html(lang="el").loged-in.show-offer-sidebar--
 					.content-wrapper
 						.progress-wrapper
 							.progress-widget
-								//- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
-								//- //- include _progress-arc
-								//- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
-								//- //- on IE Edge it does not animate <object> changes, so we have to inline the svg
-								//- //- .fg-graphic
-								//- //- 	include _progress-arc
-								.bg-graphic
-									include _progress-arc
-								.fg-graphic
-									include _progress-arc
+								//- //- object.bg-graphic(data="img/arc-6.svg" type="image/svg+xml")
+								//- //- //- include _progress-arc
+								//- //- object.fg-graphic(data="img/progress-arc-6.svg" type="image/svg+xml")
+								//- //- //- on IE Edge it does not animate <object> changes, so we have to inline the svg
+								//- //- //- .fg-graphic
+								//- //- //- 	include _progress-arc
+								//- .bg-graphic
+								//- 	include _progress-arc
+								//- .fg-graphic
+								//- 	include _progress-arc
+								.circle-chart(data-arc-lengths="8 19 3" data-arc-colors="#5b23fb #fd2322 #06d9d7" data-arc-labels="Red|Blue|Green" )
 								.number(data-max="800" data-num="421") 421
 								.subtext Λεπτά 
 							.label.level1-title ΟΜΙΛΙΑ
@@ -834,10 +843,11 @@ html(lang="el").loged-in.show-offer-sidebar--
 					.content-wrapper
 						.progress-wrapper
 							.progress-widget
-								.bg-graphic
-									include _progress-arc
-								.fg-graphic
-									include _progress-arc
+								//- .bg-graphic
+								//- 	include _progress-arc
+								//- .fg-graphic
+								//- 	include _progress-arc
+								.circle-chart(data-arc-lengths="8 19 3" data-arc-colors="#5b23fb #fd2322 #06d9d7" data-arc-labels="Red|Blue|Green" )
 								.number(data-max="100" data-num="23") 23
 								.subtext 
 							.label.level1-title SMS
@@ -871,10 +881,11 @@ html(lang="el").loged-in.show-offer-sidebar--
 					.content-wrapper
 						.progress-wrapper
 							.progress-widget
-								.bg-graphic
-									include _progress-arc
-								.fg-graphic
-									include _progress-arc
+								//- .bg-graphic
+								//- 	include _progress-arc
+								//- .fg-graphic
+								//- 	include _progress-arc
+								.circle-chart(data-arc-lengths="8 19 3" data-arc-colors="#5b23fb #fd2322 #06d9d7" data-arc-labels="Red|Blue|Green" )
 								.number(data-max="1600" data-num="60") 60
 								.subtext MB
 							.label.level1-title DATA

@@ -16,6 +16,14 @@
 	+rem(margin-top, 70px)
 
 
+	.circle-chart
+	// 	display: block
+	// 	// position: absolute
+	// 	+rem(width, 220px)
+	// 	+rem(height, 220px)
+
+
+
 	section
 		display: block
 
@@ -341,39 +349,41 @@
 
 		.progress-widget
 			+rem(margin-top, 30px)
+			margin-right: 0
 
-			.bg-graphic svg
-				.progress-arc
-					fill: none
-					stroke: $color-grey
-					stroke-width: 5
-					stroke-miterlimit: 10
-					+transition(all 0.3s)
-					+transition-timing-function(ease-in-out)
+			// .bg-graphic svg
+			// 	.progress-arc
+			// 		fill: none
+			// 		stroke: $color-grey
+			// 		stroke-width: 5
+			// 		stroke-miterlimit: 10
+			// 		+transition(all 0.3s)
+			// 		+transition-timing-function(ease-in-out)
 
-			.fg-graphic svg
-				.progress-arc
-					fill: none
-					stroke: #FF2424
-					stroke-width: 5
-					stroke-miterlimit: 10
-					stroke-dasharray: 180
-					stroke-dashoffset: 180
-					// -moz-transition: stroke-dashoffset 1s
-					// -o-transition: stroke-dashoffset 1s
-					// -webkit-transition: stroke-dashoffset 1s
-					// transition: stroke-dashoffset 1s
-					+transition(all 0.3s)
-					+transition-timing-function(ease-in-out)
-					// -moz-transition-timing-function: ease-in-out
-					// -o-transition-timing-function: ease-in-out
-					// -webkit-transition-timing-function: ease-in-out
-					// transition-timing-function: ease-in-out
+			// .fg-graphic svg
+			// 	.progress-arc
+			// 		fill: none
+			// 		stroke: #FF2424
+			// 		stroke-width: 5
+			// 		stroke-miterlimit: 10
+			// 		stroke-dasharray: 180
+			// 		stroke-dashoffset: 180
+			// 		// -moz-transition: stroke-dashoffset 1s
+			// 		// -o-transition: stroke-dashoffset 1s
+			// 		// -webkit-transition: stroke-dashoffset 1s
+			// 		// transition: stroke-dashoffset 1s
+			// 		+transition(all 0.3s)
+			// 		+transition-timing-function(ease-in-out)
+			// 		// -moz-transition-timing-function: ease-in-out
+			// 		// -o-transition-timing-function: ease-in-out
+			// 		// -webkit-transition-timing-function: ease-in-out
+			// 		// transition-timing-function: ease-in-out
 
-			.bg-graphic, .fg-graphic, svg
-				+rem(width, 80px)
-				+rem(height, 170px)
-				+transform-origin(100%, 50%)
+			// // .bg-graphic, .fg-graphic, svg
+			// .bg-graphic, .fg-graphic
+			// 	+rem(width, 80px)
+			// 	+rem(height, 170px)
+			// 	+transform-origin(100%, 50%)
 			
 			&:hover
 				svg
@@ -387,17 +397,18 @@
 			// 		// stroke: green
 			// 		stroke-width: 5px
 			.number
-				+rem(font-size, 80px)
-				font-weight: 600
+				// +rem(font-size, 80px)
+				// font-weight: 600
 				color: white
-				top: 30%
+				// top: 30%
 
 			.subtext 
 				+no-rem(font-size, 20px)
 				// font-weight: bold
 				+weight100
 				// bottom: 11%
-				bottom: 21%
+				// bottom: 21%
+				+rem(bottom, 60px)
 
 
 		.label
@@ -1544,6 +1555,9 @@
 
 	.desktop-layout
 		.remaining-section
+			.choice
+				vertical-align: bottom
+				
 			&.choice-1
 				.choice:not(.choice-1)
 					opacity: 0.5

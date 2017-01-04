@@ -77,6 +77,12 @@ function setupChoices()
 			var $option = $next.find( '.'+option );
 			$option.addClass('active');
 			var $carousel = $option.find('.slick-initialized');
+			$carousel.each(function(index, el) {
+				if (el.slick)
+				{
+					el.slick.setPosition();
+				}
+			});
 			// if ( $carousel.length > 0 )
 			// {
 			// 	$carousel.each(function(index, el)

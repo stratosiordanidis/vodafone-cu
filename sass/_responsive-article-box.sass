@@ -1,3 +1,49 @@
+
+.article-box>.fg>.text-wrapper
+	$margin-lr: 40px
+
+	@media (max-width: 1420px)
+		$scale: 0.8
+		+rem(margin-left, $margin-lr * $scale)
+		+rem(margin-right, $margin-lr * $scale)
+		+rem(padding-top, 30px * $scale)
+		+rem(padding-bottom, 20px * $scale)
+
+	@media (max-width: 1100px)
+		$scale: 0.6
+		+rem(margin-left, $margin-lr * $scale)
+		+rem(margin-right, $margin-lr * $scale)
+		+rem(padding-top, 30px * $scale)
+	
+		+rem(padding-bottom, 20px * $scale)
+
+	& > .title
+
+		@media (max-width: 1420px)
+			+rem(font-size, 30px)
+
+		@media (max-width: 1100px)
+			+rem(font-size, 24px)
+
+	& > .detail
+
+		@media (max-width: 1420px)
+			display: none
+
+.article-box.fullwidth>.fg>.text-wrapper
+
+	& > .title
+
+		@media (max-width: 1420px)
+			+rem(font-size, 45px)
+			+rem(line-height, 45px)
+
+		@media (max-width: 1100px)
+			+rem(font-size, 30px)
+			+rem(line-height, 30px)
+
+
+
 @media all and (max-width: $mobile-breakpoint)
 
 	.article-box

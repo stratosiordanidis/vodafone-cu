@@ -33,11 +33,6 @@ header
 // 		width: auto
 
 
-@media all and (max-width:1680px)	
-	header > .cu-logo > img
-		+rem(height, 70px)
-		width: auto
-
 
 // .open-submenu
 // 	header
@@ -162,17 +157,17 @@ section.login-section
 				outline: none
 				+transition(0.2s)
 
-				// @media (max-width: 1300px)
-				// 	+rem(font-size, 27px)
+				// // @media (max-width: 1300px)
+				// // 	+rem(font-size, 27px)
 
-				// @media (max-width: 1200px)
-				// 	+rem(font-size, 26px)
+				// // @media (max-width: 1200px)
+				// // 	+rem(font-size, 26px)
 
-				// @media (max-width: 1100px)
-				// 	+rem(font-size, 25px)
+				// // @media (max-width: 1100px)
+				// // 	+rem(font-size, 25px)
 
-				@media (max-width: 1150px)
-					+rem(font-size, 24px)
+				// @media (max-width: 1150px)
+				// 	+rem(font-size, 24px)
 
 				&:before
 					content: ''
@@ -189,14 +184,14 @@ section.login-section
 					+transition(0.2s)
 					+transition-delay(0.05s)
 
-					@media (max-width: 1300px)
-						+rem(right, -20px)
+					// @media (max-width: 1300px)
+					// 	+rem(right, -20px)
 
-					@media (max-width: 1200px)
-						+rem(right, -15px)
+					// @media (max-width: 1200px)
+					// 	+rem(right, -15px)
 
-					@media (max-width: 1100px)
-						+rem(right, -10px)
+					// @media (max-width: 1100px)
+					// 	+rem(right, -10px)
 
 				&:after
 					content: none
@@ -339,7 +334,8 @@ section.login-section
 
 			& > .line, &:before, &:after
 				position: absolute
-				+no-rem(width, 40px)
+				// +no-rem(width, 40px)
+				+no-rem(width, 33px)
 				+no-rem(height, 2px)
 				background-color: $color-black
 				left: 0
@@ -349,7 +345,8 @@ section.login-section
 				+transition(0.2s)
 
 
-			$offset: 5px
+			// $offset: 5px
+			$offset: 4px
 
 			& > .line
 				+no-rem(top, 10px)
@@ -359,7 +356,8 @@ section.login-section
 
 			&:before, &:after
 				content: ''
-				+transform-origin((13px/16px*1rem), 0)
+				// +transform-origin((13px/16px*1rem), 0)
+				+transform-origin((9px/16px*1rem), 0)
 
 			&:before
 				display: inline-block
@@ -469,6 +467,9 @@ section.login-section
 
 				.icon.youtube:before
 					content: $icon-youtube
+
+
+
 
 // #menu-underlay
 #click-trap-underlay

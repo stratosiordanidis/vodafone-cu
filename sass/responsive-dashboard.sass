@@ -156,29 +156,29 @@
 		// +rem(margin-top, 70px)
 		margin: 0
 
-		.bg-graphic svg
-			.progress-arc
-				fill: none
-				stroke: $color-grey
-				stroke-width: 5
-				stroke-miterlimit: 10
+		// .bg-graphic svg
+		// 	.progress-arc
+		// 		fill: none
+		// 		stroke: $color-grey
+		// 		stroke-width: 5
+		// 		stroke-miterlimit: 10
 
-		.fg-graphic svg
-			.progress-arc
-				fill: none
-				stroke: #FF2424
-				stroke-width: 5
-				stroke-miterlimit: 10
-				stroke-dasharray: 180
-				stroke-dashoffset: 180
-				// -moz-transition: stroke-dashoffset 1s
-				// -o-transition: stroke-dashoffset 1s
-				// -webkit-transition: stroke-dashoffset 1s
-				// transition: stroke-dashoffset 1s
-				// -moz-transition-timing-function: ease-in-out
-				// -o-transition-timing-function: ease-in-out
-				// -webkit-transition-timing-function: ease-in-out
-				// transition-timing-function: ease-in-out
+		// .fg-graphic svg
+		// 	.progress-arc
+		// 		fill: none
+		// 		stroke: #FF2424
+		// 		stroke-width: 5
+		// 		stroke-miterlimit: 10
+		// 		stroke-dasharray: 180
+		// 		stroke-dashoffset: 180
+		// 		// -moz-transition: stroke-dashoffset 1s
+		// 		// -o-transition: stroke-dashoffset 1s
+		// 		// -webkit-transition: stroke-dashoffset 1s
+		// 		// transition: stroke-dashoffset 1s
+		// 		// -moz-transition-timing-function: ease-in-out
+		// 		// -o-transition-timing-function: ease-in-out
+		// 		// -webkit-transition-timing-function: ease-in-out
+		// 		// transition-timing-function: ease-in-out
 
 		section
 			// background-color: #141415
@@ -355,6 +355,25 @@
 		.remaining-section 
 			+rem(padding-top, 100px)
 
+			.choices.carousel.slick-initialized
+				display: block
+				white-space: normal
+
+				& > .slick-list
+					width: 100%
+
+					& > .slick-track > .slick-slide
+						width: 200px
+
+				.slick-dots
+					display: block
+					left: 0
+					right: 0
+					margin: auto
+
+					& > li:not(.slick-active):after
+						background-color: $color-grey
+
 			.title
 				+rem(font-size, 32px)
 				font-weight: normal
@@ -364,8 +383,8 @@
 				// font-weight: 200
 				+weight100
 
-			.choice
-				width: 115px
+			// .choice
+			// 	width: 115px
 
 			.panel-link
 				display: inline-block
@@ -390,8 +409,8 @@
 
 			.progress-widget
 				+rem(margin-top, 30px)
-				padding-right: 50%
-				
+				// padding-right: 50%
+				margin-right: 0
 				// svg
 
 				// .bg-graphic
@@ -537,6 +556,7 @@
 			.progress-widget
 				+rem(margin-top, 30px)
 				padding: 0
+				margin-right: 0
 				
 				// object.bg-graphic
 				//- include _progress-arc

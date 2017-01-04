@@ -1,8 +1,0 @@
-@media (max-width: 1300px) {
-  .nav-menu > .menu {
-    display: block;
-  }
-  .nav-menu > .menu > .menu-item {
-    display: block;
-  }
-}

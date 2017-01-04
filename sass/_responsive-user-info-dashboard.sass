@@ -4,46 +4,49 @@
 	.progress-widget
 		display: inline-block
 		position: relative
-		padding-right: 50%
-		+rem(padding-right, 65px)
+		// padding-right: 50%
+		// +rem(padding-right, 65px)
 		text-align: center
 
-		svg, object, & > .bg-graphic, & > .fg-graphic
-			display: block
-			// +rem(width, 65px)
-			// +rem(height, 130px)
-			+rem(width, 65px)
-			+rem(height, 130px)
+		// svg, object, & > .bg-graphic, & > .fg-graphic
+		// 	display: block
+		// 	// +rem(width, 65px)
+		// 	// +rem(height, 130px)
+		// 	+rem(width, 65px)
+		// 	+rem(height, 130px)
+
+		.circle-chart > svg
+			pointer-events: none
 
 		$arc-scale: 1.1
-		& > .bg-graphic
-			position: relative
-			+scale($arc-scale, $arc-scale)
+		// & > .bg-graphic
+		// 	position: relative
+		// 	+scale($arc-scale, $arc-scale)
 
-		& > .fg-graphic
-			position: absolute
-			left: 0
-			top: 0
-			+scale($arc-scale, $arc-scale)
+		// & > .fg-graphic
+		// 	position: absolute
+		// 	left: 0
+		// 	top: 0
+		// 	+scale($arc-scale, $arc-scale)
 
-			svg, svg .progress-arc
-				// svg .progress-arc
-				fill: transparent
-				fill: none
-				// stroke: #EAEAEB
-				// stroke: black
-				stroke: $color-red
-				stroke-width: 15
-				stroke-miterlimit: 10
-				// 1000px in length
-				// stroke-dasharray: 100
-				// stroke-dasharray: 185
-				stroke-dasharray: 180
-				stroke-dashoffset: 180
-				// stroke-dashoffset: 50
-				// +animation(progress-arc-fill 5s ease forwards)
-				+transition(stroke-dashoffset 1s)
-				+transition-timing-function(ease-in-out)
+		// 	svg, svg .progress-arc
+		// 		// svg .progress-arc
+		// 		fill: transparent
+		// 		fill: none
+		// 		// stroke: #EAEAEB
+		// 		// stroke: black
+		// 		stroke: $color-red
+		// 		stroke-width: 15
+		// 		stroke-miterlimit: 10
+		// 		// 1000px in length
+		// 		// stroke-dasharray: 100
+		// 		// stroke-dasharray: 185
+		// 		stroke-dasharray: 180
+		// 		stroke-dashoffset: 180
+		// 		// stroke-dashoffset: 50
+		// 		// +animation(progress-arc-fill 5s ease forwards)
+		// 		+transition(stroke-dashoffset 1s)
+		// 		+transition-timing-function(ease-in-out)
 
 		.number
 			display: inline-block

@@ -1,6 +1,7 @@
 $pfpremier-font-path: "pf_premier" !default;
 $icomoon-font-path: "fonts" !default;
 
+$icon-play_button: "\e90b";
 $icon-login_email: "\e907";
 $icon-login_password: "\e908";
 $icon-login_phone: "\e909";
@@ -14,6 +15,8 @@ $icon-arrow-head: "\e900";
 $icon-carousel-arrow: "\e901";
 $icon-facebook: "\ea91";
 $icon-youtube: "\ea9d";
+
+
 
 
 
@@ -84,6 +87,13 @@ $icon-youtube: "\ea9d";
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-play_button {
+  &:before {
+    content: $icon-play_button;
+  }
 }
 
 .icon-login_email {

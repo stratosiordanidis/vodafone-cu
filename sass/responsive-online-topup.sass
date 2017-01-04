@@ -317,6 +317,7 @@
 				.payment-area
 					background-color: white
 					position: relative
+					height: 100%
 
 					.clip-wrap
 						background-color: white
@@ -468,6 +469,84 @@
 	#note-terms-mobile
 		.option-last
 			border-bottom: none
+
+		.panel
+			.content-wrapper
+				background-color: white
+
+				.option-content
+					height: 100%
+					
+					.list
+						height: 100%
+
+						ul
+							list-style: none
+							+rem(padding,5px 10px 20px 30px)
+
+							li
+								+rem(font-size,20px)
+								color: #09090a
+								font-weight: 100
+								position: relative
+								+rem(line-height,30px)
+								+rem(margin-top,10px)
+
+								&:before
+									content: ''
+									background-color: $color-cyan
+									+rem(width,6px)
+									+rem(height,6px)
+									+border-radius(125px)
+									position: absolute
+									+rem(top,12px)
+									+rem(left,-13px)
+
+					.paragraph
+						+rem(font-size,20px)
+						color: #09090a
+						font-weight: 100
+						position: relative
+						+rem(line-height,32px)
+						+rem(padding,15px 15px 20px 15px)
+
+
+	//--------- THANK YOU PAGE
+
+	.thank-you
+		margin: 0 auto
+		+rem(padding-top,70px)
+		width: 100%
+
+		.main-title
+			+rem(font-size,32px)
+			font-weight: 400
+			+rem(letter-spacing,-2px)
+			+rem(line-height,50px)
+			// +rem(margin-bottom,10px)
+
+		.second-title
+			+rem(font-size,20px)
+
+		.separator
+			display: block
+			+rem(width,160px)
+			+rem(height,2px)
+			background-color: #d2d2d4
+			+rem(margin,25px auto 25px)
+
+		.links
+			display: block
+			text-align: center
+			+rem(margin-top,20px)
+
+			a
+				+rem(font-size,20px)
+				font-weight: 100
+
+			span
+				display: block
+				+rem(margin,5px auto)
 
 
 	// // Arrow head Icon Animation

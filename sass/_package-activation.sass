@@ -1,0 +1,80 @@
+
+#package-activation-flow.panel.layer-4
+
+	display: block
+	position: fixed
+
+
+	+rem(width, 960px)
+	+rem(padding, 45px)
+	height: auto
+
+	background: black
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+	margin: auto
+
+
+
+
+	.nav-header.mobile-only
+		.title 
+		.back-button
+
+	.panel-content
+		.background
+		.main-area
+
+			.title
+			.subtitle
+			.price
+
+		.normal-case
+			.detail 
+				p
+			.choices
+				.choice.first
+					.text
+						p
+					a.action-button
+						.text
+						.icon-arrow-head
+				.divider
+				.choice.last
+					.text
+						p
+					a.action-button
+						.text
+						.icon-arrow-head
+
+		.warning-case
+			.detail
+				p
+				span
+			.choices
+				.choice.first
+					a.action-button
+						.text
+						.icon-arrow-head
+				.divider
+				.choice.last
+					.text
+						p
+					a.action-button
+						.text
+						.icon-arrow-head
+
+					a(href="#")
+
+		.thankyou-case
+			.detail 
+				p
+			.divider
+			.detail 
+				p
+					span
+
+			a.see-more(href="#")
+

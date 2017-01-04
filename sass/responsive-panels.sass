@@ -10,7 +10,7 @@
 
 	html.mobile-panel-open, .mobile-panel-open body
 		width: 100%
-		height: 100%
+		// height: 100%
 		overflow: hidden
 
 	
@@ -24,6 +24,14 @@
 	.layer-2
 		// z-index: 70
 		z-index: 400
+	
+	.layer-3
+		// z-index: 70
+		z-index: 500
+	
+	.layer-4
+		// z-index: 70
+		z-index: 600
 	
 
 	.panel
@@ -51,9 +59,11 @@
 
 
 		.progress-widget
-			+rem(width, 180px)
-			+rem(height, 180px)
-
+			// +rem(width, 180px)
+			// +rem(height, 180px)
+		
+			.number
+				top: 30%
 
 		.bg-graphic, .fg-graphic 
 			display: inline-block
@@ -78,7 +88,7 @@
 			right: 0
 			top: 0
 
-		.content-wrapper
+		.content-wrapper, .panel-content
 			display: block
 			width: 100%
 			$navheight: (64/16)*1rem
@@ -116,10 +126,14 @@
 			+rem(right, 20px)
 			top: 0
 			bottom: 0
+			left: unset
 			margin: auto
 			pointer-events: none
 			+rem(width, 13px)
 			+rem(height, 18px)
+
+		&:hover:after
+			background-color: transparent
 
 		& > .title, & > .detail
 			text-align: left

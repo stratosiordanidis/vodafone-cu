@@ -10,10 +10,13 @@
 
 	svg, object, & > .bg-graphic, & > .fg-graphic
 		display: block
+		// // +rem(width, 65px)
+		// // +rem(height, 130px)
 		// +rem(width, 65px)
 		// +rem(height, 130px)
-		+rem(width, 65px)
-		+rem(height, 130px)
+
+	svg
+		z-index: 2
 
 	.circle-chart
 		display: block
@@ -63,7 +66,9 @@
 		top: 0
 		// +rem(top, 40px)
 		// top: 30%
-		top: 23%
+		// top: 23%
+		// top: 33%
+		+rem(top, 67px)
 		right: 0
 		// bottom: 0
 		margin: auto
@@ -78,8 +83,9 @@
 		// top: 0
 		right: 0
 		// +rem(bottom, 35px)
-		bottom: 21%
+		// bottom: 21%
 		// bottom: 19%
+		+rem(bottom, 65px)
 		margin: auto
 		font-family: $font-premier
 		+no-rem(font-size, 16px)
