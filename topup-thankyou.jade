@@ -23,8 +23,8 @@ html(lang="el").loged-in.show-offer-sidebar--
 
 		link(href="css/styles.css" rel="stylesheet")
 		link(href="css/responsive.css" rel="stylesheet")
-		link(href="css/online-topup.css" rel="stylesheet")
-		link(href="css/responsive-online-topup.css" rel="stylesheet")
+		link(href="css/topup-thankyou.css" rel="stylesheet")
+		link(href="css/responsive-topup-thankyou.css" rel="stylesheet")
 		link(href="css/responsive-panels.css" rel="stylesheet")
 
 		//- include _ga
@@ -36,19 +36,19 @@ html(lang="el").loged-in.show-offer-sidebar--
 
 		include _header.jade
 
-		#content.page-topup.mobile-layout
+		#content.page-topup-thankyou
 
 			include _header-carousel.jade
 
 
 			//--------------------
-			.thank-you
-				.main-title Σ’ευχαριστούμε!
-				.second-title H Online Ανανέωσή σου ολοκληρώθηκε με επιτυχία.
+			section.thank-you-section
+				.title Σ’ευχαριστούμε!
+				.subtext H Online Ανανέωσή σου ολοκληρώθηκε με επιτυχία.
 				
-				.separator
+				.divider
 
-				.second-title
+				.subtext
 					| Το νέο σου υπόλοιπο είναι 
 					span.red €11,04
 
@@ -57,6 +57,32 @@ html(lang="el").loged-in.show-offer-sidebar--
 					span  ή 
 					a(href="#") Κάνε άλλη Online Aνανέωση
 			
+				.next-step-area.columns
+					.left.col
+						.title Τώρα μπορείς να ενεργοποιήσεις το αγαπημένο σου πακέτο
+						a(href="#") Δες όλα τα πακέτα Καρτοκινητής
+					.right.col
+						.package-list
+							.package-item
+								.wrapper
+									.top
+										.title
+											p Surf &amp; Email 60 <span class='icon-arrow-head'/>
+											.notice-sticker
+												p Πρασφορά πακέτο!
+												p ισχύει έως 29/9
+										ul.features
+											li.plus <b>500 Λεπτά</b> προς CU
+											li.plus <b>500 SMS ή MMS</b> προς CU
+											li.plus <b>100 Λεπτά</b> προς CU
+											li.plus <b>100 SMS</b> σε όλους
+											li.plus <b>60MB Internet</b> προς CU
+										.detail ενεργοποιόντας την <a href='#'>αυτόματη ανανέωση</a>
+									.bottom
+										.cost €3,02
+										.action-button
+											.text Ενεργοποίησέ το
+
 
 
 		include _sidebar.jade

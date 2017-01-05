@@ -1,0 +1,320 @@
+
+
+@media (max-width: $mobile-breakpoint)
+
+
+	#package-activation-flow
+
+		width: 100%
+		height: auto
+		min-height: 100%
+		// z-index: unset
+
+
+		// display: block
+		// position: unset
+		// width: unset
+		// height: auto
+
+		
+		// // +rem(width, 960px)
+		// // +rem(height, 520px)
+		// z-index: unset
+
+
+		// left: unset
+		// right: unset
+		// top: unset
+		// bottom: unset
+		// margin: auto
+
+
+
+
+		.nav-header.mobile-only
+			.title 
+			.back-button
+
+		.panel-content
+			// display: block
+			// position: relative
+			width: 100%
+			height: 100%
+			// background: black
+			// text-align: center
+			// +rem(padding, 45px)
+
+			width: auto
+			padding-left: 20px
+			padding-right: 20px
+			
+			.background
+				display: none
+
+			.main-area
+				// display: block
+				// width: 100%
+				// text-align: center
+
+				& > .title
+					text-align: center
+					color: $color-cyan
+					// +rem(font-size, 32px)
+					font-weight: 100
+					// +rem(padding-top, 50px)
+					+rem(padding-top, 40px)
+
+				& > .subtitle
+					// +rem(font-size, 52px)
+					+rem(font-size, 32px)
+					color: white
+					font-weight: 200
+					+rem(padding-top, 10px)
+
+				.price
+					color: $color-red
+					+rem(font-size, 56px)
+					// +rem(font-size, 48px)
+					font-weight: 200
+
+			p
+				+rem(font-size, 20px)
+				font-weight: 100
+				line-height: 1.5
+				color: white
+				text-align: center
+
+			.choices
+				display: block
+				// display: flex
+				// align-items: center
+				// position: relative
+				white-space: normal
+				+rem(padding-top, 30px) 
+
+				&:before
+					content: ''
+					display: block
+					width: 166px
+					height: 2px
+					background: $color-grey
+					opacity: 0.3
+					left: 0
+					right: 0
+					margin: auto
+					margin-bottom: 30px 
+
+			.choice
+				white-space: normal
+				// width: 48
+				
+				& > .text
+					+rem(padding, 20px)
+
+				& > .text:first-child
+					padding-top: 0
+
+			.divider
+
+				display: block
+				position: relative
+				+rem(font-size, 20px)
+				font-weight: 600
+				color: white
+				height: 100%
+				pointer-events: none
+				height: 20px
+				width: 20px
+				padding: 20px
+
+				left: 0
+				right: 0
+				top: 0
+				bottom: 0
+				margin: auto
+
+				&:empty
+					font-size: 0
+
+				&:before, &:after
+					content: ''
+					display: inline-block
+					position: absolute
+					width: 54px
+					height: 2px
+					background: $color-grey
+					opacity: 0.3
+					left: unset
+					right: unset
+					top: 0
+					bottom: 0
+					margin: auto
+
+				&:before
+					left: -54px
+
+				&:after
+					right: -54px
+
+			.choice
+				display: block
+				text-align: center
+				display: inline-block
+				width: 100%
+
+				.text
+					// text-align: center
+					p
+						// text-align: center
+						// +no-rem(font-size, 20px)
+						// line-height: 1.5
+						font-weight: 200
+						// color: white
+						// +rem(width, 200px)
+						// max-width: 100%
+						// left: 0
+						// right: 0
+						// margin: auto
+
+			.action-button
+				background: $color-red
+
+				.text
+					color: white
+
+			.normal-case
+				.detail 
+					+rem(padding-top, 45px)
+					p
+				.choices
+
+					.choice.first
+						.text
+							p
+						a.action-button
+							.text
+							.icon-arrow-head
+					.divider
+					.choice.last
+						.text
+							p
+						a.action-button
+							.text
+							.icon-arrow-head
+
+			.warning-case
+				display: none
+
+				& > .detail 
+					+rem(padding-top, 10px)
+
+					span
+						color: $color-red
+						font-weight: 600
+
+				.warning-sign
+					display: block
+					left: 0
+					right: 0
+					top: 0
+					bottom: 0
+					margin: auto
+					background: url('../img/warning.png') no-repeat
+					+rem(width, 33px)
+					+rem(height, 29px)
+					+rem(margin-top, 25px)
+
+				.learn-more
+					display: block
+					+rem(padding-top, 20px)
+					text-align: center
+					color: white
+
+					a
+						+no-rem(font-size, 20px)
+						color: $color-red
+
+					a:after
+						background-color: transparent
+
+				.choices
+					+rem(padding-top, 20px)
+
+				.choice.last
+					.text
+						p
+							font-weight: 100
+							// +rem(width, 350px)
+
+				.detail
+					p
+					span
+				.choices
+					.choice.first
+						a.action-button
+							.text
+							.icon-arrow-head
+					.divider
+					.choice.last
+						.text
+							p
+						a.action-button
+							.text
+							.icon-arrow-head
+
+						a
+
+			.thankyou-case
+				display: none
+
+				.detail
+					&:first-child
+						+rem(padding-top, 50px)
+
+					p
+						+rem(font-size, 24px)
+						+rem(line-height, 34px)
+						font-weight: 200
+
+						span
+							color: $color-red
+							font-weight: 600
+				.divider
+					display: block
+					position: relative
+					+rem(width, 160px)
+					height: 2px
+					background: $color-grey
+					opacity: 0.3
+					padding: 0
+
+					+rem(margin-top, 30px)
+					+rem(margin-bottom, 40px)
+
+
+					&:before, &:after
+						content: none
+
+				a.see-more
+					color: white
+					font-weight: 200
+					font-size: 20px
+
+					&:after
+						background-color: white
+
+		&.warning
+			.normal-case
+				display: none
+
+			.warning-case
+				display: block
+
+		&.thankyou
+			.normal-case
+				display: none
+
+			.thankyou-case
+				display: block
+
+

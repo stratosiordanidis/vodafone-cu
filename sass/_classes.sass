@@ -392,6 +392,44 @@ input:focus+label.movable, input.focused+label.movable, input.has-value+label.mo
 
 //=============================
 
+.loader
+	display: inline-block
+	position: absolute
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+	margin: auto
+	width: 100px
+	height: 100px
+	opacity: 0
+	+transition(opacity 0.5s)
+	overflow: hidden
+
+	.spinner
+		display: inline-block
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		margin: auto
+		width: 100px
+		height: 100px
+
+		background: url('../img/spinner.png') no-repeat
+		background-size: contain
+		+keyframes(spin)
+			0%
+				+rotateZ(0deg)
+			100%
+				+rotateZ(360deg)
+
+		+animation(spin 1s linear infinite)
+
+
+//=============================
+
 .breadcrumb
 	a
 		color: #707379

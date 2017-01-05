@@ -54,7 +54,7 @@ footer
 			.subtitle Surf &amp; Email 100
 			.price &euro;5,04
 
-		.normal-case
+		.normal-case.case
 			.detail 
 				p Τώρα έχεις <b>500ΜΒ Βonus</b> ενεργοποιόντας με αυτόματη ανανέωση
 			.choices
@@ -70,10 +70,13 @@ footer
 						.text Απλή Ενεργοποίηση
 						.icon-arrow-head
 
-		.warning-case
+		.warning-case.case
+			.warning-sign
+				
 			.detail 
 				p To απόλοιπό σου δεν είναι αρκετό για να ενεργοποιήσεις το πακέτο <b>Surf &amp; Email 100</b>
 				p Tώρα έχεις <span>€3,96</span> διαθέσιμο υπόλοιπο
+
 			.choices
 				.choice.first
 					//- .text Θέλεις να ανανεώνεται αυτόματα κάθε μήνα;
@@ -88,9 +91,10 @@ footer
 						.text OK
 						.icon-arrow-head
 
-					a(href="#") Μάθε περισσότερα
+					.learn-more
+						a(href="#") Μάθε περισσότερα
 
-		.thankyou-case
+		.thankyou-case.case
 			.detail 
 				p H ενεργοποίηση πακέτου <b>Surf &amp; Email 100</b>
 				p ολοκληρώθηκε με επιτυχία!
@@ -99,6 +103,10 @@ footer
 				p Το νέο σου υπόλοιπο είναι <span>€1,04</span>
 
 			a.see-more(href="#") Δες περισσότερα στο <b>MyCU</b>
+
+		.loading-case.case
+			.loader
+				.spinner
 
 
 //- #menu-underlay
@@ -132,3 +140,4 @@ script(src="js/js.cookie.js")
 	
 //- script(src="js/tooltipster.bundle.min.js")
 script(src="js/common.js")
+script(src="js/package-activation.js")

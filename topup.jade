@@ -1,5 +1,5 @@
 doctype html
-html(lang="el").loged-in.show-offer-sidebar--
+html(lang="el").loged-in
 	head
 		meta(charset="utf-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
@@ -36,7 +36,8 @@ html(lang="el").loged-in.show-offer-sidebar--
 
 		include _header.jade
 
-		#content.page-topup.mobile-layout
+		//- #content.page-topup.mobile-layout
+		#content.page-topup
 
 			include _header-carousel.jade
 
@@ -44,13 +45,13 @@ html(lang="el").loged-in.show-offer-sidebar--
 			//--------------------
 			.expandable-offers.selected
 				.boxes
-					.main-title Online Ανανέωση
+					h1.main-title Online Ανανέωση
 					.second-title Διάλεξε το ποσό που θέλεις και ανανέωσε τσακ-μπαμ!
 
 					.columns
 						.box.col
+							.background
 							.foreground
-								.background
 								a.panel-link.price-area(href='#panel-five')
 									
 									.icon-arrow-head.mobile-only
@@ -70,7 +71,7 @@ html(lang="el").loged-in.show-offer-sidebar--
 											.price 5
 												span.euro-symbol &euro;
 
-										.payment-area
+										form.payment-area(action="#" method="POST")
 											
 											.clip-wrap
 												.wrapper
@@ -78,23 +79,29 @@ html(lang="el").loged-in.show-offer-sidebar--
 													.payment-method
 														.title Τρόπος πληρωμής
 														.radio
-															input#creditcard_5(type="radio",name="payment")
+															input#creditcard_5(type="radio" name="payment")
 															label(for="creditcard_5") Credit Card
 														.radio
-															input#oneclickpaypal_5(type="radio",name="payment")
+															input#oneclickpaypal_5(type="radio" name="payment")
 															label(for="oneclickpaypal_5") OneClick Paypal
-															.user-info
-																.email johndoe@domain.com
+															.field.user-info
+																input.email(type="email" value="johndoe@domain.com" disabled)
 																a.change-email Αλλαγή
+																.change-buttons
+																	a.ok OK
+																	a.cancel Ακυρο
 														.radio
-															input#paypal_5(type="radio",name="payment")
+															input#paypal_5(type="radio" name="payment")
 															label(for="paypal_5") Paypal
 
 													.email-confirm
 														.title E-mail επιβεβαίωσης
-														.user-info
-															.email johndoe@domain.com
+														.field.user-info
+															input.email(type="email" value="johndoe@domain.com" disabled)
 															a.change-email Αλλαγή
+															.change-buttons
+																	a.ok OK
+																	a.cancel Ακυρο
 													
 
 											.buttons
@@ -110,8 +117,8 @@ html(lang="el").loged-in.show-offer-sidebar--
 													| Ακύρωση
 
 						.box.col.bonus
+							.background
 							.foreground
-								.background
 								a.panel-link.price-area(href='#panel-ten')
 									p.title
 										<strong>Bonus Ανανέωσης<br>500MB</strong> ή <strong>100'</strong> προς όλους
@@ -135,7 +142,7 @@ html(lang="el").loged-in.show-offer-sidebar--
 											.price 10
 												span.euro-symbol &euro;
 
-										.payment-area
+										form.payment-area(action="#" method="POST")
 											
 											.clip-wrap
 												.wrapper
@@ -143,24 +150,30 @@ html(lang="el").loged-in.show-offer-sidebar--
 													.payment-method
 														.title Τρόπος πληρωμής
 														.radio
-															input#creditcard_10(type="radio",name="payment")
+															input#creditcard_10(type="radio" name="payment")
 															label(for="creditcard_10") Credit Card
 														.radio
-															input#oneclickpaypal_10(type="radio",name="payment")
-															label(for="oneclickpaypal_10") OneClick Paypal
-															.user-info
-																.email johndoe@domain.com
+															input#oneclickpaypal_10(type="radio" name="payment")
+															label(for="creditcard_10") OneClick Paypal
+															.field.user-info
+																input.email(type="email" value="johndoe@domain.com" disabled)
 																a.change-email Αλλαγή
+																.change-buttons
+																	a.ok OK
+																	a.cancel Ακυρο
 														.radio
-															input#paypal_10(type="radio",name="payment")
+															input#paypal_10(type="radio" name="payment")
 															label(for="paypal_10") Paypal
 
 													.email-confirm
 														.title E-mail επιβεβαίωσης
-														.user-info
-															.email johndoe@domain.com
+														.field.user-info
+															input.email(type="email" value="johndoe@domain.com" disabled)
 															a.change-email Αλλαγή
-														
+															.change-buttons
+																a.ok OK
+																a.cancel Ακυρο
+													
 
 											.buttons
 												a.action-button.select
@@ -175,8 +188,8 @@ html(lang="el").loged-in.show-offer-sidebar--
 													| Ακύρωση
 
 						.box.col.bonus
+							.background
 							.foreground
-								.background
 								a.panel-link.price-area(href='#panel-fifteen')
 									p.title
 										<strong>Bonus Ανανέωσης<br>500MB</strong> ή <strong>100'</strong> προς όλους
@@ -202,7 +215,7 @@ html(lang="el").loged-in.show-offer-sidebar--
 											.price 15
 												span.euro-symbol &euro;
 
-										.payment-area
+										form.payment-area(action="#" method="POST")
 											
 											.clip-wrap
 												.wrapper
@@ -210,24 +223,30 @@ html(lang="el").loged-in.show-offer-sidebar--
 													.payment-method
 														.title Τρόπος πληρωμής
 														.radio
-															input#creditcard_15(type="radio",name="payment_15")
+															input#creditcard_15(type="radio" name="payment")
 															label(for="creditcard_15") Credit Card
 														.radio
-															input#oneclickpaypal_15(type="radio",name="payment_15")
+															input#oneclickpaypal_15(type="radio" name="payment")
 															label(for="oneclickpaypal_15") OneClick Paypal
-															.user-info
-																.email johndoe@domain.com
+															.field.user-info
+																input.email(type="email" value="johndoe@domain.com" disabled)
 																a.change-email Αλλαγή
+																.change-buttons
+																	a.ok OK
+																	a.cancel Ακυρο
 														.radio
-															input#paypal_15(type="radio",name="payment_15")
+															input#paypal_15(type="radio" name="payment")
 															label(for="paypal_15") Paypal
 
 													.email-confirm
 														.title E-mail επιβεβαίωσης
-														.user-info
-															.email johndoe@domain.com
+														.field.user-info
+															input.email(type="email" value="johndoe@domain.com" disabled)
 															a.change-email Αλλαγή
-
+															.change-buttons
+																a.ok OK
+																a.cancel Ακυρο
+													
 
 											.buttons
 												a.action-button.select
@@ -241,9 +260,9 @@ html(lang="el").loged-in.show-offer-sidebar--
 												a.cancel
 													| Ακύρωση
 
-						.box.col.bonus.active
+						.box.col.bonus
+							.background
 							.foreground
-								.background
 								a.panel-link.price-area(href='#panel-twenty')
 									p.title
 										<strong>Bonus Ανανέωσης<br>500MB</strong> ή <strong>100'</strong> προς όλους
@@ -269,31 +288,38 @@ html(lang="el").loged-in.show-offer-sidebar--
 											.price 20
 												span.euro-symbol &euro;
 
-										.payment-area
+										form.payment-area(action="#" method="POST")
+											
 											.clip-wrap
 												.wrapper
 
 													.payment-method
 														.title Τρόπος πληρωμής
 														.radio
-															input#creditcard_20(type="radio",name="payment_20" checked)
+															input#creditcard_20(type="radio" name="payment")
 															label(for="creditcard_20") Credit Card
 														.radio
-															input#oneclickpaypal_20(type="radio",name="payment_20")
+															input#oneclickpaypal_20(type="radio" name="payment")
 															label(for="oneclickpaypal_20") OneClick Paypal
-															.user-info
-																.email johndoe@domain.com
+															.field.user-info
+																input.email(type="email" value="johndoe@domain.com" disabled)
 																a.change-email Αλλαγή
+																.change-buttons
+																	a.ok OK
+																	a.cancel Ακυρο
 														.radio
-															input#paypal_20(type="radio",name="payment_20")
+															input#paypal_20(type="radio" name="payment")
 															label(for="paypal_20") Paypal
 
 													.email-confirm
 														.title E-mail επιβεβαίωσης
-														.user-info
-															.email johndoe@domain.com
+														.field.user-info
+															input.email(type="email" value="johndoe@domain.com" disabled)
 															a.change-email Αλλαγή
-														
+															.change-buttons
+																a.ok OK
+																a.cancel Ακυρο
+													
 
 											.buttons
 												a.action-button.select
@@ -306,10 +332,9 @@ html(lang="el").loged-in.show-offer-sidebar--
 
 												a.cancel
 													| Ακύρωση
-
 						.box.col.bonus
+							.background
 							.foreground
-								.background
 								a.panel-link.price-area(href='#panel-thirty')
 									p.title
 										<strong>Bonus Ανανέωσης<br>500MB</strong> ή <strong>100'</strong> προς όλους
@@ -334,32 +359,38 @@ html(lang="el").loged-in.show-offer-sidebar--
 											.price 30
 												span.euro-symbol &euro;
 
-										.payment-area
-
+										form.payment-area(action="#" method="POST")
+											
 											.clip-wrap
 												.wrapper
 
 													.payment-method
 														.title Τρόπος πληρωμής
 														.radio
-															input#creditcard_30(type="radio",name="payment_30")
+															input#creditcard_30(type="radio" name="payment")
 															label(for="creditcard_30") Credit Card
 														.radio
-															input#oneclickpaypal_30(type="radio",name="payment_30")
+															input#oneclickpaypal_30(type="radio" name="payment")
 															label(for="oneclickpaypal_30") OneClick Paypal
-															.user-info
-																.email johndoe@domain.com
+															.field.user-info
+																input.email(type="email" value="johndoe@domain.com" disabled)
 																a.change-email Αλλαγή
+																.change-buttons
+																	a.ok OK
+																	a.cancel Ακυρο
 														.radio
-															input#paypal_30(type="radio",name="payment_30")
+															input#paypal_30(type="radio" name="payment")
 															label(for="paypal_30") Paypal
 
 													.email-confirm
 														.title E-mail επιβεβαίωσης
-														.user-info
-															.email johndoe@domain.com
+														.field.user-info
+															input.email(type="email" value="johndoe@domain.com" disabled)
 															a.change-email Αλλαγή
-														
+															.change-buttons
+																a.ok OK
+																a.cancel Ακυρο
+													
 
 											.buttons
 												a.action-button.select
@@ -719,6 +750,6 @@ html(lang="el").loged-in.show-offer-sidebar--
 
 		include _footer.jade
 
-
-
 	script(src="js/dashboard-page.js")
+	script(src="js/topup-page.js")
+

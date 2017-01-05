@@ -15,29 +15,35 @@
 
 	.subnotes
 		text-align: center
-		+rem(font-size,16px)
+		+rem(font-size, 16px)
 		color: black
 		font-weight: 300
-		+rem(margin,100px 0 45px)
+		// +rem(margin, 100px 0 45px)
+		+rem(margin, 45px 0 45px)
 		
 		span.red
 			color: $color-red
 
-	&.selected
-		// .boxes
-		// 	ul
-		// 		li
-		.box
-			+opacity(.5)
-			margin: 0
+	// &.selected
+	// 	// .boxes
+	// 	// 	ul
+	// 	// 		li
+	// 	.box
+	// 		+opacity(.5)
+	// 		margin: 0
 
-			&:hover
-				+opacity(1)
+	// 		&:hover
+	// 			+opacity(1)
 
-		.subnotes
-			display: none
+	// 	.subnotes
+	// 		display: none
 
 	.boxes
+		+rem(padding-bottom, 60px)
+
+		& > .columns
+			display: block
+
 		.main-title
 			text-align: center
 			+rem(font-size,72px)
@@ -63,20 +69,31 @@
 		position: relative
 		align-self: flex-start
 		border: none
+		display: inline-block
+		vertical-align: top
+		+transition(opacity 0.3s)
 
 		.foreground
 			text-align: center
 			position: relative
-			z-index: 2
+			// z-index: 2
+			+rem(width, 260px)
+			
 
 		.background
 			background-color: transparent
-			width: 100%
+			// width: 100%
+			+rem(width, 260px)
 			+rem(height,220px)
 			position: absolute
-			z-index: -1
-			+rem(top,-20px)
-			+rem(left,-20px)
+			// z-index: -1
+			// +rem(top,-20px)
+			// +rem(left,-20px)
+			left: 0
+			top: 0
+
+		.panel-content > .background
+			display: none
 
 		.price-area
 			background-color: #09090a
@@ -108,14 +125,14 @@
 				+rem(width,34px)
 				+rem(height,34px)
 				+rem(margin-right,26px)
-				+transition(0.3s)
+				// +transition(0.3s)
 
 				&:before
 					position: relative
 					+rem(line-height,41.8px)
 					+rem(left,14px)
 					+rem(top,-3px)
-					+transition(0.3s)
+					// +transition(0.3s)
 					color: white
 
 			.title
@@ -147,12 +164,14 @@
 		.payment-area
 			// display: none
 
+			max-width: 100%
+
 			.clip-wrap
 				+opacity(0)
 				background-color: white
 				overflow: hidden
 				max-height: 12px
-				+transition(0.3s)
+				// +transition(0.3s)
 
 				.wrapper
 					text-align: left
@@ -164,101 +183,141 @@
 						+rem(margin-bottom,10px)
 						font-weight: 500
 
-				.payment-method
+			.payment-method
 
-					.radio
-						+rem(margin-bottom,6px)
+				.radio
+					+rem(margin-bottom,6px)
 
-						label
-							+rem(font-size,20px)
-							font-weight: 500
-							color: black
-							display: inline-block
-							position: relative
-							cursor: pointer
-							+rem(padding-left,29px)
-							+rem(padding-top,2px)
-
-							&:before
-								content: ''
-								+border-radius(125px)
-								display: inline-block
-								position: absolute
-								+rem(width,16px)
-								+rem(height,16px)
-								+rem(left,4px)
-								+rem(top,4px)
-								background-color: black
-								cursor: pointer
-
-							&:after 
-								content: ''
-								+border-radius(125px)
-								background-color: $color-cyan
-								position: absolute
-								+rem(width,10px)
-								+rem(height,10px)
-								+rem(left,7px)
-								+rem(top,7px)
-								opacity: 0
-								cursor: pointer
-
-						input[type=radio]
-							visibility: hidden
-							position: absolute
-
-							&:checked + label:after
-								+opacity(1)
-
-							// &:checked + label
-
-						.user-info
-							+rem(padding-left,30px)
-							+rem(margin-bottom,12px)
-
-							.email
-								+rem(font-size,20px)
-								font-weight: 100
-								color: black
-								+rem(margin-bottom,2px)
-
-							.change-email
-								+transition(color 0.3s)
-								+rem(font-size,16px)
-								font-weight: 100
-								color: $color-red
-								cursor: pointer
-
-								&:hover
-									color: black
-
-				.email-confirm
-					+rem(margin-top,35px)
-
-					.title
-						+rem(font-size,16px)
+					label
+						+rem(font-size,20px)
+						font-weight: 500
 						color: black
-						+rem(margin-bottom,10px)
+						display: inline-block
+						position: relative
+						cursor: pointer
+						+rem(padding-left,29px)
+						+rem(padding-top,2px)
 
-					.user-info
-						+rem(padding-left,30px)
-						+rem(margin-bottom,12px)
-
-						.email
-							+rem(font-size,20px)
-							font-weight: 100
-							color: black
-							+rem(margin-bottom,2px)
-
-						.change-email
-							+transition(color 0.3s)
-							+rem(font-size,16px)
-							font-weight: 100
-							color: $color-red
+						&:before
+							content: ''
+							+border-radius(125px)
+							display: inline-block
+							position: absolute
+							+rem(width,16px)
+							+rem(height,16px)
+							+rem(left,4px)
+							+rem(top,4px)
+							background-color: black
 							cursor: pointer
 
-							&:hover
-								color: black
+						&:after 
+							content: ''
+							+border-radius(125px)
+							background-color: $color-cyan
+							position: absolute
+							+rem(width,10px)
+							+rem(height,10px)
+							+rem(left,7px)
+							+rem(top,7px)
+							opacity: 0
+							cursor: pointer
+
+					input[type=radio]
+						visibility: hidden
+						position: absolute
+
+						&:checked + label:after
+							+opacity(1)
+
+						// &:checked + label
+
+			.change-buttons
+				a
+					+transition(color 0.3s)
+					+rem(font-size,16px)
+					font-weight: 100
+					color: $color-red
+					cursor: pointer
+
+					&:hover
+						color: black
+
+				a+a
+					+rem(margin-left, 50px)
+
+			.user-info
+				+rem(padding-left,30px)
+				+rem(margin-bottom,12px)
+
+				.email
+					+rem(font-size,20px)
+					font-weight: 100
+					+rem(width, 280px)
+					max-width: 100%
+					color: black
+					+rem(margin-bottom,2px)
+
+				.change-email
+					display: none
+					+transition(color 0.3s)
+					+rem(font-size,16px)
+					font-weight: 100
+					color: $color-red
+					cursor: pointer
+
+					&:hover
+						color: black
+
+				.change-buttons
+					display: block
+
+				input
+					border: none
+					border-bottom: 1px solid $color-cyan
+					+border-radius(0px)
+					outline: none
+
+				input:disabled
+					border: none
+
+
+				input:disabled ~ .change-email
+					display: block
+
+				input:disabled ~ .change-buttons
+					display: none
+
+
+
+
+
+			.email-confirm
+				+rem(margin-top,35px)
+
+				.title
+					+rem(font-size,16px)
+					color: black
+					+rem(margin-bottom,10px)
+
+				// .user-info
+				// 	+rem(padding-left,30px)
+				// 	+rem(margin-bottom,12px)
+
+				// 	.email
+				// 		+rem(font-size,20px)
+				// 		font-weight: 100
+				// 		color: black
+				// 		+rem(margin-bottom,2px)
+
+				// 	.change-email
+				// 		+transition(color 0.3s)
+				// 		+rem(font-size,16px)
+				// 		font-weight: 100
+				// 		color: $color-red
+				// 		cursor: pointer
+
+				// 		&:hover
+				// 			color: black
 
 			.buttons
 				width: 100%
@@ -330,10 +389,47 @@
 				+rem(letter-spacing,-5px)
 				+rem(padding-top,12px)
 
+		&.active
+
+			.panel-content > .background
+				display: block
+				width: 100%
+				+rem(top, -20px)
+				+rem(left, -20px)
+				z-index: -1
+
 	.box.active
 		+opacity(1)
-		flex-grow: 1.73
-		+rem(margin-bottom,100px)
+		// flex-grow: 1.73
+		// +rem(margin-bottom,100px)
+
+
+		.panel
+			background: rgba(0,0,0, 0.8)
+			position: fixed
+			display: block
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			z-index: 100
+			
+
+		.panel-content
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			+rem(width, 420px)
+			height: auto
+			+rem(max-height, 600px)
+			margin: auto
+
+			.price-area
+				display: block
+
+	.active
 
 		// .foreground
 		.payment-area
@@ -359,6 +455,12 @@
 					pointer-events: all
 					position: relative	
 
+	.boxes:hover
+		.box
+			+opacity(0.5)
+
+			&:hover
+				+opacity(1)
 
 // #notes-terms
 .accordion

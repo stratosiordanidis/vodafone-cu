@@ -1,0 +1,98 @@
+@import "compass"
+
+@import "vars"
+
+@import "utils"
+
+
+
+.thank-you-section
+	text-align: center
+
+
+	.title
+		display: block
+		+rem(font-size, 72px)
+		font-weight: 500
+		color: $color-black
+		text-align: center
+
+	& > .title
+		+rem(margin-top, 75px)
+
+		&+.subtext
+			+rem(margin-top, 5px)
+
+	.subtext
+		+rem(font-size, 32px)
+		font-weight: 100
+		color: $color-black
+
+		.red
+			color: $color-red
+	
+	.divider
+		+rem(width, 160px)
+		height: 2px
+		background: $color-grey
+		left: 0
+		right: 0
+		margin: auto
+		+rem(margin-top, 30px)
+		+rem(margin-bottom, 30px)
+
+	.links
+		display: block
+		+rem(margin-top, 10px)
+		+rem(margin-bottom, 35px)
+
+		span
+			+no-rem(font-size, 20px)
+			font-weight: 500
+
+	a
+		+no-rem(font-size, 20px)
+		font-weight: 200
+		color: $color-black
+
+		span
+			font-weight: 500
+
+	.next-step-area
+		+rem(margin-top, 35px)
+		+display-flex()
+		// display: block
+		background: white
+		+rem(padding, 30px)
+		+rem(padding-bottom, 40px)
+		+rem(width, 1120px)
+		max-width: 100%
+		left: 0
+		right: 0
+		margin: auto
+		align-items: flex-start
+
+		.left
+			display: inline-block
+			width: 50%
+			text-align: left
+			vertical-align: top
+			flex-grow: 1.6
+			flex-shrink: 1.6
+
+			.title
+				+rem(font-size, 56px)
+				color: $color-black
+				text-align: left
+
+			& > .title
+				+rem(margin-top, 30px)
+
+			a
+				+rem(margin-top, 25px)
+
+			// a
+		.right
+			display: inline-block
+			+rem(width, 340px)
+			vertical-align: top

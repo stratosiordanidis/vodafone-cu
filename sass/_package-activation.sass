@@ -1,40 +1,190 @@
 
-#package-activation-flow.panel.layer-4
+#package-activation-flow
 
 	display: block
 	position: fixed
 
+	// +rem(width, 960px)
+	// +rem(height, 520px)
+	// z-index: 500
+	z-index: -500
 
-	+rem(width, 960px)
-	+rem(padding, 45px)
-	height: auto
 
-	background: black
 	left: 0
 	right: 0
 	top: 0
 	bottom: 0
 	margin: auto
+	background: rgba(0, 0, 0, 0.8)
+
+	opacity: 0
+
+	+transition(opacity 0.3s)
 
 
 
+	&.active
+		display: block
 
 	.nav-header.mobile-only
 		.title 
 		.back-button
 
 	.panel-content
-		.background
-		.main-area
+		display: block
+		position: relative
+		// width: 100%
+		// height: 100%
+		+rem(width, 960px)
+		+rem(height, 520px)
+		background: black
+		text-align: center
+		// +rem(padding, 45px)
 
-			.title
-			.subtitle
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		margin: auto
+		position: absolute
+
+		.case
+			display: block
+			position: relative
+			opacity: 1
+			pointer-events: all
+			+transition(opacity 0.3s)
+
+		.background
+			display: block
+			position: absolute
+			width: 100%
+			height: 100%
+			background: $color-cyan
+			z-index: -2
+			+rem(left, -40px)
+			+rem(bottom, -40px)
+
+		.main-area
+			display: block
+			width: 100%
+			// text-align: center
+
+			& > .title
+				text-align: center
+				color: $color-cyan
+				+rem(font-size, 32px)
+				font-weight: 200
+				// +rem(padding-top, 50px)
+				+rem(padding-top, 40px)
+
+			& > .subtitle
+				// +rem(font-size, 52px)
+				+rem(font-size, 48px)
+				color: white
+				font-weight: 600
+				+rem(padding-top, 10px)
+
 			.price
+				color: $color-red
+				// +rem(font-size, 56px)
+				+rem(font-size, 48px)
+				font-weight: 200
+
+		p
+			+rem(font-size, 20px)
+			font-weight: 200
+			line-height: 1.5
+			color: white
+			text-align: center
+
+		.choices
+			// display: block
+			display: flex
+			align-items: center
+			position: relative
+			white-space: nowrap
+			+rem(padding-top, 55px)
+
+		.choice
+			white-space: normal
+			// width: 48
+			
+			& > .text
+				+rem(padding, 20px)
+
+			& > .text:first-child
+				padding-top: 0
+
+		.divider
+
+			display: block
+			position: absolute
+			+rem(font-size, 20px)
+			font-weight: 600
+			color: white
+			height: 100%
+			pointer-events: none
+			height: 20px
+
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			margin: auto
+
+			&:empty
+				font-size: 0
+
+			&:before, &:after
+				content: ''
+				display: block
+				position: absolute
+				width: 2px
+				height: 55px
+				background: $color-grey
+				opacity: 0.3
+				left: 0
+				right: 0
+				margin: auto
+
+			&:before
+				bottom: -75px
+
+			&:after
+				top: -75px
+
+		.choice
+			text-align: center
+			display: inline-block
+			width: 49%
+
+			.text
+				text-align: center
+				p
+					text-align: center
+					+no-rem(font-size, 20px)
+					line-height: 1.5
+					font-weight: 500
+					color: white
+					+rem(width, 200px)
+					max-width: 100%
+					left: 0
+					right: 0
+					margin: auto
+
+		.action-button
+			background: $color-red
+
+			.text
+				color: white
 
 		.normal-case
 			.detail 
+				+rem(padding-top, 45px)
 				p
 			.choices
+
 				.choice.first
 					.text
 						p
@@ -50,6 +200,48 @@
 						.icon-arrow-head
 
 		.warning-case
+			display: none
+
+			& > .detail 
+				+rem(padding-top, 10px)
+
+				span
+					color: $color-red
+
+			.warning-sign
+				display: block
+				left: 0
+				right: 0
+				top: 0
+				bottom: 0
+				margin: auto
+				background: url('../img/warning.png') no-repeat
+				+rem(width, 33px)
+				+rem(height, 29px)
+				+rem(margin-top, 25px)
+
+			.learn-more
+				display: block
+				+rem(padding-top, 20px)
+				text-align: center
+				color: white
+
+				a
+					+no-rem(font-size, 20px)
+					color: $color-red
+
+				a:after
+					background-color: transparent
+
+			.choices
+				+rem(padding-top, 20px)
+
+			.choice.last
+				.text
+					p
+						font-weight: 200
+						+rem(width, 350px)
+
 			.detail
 				p
 				span
@@ -66,15 +258,83 @@
 						.text
 						.icon-arrow-head
 
-					a(href="#")
+					a
 
 		.thankyou-case
-			.detail 
-				p
-			.divider
-			.detail 
-				p
-					span
+			display: none
 
-			a.see-more(href="#")
+			.detail
+				&:first-child
+					+rem(padding-top, 50px)
+
+				p
+					+rem(font-size, 32px)
+					font-weight: 200
+
+					span
+						color: $color-red
+						font-weight: 600
+			.divider
+				display: block
+				position: relative
+				+rem(width, 160px)
+				height: 2px
+				background: $color-grey
+				opacity: 0.3
+
+				+rem(margin-top, 30px)
+				+rem(margin-bottom, 40px)
+
+
+				&:before, &:after
+					content: none
+
+			a.see-more
+				color: white
+				font-weight: 200
+
+				&:after
+					background-color: white
+
+		.loading-case
+			display: block
+			pointer-events: none
+			// opacity: 0
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+
+
+	&.warning
+		.normal-case
+			display: none
+
+		.warning-case
+			display: block
+
+	&.thankyou
+		.normal-case
+			display: none
+
+		.thankyou-case
+			display: block
+
+	&.loading
+		.loading-case
+			.loader
+				opacity: 1
+
+		.case
+			opacity: 0.2
+			pointer-events: none
+
+
+
+.show-package-activation
+	#package-activation-flow
+		opacity: 1
+		pointer-events: all
+
 

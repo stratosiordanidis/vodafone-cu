@@ -225,7 +225,73 @@ function hideSidebar()
 	$('html').removeClass('sidebar-finished-loading');
 }
 
+var _dimUnderLayTimer = null;
+function showDimUnderlay(zindex, onClickHandler)
+{
+	var $clickTrap = $('#click-trap-underlay');
+	
+	// var prevClickHandlers = [];
+	// var events = jQuery._data( $clickTrap[0], "events" );
+	// if (typeof events.click !=='undefined')
+	// {
+	// 	prevClickHandlers = events.click;
+	// 	events.click = [];
+	// }
 
+	function _underlayClickHandler(e)
+	{
+		// console.log('_underlayClickHandler');
+		$clickTrap.off('click', _underlayClickHandler);
+
+		// var events = jQuery._data( $clickTrap[0], "events" );
+		// events.click = prevClickHandlers;
+
+		e.stopImmediatePropagation();
+		if (onClickHandler)
+			onClickHandler.call();
+	}
+
+	if (onClickHandler)
+	{
+
+		// var events = jQuery._data( $clickTrap[0], "events" );
+		// console.log(events);
+
+		$clickTrap
+			// .off('click', onClickHandler)
+			// .off('click') 
+			.on('click', _underlayClickHandler );
+	}
+
+	if (_dimUnderLayTimer)
+	{
+		clearTimeout(_dimUnderLayTimer);
+		_dimUnderLayTimer = null;
+	}
+	$('html').addClass('show-underlay');
+	if (zindex)
+	{
+		$clickTrap.css('z-index', zindex);
+	}
+}
+
+
+function hideDimUnderlay()
+{
+	$('html').removeClass('show-underlay');	
+	if (_dimUnderLayTimer)
+	{
+		clearTimeout(_dimUnderLayTimer);
+		_dimUnderLayTimer = null;
+	}
+	_dimUnderLayTimer = setTimeout(function()
+	{
+		var $clickTrap = $('#click-trap-underlay');
+		$clickTrap.css('z-index', '');
+		_dimUnderLayTimer = null;
+	}, 
+	350);
+}
 
 // function openOfferSidebar($replaceContentsWith)
 function openSidebar($replaceContentsWith)
@@ -241,14 +307,16 @@ function openSidebar($replaceContentsWith)
 		$sidebar.append( $replaceContentsWith.clone() );
 	}
 
-	var $clickTrap = $('#click-trap-underlay');
-	$clickTrap
-		.off('click', closeSidebar)
-		.on('click', closeSidebar);
+	// var $clickTrap = $('#click-trap-underlay');
+	// $clickTrap
+	// 	.off('click', closeSidebar)
+	// 	.on('click', closeSidebar);
 
 	$('html').addClass('open-sidebar');
 	$sidebar.parent().css('z-index', '1000');
-	$clickTrap.css('z-index', '900');
+	// $clickTrap.css('z-index', '900');
+
+	showDimUnderlay(900, closeSidebar);
 
 	setTimeout(function()
 	{
@@ -367,10 +435,11 @@ function closeSidebar()
 		// $sidebar.find('.click-trap').off('click');
 		// $('html').removeClass('show-offer-sidebar');
 		
-		var $clickTrap = $('#click-trap-underlay');
-		$clickTrap
-			.off('click', closeSidebar)
-			;
+		// var $clickTrap = $('#click-trap-underlay');
+		// $clickTrap
+		// 	.off('click', closeSidebar)
+		// 	;
+		hideDimUnderlay();
 
 		hideSidebar();
 		$('html').removeClass('open-sidebar');
@@ -385,7 +454,7 @@ function closeSidebar()
 			// $sidebar.css('z-index', '');
 			// 
 			$sidebar.parent().css('z-index', '1000');
-			$clickTrap.css('z-index', '');
+			// $clickTrap.css('z-index', '');
 		}
 		, 300);
 	}
@@ -1719,8 +1788,6 @@ function setupMobilePanels()
 			{
 				location.hash = url_hash;
 			}
-
-
 		}
 
 		return true;
