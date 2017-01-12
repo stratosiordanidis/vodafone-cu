@@ -8,6 +8,7 @@
 
 .thank-you-section
 	text-align: center
+	+rem(padding-bottom, 140px)
 
 
 	.title
@@ -35,6 +36,7 @@
 		+rem(width, 160px)
 		height: 2px
 		background: $color-grey
+		opacity: 0.3
 		left: 0
 		right: 0
 		margin: auto
@@ -49,6 +51,7 @@
 		span
 			+no-rem(font-size, 20px)
 			font-weight: 500
+			+rem(margin, 0px 8px)
 
 	a
 		+no-rem(font-size, 20px)
@@ -65,6 +68,7 @@
 		background: white
 		+rem(padding, 30px)
 		+rem(padding-bottom, 40px)
+		+rem(margin-bottom, 140px)
 		+rem(width, 1120px)
 		max-width: 100%
 		left: 0
@@ -86,9 +90,11 @@
 				text-align: left
 
 			& > .title
-				+rem(margin-top, 30px)
+				// +rem(margin-top, 30px)
+				+rem(margin-top, 25px)
 
 			a
+				display: inline-block
 				+rem(margin-top, 25px)
 
 			// a
@@ -96,3 +102,14 @@
 			display: inline-block
 			+rem(width, 340px)
 			vertical-align: top
+			text-align: right
+
+			.package-list
+				padding-bottom: 0
+
+				.package-item
+					margin-left: 0
+					margin-right: 0
+
+
+

@@ -13,6 +13,9 @@
 		// height: 100%
 		overflow: hidden
 
+	.mobile-panel-open
+		header
+			z-index: 400
 	
 	// .layer-0
 	// 	z-index: 50
@@ -47,7 +50,7 @@
 		+transform(translate3D(105%, 0, 0))
 		+transition(0.3s)
 		pointer-events: none
-		background: #0b0b0c
+		// background: #0b0b0c
 		min-height: 100%
 		// overflow-x: hidden
 		// overflow-y: auto
@@ -57,6 +60,9 @@
 		// max-height: 100%
 		// z-index: -100
 
+		background: transparent
+
+		// pointer-events: none
 
 		.progress-widget
 			// +rem(width, 180px)
@@ -79,7 +85,8 @@
 					stroke-width: 12
 
 		.nav-header+div
-			+rem(margin-top, 64px)
+			// +rem(margin-top, 64px)
+			+rem(margin-top, 42px)
 
 		.nav-header
 			background: #0f0f10
@@ -91,13 +98,16 @@
 		.content-wrapper, .panel-content
 			display: block
 			width: 100%
-			$navheight: (64/16)*1rem
+			// $navheight: (64/16)*1rem
+			$navheight: (42/16)*1rem
 			height: calc(100% - #{$navheight})
 			background: black
 
 			overflow-x: hidden
 			overflow-y: auto
 			-webkit-overflow-scrolling: touch
+
+			pointer-events: all
 
 
 		.panel-content  > .background
@@ -107,7 +117,8 @@
 			+transform(translateX(0%))
 			// +transform(translate3D(0, 0, 0))
 			// left: 0
-			pointer-events: all
+			// pointer-events: all
+			pointer-events: none
 
 
 	.panel-link
@@ -178,6 +189,7 @@
 			margin: auto
 			padding: 5px
 			font-size: (10px/16px)*1rem !important
+			pointer-events: all
 
 			&:before
 				content: $icon-arrow-thin

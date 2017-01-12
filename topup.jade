@@ -42,6 +42,11 @@ html(lang="el").loged-in
 			include _header-carousel.jade
 
 
+			.breadcrumb
+				a(href="#") Αρχική Σελίδα
+				a(href="#") Υπηρεσίες CU
+				a.active(href="#") Bonus Ανανέωσης
+
 			//--------------------
 			.expandable-offers.selected
 				.boxes
@@ -154,7 +159,7 @@ html(lang="el").loged-in
 															label(for="creditcard_10") Credit Card
 														.radio
 															input#oneclickpaypal_10(type="radio" name="payment")
-															label(for="creditcard_10") OneClick Paypal
+															label(for="oneclickpaypal_10") OneClick Paypal
 															.field.user-info
 																input.email(type="email" value="johndoe@domain.com" disabled)
 																a.change-email Αλλαγή

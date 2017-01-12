@@ -1,0 +1,311 @@
+
+@import "compass"
+
+@import "vars"
+
+@import "utils"
+
+// figure
+// 	-webkit-margin-before: 0
+// 	-webkit-margin-after: 0
+// 	-webkit-margin-start: 0
+// 	-webkit-margin-end: 0
+
+// .gallery-list
+// 	position: relative
+// 	width: calc(120% - (40/16)*1rem)
+// 	left: -10%
+// 	+rem(padding-right, 40px)
+// 	$img_height: 200px
+// 	$img_gap: 2px
+
+// 	+rem(max-height, ($img_height + $img_gap)*3 - $img_gap)
+// 	overflow-y: hidden
+
+// 	font-size: 0px
+
+// 	.img, figure
+// 		display: inline-block
+// 		position: relative
+// 		cursor: pointer
+
+// 		&.odd // mona
+// 			+rem(left, 40px)
+
+// 		&.even // zyga
+
+// 	img
+// 		display: inline-block
+// 		position: relative
+// 		+rem(height, $img_height)
+// 		width: auto
+// 		margin-right: $img_gap
+// 		margin-bottom: $img_gap
+
+// 	.description, figcaption
+// 		display: none
+
+
+
+@media (max-width: $mobile-breakpoint)
+
+	#gallery-underlay
+		// display: none
+		// // display: block
+		// position: fixed
+		// pointer-events: none
+		// background-color: rgba(0,0,0,0.9)
+
+		z-index: -200
+
+		// left: 0
+		// top: 0
+		// right: 0
+		// bottom: 0
+
+
+		& > .close-button
+			// display: inline-block
+			// position: fixed
+			+rem(top, 5px)
+			+rem(right, 5px)
+			+rem(width, 40px)
+			+rem(height, 40px)
+			// background-color: black
+			// cursor: pointer
+			z-index: 100
+
+			&:after
+				// display: block
+				// position: relative
+				// content: $icon-cross
+				// font-family: 'cu'
+				// color: $color-purple
+				+rotate(45deg)
+				+rem(line-height, 40px)
+				+rem(font-size, 20px)
+				text-align: center
+				width: 100%
+
+
+		// .img, figure
+		// 	display: inline-block
+		// 	position: relative
+		// 	vertical-align: top
+		// 	text-align: center
+
+		// 	img
+		// 		left: 0
+		// 		right: 0
+		// 		margin: auto
+		
+		.gallery-slide-count
+			display: inline-block
+			text-align: center
+		
+		.thumbnail-list
+			display: none
+
+		.gallery-list
+			// display: block
+			// position: fixed
+			// left: 0
+			// right: 0
+			// width: 100%
+			// padding: 0
+			// height: auto
+			// max-height: none
+			+rem(top, 0px)
+			+rem(bottom, 0px)
+
+			.slick-dots
+				// display: block !important
+				display: flex !important
+				position: absolute
+				justify-content: center
+				left: 0
+				right: 0
+				bottom: 20px
+				z-index: 10
+				+display-flex()
+
+				li
+					// margin-left: 3px
+					margin-left: 0
+
+					// &.slick-active
+					// 	background-color: $color-purple
+
+				li:not(.slick-active)
+					button+button
+						margin-left: 10px
+
+					+transform( scale(0.5, 0.5) )
+
+			.slick-dots > li:after
+				background-color: $color-grey
+			
+			.slick-dots > li.slick-active:after
+				background-color: $color-purple
+
+			.slick-list, .slick-track
+				// height: 100%
+				// z-index: 1
+				padding: 0 !important
+				z-index: 1
+
+			.slick-track
+				// +display-flex()
+				// align-items: center
+				// white-space: nowrap
+
+			.slick-arrow
+				display: none !important
+				// display: inline-block
+				// position: absolute
+				// border: none
+				// border-radius: 0px
+				// font-size: 0
+				// background-color: transparent
+				// +rem(width, 100px)
+				// +rem(height, 80px)
+				// opacity: 1
+				// outline: none
+
+				// top: 48%
+				// z-index: 10
+
+
+				// &:after
+				// 	content: $icon-carousel-arrow
+				// 	font-family: 'cu'
+				// 	display: inline-block
+				// 	+rem(font-size, 20px)
+				// 	+rem(line-height, 80px)
+				// 	text-align: center
+				// 	color: $color-purple
+
+				// &.slick-disabled
+				// 	opacity: 0.2
+
+				// &.slick-prev
+				// 	+rotate(180deg)
+				// 	+rem(left, 20px)
+
+				// &.slick-next
+				// 	+rem(right, 20px)
+
+
+			// .img, figure
+			// 	height: auto
+			// 	// height: 100%
+			// 	cursor: default
+
+			// img
+			// 	height: auto
+			// 	max-width: 100%
+
+			// .wrapper
+			// 	display: inline-block
+			// 	position: relative
+
+					// .description, 
+			figcaption
+				display: none
+				// display: block
+				// // +rem(width, 960px)
+				// max-width: 90%
+				// width: auto
+				// // +rem(height, 140px)
+				// height: auto
+				// left: 0
+				// right: 0
+				// margin: auto
+				// text-align: left
+				// +rem(font-size, 20px)
+				// +rem(line-height, 30px)
+				// font-weight: 100
+				// color: $color-grey
+				// +rem(margin-top, 35px)
+
+				// p, ul, li, ol, a
+				// 	color: inherit
+				// 	font-size: inherit
+				// 	font-weight: inherit
+				// 	line-height: inherit
+
+
+
+		// .thumbnail-list
+		// 	display: block
+		// 	position: fixed
+		// 	left: 0
+		// 	right: 0
+		// 	bottom: 0
+		// 	+no-rem(min-height, 70px)
+
+		// 	// .description, 
+		// 	figcaption
+		// 		display: none
+
+		// 	.img, figure
+		// 		display: inline-block
+		// 		position: relative
+		// 		vertical-align: top
+		// 		border-bottom: 0px solid $color-purple
+		// 		+transition(border-bottom 0.3s)
+		// 		margin: 0
+		// 		-webkit-margin: 0
+		// 		cursor: pointer
+
+		// 		&:hover, &.slick-current
+		// 			.grayscale
+		// 				opacity: 0
+
+		// 		&.slick-current
+		// 			border-bottom-width: 10px
+
+
+
+		// 	img
+		// 		display: inline-block
+		// 		position: absolute
+		// 		left: 0
+		// 		top: 0
+		// 		opacity: 1
+		// 		height: 60px
+		// 		width: auto
+		// 		margin-right: 1px
+
+		// 		&.grayscale
+		// 			display: inline-block
+		// 			position: relative
+
+		// 			filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)
+		// 			+filter(grayscale(1))
+
+		// 			opacity: 1
+		// 			+transition(opacity 0.3s)
+
+		// 	figcaption
+		// 		display: none
+
+		// 	.slick-track
+		// 		// +rem(width, 1340px)
+		// 		// width: ((1340/16)*1rem) !important
+
+		// 		white-space: nowrap
+
+		// 		figure
+		// 			width: auto !important
+
+
+// .show-gallery
+// 	#gallery-underlay
+// 		display: block
+// 		pointer-events: all
+// 		z-index: 900
+
+
+
+

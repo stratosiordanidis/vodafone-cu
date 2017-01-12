@@ -23,8 +23,12 @@ html(lang="el").loged-in.show-offer-sidebar--
 
 		link(href="css/styles.css" rel="stylesheet")
 		link(href="css/responsive.css" rel="stylesheet")
-		link(href="css/generic.css" rel="stylesheet")
-		link(href="css/responsive-online-topup.css" rel="stylesheet")
+		link(href="css/page-generic.css" rel="stylesheet")
+		link(href="css/page-bundles.css" rel="stylesheet")
+		link(href="css/gallery.css" rel="stylesheet")
+		link(href="css/responsive-page-generic.css" rel="stylesheet")
+		link(href="css/responsive-gallery.css" rel="stylesheet")
+		//- link(href="css/responsive-online-topup.css" rel="stylesheet")
 		link(href="css/responsive-panels.css" rel="stylesheet")
 
 		//- include _ga
@@ -36,127 +40,352 @@ html(lang="el").loged-in.show-offer-sidebar--
 
 		include _header.jade
 
-		#content.page-topup.mobile-layout
+		#content.generic-page
 
 			//- include _header-carousel.jade
 
 
 			//--------------------
-			.single-page
 
-				.layout
+			.generic-center-col
 
-					.breadcrumb
-						a(href="#") Αρχική Σελίδα
-						a(href="#") Υπηρεσίες CU
-						a.active(href="#") Bonus Ανανέωσης
+				//- .layout
 
-					.main-title Bonus Ανανέωσης
-					.second-title Σύμπτωμα 23: Μένεις έξω!
+				.breadcrumb
+					a(href="#") Αρχική Σελίδα
+					a(href="#") Υπηρεσίες CU
+					a.active(href="#") Bonus Ανανέωσης
 
-					.paragraph
-						| Τώρα, με το Just Surf Bonus, κερδίζεις δωρεάν MB για internet από το κινητό:
+				.h1 Bonus Ανανέωσης
+				.h3 Σύμπτωμα 23: Μένεις έξω!
 
-					.ul-list
-						ul
-							li <strong>500ΜΒ</strong> για κάθε ανανέωση από <strong>10€</strong>
-							li <strong>1GB</strong> για ανανέωση από <strong>20€</strong>
+				p
+					| Τώρα, με το Just Surf Bonus, κερδίζεις δωρεάν MB για internet από το κινητό:
 
-					.paragraph
-						| Αν δεν το έχεις ήδη, 
-						a.p-link(href="#") ενεργοποίησε το εδώ
-						| !
+				ul
+					li <strong>500ΜΒ</strong> για κάθε ανανέωση από <strong>10€</strong>
+					li <strong>1GB</strong> για ανανέωση από <strong>20€</strong>
 
-				.accordion.desktop-only
+				p
+					| Αν δεν το έχεις ήδη, 
+					a.important-link(href="#") ενεργοποίησε το εδώ
+					| !
+
+
+				.accordion
+					.accordion-item.active
+						a.panel-link(href='#note-1')
+							.title
+								.icon-arrow-head
+								| Ψιλά Γράμματα
+
+						#note-1.panel.layer-1
+							.nav-header.mobile-only
+								.title Online Aνανέωση
+								.back-button
+
+							.panel-content
+								ul
+									li Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong>
+									li Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.
+									li Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.
+									li Το Bonus δεν ισχύει για χρήση στο εξωτερικό.
+
+					.accordion-item
+						a.panel-link(href='#note-2')
+							.title
+								.icon-arrow-head
+								| Όροι χρήσης Online Ανανέωσης Xρόνου Oμιλίας
+
+						#note-2.panel.layer-1
+							.nav-header.mobile-only
+								.title Online Aνανέωση
+								.back-button
+
+							.panel-content
+								//- .paragraph
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mi ex, sollicitudin in purus et, tempus tempor sem. Sed vitae nulla dignissim, mollis leo cursus, scelerisque lacus. Donec ultricies turpis odio, non elementum libero pharetra eget. Praesent non sollicitudin tellus. Aenean lectus purus, sodales nec eros quis, dignissim eleifend tellus. Nulla dapibus, sapien vitae rhoncus elementum, neque libero pellentesque augue, et dignissim elit sem et leo. Nullam fringilla venenatis sodales. Phasellus accumsan libero non lorem cursus condimentum. Vivamus nec maximus dolor, a interdum neque. Integer condimentum posuere sem a sollicitudin. Phasellus faucibus bibendum hendrerit. Morbi ac eros et massa porttitor aliquet. Proin pulvinar massa efficitur accumsan porta. Suspendisse eu fringilla dui, ut eleifend ipsum. Quisque nec luctus quam.
+									br
+									| Integer tincidunt in sem et iaculis. Fusce at lectus mauris. Etiam vel lectus tincidunt, imperdiet velit eu, ornare turpis. Vivamus quis neque congue, hendrerit nisl nec, ornare lectus. Etiam ut nisi non dolor feugiat hendrerit et a sapien. Donec ultricies diam a erat aliquet, quis rhoncus leo porttitor. Etiam tempus, arcu vitae aliquet cursus, justo nisl cursus justo, at hendrerit est purus luctus erat. Curabitur lacus dolor, tempor nec urna quis, pulvinar lacinia risus. Integer interdum sem nec erat convallis semper. Mauris non dolor purus. 
+
+				//- .accordion.desktop-only
 					
-					.option
-						.title
-							.icon-arrow-head
-							.text Πώς ακριβώς γίνεται η κατανάλωση των δωρεάν ΜΒ;
-						ul
-							li Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong>
-							li Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.
-							li Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.
-							li Το Bonus δεν ισχύει για χρήση στο εξωτερικό.
+				//- 	.option
+				//- 		.title
+				//- 			.icon-arrow-head
+				//- 			.text Πώς ακριβώς γίνεται η κατανάλωση των δωρεάν ΜΒ;
+				//- 		ul
+				//- 			li Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong>
+				//- 			li Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.
+				//- 			li Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.
+				//- 			li Το Bonus δεν ισχύει για χρήση στο εξωτερικό.
 
-					.option
-						.title
-							.icon-arrow-head
-							.text Πώς παίρνω τα δωρεάν MB;
-						ul
-							li Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong>
-							li Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.
-							li Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.
-							li Το Bonus δεν ισχύει για χρήση στο εξωτερικό.
-					.option
-						.title
-							.icon-arrow-head
-							.text Κι αν δεν θέλω άλλο το Just Surf Bonus;
-					.option
-						.title
-							.icon-arrow-head
-							.text Κι αν έχω ενεργοποιημένο το Bonus Talk 2 Vodafone;
+				//- 	.option
+				//- 		.title
+				//- 			.icon-arrow-head
+				//- 			.text Πώς παίρνω τα δωρεάν MB;
+				//- 		ul
+				//- 			li Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong>
+				//- 			li Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.
+				//- 			li Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.
+				//- 			li Το Bonus δεν ισχύει για χρήση στο εξωτερικό.
+				//- 	.option
+				//- 		.title
+				//- 			.icon-arrow-head
+				//- 			.text Κι αν δεν θέλω άλλο το Just Surf Bonus;
+				//- 	.option
+				//- 		.title
+				//- 			.icon-arrow-head
+				//- 			.text Κι αν έχω ενεργοποιημένο το Bonus Talk 2 Vodafone;
 
-				.layout
-					.subnotes * Το έξτρα bonus ανανέωσης από πιστωτική, χρεωστική, Paypal &amp; κατάστημα ισχύει για την 1η ανανέωση του μήνα από 10€ έως 31/10/2016.
+				//- .layout
+				.subtext * Το έξτρα bonus ανανέωσης από πιστωτική, χρεωστική, Paypal &amp; κατάστημα ισχύει για την 1η ανανέωση του μήνα από 10€ έως 31/10/2016.
 
 
-					.second-title Bonus Talk2Vodafone
-					.third-title Το... μικρόβιο μεταδίδεται ακόμα πιο εύκολα μεταξύ CU και Vodafone, με το Bonus Talk2Vodafone!
+				.h3 Bonus Talk2Vodafone
+				.h4 Το... μικρόβιο μεταδίδεται ακόμα πιο εύκολα μεταξύ CU και Vodafone, με το Bonus Talk2Vodafone!
 
-					.paragraph
-						| Τώρα, με το <strong>Talk2Vodafone</strong>, κερδίζεις δωρεάν λεπτά ομιλίας προς όλη τη Vodafone:
+				p
+					| Τώρα, με το <strong>Talk2Vodafone</strong>, κερδίζεις δωρεάν λεπτά ομιλίας προς όλη τη Vodafone:
 
-					.ul-list
-						ul
-							li <strong>2 ώρες</strong> με κάθε ανανέωση από <strong>10€</strong> για 30 μέρες
-							li <strong>4 ώρες + 60ΜΒ</strong> με ανανέωση από <strong>20€</strong> και πάνω για 30 μέρες
+				ul
+					li <strong>2 ώρες</strong> με κάθε ανανέωση από <strong>10€</strong> για 30 μέρες
+					li <strong>4 ώρες + 60ΜΒ</strong> με ανανέωση από <strong>20€</strong> και πάνω για 30 μέρες
 
-					.paragraph
-						| <strong>Tip:</strong> Κάνε ανανέωση 10€ μέσω πιστωτικής, χρεωστικής, paypal ή σε κατάστημα, και πάρε επιπλέον <strong>500ΜΒ</strong>!
-						br
-						| Αν δεν το έχεις ήδη, <strong>ενεργοποίησε το εδώ</strong>!
+				p
+					| <strong>Tip:</strong> Κάνε ανανέωση 10€ μέσω πιστωτικής, χρεωστικής, paypal ή σε κατάστημα, και πάρε επιπλέον <strong>500ΜΒ</strong>!
+					br
+					| Αν δεν το έχεις ήδη, <strong>ενεργοποίησε το εδώ</strong>!
 
-					.action-button
-						.text
-							| Ενεργοποίησέ το!
+				.action-button
+					.text
+						| Ενεργοποίησέ το!
 
-				.accordion.desktop-only
+
+				.accordion
+					.accordion-item.active
+						a.panel-link(href='#note-1')
+							.title
+								.icon-arrow-head
+								| Ψιλά Γράμματα
+
+						#note-1.panel.layer-1
+							.nav-header.mobile-only
+								.title Online Aνανέωση
+								.back-button
+
+							.panel-content
+								ul
+									li Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong>
+									li Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.
+									li Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.
+									li Το Bonus δεν ισχύει για χρήση στο εξωτερικό.
+
+					.accordion-item
+						a.panel-link(href='#note-2')
+							.title
+								.icon-arrow-head
+								| Όροι χρήσης Online Ανανέωσης Xρόνου Oμιλίας
+
+						#note-2.panel.layer-1
+							.nav-header.mobile-only
+								.title Online Aνανέωση
+								.back-button
+
+							.panel-content
+								//- .paragraph
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mi ex, sollicitudin in purus et, tempus tempor sem. Sed vitae nulla dignissim, mollis leo cursus, scelerisque lacus. Donec ultricies turpis odio, non elementum libero pharetra eget. Praesent non sollicitudin tellus. Aenean lectus purus, sodales nec eros quis, dignissim eleifend tellus. Nulla dapibus, sapien vitae rhoncus elementum, neque libero pellentesque augue, et dignissim elit sem et leo. Nullam fringilla venenatis sodales. Phasellus accumsan libero non lorem cursus condimentum. Vivamus nec maximus dolor, a interdum neque. Integer condimentum posuere sem a sollicitudin. Phasellus faucibus bibendum hendrerit. Morbi ac eros et massa porttitor aliquet. Proin pulvinar massa efficitur accumsan porta. Suspendisse eu fringilla dui, ut eleifend ipsum. Quisque nec luctus quam.
+									br
+									| Integer tincidunt in sem et iaculis. Fusce at lectus mauris. Etiam vel lectus tincidunt, imperdiet velit eu, ornare turpis. Vivamus quis neque congue, hendrerit nisl nec, ornare lectus. Etiam ut nisi non dolor feugiat hendrerit et a sapien. Donec ultricies diam a erat aliquet, quis rhoncus leo porttitor. Etiam tempus, arcu vitae aliquet cursus, justo nisl cursus justo, at hendrerit est purus luctus erat. Curabitur lacus dolor, tempor nec urna quis, pulvinar lacinia risus. Integer interdum sem nec erat convallis semper. Mauris non dolor purus. 
+
+				//- .accordion.desktop-only
 					
-					.option.active
-						.title
-							.icon-arrow-head
-							.text Tell me more… για το Bonus Talk2Vodafone
-						ul
-							li Η ελάχιστη διάρκεια κλήσης για τα δωρεάν λεπτά είναι 3 λεπτά ανά κλήση και μετά η χρήση υπολογίζεται ανά δευτερόλεπτο.
-							li Τα δωρεάν λεπτά ομιλίας και τα MB ισχύουν για 30 ημέρες μετά από κάθε ανανέωση-ενεργοποίησή της.
-							li Σε περίπτωση που ξεπεράσεις τα δωρεάν λεπτά ή MB, η επιπλέον χρέωση γίνεται βάσει του ισχύοντα τιμοκαταλόγου.
-							li Το πακέτο δεν ισχύει όταν βρίσκεσαι εκτός Ελλάδας, ούτε προς συνδρομητές του εξωτερικού.
-							li Για την απόδοση των δωρεάν λεπτών ομιλίας και ΜΒ, ισχύουν όλοι οι τρόποι ανανέωσης χρόνου ομιλίας, εκτός από την υπηρεσία Vodafone Sharing και την υπηρεσία επέκτασης υπολοίπου.
-							li Η προϋπόθεση της ανανέωσης χρόνου ομιλίας για την απόδοση των δωρεάν λεπτών και MB δεν αποτελεί χρέωση, δηλαδή ο χρόνος ομιλίας παραμένει στον λογαριασμό σου για να τον χρησιμοποιήσεις όπως εσύ θέλεις.
-							li Η ανανέωση χρόνου ομιλίας που πραγματοποιείται στο εξωτερικό θεωρείται έγκυρη και έχεις τη δυνατότητα να χρησιμοποιήσεις τα δωρεάν λεπτά και MΒ σου, όταν επιστρέψεις στην Ελλάδα (εφόσον δεν έχει περάσει το διάστημα ισχύος τους).
-							li Η ενεργοποίηση του Bonus Talk2Vodafone επιτρέπεται σε έως 3 συνδέσεις ανά συνδρομητή καρτοκινητής.
-							li Η Vodafone διατηρεί το δικαίωμα του τερματισμού του Bonus Talk2Vodafone και της μετατροπής του χρονικού διαστήματος της προσφοράς ή/και της μετατροπής των σχετικών όρων, χωρίς προηγούμενη προειδοποίηση.
-							li Στην περίπτωση που έχεις στη διάθεσή σου δωρεάν λεπτά ή ΜΒ από το Bonus Talk2Vodafone και λάβεις κι άλλο bonus με κάρτα 10€ και άνω, τυχόν υπολειπόμενα δωρεάν λεπτά προς Vodafone ή ΜΒ από προηγούμενη ανανέωση θα παραμείνουν στη διάθεσή σου, και προτεραιότητα στην κατανάλωση θα έχουν τα λεπτά ομιλίας ή ΜΒ με τη συντομότερη ημερομηνία λήξης.
-							li Το Bonus Talk2Vodafone μπορεί να συνδυαστεί ταυτόχρονα με όλα τα πακέτα, υπηρεσίες και bonus του CU, με εξαίρεση το πακέτο Just Surf Bonus.
-							li Προτεραιότητα στην κατανάλωση θα έχουν τα λεπτά ομιλίας, ή MΒ με τη συντομότερη ημερομηνία λήξης.
+				//- 	.option.active
+				//- 		.title
+				//- 			.icon-arrow-head
+				//- 			.text Tell me more… για το Bonus Talk2Vodafone
+				//- 		ul
+				//- 			li Η ελάχιστη διάρκεια κλήσης για τα δωρεάν λεπτά είναι 3 λεπτά ανά κλήση και μετά η χρήση υπολογίζεται ανά δευτερόλεπτο.
+				//- 			li Τα δωρεάν λεπτά ομιλίας και τα MB ισχύουν για 30 ημέρες μετά από κάθε ανανέωση-ενεργοποίησή της.
+				//- 			li Σε περίπτωση που ξεπεράσεις τα δωρεάν λεπτά ή MB, η επιπλέον χρέωση γίνεται βάσει του ισχύοντα τιμοκαταλόγου.
+				//- 			li Το πακέτο δεν ισχύει όταν βρίσκεσαι εκτός Ελλάδας, ούτε προς συνδρομητές του εξωτερικού.
+				//- 			li Για την απόδοση των δωρεάν λεπτών ομιλίας και ΜΒ, ισχύουν όλοι οι τρόποι ανανέωσης χρόνου ομιλίας, εκτός από την υπηρεσία Vodafone Sharing και την υπηρεσία επέκτασης υπολοίπου.
+				//- 			li Η προϋπόθεση της ανανέωσης χρόνου ομιλίας για την απόδοση των δωρεάν λεπτών και MB δεν αποτελεί χρέωση, δηλαδή ο χρόνος ομιλίας παραμένει στον λογαριασμό σου για να τον χρησιμοποιήσεις όπως εσύ θέλεις.
+				//- 			li Η ανανέωση χρόνου ομιλίας που πραγματοποιείται στο εξωτερικό θεωρείται έγκυρη και έχεις τη δυνατότητα να χρησιμοποιήσεις τα δωρεάν λεπτά και MΒ σου, όταν επιστρέψεις στην Ελλάδα (εφόσον δεν έχει περάσει το διάστημα ισχύος τους).
+				//- 			li Η ενεργοποίηση του Bonus Talk2Vodafone επιτρέπεται σε έως 3 συνδέσεις ανά συνδρομητή καρτοκινητής.
+				//- 			li Η Vodafone διατηρεί το δικαίωμα του τερματισμού του Bonus Talk2Vodafone και της μετατροπής του χρονικού διαστήματος της προσφοράς ή/και της μετατροπής των σχετικών όρων, χωρίς προηγούμενη προειδοποίηση.
+				//- 			li Στην περίπτωση που έχεις στη διάθεσή σου δωρεάν λεπτά ή ΜΒ από το Bonus Talk2Vodafone και λάβεις κι άλλο bonus με κάρτα 10€ και άνω, τυχόν υπολειπόμενα δωρεάν λεπτά προς Vodafone ή ΜΒ από προηγούμενη ανανέωση θα παραμείνουν στη διάθεσή σου, και προτεραιότητα στην κατανάλωση θα έχουν τα λεπτά ομιλίας ή ΜΒ με τη συντομότερη ημερομηνία λήξης.
+				//- 			li Το Bonus Talk2Vodafone μπορεί να συνδυαστεί ταυτόχρονα με όλα τα πακέτα, υπηρεσίες και bonus του CU, με εξαίρεση το πακέτο Just Surf Bonus.
+				//- 			li Προτεραιότητα στην κατανάλωση θα έχουν τα λεπτά ομιλίας, ή MΒ με τη συντομότερη ημερομηνία λήξης.
 
-					.option
-						.title
-							.icon-arrow-head
-							.text Κι αν δεν θέλω άλλο το Bonus Talk 2 Vodafone;
-						ul
-							li Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong>
-							li Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.
-							li Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.
-							li Το Bonus δεν ισχύει για χρήση στο εξωτερικό.
+				//- 	.option
+				//- 		.title
+				//- 			.icon-arrow-head
+				//- 			.text Κι αν δεν θέλω άλλο το Bonus Talk 2 Vodafone;
+				//- 		ul
+				//- 			li Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong>
+				//- 			li Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.
+				//- 			li Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.
+				//- 			li Το Bonus δεν ισχύει για χρήση στο εξωτερικό.
 
-				.layout
-					.subnotes * Το έξτρα bonus ανανέωσης από πιστωτική, χρεωστική, Paypal &amp; κατάστημα ισχύει για την 1η ανανέωση του μήνα από 10€ έως 31/10/2016.
+				//- .layout
+				.subnotes * Το έξτρα bonus ανανέωσης από πιστωτική, χρεωστική, Paypal &amp; κατάστημα ισχύει για την 1η ανανέωση του μήνα από 10€ έως 31/10/2016.
+
+
+				.table
+					.thead
+						.tr
+							.th
+								.phone-icon
+							.th: p Το χρησιμοποιώ για
+					.tbody
+						.tr
+							.td 1252
+							.td 
+								p: b Ενημέρωση υπολοίπου
+								p Με δωρεάν κλήση (επιλογή 1) ή με δωρεάν SMS γράφοντας «Υ» για το χρηματικό υπόλοιπο
+									br
+								p: b Ανανέωση υπολοίπου
+								p Με δωρεάν κλήση (επιλογή 2) ή με δωρεάν SMS γράφοντας «Α κενό και όλο τον κωδικό της κάρτας»
+								p: b Αγορά πακέτων
+								p Με δωρεάν κλήση (επιλογή 3) ή Με δωρεάν SMS τον κωδικό του πακέτου που θες να αγοράσεις
+						.tr
+							.td 1392
+							.td 
+								p: b Ρυθμίσεις Internet, Ρυθμίσεις MMS
+								p Με δωρεάν κλήση ή με δωρεάν αποστολή κενού sms
+								
+
+				//- .gallery
+				.gallery-list
+
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-01.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-02.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-03.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-04.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-05.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-06.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-07.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-08.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-09.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-10.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-01.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-02.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-03.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-04.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-05.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-06.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-07.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-08.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-09.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+					figure(data-big-size-url="img/party-big-01.jpg")
+						img(src="img/party-10.jpg")
+						figcaption
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
+							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
+
+
+				//- .video-thumb(style="background-image--: url('img/article-img-3.jpg')" data-youtube-id="xrzXIaTt99U" data-facebook-video="http://fb.video.com/sfsdfdf")
+				.video-thumb(data-youtube-id="xrzXIaTt99U" data-facebook-video="http://fb.video.com/sfsdfdf")
+					img(src="img/video-frame-01.jpg")
+					.video-button
+
+				.google-map(data-lat="37.9743468" data-long="23.7092112" )
+					.marker(data-lat="37.9743468" data-long="23.7092112")
+						//- a(href="#") this is a sample address this is a sample address this is a sample address
+						a(href="#" target="_blank") this is a sample address
+						//- a(href="#") this 
+
+
+
+
+		include _there-is-more.jade
 
 		include _sidebar.jade
 
 		include _footer.jade
+		//- script(src='js/vendor/infobox_packed.js')
+		script(src='js/gallery-list.js')
+		script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBTFuFePOLQAiXCDIGbiDRFKZyz8ta5tQk&callback=initGoogleMaps' async defer)
 
 
 

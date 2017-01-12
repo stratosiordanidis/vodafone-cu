@@ -1,0 +1,149 @@
+@import "compass"
+
+@import "vars"
+
+@import "utils"
+
+
+@media all and (max-width: $mobile-breakpoint)
+
+	.thank-you-section
+		text-align: center
+		+rem(padding-bottom, 0px)
+
+
+		.title
+			display: block
+			+rem(font-size, 32px)
+			font-weight: 500
+			// color: $color-black
+			text-align: center
+
+		& > .title
+			+rem(margin-top, 75px)
+
+			&+.subtext
+				+rem(margin-top, 5px)
+
+		.subtext
+			+rem(font-size, 20px)
+			+rem(line-height, 22px)
+			font-weight: 100
+			// color: $color-black
+			width: 230px
+			text-align: center
+			left: 0
+			right: 0
+			margin: auto
+
+			// .red
+			// 	color: $color-red
+		
+		.divider
+			+rem(width, 160px)
+			height: 2px
+			background: $color-grey
+			opacity: 0.3
+			left: 0
+			right: 0
+			margin: auto
+			+rem(margin-top, 25px)
+			+rem(margin-bottom, 25px)
+
+		.links
+			display: block
+			+rem(margin-top, 10px)
+			+rem(margin-bottom, 35px)
+
+			span
+				display: block
+				text-align: center
+				+rem(font-size, 16px)
+				+rem(line-height, 22px)
+
+			// span
+			// 	+no-rem(font-size, 20px)
+			// 	font-weight: 500
+			// 	+rem(margin, 0px 8px)
+
+		a
+			+no-rem(font-size, 16px)
+			+rem(line-height, 22px)
+			text-align: center
+			left: 0
+			right: 0
+			margin: auto
+
+			// font-weight: 200
+			// color: $color-black
+
+			// span
+			// 	font-weight: 500
+
+		.next-step-area
+			+rem(margin-top, 35px)
+			// +display-flex()
+			display: block
+			position: relative
+			// background: white
+			+rem(padding, 20px)
+			+rem(padding-bottom, 110px)
+			+rem(margin-bottom, 0px)
+			width: auto
+			// max-width: 100%
+			// left: 0
+			// right: 0
+			// margin: auto
+			// align-items: flex-start
+
+			.left
+				display: block
+				width: auto
+				text-align: center
+				// vertical-align: top
+				// flex-grow: 1.6
+				// flex-shrink: 1.6
+
+				.title
+					+rem(font-size, 24px)
+					+rem(line-height, 32px)
+					// color: $color-black
+					text-align: center
+
+				& > .title
+					// +rem(margin-top, 30px)
+					+rem(margin-top, 0px)
+
+				// a
+				// 	display: inline-block
+				// 	// +rem(margin-top, 25px)
+				// 	position: absolute
+				// 	bottom: 70px
+				// 	left: 0
+				// 	right: 0
+				// 	margin: auto
+
+
+				// a
+			.right
+				display: inline-block
+				// +rem(width, 340px)
+				width: auto
+				// vertical-align: top
+				text-align: center
+
+				a
+					display: inline-block
+					text-align: center
+
+				.package-list
+					padding-bottom: 30px
+
+					.package-item
+						width: auto !important
+						margin-right: 0
+						padding-left: 10px
+						padding-right: 10px
+
+
+

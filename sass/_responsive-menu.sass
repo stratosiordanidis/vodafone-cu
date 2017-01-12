@@ -35,6 +35,49 @@
 
 		width: 100%
 
+	header
+		.login-button, .cu-logo
+			+transition(opacity 0.3s)
+			opacity: 1
+
+
+		& > .back-button
+			display: inline-block
+			position: absolute
+			opacity: 0
+			left: 10px
+			// top: 32px
+			top: 0
+			bottom: 0
+			height: 10px
+			margin: auto
+			padding: 5px
+			font-size: (10px/16px)*1rem !important
+			pointer-events: none
+
+			+transition(0.3s)
+
+			&:before
+				content: $icon-arrow-thin
+				display: inline-block
+				position: relative
+				font-family: 'cu'
+				color: black
+				// +rem(font-size, 24px)
+				font-size: inherit
+				+rotateZ(180deg)
+
+
+	.mobile-panel-open
+		header
+			.login-button, .cu-logo
+				opacity: 0
+				pointer-events: none
+
+			& > .back-button
+				opacity: 1
+				pointer-events: all
+
 	.nav-menu .menu
 		width: 100%
 

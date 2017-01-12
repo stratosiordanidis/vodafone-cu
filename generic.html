@@ -13,8 +13,11 @@
     <link href="css/slick.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    <link href="css/generic.css" rel="stylesheet">
-    <link href="css/responsive-online-topup.css" rel="stylesheet">
+    <link href="css/page-generic.css" rel="stylesheet">
+    <link href="css/page-bundles.css" rel="stylesheet">
+    <link href="css/gallery.css" rel="stylesheet">
+    <link href="css/responsive-page-generic.css" rel="stylesheet">
+    <link href="css/responsive-gallery.css" rel="stylesheet">
     <link href="css/responsive-panels.css" rel="stylesheet">
     <script src="js/device.min.js"></script>
   </head>
@@ -99,6 +102,7 @@
           </ul>
         </div>
       </nav>
+      <div class="back-button"></div>
       <div class="login-button">
         <div class="login-msg">
           <p>ΕΙΣΟΔΟΣ ΣΤΟ</p>
@@ -137,114 +141,375 @@
         </div>
       </div>
     </header>
-    <div class="page-topup mobile-layout" id="content">
-      <div class="single-page">
-        <div class="layout">
-          <div class="breadcrumb"><a href="#">Αρχική Σελίδα</a><a href="#">Υπηρεσίες CU</a><a class="active" href="#">Bonus Ανανέωσης</a></div>
-          <div class="main-title">Bonus Ανανέωσης</div>
-          <div class="second-title">Σύμπτωμα 23: Μένεις έξω!</div>
-          <div class="paragraph">Τώρα, με το Just Surf Bonus, κερδίζεις δωρεάν MB για internet από το κινητό:</div>
-          <div class="ul-list">
-            <ul>
-              <li><strong>500ΜΒ</strong> για κάθε ανανέωση από <strong>10€</strong></li>
-              <li><strong>1GB</strong> για ανανέωση από <strong>20€</strong></li>
-            </ul>
-          </div>
-          <div class="paragraph">Αν δεν το έχεις ήδη, <a class="p-link" href="#">ενεργοποίησε το εδώ</a>!</div>
-        </div>
-        <div class="accordion desktop-only">
-          <div class="option">
-            <div class="title">
-              <div class="icon-arrow-head"></div>
-              <div class="text">Πώς ακριβώς γίνεται η κατανάλωση των δωρεάν ΜΒ;</div>
-            </div>
-            <ul>
-              <li>Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong></li>
-              <li>Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.</li>
-              <li>Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.</li>
-              <li>Το Bonus δεν ισχύει για χρήση στο εξωτερικό.</li>
-            </ul>
-          </div>
-          <div class="option">
-            <div class="title">
-              <div class="icon-arrow-head"></div>
-              <div class="text">Πώς παίρνω τα δωρεάν MB;</div>
-            </div>
-            <ul>
-              <li>Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong></li>
-              <li>Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.</li>
-              <li>Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.</li>
-              <li>Το Bonus δεν ισχύει για χρήση στο εξωτερικό.</li>
-            </ul>
-          </div>
-          <div class="option">
-            <div class="title">
-              <div class="icon-arrow-head"></div>
-              <div class="text">Κι αν δεν θέλω άλλο το Just Surf Bonus;</div>
+    <div class="generic-page" id="content">
+      <div class="generic-center-col">
+        <div class="breadcrumb"><a href="#">Αρχική Σελίδα</a><a href="#">Υπηρεσίες CU</a><a class="active" href="#">Bonus Ανανέωσης</a></div>
+        <div class="h1">Bonus Ανανέωσης</div>
+        <div class="h3">Σύμπτωμα 23: Μένεις έξω!</div>
+        <p>Τώρα, με το Just Surf Bonus, κερδίζεις δωρεάν MB για internet από το κινητό:</p>
+        <ul>
+          <li><strong>500ΜΒ</strong> για κάθε ανανέωση από <strong>10€</strong></li>
+          <li><strong>1GB</strong> για ανανέωση από <strong>20€</strong></li>
+        </ul>
+        <p>Αν δεν το έχεις ήδη, <a class="important-link" href="#">ενεργοποίησε το εδώ</a>!</p>
+        <div class="accordion">
+          <div class="accordion-item active"><a class="panel-link" href="#note-1">
+              <div class="title">
+                <div class="icon-arrow-head"></div>Ψιλά Γράμματα
+              </div></a>
+            <div class="panel layer-1" id="note-1">
+              <div class="nav-header mobile-only">
+                <div class="title">Online Aνανέωση</div>
+                <div class="back-button"></div>
+              </div>
+              <div class="panel-content">
+                <ul>
+                  <li>Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong></li>
+                  <li>Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.</li>
+                  <li>Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.</li>
+                  <li>Το Bonus δεν ισχύει για χρήση στο εξωτερικό.</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="option">
-            <div class="title">
-              <div class="icon-arrow-head"></div>
-              <div class="text">Κι αν έχω ενεργοποιημένο το Bonus Talk 2 Vodafone;</div>
+          <div class="accordion-item"><a class="panel-link" href="#note-2">
+              <div class="title">
+                <div class="icon-arrow-head"></div>Όροι χρήσης Online Ανανέωσης Xρόνου Oμιλίας
+              </div></a>
+            <div class="panel layer-1" id="note-2">
+              <div class="nav-header mobile-only">
+                <div class="title">Online Aνανέωση</div>
+                <div class="back-button"></div>
+              </div>
+              <div class="panel-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mi ex, sollicitudin in purus et, tempus tempor sem. Sed vitae nulla dignissim, mollis leo cursus, scelerisque lacus. Donec ultricies turpis odio, non elementum libero pharetra eget. Praesent non sollicitudin tellus. Aenean lectus purus, sodales nec eros quis, dignissim eleifend tellus. Nulla dapibus, sapien vitae rhoncus elementum, neque libero pellentesque augue, et dignissim elit sem et leo. Nullam fringilla venenatis sodales. Phasellus accumsan libero non lorem cursus condimentum. Vivamus nec maximus dolor, a interdum neque. Integer condimentum posuere sem a sollicitudin. Phasellus faucibus bibendum hendrerit. Morbi ac eros et massa porttitor aliquet. Proin pulvinar massa efficitur accumsan porta. Suspendisse eu fringilla dui, ut eleifend ipsum. Quisque nec luctus quam.<br>Integer tincidunt in sem et iaculis. Fusce at lectus mauris. Etiam vel lectus tincidunt, imperdiet velit eu, ornare turpis. Vivamus quis neque congue, hendrerit nisl nec, ornare lectus. Etiam ut nisi non dolor feugiat hendrerit et a sapien. Donec ultricies diam a erat aliquet, quis rhoncus leo porttitor. Etiam tempus, arcu vitae aliquet cursus, justo nisl cursus justo, at hendrerit est purus luctus erat. Curabitur lacus dolor, tempor nec urna quis, pulvinar lacinia risus. Integer interdum sem nec erat convallis semper. Mauris non dolor purus. </p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="layout">
-          <div class="subnotes">* Το έξτρα bonus ανανέωσης από πιστωτική, χρεωστική, Paypal &amp; κατάστημα ισχύει για την 1η ανανέωση του μήνα από 10€ έως 31/10/2016.</div>
-          <div class="second-title">Bonus Talk2Vodafone</div>
-          <div class="third-title">Το... μικρόβιο μεταδίδεται ακόμα πιο εύκολα μεταξύ CU και Vodafone, με το Bonus Talk2Vodafone!</div>
-          <div class="paragraph">Τώρα, με το <strong>Talk2Vodafone</strong>, κερδίζεις δωρεάν λεπτά ομιλίας προς όλη τη Vodafone:</div>
-          <div class="ul-list">
-            <ul>
-              <li><strong>2 ώρες</strong> με κάθε ανανέωση από <strong>10€</strong> για 30 μέρες</li>
-              <li><strong>4 ώρες + 60ΜΒ</strong> με ανανέωση από <strong>20€</strong> και πάνω για 30 μέρες</li>
-            </ul>
+        <div class="subtext">* Το έξτρα bonus ανανέωσης από πιστωτική, χρεωστική, Paypal &amp; κατάστημα ισχύει για την 1η ανανέωση του μήνα από 10€ έως 31/10/2016.</div>
+        <div class="h3">Bonus Talk2Vodafone</div>
+        <div class="h4">Το... μικρόβιο μεταδίδεται ακόμα πιο εύκολα μεταξύ CU και Vodafone, με το Bonus Talk2Vodafone!</div>
+        <p>Τώρα, με το <strong>Talk2Vodafone</strong>, κερδίζεις δωρεάν λεπτά ομιλίας προς όλη τη Vodafone:</p>
+        <ul>
+          <li><strong>2 ώρες</strong> με κάθε ανανέωση από <strong>10€</strong> για 30 μέρες</li>
+          <li><strong>4 ώρες + 60ΜΒ</strong> με ανανέωση από <strong>20€</strong> και πάνω για 30 μέρες</li>
+        </ul>
+        <p><strong>Tip:</strong> Κάνε ανανέωση 10€ μέσω πιστωτικής, χρεωστικής, paypal ή σε κατάστημα, και πάρε επιπλέον <strong>500ΜΒ</strong>!<br>Αν δεν το έχεις ήδη, <strong>ενεργοποίησε το εδώ</strong>!</p>
+        <div class="action-button">
+          <div class="text">Ενεργοποίησέ το!</div>
+        </div>
+        <div class="accordion">
+          <div class="accordion-item active"><a class="panel-link" href="#note-1">
+              <div class="title">
+                <div class="icon-arrow-head"></div>Ψιλά Γράμματα
+              </div></a>
+            <div class="panel layer-1" id="note-1">
+              <div class="nav-header mobile-only">
+                <div class="title">Online Aνανέωση</div>
+                <div class="back-button"></div>
+              </div>
+              <div class="panel-content">
+                <ul>
+                  <li>Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong></li>
+                  <li>Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.</li>
+                  <li>Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.</li>
+                  <li>Το Bonus δεν ισχύει για χρήση στο εξωτερικό.</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="paragraph"><strong>Tip:</strong> Κάνε ανανέωση 10€ μέσω πιστωτικής, χρεωστικής, paypal ή σε κατάστημα, και πάρε επιπλέον <strong>500ΜΒ</strong>!<br>Αν δεν το έχεις ήδη, <strong>ενεργοποίησε το εδώ</strong>!</div>
-          <div class="action-button">
-            <div class="text">Ενεργοποίησέ το!</div>
+          <div class="accordion-item"><a class="panel-link" href="#note-2">
+              <div class="title">
+                <div class="icon-arrow-head"></div>Όροι χρήσης Online Ανανέωσης Xρόνου Oμιλίας
+              </div></a>
+            <div class="panel layer-1" id="note-2">
+              <div class="nav-header mobile-only">
+                <div class="title">Online Aνανέωση</div>
+                <div class="back-button"></div>
+              </div>
+              <div class="panel-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mi ex, sollicitudin in purus et, tempus tempor sem. Sed vitae nulla dignissim, mollis leo cursus, scelerisque lacus. Donec ultricies turpis odio, non elementum libero pharetra eget. Praesent non sollicitudin tellus. Aenean lectus purus, sodales nec eros quis, dignissim eleifend tellus. Nulla dapibus, sapien vitae rhoncus elementum, neque libero pellentesque augue, et dignissim elit sem et leo. Nullam fringilla venenatis sodales. Phasellus accumsan libero non lorem cursus condimentum. Vivamus nec maximus dolor, a interdum neque. Integer condimentum posuere sem a sollicitudin. Phasellus faucibus bibendum hendrerit. Morbi ac eros et massa porttitor aliquet. Proin pulvinar massa efficitur accumsan porta. Suspendisse eu fringilla dui, ut eleifend ipsum. Quisque nec luctus quam.<br>Integer tincidunt in sem et iaculis. Fusce at lectus mauris. Etiam vel lectus tincidunt, imperdiet velit eu, ornare turpis. Vivamus quis neque congue, hendrerit nisl nec, ornare lectus. Etiam ut nisi non dolor feugiat hendrerit et a sapien. Donec ultricies diam a erat aliquet, quis rhoncus leo porttitor. Etiam tempus, arcu vitae aliquet cursus, justo nisl cursus justo, at hendrerit est purus luctus erat. Curabitur lacus dolor, tempor nec urna quis, pulvinar lacinia risus. Integer interdum sem nec erat convallis semper. Mauris non dolor purus. </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="accordion desktop-only">
-          <div class="option active">
-            <div class="title">
-              <div class="icon-arrow-head"></div>
-              <div class="text">Tell me more… για το Bonus Talk2Vodafone</div>
+        <div class="subnotes">* Το έξτρα bonus ανανέωσης από πιστωτική, χρεωστική, Paypal &amp; κατάστημα ισχύει για την 1η ανανέωση του μήνα από 10€ έως 31/10/2016.</div>
+        <div class="table">
+          <div class="thead">
+            <div class="tr">
+              <div class="th">
+                <div class="phone-icon"></div>
+              </div>
+              <div class="th">
+                <p>Το χρησιμοποιώ για</p>
+              </div>
             </div>
-            <ul>
-              <li>Η ελάχιστη διάρκεια κλήσης για τα δωρεάν λεπτά είναι 3 λεπτά ανά κλήση και μετά η χρήση υπολογίζεται ανά δευτερόλεπτο.</li>
-              <li>Τα δωρεάν λεπτά ομιλίας και τα MB ισχύουν για 30 ημέρες μετά από κάθε ανανέωση-ενεργοποίησή της.</li>
-              <li>Σε περίπτωση που ξεπεράσεις τα δωρεάν λεπτά ή MB, η επιπλέον χρέωση γίνεται βάσει του ισχύοντα τιμοκαταλόγου.</li>
-              <li>Το πακέτο δεν ισχύει όταν βρίσκεσαι εκτός Ελλάδας, ούτε προς συνδρομητές του εξωτερικού.</li>
-              <li>Για την απόδοση των δωρεάν λεπτών ομιλίας και ΜΒ, ισχύουν όλοι οι τρόποι ανανέωσης χρόνου ομιλίας, εκτός από την υπηρεσία Vodafone Sharing και την υπηρεσία επέκτασης υπολοίπου.</li>
-              <li>Η προϋπόθεση της ανανέωσης χρόνου ομιλίας για την απόδοση των δωρεάν λεπτών και MB δεν αποτελεί χρέωση, δηλαδή ο χρόνος ομιλίας παραμένει στον λογαριασμό σου για να τον χρησιμοποιήσεις όπως εσύ θέλεις.</li>
-              <li>Η ανανέωση χρόνου ομιλίας που πραγματοποιείται στο εξωτερικό θεωρείται έγκυρη και έχεις τη δυνατότητα να χρησιμοποιήσεις τα δωρεάν λεπτά και MΒ σου, όταν επιστρέψεις στην Ελλάδα (εφόσον δεν έχει περάσει το διάστημα ισχύος τους).</li>
-              <li>Η ενεργοποίηση του Bonus Talk2Vodafone επιτρέπεται σε έως 3 συνδέσεις ανά συνδρομητή καρτοκινητής.</li>
-              <li>Η Vodafone διατηρεί το δικαίωμα του τερματισμού του Bonus Talk2Vodafone και της μετατροπής του χρονικού διαστήματος της προσφοράς ή/και της μετατροπής των σχετικών όρων, χωρίς προηγούμενη προειδοποίηση.</li>
-              <li>Στην περίπτωση που έχεις στη διάθεσή σου δωρεάν λεπτά ή ΜΒ από το Bonus Talk2Vodafone και λάβεις κι άλλο bonus με κάρτα 10€ και άνω, τυχόν υπολειπόμενα δωρεάν λεπτά προς Vodafone ή ΜΒ από προηγούμενη ανανέωση θα παραμείνουν στη διάθεσή σου, και προτεραιότητα στην κατανάλωση θα έχουν τα λεπτά ομιλίας ή ΜΒ με τη συντομότερη ημερομηνία λήξης.</li>
-              <li>Το Bonus Talk2Vodafone μπορεί να συνδυαστεί ταυτόχρονα με όλα τα πακέτα, υπηρεσίες και bonus του CU, με εξαίρεση το πακέτο Just Surf Bonus.</li>
-              <li>Προτεραιότητα στην κατανάλωση θα έχουν τα λεπτά ομιλίας, ή MΒ με τη συντομότερη ημερομηνία λήξης.</li>
-            </ul>
           </div>
-          <div class="option">
-            <div class="title">
-              <div class="icon-arrow-head"></div>
-              <div class="text">Κι αν δεν θέλω άλλο το Bonus Talk 2 Vodafone;</div>
+          <div class="tbody">
+            <div class="tr">
+              <div class="td">1252</div>
+              <div class="td"> 
+                <p><b>Ενημέρωση υπολοίπου</b></p>
+                <p>Με δωρεάν κλήση (επιλογή 1) ή με δωρεάν SMS γράφοντας «Υ» για το χρηματικό υπόλοιπο<br></p>
+                <p><b>Ανανέωση υπολοίπου</b></p>
+                <p>Με δωρεάν κλήση (επιλογή 2) ή με δωρεάν SMS γράφοντας «Α κενό και όλο τον κωδικό της κάρτας»</p>
+                <p><b>Αγορά πακέτων</b></p>
+                <p>Με δωρεάν κλήση (επιλογή 3) ή Με δωρεάν SMS τον κωδικό του πακέτου που θες να αγοράσεις</p>
+              </div>
             </div>
-            <ul>
-              <li>Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong></li>
-              <li>Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.</li>
-              <li>Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.</li>
-              <li>Το Bonus δεν ισχύει για χρήση στο εξωτερικό.</li>
-            </ul>
+            <div class="tr">
+              <div class="td">1392</div>
+              <div class="td"> 
+                <p><b>Ρυθμίσεις Internet, Ρυθμίσεις MMS</b></p>
+                <p>Με δωρεάν κλήση ή με δωρεάν αποστολή κενού sms</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="layout">
-          <div class="subnotes">* Το έξτρα bonus ανανέωσης από πιστωτική, χρεωστική, Paypal &amp; κατάστημα ισχύει για την 1η ανανέωση του μήνα από 10€ έως 31/10/2016.</div>
+        <div class="gallery-list">
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-01.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-02.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-03.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-04.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-05.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-06.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-07.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-08.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-09.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-10.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-01.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-02.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-03.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-04.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-05.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-06.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-07.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-08.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-09.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-10.jpg">
+            <figcaption>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
+              <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="video-thumb" data-youtube-id="xrzXIaTt99U" data-facebook-video="http://fb.video.com/sfsdfdf"><img src="img/video-frame-01.jpg">
+          <div class="video-button"></div>
+        </div>
+        <div class="google-map" data-lat="37.9743468" data-long="23.7092112">
+          <div class="marker" data-lat="37.9743468" data-long="23.7092112"><a href="#" target="_blank">this is a sample address</a></div>
         </div>
       </div>
     </div>
+    <section id="there-is-more">
+      <div class="head-wrapper">
+        <div class="title h1">Έχει κι άλλα…</div>
+        <div class="detail h3">Τσέκαρε τι άλλο παίζει και δεν πρέπει να χάσεις.</div>
+      </div>
+      <div class="article-box-carousel">
+        <div class="article-box category-red layout-right-bottom">
+          <div class="bg" style="background-image: url('img/article-img-1.jpg')"></div>
+          <div class="fg">
+            <div class="text-wrapper">
+              <div class="category-title">Υπηρεσίες CU</div>
+              <div class="title">Κατέβασέ το και μπες στη φάση του My CU App!</div>
+              <div class="detail">Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!</div>
+            </div>
+            <div class="icon"></div>
+            <div class="action-button">
+              <div class="text">Μάθε περισσότερα</div>
+              <div class="icon-arrow-head"></div>
+            </div>
+          </div>
+        </div>
+        <div class="article-box category-red layout-right-bottom">
+          <div class="bg" style="background-image: url('img/article-img-1.jpg')"></div>
+          <div class="fg">
+            <div class="text-wrapper">
+              <div class="category-title">Υπηρεσίες CU</div>
+              <div class="title">Κατέβασέ το και μπες στη φάση του My CU App!</div>
+              <div class="detail">Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!</div>
+            </div>
+            <div class="icon"></div>
+            <div class="action-button">
+              <div class="text">Μάθε περισσότερα</div>
+              <div class="icon-arrow-head"></div>
+            </div>
+          </div>
+        </div>
+        <div class="article-box category-red layout-right-bottom">
+          <div class="bg" style="background-image: url('img/article-img-1.jpg')"></div>
+          <div class="fg">
+            <div class="text-wrapper">
+              <div class="category-title">Υπηρεσίες CU</div>
+              <div class="title">Κατέβασέ το και μπες στη φάση του My CU App!</div>
+              <div class="detail">Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!</div>
+            </div>
+            <div class="icon"></div>
+            <div class="action-button">
+              <div class="text">Μάθε περισσότερα</div>
+              <div class="icon-arrow-head"></div>
+            </div>
+          </div>
+        </div>
+        <div class="article-box category-red layout-right-bottom">
+          <div class="bg" style="background-image: url('img/article-img-1.jpg')"></div>
+          <div class="fg">
+            <div class="text-wrapper">
+              <div class="category-title">Υπηρεσίες CU</div>
+              <div class="title">Κατέβασέ το και μπες στη φάση του My CU App!</div>
+              <div class="detail">Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!</div>
+            </div>
+            <div class="icon"></div>
+            <div class="action-button">
+              <div class="text">Μάθε περισσότερα</div>
+              <div class="icon-arrow-head"></div>
+            </div>
+          </div>
+        </div>
+        <div class="article-box category-red layout-right-bottom">
+          <div class="bg" style="background-image: url('img/article-img-1.jpg')"></div>
+          <div class="fg">
+            <div class="text-wrapper">
+              <div class="category-title">Υπηρεσίες CU</div>
+              <div class="title">Κατέβασέ το και μπες στη φάση του My CU App!</div>
+              <div class="detail">Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!</div>
+            </div>
+            <div class="icon"></div>
+            <div class="action-button">
+              <div class="text">Μάθε περισσότερα</div>
+              <div class="icon-arrow-head"></div>
+            </div>
+          </div>
+        </div>
+        <div class="article-box category-red layout-right-bottom">
+          <div class="bg" style="background-image: url('img/article-img-1.jpg')"></div>
+          <div class="fg">
+            <div class="text-wrapper">
+              <div class="category-title">Υπηρεσίες CU</div>
+              <div class="title">Κατέβασέ το και μπες στη φάση του My CU App!</div>
+              <div class="detail">Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!</div>
+            </div>
+            <div class="icon"></div>
+            <div class="action-button">
+              <div class="text">Μάθε περισσότερα</div>
+              <div class="icon-arrow-head"></div>
+            </div>
+          </div>
+        </div>
+        <div class="article-box category-red layout-right-bottom">
+          <div class="bg" style="background-image: url('img/article-img-1.jpg')"></div>
+          <div class="fg">
+            <div class="text-wrapper">
+              <div class="category-title">Υπηρεσίες CU</div>
+              <div class="title">Κατέβασέ το και μπες στη φάση του My CU App!</div>
+              <div class="detail">Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!Πάρε μέρος στο CU ONSTAGE και διάλεξε εσύ τους καλλιτέχνες που θα παίξετε μαζί στη σκηνή!</div>
+            </div>
+            <div class="icon"></div>
+            <div class="action-button">
+              <div class="text">Μάθε περισσότερα</div>
+              <div class="icon-arrow-head"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <aside id="sidebar">
       <div class="loader">
         <div class="spinner"></div>
@@ -414,6 +679,15 @@
       </div>
     </div>
     <div id="click-trap-underlay"></div>
+    <div id="gallery-underlay">
+      <div class="close-button"></div>
+      <div class="gallery-list"></div>
+      <div class="gallery-slide-count">
+        <div class="current"></div><span> / </span>
+        <div class="total"></div>
+      </div>
+      <div class="thumbnail-list"></div>
+    </div>
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
     <script src="js/debounce.js"></script>
     <script src="js/browser.js"></script>
@@ -423,9 +697,12 @@
     <script src="js/vendor/ScrollToPlugin.js"></script>
     <script src="js/vendor/raphael-2.2.1.min.js"></script>
     <script src="js/vendor/morris.js"></script>
+    <script src="js/vendor/jquery.gray.min.js"></script>
     <script src="js/js.cookie.js"></script>
     <script src="js/common.js"></script>
     <script src="js/package-activation.js"></script>
+    <script src="js/gallery-list.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTFuFePOLQAiXCDIGbiDRFKZyz8ta5tQk&amp;callback=initGoogleMaps" async defer></script>
   </body>
   <script src="js/dashboard-page.js"></script>
 </html>

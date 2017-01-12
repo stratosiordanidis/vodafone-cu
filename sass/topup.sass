@@ -7,6 +7,7 @@
 
 .expandable-offers
 	+rem(width,1680px)
+	max-width: 100%
 	margin: 0 auto
 	+rem(padding-top,70px)
 
@@ -19,7 +20,8 @@
 		color: black
 		font-weight: 300
 		// +rem(margin, 100px 0 45px)
-		+rem(margin, 45px 0 45px)
+		// +rem(margin, 45px 0 45px)
+		+rem(margin, 35px 0 45px)
 		
 		span.red
 			color: $color-red
@@ -39,7 +41,9 @@
 	// 		display: none
 
 	.boxes
-		+rem(padding-bottom, 60px)
+		// +rem(padding-bottom, 60px)
+		+rem(padding-bottom, 0px)
+		text-align: center
 
 		& > .columns
 			display: block
@@ -66,6 +70,7 @@
 	.box
 		+rem(margin,0 10px)
 		+rem(padding,20px)
+		+rem(padding-bottom,90px)
 		position: relative
 		align-self: flex-start
 		border: none
@@ -462,165 +467,173 @@
 			&:hover
 				+opacity(1)
 
-// #notes-terms
+// // #notes-terms
 .accordion
-	+rem(width,1680px)
-	max-width: 100%
-	margin: 0 auto
-	+rem(padding,30px 80px 100px 80px)
-	background-color: white
-
-	.panel-link
-		margin: 0
-		padding: 0
-		border: none
-
-	a.panel-link
-		
-
-		&:after
-			content: none
+	+rem(padding,30px 0px 100px 0px)
 
 	.accordion-item
-		border-bottom: solid #f0f1f1
-		+rem(margin-top,30px)
-		+rem(padding-bottom,30px)
+		+rem(margin-left, 80px)
+		+rem(margin-right, 80px)
+// .accordion
+// 	+rem(width,1680px)
+// 	max-width: 100%
+// 	margin: 0 auto
+// 	+rem(padding,30px 0px 100px 0px)
+// 	background-color: white
 
-		&:first-child
-			margin-top: 0 
+// 	.panel-link
+// 		margin: 0
+// 		padding: 0
+// 		border: none
 
-		&:last-child
-			border: none
+// 	a.panel-link
+		
 
-		.panel-link
-			.title
-				+rem(font-size,32px)
-				color: black
-				position: relative
-				cursor: pointer
+// 		&:after
+// 			content: none
 
-				&:hover
-					.icon-arrow-head
-						border-color: $color-cyan
+// 	.accordion-item
+// 		border-bottom: solid #f0f1f1
+// 		+rem(margin-top,30px)
+// 		+rem(padding-bottom,30px)
+// 		+rem(margin-left, 80px)
+// 		+rem(margin-right, 80px)
 
-						&:before
-							color: $color-cyan
+// 		&:first-child
+// 			margin-top: 0 
 
-		.panel-content
-			max-height: 0
-			overflow: hidden
-			+transition(0.2s)
+// 		&:last-child
+// 			border: none
 
-			ul
-				list-style: none
-				+rem(padding,5px 0 0px 100px)
-				// +opacity(0)
-				// max-height: 0
-				// overflow: hidden
+// 		.panel-link
+// 			.title
+// 				+rem(font-size,32px)
+// 				color: black
+// 				position: relative
+// 				cursor: pointer
 
-				li
-					+rem(font-size,20px)
-					color: #09090a
-					font-weight: 100
-					position: relative
-					+rem(line-height,40px)
+// 				&:hover
+// 					.icon-arrow-head
+// 						border-color: $color-cyan
 
-					&:before
-						content: ''
-						background-color: $color-cyan
-						+rem(width,6px)
-						+rem(height,6px)
-						+border-radius(125px)
-						position: absolute
-						+rem(top,17px)
-						+rem(left,-13px)
+// 						&:before
+// 							color: $color-cyan
 
-			// .paragraph
-			p
-				+rem(font-size,20px)
-				color: #09090a
-				font-weight: 100
-				position: relative
-				+rem(line-height,32px)
-				+rem(padding,5px 0 0px 100px)
-				// +opacity(0)
-				// max-height: 0
-				// overflow: hidden
+// 		.panel-content
+// 			max-height: 0
+// 			overflow: hidden
+// 			+transition(0.2s)
+
+// 			ul
+// 				list-style: none
+// 				+rem(padding,5px 0 0px 100px)
+// 				// +opacity(0)
+// 				// max-height: 0
+// 				// overflow: hidden
+
+// 				li
+// 					+rem(font-size,20px)
+// 					color: #09090a
+// 					font-weight: 100
+// 					position: relative
+// 					+rem(line-height,40px)
+
+// 					&:before
+// 						content: ''
+// 						background-color: $color-cyan
+// 						+rem(width,6px)
+// 						+rem(height,6px)
+// 						+border-radius(125px)
+// 						position: absolute
+// 						+rem(top,17px)
+// 						+rem(left,-13px)
+
+// 			// .paragraph
+// 			p
+// 				+rem(font-size,20px)
+// 				color: #09090a
+// 				font-weight: 100
+// 				position: relative
+// 				+rem(line-height,32px)
+// 				+rem(padding,5px 0 0px 100px)
+// 				// +opacity(0)
+// 				// max-height: 0
+// 				// overflow: hidden
 
 
-	.accordion-item.active
+// 	.accordion-item.active
 
-		.panel-content
-			max-height: 2000px
-			// ul
-			// 	+opacity(1)
-			// 	max-height: 100%
+// 		.panel-content
+// 			max-height: 2000px
+// 			// ul
+// 			// 	+opacity(1)
+// 			// 	max-height: 100%
 
-			// // .paragraph
-			// p
-			// 	+opacity(1)
-			// 	max-height: 100%
+// 			// // .paragraph
+// 			// p
+// 			// 	+opacity(1)
+// 			// 	max-height: 100%
 
-		.icon-arrow-head
-			border-color: $color-cyan
-			$offset: 50px
-			+rotate(90deg)
+// 		.icon-arrow-head
+// 			border-color: $color-cyan
+// 			$offset: 50px
+// 			+rotate(90deg)
 
-			// &:after
-			// 	+rem(width, $offset)
-			// 	+rem(left,22px)
-			// 	background-color: $color-cyan
+// 			// &:after
+// 			// 	+rem(width, $offset)
+// 			// 	+rem(left,22px)
+// 			// 	background-color: $color-cyan
 
-			&:before
-				color: $color-cyan
-			// 	// +rem(top,-5px)
-			// 	+rem(left,66px)
-			// 	+rem(line-height, 2.8rem)
-			// 	top: 0
+// 			&:before
+// 				color: $color-cyan
+// 			// 	// +rem(top,-5px)
+// 			// 	+rem(left,66px)
+// 			// 	+rem(line-height, 2.8rem)
+// 			// 	top: 0
 
-	// Arrow head Icon Animation
+// 	// Arrow head Icon Animation
 
-	.icon-arrow-head
-		+border-radius(125px)
-		display: inline-block
-		position: relative
-		// left: 100%
-		+rem(left, 10px)
-		// +rem(font-size, 20px)
-		+rem(font-size, 16px)
-		color: #09090a
-		top: 0
-		bottom: 0
-		margin: auto
-		+rem(width,80px)
-		$offset: 50px
-		border-style: solid
-		border-color: #000
-		+rem(border-width,2px)
-		+rem(width,34px)
-		+rem(height,34px)
-		+rem(margin-right,26px)
-		+transition(0.3s)
+// 	.icon-arrow-head
+// 		+border-radius(125px)
+// 		display: inline-block
+// 		position: relative
+// 		// left: 100%
+// 		+rem(left, 10px)
+// 		// +rem(font-size, 20px)
+// 		+rem(font-size, 16px)
+// 		color: #09090a
+// 		top: 0
+// 		bottom: 0
+// 		margin: auto
+// 		+rem(width,80px)
+// 		$offset: 50px
+// 		border-style: solid
+// 		border-color: #000
+// 		+rem(border-width,2px)
+// 		+rem(width,34px)
+// 		+rem(height,34px)
+// 		+rem(margin-right,26px)
+// 		+transition(0.3s)
 
-		&:after
-			content: ''
-			display: inline-block
-			//+rem(width, $offset)
-			width: 0
-			+rem(height, 2px)
-			background-color: #09090a
-			top: 0
-			bottom: 0
-			margin: auto
-			position: absolute
-			+transition(0.3s)
+// 		&:after
+// 			content: ''
+// 			display: inline-block
+// 			//+rem(width, $offset)
+// 			width: 0
+// 			+rem(height, 2px)
+// 			background-color: #09090a
+// 			top: 0
+// 			bottom: 0
+// 			margin: auto
+// 			position: absolute
+// 			+transition(0.3s)
 
-		&:before
-			position: relative
-			+rem(line-height,41.8px)
-			+rem(left,14px)
-			+rem(top,-3px)
-			+transition(0.3s)
+// 		&:before
+// 			position: relative
+// 			+rem(line-height,41.8px)
+// 			+rem(left,14px)
+// 			+rem(top,-3px)
+// 			+transition(0.3s)
 
 
 #note-terms-mobile

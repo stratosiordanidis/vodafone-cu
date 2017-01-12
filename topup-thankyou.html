@@ -99,6 +99,7 @@
           </ul>
         </div>
       </nav>
+      <div class="back-button"></div>
       <div class="login-button">
         <div class="login-msg">
           <p>ΕΙΣΟΔΟΣ ΣΤΟ</p>
@@ -189,11 +190,11 @@
         <div class="title">Σ’ευχαριστούμε!</div>
         <div class="subtext">H Online Ανανέωσή σου ολοκληρώθηκε με επιτυχία.</div>
         <div class="divider"></div>
-        <div class="subtext">Το νέο σου υπόλοιπο είναι <span class="red">€11,04</span></div>
+        <div class="subtext">Το νέο σου υπόλοιπο είναι <b class="red">€11,04</b></div>
         <div class="links"><a href="#">Δες περισσότερα στο <strong>ΜyCU</strong>   </a><span> ή </span><a href="#">Κάνε άλλη Online Aνανέωση</a></div>
         <div class="next-step-area columns">
           <div class="left col">
-            <div class="title">Τώρα μπορείς να ενεργοποιήσεις το αγαπημένο σου πακέτο</div><a href="#">Δες όλα τα πακέτα Καρτοκινητής</a>
+            <div class="title">Τώρα μπορείς να ενεργοποιήσεις το αγαπημένο σου πακέτο</div><a class="desktop-only" href="#">Δες όλα τα πακέτα Καρτοκινητής</a>
           </div>
           <div class="right col">
             <div class="package-list">
@@ -224,7 +225,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div><a class="mobile-only" href="#">Δες όλα τα πακέτα Καρτοκινητής</a>
           </div>
         </div>
       </section>
@@ -398,6 +399,15 @@
       </div>
     </div>
     <div id="click-trap-underlay"></div>
+    <div id="gallery-underlay">
+      <div class="close-button"></div>
+      <div class="gallery-list"></div>
+      <div class="gallery-slide-count">
+        <div class="current"></div><span> / </span>
+        <div class="total"></div>
+      </div>
+      <div class="thumbnail-list"></div>
+    </div>
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
     <script src="js/debounce.js"></script>
     <script src="js/browser.js"></script>
@@ -407,6 +417,7 @@
     <script src="js/vendor/ScrollToPlugin.js"></script>
     <script src="js/vendor/raphael-2.2.1.min.js"></script>
     <script src="js/vendor/morris.js"></script>
+    <script src="js/vendor/jquery.gray.min.js"></script>
     <script src="js/js.cookie.js"></script>
     <script src="js/common.js"></script>
     <script src="js/package-activation.js"></script>

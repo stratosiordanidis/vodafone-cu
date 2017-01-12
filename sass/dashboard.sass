@@ -57,13 +57,15 @@
 			+rem(padding, 0 80px)
 
 		&:nth-child(4n+1)
-			background-color: #09090a
+			// background-color: #09090a
+			background-color: #141415
 
 		&:nth-child(4n+2), &:nth-child(4n+4)
 			background-color: black
 
 		&:nth-child(4n+3)
-			background-color: #141415
+			// background-color: #141415
+			background-color: #09090a
 
 		&.options-section
 			display: block
@@ -261,6 +263,8 @@
 			right: 0
 			margin: auto
 			border-right: 2px solid black
+			+rem(padding-bottom,32px)
+			+transition(padding 0.3s)
 
 			&:before
 				content: ''
@@ -281,6 +285,8 @@
 
 		&.active
 			.control-button-wrapper
+				+rem(padding,16px 0)
+
 				&:before
 					top: 0
 
@@ -585,7 +591,8 @@
 						// font-weight: 200
 						+weight100
 						color: $color-grey
-						+rem(margin-top, 30px)
+						// +rem(margin-top, 30px)
+						+rem(margin-top, 5px)
 
 
 			.title
@@ -691,6 +698,39 @@
 						// border-right: 2px solid #1e1e1e
 						// +rem(border-right-width, 2px)
 
+
+					// Custom Tab colors
+
+					&.tab-1
+						.title
+							// color: $color-black
+							color: #464748
+
+						&.active
+							// border-bottom-color: $color-black
+							border-bottom-color: #282929
+
+					&.tab-2
+						.title
+							color: $color-red
+
+						&.active
+							border-bottom-color: $color-red
+
+					&.tab-3
+						.title
+							color: #83888e
+
+						&.active
+							border-bottom-color: #83888e
+
+					&.tab-4
+						.title
+							color: #e1ae05
+
+						&.active
+							border-bottom-color: #e1ae05
+
 			.tab-content
 				// display: block
 				text-align: center
@@ -733,7 +773,8 @@
 
 					.detail
 						color: $color-grey
-						+rem(margin-top, 40px)
+						// +rem(margin-top, 40px)
+						+rem(margin-top, 5px)
 
 				.tab-item+.tab-item
 					&:before
@@ -755,12 +796,15 @@
 		+rem(padding-bottom, 55px)
 
 		.title
+			// +rem(font-size, 64px)
+			// font-weight: 200
 			+rem(font-size, 64px)
-			font-weight: 200
+			font-weight: 400
 			text-align: center
 
 			.underlined-title
-				font-weight: bold
+				// font-weight: bold
+				// +rem(letter-spacing,-4px)
 				font-size: inherit
 
 				&:before
@@ -907,10 +951,11 @@
 				+no-rem(font-size, 20px)
 				+no-rem(line-height, 28px)
 				// font-weight: 200
-				+weight100
+				// +weight100
 				color: $color-red
 				background: transparent
 				+rem(max-width, 190px)
+				font-weight: bold
 
 
 	.active > .feature-wrapper
@@ -1051,6 +1096,9 @@
 					// font-weight: 500
 					+weight100
 					color: white
+
+					&:first-child
+						font-weight: 200 
 
 			.row:first-child
 				& > .cell
@@ -1218,7 +1266,8 @@
 				+rem(margin-top, 15px)
 
 				&.error
-					color: $color-red
+					// color: $color-red
+					color: $color-grey
 
 	.coupon+.coupon
 		border-top: 2px solid black
@@ -1290,7 +1339,8 @@
 		.prev-button, .next-button
 			display: inline-block
 			position: relative
-			color: $color-grey
+			// color: $color-grey
+			color: white
 			+rem(width, 62px)
 			+rem(margin, 0px 15px)
 			vertical-align: middle
@@ -1326,7 +1376,8 @@
 
 				& > a
 					display: inline-block
-					color: $color-grey
+					// color: $color-grey
+					color: white
 					text-decoration: none
 					+no-rem(font-size, 20px)
 					font-weight: bold
@@ -1369,7 +1420,7 @@
 				+rem(height, 80px)
 				+border-radius( (40/16)*1em )
 				+border-radius( 40px )
-				background-color: $color-cyan
+				// background-color: $color-cyan
 				background-repeat: no-repeat
 				background-size: cover
 				text-align: center
@@ -1378,7 +1429,8 @@
 					position: relative
 					margin: 0
 					+rem(font-size, 48px)
-					color: black
+					// color: black
+					color: $color-cyan
 					+rem(padding-top, 18px)
 					// +rem(line-height, 80px)
 
@@ -1546,6 +1598,8 @@
 		display: block
 		+rem(padding-bottom, 160px)
 		background-color: #09090a
+		background-image: url('../img/footer-fg-pic.png')
+		background-position: 0 100%
 
 
 	.options-section

@@ -1,0 +1,163 @@
+doctype html
+html(lang="el").loged-in.show-offer-sidebar--
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		//- meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+
+		meta(property="og:title" content="Vodafone CU")
+		meta(property="og:description" content="<description goes here>")
+		meta(property="twitter:title" content="Vodafone CU")
+		meta(property="twitter:description" content="<description goes here>")
+
+			
+		title Vodafone CU
+
+		//- link(href="img/fav_icon.png" rel="icon")
+
+		link(href="css/tooltipster.bundle.min.css" rel="stylesheet")
+		link(href="css/fonts.css" rel="stylesheet")
+			
+		link(href="css/slick.css" rel="stylesheet")
+		//- link(href="css/owl.carousel.min.css" rel="stylesheet")
+
+		link(href="css/styles.css" rel="stylesheet")
+		link(href="css/responsive.css" rel="stylesheet")
+		link(href="css/generic.css" rel="stylesheet")
+		link(href="css/responsive-online-topup.css" rel="stylesheet")
+		link(href="css/responsive-panels.css" rel="stylesheet")
+
+		//- include _ga
+
+		script(src="js/device.min.js")
+			
+	body
+		include _login-panel.jade
+
+		include _header.jade
+
+		#content.page-topup.mobile-layout
+
+			//- include _header-carousel.jade
+
+
+			//--------------------
+			.single-page
+
+				.layout
+
+					.breadcrumb
+						a(href="#") Αρχική Σελίδα
+						a(href="#") Υπηρεσίες CU
+						a.active(href="#") Bonus Ανανέωσης
+
+					.main-title Bonus Ανανέωσης
+					.second-title Σύμπτωμα 23: Μένεις έξω!
+
+					.paragraph
+						| Τώρα, με το Just Surf Bonus, κερδίζεις δωρεάν MB για internet από το κινητό:
+
+					.ul-list
+						ul
+							li <strong>500ΜΒ</strong> για κάθε ανανέωση από <strong>10€</strong>
+							li <strong>1GB</strong> για ανανέωση από <strong>20€</strong>
+
+					.paragraph
+						| Αν δεν το έχεις ήδη, 
+						a.p-link(href="#") ενεργοποίησε το εδώ
+						| !
+
+				.accordion.desktop-only
+					
+					.option
+						.title
+							.icon-arrow-head
+							.text Πώς ακριβώς γίνεται η κατανάλωση των δωρεάν ΜΒ;
+						ul
+							li Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong>
+							li Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.
+							li Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.
+							li Το Bonus δεν ισχύει για χρήση στο εξωτερικό.
+
+					.option
+						.title
+							.icon-arrow-head
+							.text Πώς παίρνω τα δωρεάν MB;
+						ul
+							li Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong>
+							li Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.
+							li Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.
+							li Το Bonus δεν ισχύει για χρήση στο εξωτερικό.
+					.option
+						.title
+							.icon-arrow-head
+							.text Κι αν δεν θέλω άλλο το Just Surf Bonus;
+					.option
+						.title
+							.icon-arrow-head
+							.text Κι αν έχω ενεργοποιημένο το Bonus Talk 2 Vodafone;
+
+				.layout
+					.subnotes * Το έξτρα bonus ανανέωσης από πιστωτική, χρεωστική, Paypal &amp; κατάστημα ισχύει για την 1η ανανέωση του μήνα από 10€ έως 31/10/2016.
+
+
+					.second-title Bonus Talk2Vodafone
+					.third-title Το... μικρόβιο μεταδίδεται ακόμα πιο εύκολα μεταξύ CU και Vodafone, με το Bonus Talk2Vodafone!
+
+					.paragraph
+						| Τώρα, με το <strong>Talk2Vodafone</strong>, κερδίζεις δωρεάν λεπτά ομιλίας προς όλη τη Vodafone:
+
+					.ul-list
+						ul
+							li <strong>2 ώρες</strong> με κάθε ανανέωση από <strong>10€</strong> για 30 μέρες
+							li <strong>4 ώρες + 60ΜΒ</strong> με ανανέωση από <strong>20€</strong> και πάνω για 30 μέρες
+
+					.paragraph
+						| <strong>Tip:</strong> Κάνε ανανέωση 10€ μέσω πιστωτικής, χρεωστικής, paypal ή σε κατάστημα, και πάρε επιπλέον <strong>500ΜΒ</strong>!
+						br
+						| Αν δεν το έχεις ήδη, <strong>ενεργοποίησε το εδώ</strong>!
+
+					.action-button
+						.text
+							| Ενεργοποίησέ το!
+
+				.accordion.desktop-only
+					
+					.option.active
+						.title
+							.icon-arrow-head
+							.text Tell me more… για το Bonus Talk2Vodafone
+						ul
+							li Η ελάχιστη διάρκεια κλήσης για τα δωρεάν λεπτά είναι 3 λεπτά ανά κλήση και μετά η χρήση υπολογίζεται ανά δευτερόλεπτο.
+							li Τα δωρεάν λεπτά ομιλίας και τα MB ισχύουν για 30 ημέρες μετά από κάθε ανανέωση-ενεργοποίησή της.
+							li Σε περίπτωση που ξεπεράσεις τα δωρεάν λεπτά ή MB, η επιπλέον χρέωση γίνεται βάσει του ισχύοντα τιμοκαταλόγου.
+							li Το πακέτο δεν ισχύει όταν βρίσκεσαι εκτός Ελλάδας, ούτε προς συνδρομητές του εξωτερικού.
+							li Για την απόδοση των δωρεάν λεπτών ομιλίας και ΜΒ, ισχύουν όλοι οι τρόποι ανανέωσης χρόνου ομιλίας, εκτός από την υπηρεσία Vodafone Sharing και την υπηρεσία επέκτασης υπολοίπου.
+							li Η προϋπόθεση της ανανέωσης χρόνου ομιλίας για την απόδοση των δωρεάν λεπτών και MB δεν αποτελεί χρέωση, δηλαδή ο χρόνος ομιλίας παραμένει στον λογαριασμό σου για να τον χρησιμοποιήσεις όπως εσύ θέλεις.
+							li Η ανανέωση χρόνου ομιλίας που πραγματοποιείται στο εξωτερικό θεωρείται έγκυρη και έχεις τη δυνατότητα να χρησιμοποιήσεις τα δωρεάν λεπτά και MΒ σου, όταν επιστρέψεις στην Ελλάδα (εφόσον δεν έχει περάσει το διάστημα ισχύος τους).
+							li Η ενεργοποίηση του Bonus Talk2Vodafone επιτρέπεται σε έως 3 συνδέσεις ανά συνδρομητή καρτοκινητής.
+							li Η Vodafone διατηρεί το δικαίωμα του τερματισμού του Bonus Talk2Vodafone και της μετατροπής του χρονικού διαστήματος της προσφοράς ή/και της μετατροπής των σχετικών όρων, χωρίς προηγούμενη προειδοποίηση.
+							li Στην περίπτωση που έχεις στη διάθεσή σου δωρεάν λεπτά ή ΜΒ από το Bonus Talk2Vodafone και λάβεις κι άλλο bonus με κάρτα 10€ και άνω, τυχόν υπολειπόμενα δωρεάν λεπτά προς Vodafone ή ΜΒ από προηγούμενη ανανέωση θα παραμείνουν στη διάθεσή σου, και προτεραιότητα στην κατανάλωση θα έχουν τα λεπτά ομιλίας ή ΜΒ με τη συντομότερη ημερομηνία λήξης.
+							li Το Bonus Talk2Vodafone μπορεί να συνδυαστεί ταυτόχρονα με όλα τα πακέτα, υπηρεσίες και bonus του CU, με εξαίρεση το πακέτο Just Surf Bonus.
+							li Προτεραιότητα στην κατανάλωση θα έχουν τα λεπτά ομιλίας, ή MΒ με τη συντομότερη ημερομηνία λήξης.
+
+					.option
+						.title
+							.icon-arrow-head
+							.text Κι αν δεν θέλω άλλο το Bonus Talk 2 Vodafone;
+						ul
+							li Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong>
+							li Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.
+							li Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.
+							li Το Bonus δεν ισχύει για χρήση στο εξωτερικό.
+
+				.layout
+					.subnotes * Το έξτρα bonus ανανέωσης από πιστωτική, χρεωστική, Paypal &amp; κατάστημα ισχύει για την 1η ανανέωση του μήνα από 10€ έως 31/10/2016.
+
+		include _sidebar.jade
+
+		include _footer.jade
+
+
+
+	script(src="js/dashboard-page.js")

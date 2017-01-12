@@ -99,6 +99,7 @@
           </ul>
         </div>
       </nav>
+      <div class="back-button"></div>
       <div class="login-button">
         <div class="login-msg">
           <p>ΕΙΣΟΔΟΣ ΣΤΟ</p>
@@ -185,6 +186,7 @@
         </div>
         <div class="info-holder"></div>
       </div>
+      <div class="breadcrumb"><a href="#">Αρχική Σελίδα</a><a href="#">Υπηρεσίες CU</a><a class="active" href="#">Bonus Ανανέωσης</a></div>
       <div class="expandable-offers selected">
         <div class="boxes">
           <h1 class="main-title">Online Ανανέωση</h1>
@@ -272,7 +274,7 @@
                             </div>
                             <div class="radio">
                               <input id="oneclickpaypal_10" type="radio" name="payment">
-                              <label for="creditcard_10">OneClick Paypal</label>
+                              <label for="oneclickpaypal_10">OneClick Paypal</label>
                               <div class="field user-info">
                                 <input class="email" type="email" value="johndoe@domain.com" disabled><a class="change-email">Αλλαγή</a>
                                 <div class="change-buttons"><a class="ok">OK</a><a class="cancel">Ακυρο</a></div>
@@ -678,6 +680,15 @@
       </div>
     </div>
     <div id="click-trap-underlay"></div>
+    <div id="gallery-underlay">
+      <div class="close-button"></div>
+      <div class="gallery-list"></div>
+      <div class="gallery-slide-count">
+        <div class="current"></div><span> / </span>
+        <div class="total"></div>
+      </div>
+      <div class="thumbnail-list"></div>
+    </div>
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
     <script src="js/debounce.js"></script>
     <script src="js/browser.js"></script>
@@ -687,6 +698,7 @@
     <script src="js/vendor/ScrollToPlugin.js"></script>
     <script src="js/vendor/raphael-2.2.1.min.js"></script>
     <script src="js/vendor/morris.js"></script>
+    <script src="js/vendor/jquery.gray.min.js"></script>
     <script src="js/js.cookie.js"></script>
     <script src="js/common.js"></script>
     <script src="js/package-activation.js"></script>

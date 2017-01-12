@@ -1,10 +1,12 @@
 
+
 // #notes-terms
 .accordion
-	+rem(width,1680px)
+	+rem(width, 1680px)
 	max-width: 100%
 	margin: 0 auto
-	+rem(padding,30px 80px 100px 80px)
+	+rem(padding, 30px 0px 100px)
+	+rem(padding, 30px 0px)
 	background-color: white
 
 	.panel-link
@@ -20,18 +22,21 @@
 
 	.accordion-item
 		border-bottom: solid #f0f1f1
-		+rem(margin-top,30px)
-		+rem(padding-bottom,30px)
+		+rem(margin-top, 30px)
+		+rem(padding-bottom, 30px)
+		// +rem(margin-left, 80px)
+		// +rem(margin-right, 80px)
 
 		&:first-child
 			margin-top: 0 
 
 		&:last-child
 			border: none
+			padding-bottom: 0
 
 		.panel-link
 			.title
-				+rem(font-size,32px)
+				+rem(font-size, 32px)
 				color: black
 				position: relative
 				cursor: pointer
@@ -50,36 +55,36 @@
 
 			ul
 				list-style: none
-				+rem(padding,5px 0 0px 100px)
+				+rem(padding, 5px 0px 0px 100px)
 				// +opacity(0)
 				// max-height: 0
 				// overflow: hidden
 
 				li
-					+rem(font-size,20px)
+					+rem(font-size, 20px)
 					color: #09090a
 					font-weight: 100
 					position: relative
-					+rem(line-height,40px)
+					+rem(line-height, 40px)
 
 					&:before
 						content: ''
 						background-color: $color-cyan
-						+rem(width,6px)
-						+rem(height,6px)
+						+rem(width, 6px)
+						+rem(height, 6px)
 						+border-radius(125px)
 						position: absolute
-						+rem(top,17px)
-						+rem(left,-13px)
+						+rem(top, 17px)
+						+rem(left, -13px)
 
 			// .paragraph
 			p
-				+rem(font-size,20px)
+				+rem(font-size, 20px)
 				color: #09090a
 				font-weight: 100
 				position: relative
-				+rem(line-height,32px)
-				+rem(padding,5px 0 0px 100px)
+				+rem(line-height, 32px)
+				+rem(padding, 5px 0px 0px 100px)
 				// +opacity(0)
 				// max-height: 0
 				// overflow: hidden
@@ -133,10 +138,10 @@
 		$offset: 50px
 		border-style: solid
 		border-color: #000
-		+rem(border-width,2px)
-		+rem(width,34px)
-		+rem(height,34px)
-		+rem(margin-right,26px)
+		+rem(border-width, 2px)
+		+rem(width, 34px)
+		+rem(height, 34px)
+		+rem(margin-right, 26px)
 		+transition(0.3s)
 
 		&:after
@@ -154,9 +159,8 @@
 
 		&:before
 			position: relative
-			+rem(line-height,41.8px)
-			+rem(left,14px)
-			+rem(top,-3px)
+			+rem(line-height, 41.8px)
+			+rem(left, 14px)
+			+rem(top, -3px)
 			+transition(0.3s)
 
-			

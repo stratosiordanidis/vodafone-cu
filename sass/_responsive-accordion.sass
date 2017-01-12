@@ -1,0 +1,109 @@
+
+
+@media all and (max-width: $mobile-breakpoint)
+	.accordion
+		background-color: white
+		+rem(padding, 25px 0px 20px)
+		// +rem(padding,10px 0 40px)
+
+		.accordion-item
+			margin: 0
+			position: relative
+			+rem(padding, 20px 0 20px 0)
+			+rem(margin-left, 20px)
+			border-bottom: 2px solid #e2e3e4
+
+			&:last-child
+				border-bottom: none
+
+			a.panel-link
+				padding-right: 40px
+
+				&:after
+					content: none
+
+			.panel-link
+				.title
+					+rem(font-size,20px)
+					// color: #09090a
+					color: $color-black
+					position: relative
+
+					.icon-arrow-head
+						// display: none
+						//display: inline-block
+						position: absolute
+						+rem(right, -20px)
+						left: auto
+						left: unset
+
+						+rem(font-size, 16px)
+						top: 0
+						bottom: 0
+						margin: auto
+						+rem(width,80px)
+						+rem(width,34px)
+						+rem(height,34px)
+						+transition(0s)
+						border: none
+
+						&:before
+							color: #09090a
+							position: relative
+							+rem(line-height,41.8px)
+							+rem(left,14px)
+							+rem(top,-3px)
+							+transition(0.3s)
+
+			&.active .icon-arrow-head
+				+transform(none)
+
+			.nav-header
+				// background-color: $color-light-grey
+				background-color: transparent
+
+				.title
+					display: none
+					color: $color-black
+
+				.back-button:before
+					color: $color-black
+
+			.panel-content
+				background-color: white
+				color: $color-black
+				overflow-y: auto
+				max-height: none
+
+				ul
+					list-style: none
+					+rem(padding,5px 10px 20px 30px)
+
+					li
+						+rem(font-size,20px)
+						color: #09090a
+						font-weight: 100
+						position: relative
+						+rem(line-height,30px)
+						+rem(margin-top,10px)
+
+						&:before
+							content: ''
+							background-color: $color-cyan
+							+rem(width,6px)
+							+rem(height,6px)
+							+border-radius(125px)
+							position: absolute
+							+rem(top,12px)
+							+rem(left,-13px)
+
+				// .paragraph
+				p
+					+opacity(1)
+					max-height: none
+					+rem(font-size,20px)
+					color: #09090a
+					font-weight: 100
+					position: relative
+					+rem(line-height,32px)
+					+rem(padding,15px 15px 20px 15px)

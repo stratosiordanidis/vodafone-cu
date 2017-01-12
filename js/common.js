@@ -6,10 +6,92 @@ if (typeof History === 'undefined')
 }
 
 
+// Below is an actual throttle function, that fires a message every threshhold ms 
+// by default (rather than at the end of a burst of events)
+function throttle(fn, threshhold, scope) 
+{
+	threshhold || (threshhold = 250);
+	var last,
+			deferTimer;
+	return function () 
+	{
+		var context = scope || this;
+
+		var now = +new Date,
+				args = arguments;
+		if (last && now < last + threshhold) 
+		{
+			// hold on to it
+			clearTimeout(deferTimer);
+			deferTimer = setTimeout(function () 
+			{
+				last = now;
+				fn.apply(context, args);
+			}, threshhold);
+		} 
+		else 
+		{
+			last = now;
+			fn.apply(context, args);
+		}
+	};
+}
+
+
+// Returns a function, that, as long as it continues to be invoked, will not
+// be triggered. The function will be called after it stops being called for
+// N milliseconds. If `immediate` is passed, trigger the function on the
+// leading edge, instead of the trailing.
+function debounce(func, wait, immediate) 
+{
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() 
+		{
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+
 function strStartsWith(str, starts)
 {
 	return str.indexOf(starts) == 0;
 }
+
+var _googleMapsQueue = [];
+var _googleMapsInitialized = false;
+
+function initGoogleMaps()
+{
+	console.log('Google Maps Init done!');
+	for (var i = 0; i < _googleMapsQueue.length; i++)
+	{
+		_googleMapsQueue[i] && _googleMapsQueue[i].call();
+	}
+	_googleMapsQueue = [];
+}
+
+function executeGoogleMapsCommand(func)
+{
+	if (func && _googleMapsInitialized != true)
+	{
+		_googleMapsQueue.push(func);
+	}
+	else
+	{
+		func.call();
+	}
+}
+
+
+//==========================================
 
 function scrollToElement(el, offset, onComplete)
 {
@@ -1347,24 +1429,24 @@ function setupProgressCircles()
 		if (typeof Morris !== 'undefined')
 		{
 			Morris.Donut({
-			  element: el,
-			  data: data,
-			  // [
-			  //   {value: 70, label: 'foo', formatted: 'at least 70%' },
-			  //   {value: 15, label: 'bar', formatted: 'approx. 15%' },
-			  //   {value: 10, label: 'baz', formatted: 'approx. 10%' },
-			  //   {value: 5, label: 'A really really long label', formatted: 'at most 5%' }
-			  // ],
-			  colors: colors,
-			  formatter: function (x, data) 
-			  			{
-			  				// console.log(x);
-			  				// console.log(data);
+				element: el,
+				data: data,
+				// [
+				//   {value: 70, label: 'foo', formatted: 'at least 70%' },
+				//   {value: 15, label: 'bar', formatted: 'approx. 15%' },
+				//   {value: 10, label: 'baz', formatted: 'approx. 10%' },
+				//   {value: 5, label: 'A really really long label', formatted: 'at most 5%' }
+				// ],
+				colors: colors,
+				formatter: function (x, data) 
+							{
+								// console.log(x);
+								// console.log(data);
 
-			  				return data.label;
+								return data.label;
 
-			  				// return data.formatted; 
-			  			}
+								// return data.formatted; 
+							}
 			});
 
 		}
@@ -1398,8 +1480,8 @@ function setupProgressCircles()
 							display: false
 						},
 				animation:{
-					   animateScale:true
-				   }
+						 animateScale:true
+					 }
 			};
 			var myDoughnutChart = new Chart(ctx, {
 				type: 'doughnut',
@@ -1465,6 +1547,357 @@ function setupGenericCarousel($object)
 	});
 }
 
+
+function setupGoogleMaps()
+{
+	var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+	var icons = {
+		parking: {
+			icon: iconBase + 'parking_lot_maps.png'
+		},
+		library: {
+			icon: iconBase + 'library_maps.png'
+		},
+		info: {
+			icon: iconBase + 'info-i_maps.png'
+		}
+	};
+
+	function _addMarker(map, feature) 
+	{
+		var icon_img = new google.maps.MarkerImage(feature.icon, null, null, null, 
+											new google.maps.Size(feature.icon_size[0],feature.icon_size[1]));
+		var icon_shadow = new google.maps.MarkerImage(feature.icon_shadow, null, null, null, 
+											new google.maps.Size(feature.icon_shadow_size[0],feature.icon_shadow_size[1]));
+		var marker = new google.maps.Marker({
+			position: feature.position,
+			icon: icon_img,
+			shadow: icon_shadow,
+			animation: google.maps.Animation.DROP,
+			map: map
+		});
+
+		return marker;
+	}
+
+
+	if ( $('.google-map').length > 0 )
+	{
+		executeGoogleMapsCommand(function()
+		{
+			$('body').append('<script src="js/vendor/infobox_packed.js"/>');
+
+			$('.google-map').each(function(index, el)
+			{
+				var lat = $(el).attr('data-lat') || null;
+				var long = $(el).attr('data-long') || null;
+				var default_icon = $(el).attr('data-icon') || 'http://demo.isobar-iprospect.gr/vodafone/cu/img/pin-2x.png';
+				var default_icon_shadow = $(el).attr('data-icon-shadow') || 'http://demo.isobar-iprospect.gr/vodafone/cu/img/pin-shadow@2x.png';
+				var defualt_icon_size = [34, 49];
+				var default_icon_shadow_size = [36, 10];
+
+				if (lat !== null && long !== null )
+				{
+					lat = parseFloat(lat);
+					long = parseFloat(long);
+
+					$(el).append('<div class="map"></div>');
+					var mapEl = $(el).find('.map')[0];
+
+					var gMap = new google.maps.Map(mapEl, {
+									center: {lat: lat, lng: long},
+									// scrollwheel: false,
+									// zoom: 8,
+									zoom: 15,
+									disableDefaultUI: true,
+									styles: [
+												{
+													"elementType": "geometry",
+													"stylers": [
+														{
+															"color": "#f5f5f5"
+														}
+													]
+												},
+												{
+													"elementType": "labels.icon",
+													"stylers": [
+														{
+															"visibility": "off"
+														}
+													]
+												},
+												{
+													"elementType": "labels.text.fill",
+													"stylers": [
+														{
+															"color": "#616161"
+														}
+													]
+												},
+												{
+													"elementType": "labels.text.stroke",
+													"stylers": [
+														{
+															"color": "#f5f5f5"
+														}
+													]
+												},
+												{
+													"featureType": "administrative.land_parcel",
+													"elementType": "labels.text.fill",
+													"stylers": [
+														{
+															"color": "#bdbdbd"
+														}
+													]
+												},
+												{
+													"featureType": "poi",
+													"elementType": "geometry",
+													"stylers": [
+														{
+															"color": "#eeeeee"
+														}
+													]
+												},
+												{
+													"featureType": "poi",
+													"elementType": "labels.text.fill",
+													"stylers": [
+														{
+															"color": "#757575"
+														}
+													]
+												},
+												{
+													"featureType": "poi.park",
+													"elementType": "geometry",
+													"stylers": [
+														{
+															"color": "#e5e5e5"
+														}
+													]
+												},
+												{
+													"featureType": "poi.park",
+													"elementType": "labels.text.fill",
+													"stylers": [
+														{
+															"color": "#9e9e9e"
+														}
+													]
+												},
+												{
+													"featureType": "road",
+													"elementType": "geometry",
+													"stylers": [
+														{
+															"color": "#ffffff"
+														}
+													]
+												},
+												{
+													"featureType": "road.arterial",
+													"elementType": "labels.text.fill",
+													"stylers": [
+														{
+															"color": "#757575"
+														}
+													]
+												},
+												{
+													"featureType": "road.highway",
+													"elementType": "geometry",
+													"stylers": [
+														{
+															"color": "#dadada"
+														}
+													]
+												},
+												{
+													"featureType": "road.highway",
+													"elementType": "labels.text.fill",
+													"stylers": [
+														{
+															"color": "#616161"
+														}
+													]
+												},
+												{
+													"featureType": "road.local",
+													"elementType": "labels.text.fill",
+													"stylers": [
+														{
+															"color": "#9e9e9e"
+														}
+													]
+												},
+												{
+													"featureType": "transit.line",
+													"elementType": "geometry",
+													"stylers": [
+														{
+															"color": "#e5e5e5"
+														}
+													]
+												},
+												{
+													"featureType": "transit.station",
+													"elementType": "geometry",
+													"stylers": [
+														{
+															"color": "#eeeeee"
+														}
+													]
+												},
+												{
+													"featureType": "water",
+													"elementType": "geometry",
+													"stylers": [
+														{
+															"color": "#c9c9c9"
+														}
+													]
+												},
+												{
+													"featureType": "water",
+													"elementType": "geometry.fill",
+													"stylers": [
+														{
+															"color": "#ffffff"
+														}
+													]
+												},
+												{
+													"featureType": "water",
+													"elementType": "labels.text.fill",
+													"stylers": [
+														{
+															"color": "#9e9e9e"
+														}
+													]
+												}
+											]
+								});
+
+					var openInfoWindow = null;
+
+					$(el).find('.marker').each(function(idx, element)
+					{
+						var $marker = $(element);
+
+						var content = $marker.html() || '';
+						content = content.trim();
+
+						var lat = $marker.attr('data-lat') || null;
+						var long = $marker.attr('data-long') || null;
+
+						if (lat !== null && long !== null )
+						{
+							lat = parseFloat(lat);
+							long = parseFloat(long);
+							var icon = $marker.attr('data-icon') || default_icon;
+
+							var gMarker = _addMarker(gMap, {
+								position: new google.maps.LatLng(lat, long),
+								icon: icon,
+								icon_size: defualt_icon_size,
+								icon_shadow: default_icon_shadow,
+								icon_shadow_size: default_icon_shadow_size
+							});
+
+							if (content.length > 0)
+							{
+								// var infowindow = new google.maps.InfoWindow({
+								// 						content: content
+								// 				});
+
+								var offsetX = $marker.outerWidth() * 0.5;// - 10;
+								var offsetY = $marker.outerHeight() + 67;
+								content = '<div class="marker-wrapper">'+content+'<div class="bottom-triangle" style="border-right-width:'+offsetX+'px;"/></div>';
+
+								console.log('offsetX: '+offsetX);
+
+								var ibOptions = {
+											disableAutoPan: false
+											,maxWidth: 0
+											,pixelOffset: new google.maps.Size(-offsetX, -offsetY)
+											// ,pixelOffset: new google.maps.Size(0, -offsetY)
+											,zIndex: null
+											,boxStyle: {
+														  padding: "20px 20px 18px",
+														  width: "auto",
+														  height: "auto"
+														},
+										closeBoxURL : "",
+										infoBoxClearance: new google.maps.Size(1, 1),
+											isHidden: false,
+											pane: "floatPane",
+											enableEventPropagation: false
+										};
+
+								ibOptions.content = content;
+								var infowindow = new InfoBox(ibOptions);
+
+								// ib.open(gMap, gMarker);
+								// map.panTo(ib.getPosition());
+
+								gMarker.addListener('click', function() 
+								{
+									if (openInfoWindow == infowindow)
+									{
+										infowindow.close();
+										openInfoWindow = null;
+									}
+									else
+									{
+										if (openInfoWindow !== null)
+											openInfoWindow.close();
+										infowindow.open(gMap, gMarker);
+
+
+										gMap.panTo(infowindow.getPosition());
+										openInfoWindow = infowindow;
+									}
+								});
+
+							}
+
+							console.log('marker['+idx+'] added to map');
+						}
+
+					});
+
+				}
+			});
+
+
+		});
+		
+	}
+
+	// $('.google-map').each(function(index, el)
+	// {
+	// 	var lat = $(el).attr('data-lat') || null;
+	// 	var long = $(el).attr('data-long') || null;
+
+	// 	if (lat !== null && long !== null )
+	// 	{
+	// 		lat = parseFloat(lat);
+	// 		long = parseFloat(long);
+
+	// 		executeGoogleMapsCommand(function()
+	// 		{
+	// 			var map = new google.maps.Map(el, {
+	// 							center: {lat: lat, lng: long},
+	// 							// scrollwheel: false,
+	// 							zoom: 8
+	// 						});
+	// 		});
+	// 	}
+	// });
+}
 
 function setupInputs()
 {
@@ -2091,6 +2524,8 @@ $(document).ready(function()
 			$(window).trigger('sidebar-loaded');
 		}, 4*1000);
 	});
+
+	setupGoogleMaps();
 
 	$('.not-initialized').removeClass('not-initialized');
 });

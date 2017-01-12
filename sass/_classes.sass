@@ -218,6 +218,33 @@ a
 a.underlined-title:after
 	content: none
 
+a.important-link
+	display: inline-block
+	position: relative
+	// +rem(font-size, 32px)
+	font-weight: bold
+	color: $color-black
+	z-index: 1
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		width: 100%
+		+rem(height, 10px)
+		background: $color-cyan
+		// +rem(left, 10px)
+		+rem(left, 0px)
+		// +rem(bottom, 5px)
+		// +rem(bottom, 0px)
+		bottom: 0
+		z-index: -1
+		+transition(background-color 0.3s)
+
+	:after
+		content: none
+
+
 
 .underlined-title.size-xxl
 	display: inline-block
@@ -252,6 +279,70 @@ a.underlined-title:after
 	-webkit-appearance: none
 	-webkit-box-align: center
 	-ms-flex-align: center
+
+
+.video-thumb
+	display: inline-block
+	position: relative
+	z-index: 1
+	+rem(margin-bottom, 40px)
+	cursor: pointer
+	font-size: 0
+	max-width: calc(100% - 40px)
+
+	img
+		max-width: 100%
+
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		z-index: -1
+		+rem(left, 40px)
+		+rem(top, 40px)
+		background: url('../img/video-pattern.jpg')
+
+.video-button
+	display: block
+	position: absolute
+	+rem(width, 78px)
+	+rem(height, 78px)
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+	margin: auto
+	cursor: pointer
+
+	background-color: $color-black
+	+border-radius(100px)
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		+rem(left, -26px)
+		+rem(top, -26px)
+		+rem(border-width, 10px)
+		border-style: solid
+		border-color: white
+		+rem(width, 110px)
+		+rem(height, 110px)
+		+border-radius(100px)
+
+
+	&:after
+		content: $icon-play_button
+		display: inline-block
+		width: 110%
+		text-align: center
+		font-family: 'cu'
+		+rem(font-size, 35px)
+		+rem(line-height, 78px)
+		color: white
+
 
 
 .action-button
@@ -431,6 +522,11 @@ input:focus+label.movable, input.focused+label.movable, input.has-value+label.mo
 //=============================
 
 .breadcrumb
+	+rem(width, 1680px)
+	max-width: 100%
+	left: 0
+	right: 0
+	margin: auto
 	a
 		color: #707379
 		+rem(font-size,20px)
@@ -463,6 +559,9 @@ input:focus+label.movable, input.focused+label.movable, input.has-value+label.mo
 			&:before
 				content: none
 
+
+.header-carousel+.breadcrumb
+	+rem(padding-top, 70px)
 
 
 //=============================
@@ -534,9 +633,26 @@ input:focus+label.movable, input.focused+label.movable, input.has-value+label.mo
 	+rem(font-size, 32px)
 	// font-weight: 500
 	// +rem(letter-spacing, -3px)
+	+rem(letter-spacing, -1px)
+
 
 .h4
+	+rem(font-size, 24px)
+	font-weight: 100
+	+rem(line-height, 32px)
+	// font-weight: 500
+	// +rem(letter-spacing, -3px)
+
+.h5
 	+rem(font-size, 20px)
+	font-weight: 100
+	// +rem(line-height, 1.6)
+	+rem(line-height, 32px)
+	// font-weight: 500
+	// +rem(letter-spacing, -3px)
+
+.h6
+	+rem(font-size, 16px)
 	font-weight: 100
 	// font-weight: 500
 	// +rem(letter-spacing, -3px)

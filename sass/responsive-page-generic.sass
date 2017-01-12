@@ -1,0 +1,291 @@
+@import "compass"
+
+@import "vars"
+
+@import "utils"
+
+
+
+@media (max-width: $mobile-breakpoint)
+
+	.generic-page
+		+rem(width,1680px)
+		max-width: 100%
+		margin: 0 auto
+		+rem(padding-top,70px)
+		+rem(padding-bottom,20px)
+
+		color: $color-black
+
+		a:after
+			content: none
+
+		
+		.generic-center-col
+			display: block
+			// +rem(width, 1280px)
+			// $gap: ((800 / 1280)*0.5 * 100%)
+			// $gap: ((2/7)*0.5 * 100%)
+			$gap: 5px
+			left: 0
+			right: 0
+			margin: auto
+			padding-left: $gap
+			padding-right: $gap
+			width: auto
+
+
+		.layout
+			+rem(width,960px)
+
+			margin: 0 auto
+
+
+		.accordion
+			position: relative
+			+rem(left, -80px)
+			width: calc(100% + 80px)
+
+		.action-button
+			position: relative
+			+rem(left, -20px)
+			+rem(margin-bottom, 35px)
+
+		
+		.h1
+			+rem(margin-bottom, 15px)
+
+		.h2
+			+rem(margin-bottom, 25px)
+
+		.h3
+			+rem(margin-bottom, 20px)
+
+
+		// .paragraph
+		p
+			+rem(font-size, 20px)
+			color: $color-black
+			font-weight: 100
+			+rem(letter-spacing, 0)
+			+rem(margin-bottom, 15px)
+
+			&:last-of-type
+				margin-bottom: 0
+
+
+		// .ul-list
+		ul
+			list-style: none
+			+rem(padding-left, 15px)
+			// +rem(margin-top, 10px)
+			
+			li
+				+rem(font-size, 20px)
+				color: black
+				font-weight: 100
+				+rem(letter-spacing, 0)
+				+rem(margin-bottom, 10px)
+
+				// &:first-child
+
+
+				strong
+					font-weight: 500
+
+				&:before
+					content: ''
+					background-color: $color-red
+					+border-radius(50px)
+					width: 6px
+					height: 6px
+					display: inline-block
+					+rem(margin-right,7px)
+					position: relative
+					top: -3px
+
+
+		
+		.phone-icon
+			display: inline-block
+			position: relative
+
+			&:after
+				content: $icon-phone
+				font-family: 'cu'
+				display: inline-block
+				color: $color-red
+				// +rem(font-size, 32px)
+				+rem(font-size, 30px)
+
+		.table
+			+rem(margin-top, 45px)
+
+			.th
+				display: block
+				position: relative
+				width: auto
+				height: auto
+				// +rem(min-height, 32px)
+				+rem(padding, 10px 40px)
+				+rem(padding-left, (160px + 40px))
+				vertical-align: middle
+
+				&:first-child
+					position: absolute
+					+rem(width, 160px)
+					text-align: center
+					padding-left: 0
+					padding-right: 0
+					background-color: $color-black
+
+			.td
+				// display: inline-block
+				display: block
+				width: auto
+				height: auto
+				color: $color-black
+				+no-rem(font-size, 20px)
+				+rem(padding, 45px 40px)
+				+rem(padding-left, (160px + 40px))
+				+rem(min-height, 22px)
+				// +rem(margin-left, 160px)
+
+			.td:first-child
+				position: absolute
+				+rem(width, 160px)
+				padding-left: 0
+				padding-right: 0
+				top: 0
+				bottom: 0
+				left: 0
+
+				background-color: $color-black
+				color: white
+				+no-rem(font-size, 32px)
+				+rem(width, 160px)
+				text-align: center
+				// vertical-align: middle
+				vertical-align: top
+				// +rem(margin-top, 45px)
+				// +rem(margin-bottom, 45px)
+				font-weight: bold
+
+			.tr
+				display: block
+				position: relative
+				// +display-flex()
+
+				vertical-align: top
+				font-size: 0
+
+
+
+				&:nth-child(2n+0)
+					.td:last-child
+						background-color: white
+
+			.tbody
+				.tr+.tr
+					+no-rem(margin-top, 2px)
+
+			.tbody > .tr > .td
+				+rem(padding-top, 45px)
+				+rem(padding-bottom, 45px)
+
+		.gallery-list
+			+rem(margin-top, 45px)
+
+		.video-thumb
+			+rem(margin-top, 25px)
+
+
+		// .subnotes
+		.subtext
+			text-align: left
+			+rem(font-size,16px)
+			color: black
+			font-weight: 300
+			
+			span.red
+				color: $color-red
+
+		.action-button
+			background-color: $color-red
+			color: white
+
+
+		.google-map
+			display: block
+			position: relative
+			width: 100%
+			height: 200px
+			max-width: 100%
+
+			// +rem(width, 960px)
+			// +rem(height, 450px)
+			z-index: 1
+			background-color: $color-grey
+			// +rem(margin-top, 45px)
+
+			& > .map
+				display: block
+				position: relative
+				width: 100%
+				height: 100%
+
+			& > .marker
+				// // display: none
+				// display: inline-block
+				// visibility: hidden
+				// position: absolute
+				// +rem(padding, 20px)
+				// z-index: -100
+				// color: white
+				// +rem(font-size, 16px)
+				// font-weight: 200
+
+
+			&:after
+				content: none
+				display: none
+
+
+			.infoBox
+				// background-color: $color-black
+				// color: white
+				// visibility: hidden
+
+				// &:after
+				// 	content: ''
+				// 	display: inline-block
+				// 	position: absolute
+				// 	right: 0
+				// 	bottom: 0
+				// 	width: 0
+				// 	height: 0
+				// 	border-top: 10px solid $color-black
+				// 	border-right: 50% solid transparent
+
+				.bottom-triangle
+					// display: inline-block
+					// position: absolute
+					// right: 0
+					// bottom: -10px
+					// width: 0
+					// height: 0
+					// border-top: 10px solid $color-black
+					// border-right: 100px solid transparent
+
+				.marker-wrapper
+					// color: white
+					// +rem(font-size, 16px)
+					// font-weight: 200
+
+
+		.accordion
+			+rem(margin-bottom, 40px)
+
+
+
+
