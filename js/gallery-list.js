@@ -56,10 +56,29 @@ function setupGalleryList()
 		_setCurrentSlideNumber(slick.currentSlide);
 	}
 
+	var _animatingDescriptionTimer = null;
 	// $gallery.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-	function _galleryCounterBeforeChange(event, slick, currentSlide, nextSlide)
+	function _galleryBeforeChange(event, slick, currentSlide, nextSlide)
 	{
 		_setCurrentSlideNumber(nextSlide);
+		if (currentSlide !== nextSlide)
+		{
+			$(event.target).find('.slick-current figcaption').css('opacity', '');
+			$('#gallery-underlay .description').css('opacity', '');
+			if (_animatingDescriptionTimer)
+				clearTimeout(_animatingDescriptionTimer);
+			_animatingDescriptionTimer = setTimeout(function() { 
+				_animatingDescriptionTimer = null; 
+				$('#gallery-underlay .description-wrapper').html( $('#gallery-underlay .slick-current figcaption').html() );
+				$('#gallery-underlay .description').css('opacity', '1');
+			}, 301);
+		}
+	}
+
+	function _galleryAfterChange(event)
+	{
+		// _setCurrentSlideNumber(nextSlide);
+		$(event.target).find('.slick-current figcaption').css('opacity', '1');
 	}
 
 	function _setSlideCount(count) 
@@ -79,14 +98,16 @@ function setupGalleryList()
 	{
 		$('.gallery-list figure').on('click', function(e)
 		{
+			var $this = $(this);
 			var $el = $(e.target);
 			var $galleryList = $el.closest('.gallery-list');
+			var index = $this.index();
 
 			$('html').addClass('show-gallery');
 
 			var $galleryUnderlay = $('#gallery-underlay');
 
-			$galleryUnderlay.find('.gallery-list').empty();
+			$galleryUnderlay.find('.gallery-list').html('');
 
 			var $clone = $galleryList.children().clone();
 
@@ -133,6 +154,7 @@ function setupGalleryList()
 				focusOnSelect: true,
 				// slidesToScroll: 1,
 				infinite: false,
+				initialSlide: index,
 				// swipe: true,
 				swipe: false,
 				asNavFor: '#gallery-underlay .gallery-list'
@@ -150,6 +172,8 @@ function setupGalleryList()
 				// so that the images inside the figures will have loaded
 				// $thumbs[0].slick.refresh();	
 				$thumbs.slick('refresh');
+				$thumbs[0].slick.animating = false;
+				$thumbs.slick('slickGoTo', index);
 				$thumbs.css('visibility', '');
 			}, 0);
 
@@ -172,7 +196,8 @@ function setupGalleryList()
 
 			$galleryUnderlay.find('.gallery-list').first()
 				.on('init', _galleryCounterInit)
-				.on('beforeChange', _galleryCounterBeforeChange)
+				.on('beforeChange', _galleryBeforeChange)
+				.on('afterChange', _galleryAfterChange)
 				;
 
 			$galleryUnderlay.find('.gallery-list').first().slick({
@@ -186,16 +211,23 @@ function setupGalleryList()
 				arrows: true,
 				slidesToScroll: 1,
 				infinite: false,
+				initialSlide: index,
 				swipe: true,
 				asNavFor: '#gallery-underlay .thumbnail-list'
 			});
+
+			var $gal = $galleryUnderlay.find('.gallery-list').first();
 
 			setTimeout(function()
 			{
 				// must refresh after a small delay
 				// so that the images inside the figures will have loaded
 				$galleryUnderlay.find('.gallery-list').first().slick('refresh');
+				$gal[0].slick.animating = false;
+				$gal.slick('slickGoTo', index);
 				// $thumbs.css('visibility', '');
+				// $galleryUnderlay.find('.gallery-list').first().slick('slickGoTo', index);
+				
 			}, 0);
 
 

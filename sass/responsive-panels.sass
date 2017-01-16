@@ -120,6 +120,20 @@
 			// pointer-events: all
 			pointer-events: none
 
+	.slide-down .panel
+		position: relative
+		+transform( none )
+		height: auto
+		overflow: hidden
+		min-height: 0
+		max-height: 0px
+
+		.panel-content
+			margin-top: 0
+
+	.slide-down.active .panel
+		max-height: 2000px
+
 
 	.panel-link
 		display: block
@@ -179,25 +193,26 @@
 			font-weight: 500
 
 		& > .back-button
-			display: inline-block
-			position: absolute
-			left: 10px
-			// top: 32px
-			top: 0
-			bottom: 0
-			height: 10px
-			margin: auto
-			padding: 5px
-			font-size: (10px/16px)*1rem !important
-			pointer-events: all
+			display: none
+			// display: inline-block
+			// position: absolute
+			// left: 10px
+			// // top: 32px
+			// top: 0
+			// bottom: 0
+			// height: 10px
+			// margin: auto
+			// padding: 5px
+			// font-size: (10px/16px)*1rem !important
+			// pointer-events: all
 
-			&:before
-				content: $icon-arrow-thin
-				display: inline-block
-				position: relative
-				font-family: 'cu'
-				color: white
-				// +rem(font-size, 24px)
-				font-size: inherit
-				+rotateZ(180deg)
+			// &:before
+			// 	content: $icon-arrow-thin
+			// 	display: inline-block
+			// 	position: relative
+			// 	font-family: 'cu'
+			// 	color: white
+			// 	// +rem(font-size, 24px)
+			// 	font-size: inherit
+			// 	+rotateZ(180deg)
 

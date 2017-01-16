@@ -56,6 +56,23 @@ html(lang="el").loged-in.show-offer-sidebar--
 					a(href="#") Υπηρεσίες CU
 					a.active(href="#") Bonus Ανανέωσης
 
+				.h1 CU at NEON PARTY - Carnival Edition
+
+				.event-info
+					.info
+						.title Ημερομηνία
+						.subtext 10-18, Σεπ 2017
+
+					.info
+						.title Ώρα
+						.subtext 22:00
+
+					.info
+						.title Τοποθεσία
+						.subtext Gagarin, Λιοσίων 205, Αθήνα
+
+					a.fb-link(href="http://www.facebook.com" target="_blank") Join Event
+
 				.h1 Bonus Ανανέωσης
 				.h3 Σύμπτωμα 23: Μένεις έξω!
 
@@ -91,7 +108,7 @@ html(lang="el").loged-in.show-offer-sidebar--
 									li Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.
 									li Το Bonus δεν ισχύει για χρήση στο εξωτερικό.
 
-					.accordion-item
+					.accordion-item.slide-down
 						a.panel-link(href='#note-2')
 							.title
 								.icon-arrow-head
@@ -165,30 +182,33 @@ html(lang="el").loged-in.show-offer-sidebar--
 
 				.accordion
 					.accordion-item.active
-						a.panel-link(href='#note-1')
+						a.panel-link(href='#note-3')
 							.title
 								.icon-arrow-head
 								| Ψιλά Γράμματα
 
-						#note-1.panel.layer-1
+						#note-3.panel.layer-1
 							.nav-header.mobile-only
 								.title Online Aνανέωση
 								.back-button
 
 							.panel-content
-								ul
+								// this is an example of how to add custom bullet colors
+								style(type="text/css").
+									.green li:before { color:limegreen !important; }
+								ul.green
 									li Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong>
 									li Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.
 									li Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.
 									li Το Bonus δεν ισχύει για χρήση στο εξωτερικό.
 
 					.accordion-item
-						a.panel-link(href='#note-2')
+						a.panel-link(href='#note-4')
 							.title
 								.icon-arrow-head
 								| Όροι χρήσης Online Ανανέωσης Xρόνου Oμιλίας
 
-						#note-2.panel.layer-1
+						#note-4.panel.layer-1
 							.nav-header.mobile-only
 								.title Online Aνανέωση
 								.back-button
@@ -231,19 +251,58 @@ html(lang="el").loged-in.show-offer-sidebar--
 				//- 			li Το Bonus δεν ισχύει για χρήση στο εξωτερικό.
 
 				//- .layout
-				.subnotes * Το έξτρα bonus ανανέωσης από πιστωτική, χρεωστική, Paypal &amp; κατάστημα ισχύει για την 1η ανανέωση του μήνα από 10€ έως 31/10/2016.
+				.subtext * Το έξτρα bonus ανανέωσης από πιστωτική, χρεωστική, Paypal &amp; κατάστημα ισχύει για την 1η ανανέωση του μήνα από 10€ έως 31/10/2016.
 
 
-				.table
-					.thead
-						.tr
-							.th
+				//- .table
+				//- 	.thead
+				//- 		.tr
+				//- 			.th
+				//- 				.phone-icon
+				//- 			.th: p Το χρησιμοποιώ για
+				//- 	.tbody
+				//- 		.tr
+				//- 			.td 1252
+				//- 			.td 
+				//- 				p: b Ενημέρωση υπολοίπου
+				//- 				p Με δωρεάν κλήση (επιλογή 1) ή με δωρεάν SMS γράφοντας «Υ» για το χρηματικό υπόλοιπο
+				//- 					br
+				//- 				p: b Ανανέωση υπολοίπου
+				//- 				p Με δωρεάν κλήση (επιλογή 2) ή με δωρεάν SMS γράφοντας «Α κενό και όλο τον κωδικό της κάρτας»
+				//- 				p: b Αγορά πακέτων
+				//- 				p Με δωρεάν κλήση (επιλογή 3) ή Με δωρεάν SMS τον κωδικό του πακέτου που θες να αγοράσεις
+				//- 		.tr
+				//- 			.td 1392
+				//- 			.td 
+				//- 				p: b Ρυθμίσεις Internet, Ρυθμίσεις MMS
+				//- 				p Με δωρεάν κλήση ή με δωρεάν αποστολή κενού sms
+				//- 		.tr
+				//- 			.td 1392
+				//- 			.td 
+				//- 				p: b Ρυθμίσεις Internet, Ρυθμίσεις MMS
+				//- 				p Με δωρεάν κλήση ή με δωρεάν αποστολή κενού sms
+				//- 		.tr
+				//- 			.td 1392
+				//- 			.td 
+				//- 				p: b Ρυθμίσεις Internet, Ρυθμίσεις MMS
+				//- 				p Με δωρεάν κλήση ή με δωρεάν αποστολή κενού sms
+				//- 		.tr
+				//- 			.td 1392
+				//- 			.td 
+				//- 				p: b Ρυθμίσεις Internet, Ρυθμίσεις MMS
+				//- 				p Με δωρεάν κλήση ή με δωρεάν αποστολή κενού sms
+								
+
+				table
+					thead
+						tr
+							th
 								.phone-icon
-							.th: p Το χρησιμοποιώ για
-					.tbody
-						.tr
-							.td 1252
-							.td 
+							th: p Το χρησιμοποιώ για
+					tbody
+						tr
+							td 1252
+							td 
 								p: b Ενημέρωση υπολοίπου
 								p Με δωρεάν κλήση (επιλογή 1) ή με δωρεάν SMS γράφοντας «Υ» για το χρηματικό υπόλοιπο
 									br
@@ -251,9 +310,24 @@ html(lang="el").loged-in.show-offer-sidebar--
 								p Με δωρεάν κλήση (επιλογή 2) ή με δωρεάν SMS γράφοντας «Α κενό και όλο τον κωδικό της κάρτας»
 								p: b Αγορά πακέτων
 								p Με δωρεάν κλήση (επιλογή 3) ή Με δωρεάν SMS τον κωδικό του πακέτου που θες να αγοράσεις
-						.tr
-							.td 1392
-							.td 
+						tr
+							td 1392
+							td 
+								p: b Ρυθμίσεις Internet, Ρυθμίσεις MMS
+								p Με δωρεάν κλήση ή με δωρεάν αποστολή κενού sms
+						tr
+							td 1392
+							td 
+								p: b Ρυθμίσεις Internet, Ρυθμίσεις MMS
+								p Με δωρεάν κλήση ή με δωρεάν αποστολή κενού sms
+						tr
+							td 1392
+							td 
+								p: b Ρυθμίσεις Internet, Ρυθμίσεις MMS
+								p Με δωρεάν κλήση ή με δωρεάν αποστολή κενού sms
+						tr
+							td 1392
+							td 
 								p: b Ρυθμίσεις Internet, Ρυθμίσεις MMS
 								p Με δωρεάν κλήση ή με δωρεάν αποστολή κενού sms
 								
@@ -266,47 +340,47 @@ html(lang="el").loged-in.show-offer-sidebar--
 						figcaption
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
 							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
-					figure(data-big-size-url="img/party-big-01.jpg")
+					figure(data-big-size-url="img/party-02.jpg")
 						img(src="img/party-02.jpg")
 						figcaption
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
 							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
-					figure(data-big-size-url="img/party-big-01.jpg")
+					figure(data-big-size-url="img/party-03.jpg")
 						img(src="img/party-03.jpg")
 						figcaption
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
 							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
-					figure(data-big-size-url="img/party-big-01.jpg")
+					figure(data-big-size-url="img/party-04.jpg")
 						img(src="img/party-04.jpg")
 						figcaption
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
 							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
-					figure(data-big-size-url="img/party-big-01.jpg")
+					figure(data-big-size-url="img/party-05.jpg")
 						img(src="img/party-05.jpg")
 						figcaption
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
 							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
-					figure(data-big-size-url="img/party-big-01.jpg")
+					figure(data-big-size-url="img/party-06.jpg")
 						img(src="img/party-06.jpg")
 						figcaption
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
 							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
-					figure(data-big-size-url="img/party-big-01.jpg")
+					figure(data-big-size-url="img/party-07.jpg")
 						img(src="img/party-07.jpg")
 						figcaption
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
 							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
-					figure(data-big-size-url="img/party-big-01.jpg")
+					figure(data-big-size-url="img/party-08.jpg")
 						img(src="img/party-08.jpg")
 						figcaption
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
 							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
-					figure(data-big-size-url="img/party-big-01.jpg")
+					figure(data-big-size-url="img/party-09.jpg")
 						img(src="img/party-09.jpg")
 						figcaption
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
 							p Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.
-					figure(data-big-size-url="img/party-big-01.jpg")
+					figure(data-big-size-url="img/party-10.jpg")
 						img(src="img/party-10.jpg")
 						figcaption
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.
@@ -365,7 +439,11 @@ html(lang="el").loged-in.show-offer-sidebar--
 
 
 				//- .video-thumb(style="background-image--: url('img/article-img-3.jpg')" data-youtube-id="xrzXIaTt99U" data-facebook-video="http://fb.video.com/sfsdfdf")
-				.video-thumb(data-youtube-id="xrzXIaTt99U" data-facebook-video="http://fb.video.com/sfsdfdf")
+				.video-thumb(data-youtube-id="RxabLA7UQ9k")
+					img(src="img/video-frame-01.jpg")
+					.video-button
+						
+				.video-thumb(data-facebook-video="https://www.facebook.com/facebook/videos/10153231379946729/")
 					img(src="img/video-frame-01.jpg")
 					.video-button
 

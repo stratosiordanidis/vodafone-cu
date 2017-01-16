@@ -26,7 +26,8 @@
 			// +rem(width, 1280px)
 			// $gap: ((800 / 1280)*0.5 * 100%)
 			// $gap: ((2/7)*0.5 * 100%)
-			$gap: 5px
+			// $gap: 5px
+			$gap: 0px
 			left: 0
 			right: 0
 			margin: auto
@@ -47,42 +48,69 @@
 			width: calc(100% + 80px)
 
 		.action-button
-			position: relative
-			+rem(left, -20px)
-			+rem(margin-bottom, 35px)
+			// position: relative
+			+no-rem(left, 0px)
+			margin-left: 20px
+			margin-top: 20px
+			margin-bottom: 20px
+			// +rem(margin-bottom, 35px)
+
+		p, ul
+			& + .action-button
+				margin-top: 15px
+
+		.breadcrumb
+			a
+				display: none
+
+				&.active
+					display: block
 
 		
 		.h1
-			+rem(margin-bottom, 15px)
+			// +rem(margin-bottom, 15px)
+			font-size: 32px
+			font-weight: 500
+			letter-spacing: 0
 
 		.h2
-			+rem(margin-bottom, 25px)
+			// +rem(margin-bottom, 25px)
+			margin-bottom: 10px
 
 		.h3
-			+rem(margin-bottom, 20px)
+			// +rem(margin-bottom, 20px)
+			margin-bottom: 10px
+			font-size: 20px
+			font-weight: bold
+			letter-spacing: 0
+
+		.h4
+			font-size: 20px
+			line-height: 26px
 
 
 		// .paragraph
 		p
-			+rem(font-size, 20px)
-			color: $color-black
+			+no-rem(font-size, 16px)
+			line-height: 24px
+			// color: $color-black
 			font-weight: 100
 			+rem(letter-spacing, 0)
 			+rem(margin-bottom, 15px)
 
-			&:last-of-type
-				margin-bottom: 0
+			// &:last-of-type
+			// 	margin-bottom: 0
 
 
 		// .ul-list
 		ul
-			list-style: none
+			// list-style: none
 			+rem(padding-left, 15px)
 			// +rem(margin-top, 10px)
 			
 			li
-				+rem(font-size, 20px)
-				color: black
+				+rem(font-size, 16px)
+				// color: black
 				font-weight: 100
 				+rem(letter-spacing, 0)
 				+rem(margin-bottom, 10px)
@@ -103,9 +131,85 @@
 					+rem(margin-right,7px)
 					position: relative
 					top: -3px
-
-
 		
+
+		.event-info
+			display: inline-block
+			position: relative
+
+			+no-rem(left, 0px)
+			+rem(padding, 10px 15px)
+			// background-color: $color-black
+			min-width: 0
+			margin-left: 5px
+			margin-right: 5px
+			// width: 
+			
+			padding-bottom: 0
+			// margin-bottom: 30px
+			margin-bottom: 45px
+
+			.info
+				display: inline-block
+				vertical-align: middle
+				line-height: 30px
+
+				&:nth-child(#{1}), &:nth-child(#{2}), &:nth-child(#{3})
+					width: auto
+
+				width: auto
+				margin-right: 15px
+				white-space: nowrap
+
+				.title
+					display: inline-block
+					+no-rem(font-size, 16px)
+					+no-rem(line-height, 18px)
+					// color: $color-purple
+					font-weight: 200
+
+				.subtext
+					display: inline-block
+					margin: 0
+					+rem(font-size, 16px)
+					+rem(line-height, 18px)
+					// color: white
+					font-weight: 200
+
+			a
+				// display: inline-block
+				// background-color: $color-purple
+				// +rem(padding, 10px 30px)
+				// vertical-align: middle
+				// color: white
+				+no-rem(font-size, 16px)
+
+				// &:after
+				// 	content: none
+
+				&.fb-link
+					position: relative
+					right: auto
+					right: unset
+					// left: 15px
+					left: 0
+					// bottom: -10px
+					bottom: -19px
+					+rem(height, 40px)
+					+rem(line-height, 40px)
+					padding: 0 10px
+					// padding-top: 0
+					// padding-bottom: 0
+
+					&:before
+						display: inline
+						content: $icon-facebook
+						font-family: 'cu'
+						+rem(font-size, 17px)
+						color: white
+						vertical-align: top
+						+rem(margin-right, 10px)
+
 		.phone-icon
 			display: inline-block
 			position: relative
@@ -120,6 +224,8 @@
 
 		.table
 			+rem(margin-top, 45px)
+			margin-left: 5px
+			margin-right: 5px
 
 			.th
 				display: block
@@ -127,13 +233,13 @@
 				width: auto
 				height: auto
 				// +rem(min-height, 32px)
-				+rem(padding, 10px 40px)
-				+rem(padding-left, (160px + 40px))
+				+rem(padding, 15px)
+				+rem(padding-left, (75px + 15px))
 				vertical-align: middle
 
 				&:first-child
 					position: absolute
-					+rem(width, 160px)
+					+rem(width, 75px)
 					text-align: center
 					padding-left: 0
 					padding-right: 0
@@ -144,16 +250,18 @@
 				display: block
 				width: auto
 				height: auto
+				background-color: transparent
 				color: $color-black
-				+no-rem(font-size, 20px)
-				+rem(padding, 45px 40px)
-				+rem(padding-left, (160px + 40px))
+				+no-rem(font-size, 16px)
+				line-height: 22px
+				+rem(padding, 15px)
+				+rem(padding-left, (75px + 15px))
 				+rem(min-height, 22px)
 				// +rem(margin-left, 160px)
 
 			.td:first-child
 				position: absolute
-				+rem(width, 160px)
+				+no-rem(width, 75px)
 				padding-left: 0
 				padding-right: 0
 				top: 0
@@ -162,8 +270,8 @@
 
 				background-color: $color-black
 				color: white
-				+no-rem(font-size, 32px)
-				+rem(width, 160px)
+				+no-rem(font-size, 16px)
+				// +rem(width, 160px)
 				text-align: center
 				// vertical-align: middle
 				vertical-align: top
@@ -180,32 +288,132 @@
 				font-size: 0
 
 
+			.tr:nth-child(2n+0) .td:last-child
+				background-color: transparent
 
-				&:nth-child(2n+0)
-					.td:last-child
-						background-color: white
+			.tr:nth-child(2n+1)
+				.td:last-child
+					background-color: white
 
 			.tbody
 				.tr+.tr
 					+no-rem(margin-top, 2px)
 
 			.tbody > .tr > .td
-				+rem(padding-top, 45px)
-				+rem(padding-bottom, 45px)
+				+rem(padding-top, 15px)
+				+rem(padding-bottom, 15px)
+
+
+		table
+			+rem(margin-top, 45px)
+			margin-left: 5px
+			margin-right: 5px
+			width: calc(100% - 10px)
+
+			th
+				// display: block
+				position: relative
+				width: auto
+				height: auto
+				min-width: 75px
+				// +rem(min-height, 32px)
+				+rem(padding, 15px)
+				// +rem(padding-left, (75px + 15px))
+				vertical-align: middle
+
+				&:first-child
+					// position: absolute
+					// +rem(width, 75px)
+					text-align: center
+					padding-left: 0
+					padding-right: 0
+					background-color: $color-black
+
+			td
+				// display: inline-block
+				// display: block
+				width: auto
+				height: auto
+				background-color: transparent
+				color: $color-black
+				+no-rem(font-size, 16px)
+				line-height: 22px
+				+rem(padding, 15px)
+				// +rem(padding-left, (75px + 15px))
+				+rem(min-height, 22px)
+				// +rem(margin-left, 160px)
+
+			td:first-child
+				// position: absolute
+				// +no-rem(width, 75px)
+				padding-left: 0
+				padding-right: 0
+				top: 0
+				bottom: 0
+				left: 0
+
+				background-color: $color-black
+				color: white
+				+no-rem(font-size, 16px)
+				// +rem(width, 160px)
+				width: auto
+				min-width: 75px
+				text-align: center
+				// vertical-align: middle
+				vertical-align: top
+				// +rem(margin-top, 45px)
+				// +rem(margin-bottom, 45px)
+				font-weight: bold
+
+			tr
+				display: block
+				position: relative
+				// +display-flex()
+
+				vertical-align: top
+				font-size: 0
+
+
+			tr:nth-child(2n+0) td:last-child
+				background-color: transparent
+
+			tr:nth-child(2n+1)
+				td:last-child
+					background-color: white
+
+			tbody
+				tr+tr
+					// +no-rem(margin-top, 2px)
+					+no-rem(margin-top, 0px)
+
+			tbody > tr > td
+				+rem(padding-top, 15px)
+				+rem(padding-bottom, 15px)
+
+
+
 
 		.gallery-list
 			+rem(margin-top, 45px)
+			margin-left: 5px
+			margin-right: 5px
 
 		.video-thumb
 			+rem(margin-top, 25px)
+			margin-left: 5px
+			// max-width: calc(100% - 20px)
+			margin-right: 20px
 
 
 		// .subnotes
 		.subtext
-			text-align: left
-			+rem(font-size,16px)
-			color: black
-			font-weight: 300
+			// text-align: left
+			+no-rem(font-size,16px)
+			line-height: 22px
+			// color: black
+			font-weight: 100
+			margin-left: 20px
+			margin-top: 20px
 			
 			span.red
 				color: $color-red
@@ -284,7 +492,46 @@
 
 
 		.accordion
-			+rem(margin-bottom, 40px)
+			margin-bottom: 0px
+			left: 0
+			// margin: 0
+			margin-left: 5px 
+			margin-right: 5px
+			width: auto
+			padding: 0
+
+			& > .accordion-item
+				// height: 60px
+				padding: 0
+				line-height: 60px
+				margin-left: 0
+
+				& > .panel-link
+					display: inline-block
+					width: calc(100% - 20px)
+
+					// display: table-cell
+					vertical-align: middle
+					line-height: normal
+
+					& > .title
+						font-size: 16px
+						line-height: 22px
+						padding-left: 20px
+						padding-right: 40px
+						font-weight: 500
+
+
+		//=================================
+		//	MARGINS
+		//=================================
+		
+
+		.generic-center-col
+			& > p, & > ul, & > .h1, & > .h2, & > .h3, & > .h4, & > .h5, & > .h6, & > .subtext, & > .breadcrumb
+				margin-left: 20px
+				margin-right: 20px
+
 
 
 

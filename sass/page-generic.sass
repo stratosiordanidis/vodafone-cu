@@ -127,9 +127,17 @@
 				font-weight: 500
 
 			&:before
-				content: ''
-				background-color: $color-red
-				+border-radius(50px)
+				// content: ''
+				// background-color: $color-red
+				// +border-radius(50px)
+				
+				content: $icon-sphere
+				display: inline-block
+				// position: absolute
+				font-family: 'cu'
+				color: $color-red
+				+rem(font-size, 8px)
+
 				width: 6px
 				height: 6px
 				display: inline-block
@@ -137,6 +145,71 @@
 				position: relative
 				top: -3px
 
+
+	.event-info
+		display: inline-block
+		position: relative
+		+rem(left, -40px)
+		+rem(padding, 20px 40px)
+		background-color: $color-black
+		min-width: 100%
+		// width: 
+
+		.info
+			display: inline-block
+			vertical-align: middle
+
+			&:nth-child(#{1})
+				width: ((190/980)*100%)
+
+			&:nth-child(#{2})
+				width: ((110/980)*100%)
+
+			&:nth-child(#{3})
+				width: ((520/980)*100%)
+
+			.title
+				display: block
+				+no-rem(font-size, 20px)
+				+no-rem(line-height, 24px)
+				color: $color-purple
+				font-weight: 200
+
+			.subtext
+				display: inline-block
+				+rem(font-size, 24px)
+				+rem(line-height, 24px)
+				color: white
+				font-weight: 400
+
+		a
+			display: inline-block
+			background-color: $color-purple
+			+rem(padding, 10px 30px)
+			vertical-align: middle
+			color: white
+			+no-rem(font-size, 20px)
+
+			&:after
+				content: none
+
+			&.fb-link
+				position: absolute
+				+rem(right, 40px)
+				// +rem(padding-left, 50px)
+				+rem(height, 50px)
+				+rem(line-height, 50px)
+				padding-top: 0
+				padding-bottom: 0
+
+				&:before
+					display: inline
+					content: $icon-facebook
+					font-family: 'cu'
+					+rem(font-size, 17px)
+					color: white
+					vertical-align: top
+					+rem(margin-right, 10px)
 
 	
 	.phone-icon
@@ -214,7 +287,8 @@
 
 
 
-			&:nth-child(2n+0)
+			// &:nth-child(2n+0)
+			&:nth-child(2n+1)
 				.td:last-child
 					background-color: white
 
@@ -223,6 +297,91 @@
 				+no-rem(margin-top, 2px)
 
 		.tbody > .tr > .td
+			+rem(padding-top, 45px)
+			+rem(padding-bottom, 45px)
+
+
+	table
+		width: 100%
+		+rem(margin-top, 45px)
+		border-collapse: collapse
+
+		thead
+			width: 100%
+
+		th
+			// display: block
+			position: relative
+			width: auto
+			height: auto
+			text-align: left
+			// +rem(min-height, 32px)
+			+rem(padding, 10px 40px)
+			// +rem(padding-left, (160px + 40px))
+			vertical-align: middle
+
+			&:first-child
+				// position: absolute
+				// +rem(width, 160px)
+				text-align: center
+				padding-left: 0
+				padding-right: 0
+				background-color: $color-black
+
+		td
+			// display: inline-block
+			// display: block
+			border: none
+			width: auto
+			height: auto
+			color: $color-black
+			+no-rem(font-size, 20px)
+			+rem(padding, 45px 40px)
+			// +rem(padding-left, (160px + 40px))
+			+rem(min-height, 22px)
+			// +rem(margin-left, 160px)
+
+		td:first-child
+			// position: absolute
+			// +rem(width, 160px)
+			padding-left: 0
+			padding-right: 0
+			top: 0
+			bottom: 0
+			left: 0
+
+			background-color: $color-black
+			color: white
+			+no-rem(font-size, 32px)
+			+rem(width, 160px)
+			text-align: center
+			// vertical-align: middle
+			vertical-align: top
+			// +rem(margin-top, 45px)
+			// +rem(margin-bottom, 45px)
+			font-weight: bold
+
+		tr
+			// display: block
+			position: relative
+			// +display-flex()
+
+			vertical-align: top
+			font-size: 0
+			border-bottom: 2px solid #eaeaeb
+
+
+
+			// &:nth-child(2n+0)
+			&:nth-child(2n+1)
+				td:last-child
+					background-color: white
+
+		tbody
+			tr+tr
+				+no-rem(margin-top, 0px)
+
+		tbody > tr > td
 			+rem(padding-top, 45px)
 			+rem(padding-bottom, 45px)
 

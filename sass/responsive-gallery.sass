@@ -5,49 +5,50 @@
 
 @import "utils"
 
-// figure
-// 	-webkit-margin-before: 0
-// 	-webkit-margin-after: 0
-// 	-webkit-margin-start: 0
-// 	-webkit-margin-end: 0
-
-// .gallery-list
-// 	position: relative
-// 	width: calc(120% - (40/16)*1rem)
-// 	left: -10%
-// 	+rem(padding-right, 40px)
-// 	$img_height: 200px
-// 	$img_gap: 2px
-
-// 	+rem(max-height, ($img_height + $img_gap)*3 - $img_gap)
-// 	overflow-y: hidden
-
-// 	font-size: 0px
-
-// 	.img, figure
-// 		display: inline-block
-// 		position: relative
-// 		cursor: pointer
-
-// 		&.odd // mona
-// 			+rem(left, 40px)
-
-// 		&.even // zyga
-
-// 	img
-// 		display: inline-block
-// 		position: relative
-// 		+rem(height, $img_height)
-// 		width: auto
-// 		margin-right: $img_gap
-// 		margin-bottom: $img_gap
-
-// 	.description, figcaption
-// 		display: none
-
-
-
 @media (max-width: $mobile-breakpoint)
+
+	// figure
+	// 	-webkit-margin-before: 0
+	// 	-webkit-margin-after: 0
+	// 	-webkit-margin-start: 0
+	// 	-webkit-margin-end: 0
+
+	.gallery-list
+		// position: relative
+		width: calc(120% - (20/16)*1rem)
+		left: 0%
+		+rem(padding-right, 20px)
+		$img_height: 90px
+		$img_gap: 2px
+
+		+rem(max-height, ($img_height + $img_gap)*4 - $img_gap)
+		// overflow-y: hidden
+
+		// font-size: 0px
+
+		.img, figure
+			// display: inline-block
+			// position: relative
+			// cursor: pointer
+
+			&.odd // mona
+				+rem(left, 20px)
+
+			&.even // zyga
+
+		img
+			// display: inline-block
+			// position: relative
+			+rem(height, $img_height)
+			// width: auto
+			// margin-right: $img_gap
+			// margin-bottom: $img_gap
+
+		// .description, figcaption
+		// 	display: none
+
+
+
 
 	#gallery-underlay
 		// display: none
@@ -63,6 +64,11 @@
 		// right: 0
 		// bottom: 0
 
+
+		.img, figure
+			&.odd, &.even
+				left: auto
+				left: unset
 
 		& > .close-button
 			// display: inline-block
@@ -102,9 +108,62 @@
 		.gallery-slide-count
 			display: inline-block
 			text-align: center
+			pointer-events: none
 		
 		.thumbnail-list
 			display: none
+
+		.description
+			// display: block
+			display: table
+			position: fixed
+			bottom: 0
+			left: 5px
+			right: 5px
+			+rem(height, 80px)
+			overflow: auto
+			opacity: 0
+			+transition(opacity 0.3s)
+
+			// display: none
+			// display: inline-block
+			// // position: absolute
+			// position: fixed
+			// left: 5px
+			// right: 5px
+			// bottom: 0
+			// height: 80px
+			// margin-top: 0
+			// // +rem(width, 960px)
+			// max-width: 90%
+			// width: auto
+			// // +rem(height, 140px)
+			// height: auto
+			// left: 0
+			// right: 0
+			// margin: auto
+
+			.description-wrapper
+				display: table-cell
+				vertical-align: middle
+				text-align: left
+				+rem(font-size, 20px)
+				+rem(line-height, 30px)
+				font-weight: 200
+				color: $color-grey
+				// +rem(margin-top, 35px)
+				text-align: center
+
+				// 	color: inherit
+				p, ul, li, ol, a
+					position: relative
+					font-size: 14px
+					line-height: 20px
+					letter-spacing: normal
+					color: $color-grey
+				// 	font-weight: inherit
+				// 	line-height: inherit
+
 
 		.gallery-list
 			// display: block
@@ -160,9 +219,11 @@
 				// white-space: nowrap
 
 			.slick-arrow
-				display: none !important
-				// display: inline-block
+				// display: none !important
+				display: inline-block
 				// position: absolute
+				position: fixed
+
 				// border: none
 				// border-radius: 0px
 				// font-size: 0
@@ -171,29 +232,42 @@
 				// +rem(height, 80px)
 				// opacity: 1
 				// outline: none
+				top: auto
+				top: unset
+				bottom: 80px
+				height: 16px
+				width: 50px
 
 				// top: 48%
 				// z-index: 10
 
 
-				// &:after
-				// 	content: $icon-carousel-arrow
-				// 	font-family: 'cu'
-				// 	display: inline-block
-				// 	+rem(font-size, 20px)
-				// 	+rem(line-height, 80px)
-				// 	text-align: center
-				// 	color: $color-purple
+				&:after
+					color: white
+					font-weight: 100
+					font-size: 8px
+					line-height: 14px
+					vertical-align: middle
+
+					// content: $icon-carousel-arrow
+					// font-family: 'cu'
+					// display: inline-block
+					// +rem(font-size, 20px)
+					// +rem(line-height, 80px)
+					// text-align: center
+					// color: $color-purple
 
 				// &.slick-disabled
 				// 	opacity: 0.2
 
-				// &.slick-prev
-				// 	+rotate(180deg)
-				// 	+rem(left, 20px)
+				&.slick-prev
+					// +rotate(180deg)
+					// +rem(left, 20px)
+					left: 30%
 
-				// &.slick-next
-				// 	+rem(right, 20px)
+				&.slick-next
+					// +rem(right, 20px)
+					right: 30%
 
 
 			// .img, figure
@@ -212,27 +286,38 @@
 					// .description, 
 			figcaption
 				display: none
-				// display: block
-				// // +rem(width, 960px)
-				// max-width: 90%
-				// width: auto
-				// // +rem(height, 140px)
-				// height: auto
-				// left: 0
-				// right: 0
-				// margin: auto
-				// text-align: left
-				// +rem(font-size, 20px)
-				// +rem(line-height, 30px)
-				// font-weight: 100
-				// color: $color-grey
-				// +rem(margin-top, 35px)
+				// display: inline-block
+				// // position: absolute
+				// position: fixed
+				// left: 5px
+				// right: 5px
+				// bottom: 0
+				// height: 80px
+				// margin-top: 0
+				// // // +rem(width, 960px)
+				// // max-width: 90%
+				// // width: auto
+				// // // +rem(height, 140px)
+				// // height: auto
+				// // left: 0
+				// // right: 0
+				// // margin: auto
+				// // text-align: left
+				// // +rem(font-size, 20px)
+				// // +rem(line-height, 30px)
+				// // font-weight: 100
+				// // color: $color-grey
+				// // +rem(margin-top, 35px)
 
+				// // 	color: inherit
 				// p, ul, li, ol, a
-				// 	color: inherit
-				// 	font-size: inherit
-				// 	font-weight: inherit
-				// 	line-height: inherit
+				// 	position: relative
+				// 	font-size: 14px
+				// 	line-height: normal
+				// 	letter-spacing: normal
+				// 	color: $color-grey
+				// // 	font-weight: inherit
+				// // 	line-height: inherit
 
 
 

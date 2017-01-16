@@ -51,6 +51,48 @@
           <div class="detail">Είσαι στην απ’ έξω;</div>
           <div class="title">Μπες στον κόσμο του <b>CU</b></div><a class="action-button" href="#">
             <div class="text">Κάνε Εγγραφή</div></a>
+          <div class="tab-content tab-content-2">
+            <form class="enter" action="#" method="POST">
+              <div class="title">Αλλαγή <b>Password</b></div>
+              <div class="detail">
+                <p>Για λόγους ασφαλείας θα πρέπει να λάβεις νέο password με SMS, στο νούμερο του κινητού που είχες δηλώσει κατά την εγγραφή σου. Μην ανησυχείς, μετά θα σου ζητηθεί να το αλλάξεις ούτως ή άλλως και θα βάλεις ένα δικό σου.</p>
+              </div>
+              <div class="line field name-field"><i class="icon icon-login_username"></i>
+                <input type="text" name="name" required>
+                <label class="movable" for="name">Όνομα Χρήστη</label>
+              </div>
+              <div class="line">
+                <input type="submit" name="Συνέχεια">
+              </div>
+            </form>
+          </div>
+          <div class="tab-content tab-content-3">
+            <form class="enter" action="#" method="POST">
+              <div class="title">Υπενθύμιση <b>Username</b></div>
+              <div class="detail">
+                <p>Ξέχασες το username σου? No problemo! Συμπλήρωσε τα παρακάτω στοιχεία όπως ακριβώς τα είχες δηλώσει κατά την εγγραφή σου στο vodafonecu.gr και το username σου θα αποσταλεί με <b>sms</b>.</p>
+              </div>
+              <div class="line field name-field"><i class="icon icon-login_username"></i>
+                <input type="text" name="last-name" required>
+                <label class="movable" for="last-name">Επώνυμο</label>
+              </div>
+              <div class="line field name-field"><i class="icon icon-login_username"></i>
+                <input type="text" name="name" required>
+                <label class="movable" for="name">Όνομα</label>
+              </div>
+              <div class="line field mobile-field"><i class="icon icon-login_phone"></i>
+                <input type="text" name="mobile" required>
+                <label class="movable" for="mobile">Κινητό Vodafone CU </label>
+              </div>
+              <div class="line field email-field"><i class="icon icon-login_email"></i>
+                <input type="text" name="email" required>
+                <label class="movable" for="email">E-mail</label>
+              </div>
+              <div class="line">
+                <input type="submit" name="Συνέχεια">
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -144,6 +186,21 @@
     <div class="generic-page" id="content">
       <div class="generic-center-col">
         <div class="breadcrumb"><a href="#">Αρχική Σελίδα</a><a href="#">Υπηρεσίες CU</a><a class="active" href="#">Bonus Ανανέωσης</a></div>
+        <div class="h1">CU at NEON PARTY - Carnival Edition</div>
+        <div class="event-info">
+          <div class="info">
+            <div class="title">Ημερομηνία</div>
+            <div class="subtext">10-18, Σεπ 2017</div>
+          </div>
+          <div class="info">
+            <div class="title">Ώρα</div>
+            <div class="subtext">22:00</div>
+          </div>
+          <div class="info">
+            <div class="title">Τοποθεσία</div>
+            <div class="subtext">Gagarin, Λιοσίων 205, Αθήνα</div>
+          </div><a class="fb-link" href="http://www.facebook.com" target="_blank">Join Event</a>
+        </div>
         <div class="h1">Bonus Ανανέωσης</div>
         <div class="h3">Σύμπτωμα 23: Μένεις έξω!</div>
         <p>Τώρα, με το Just Surf Bonus, κερδίζεις δωρεάν MB για internet από το κινητό:</p>
@@ -172,7 +229,7 @@
               </div>
             </div>
           </div>
-          <div class="accordion-item"><a class="panel-link" href="#note-2">
+          <div class="accordion-item slide-down"><a class="panel-link" href="#note-2">
               <div class="title">
                 <div class="icon-arrow-head"></div>Όροι χρήσης Online Ανανέωσης Xρόνου Oμιλίας
               </div></a>
@@ -200,17 +257,19 @@
           <div class="text">Ενεργοποίησέ το!</div>
         </div>
         <div class="accordion">
-          <div class="accordion-item active"><a class="panel-link" href="#note-1">
+          <div class="accordion-item active"><a class="panel-link" href="#note-3">
               <div class="title">
                 <div class="icon-arrow-head"></div>Ψιλά Γράμματα
               </div></a>
-            <div class="panel layer-1" id="note-1">
+            <div class="panel layer-1" id="note-3">
               <div class="nav-header mobile-only">
                 <div class="title">Online Aνανέωση</div>
                 <div class="back-button"></div>
               </div>
               <div class="panel-content">
-                <ul>
+                <!-- this is an example of how to add custom bullet colors-->
+                <style type="text/css">.green li:before { color:limegreen !important; }</style>
+                <ul class="green">
                   <li>Συμβατές κάρτες: <strong>VISA, MasterCard, AMEX, Visa Electron, Maestro.</strong></li>
                   <li>Προτεραιότητα στην κατανάλωση έχουν τα ΜΒ που λήγουν πρώτα. Μετά την κατανάλωση του Bonus και αν δεν υπάρχουν άλλα διαθέσιμα MB, ενεργοποιείται η υπηρεσία Internet όλη μέρα.</li>
                   <li>Ενημερώσου για τα διαθέσιμα ΜΒ στο <strong>My CU Account, My CU app</strong> , ή με δωρεάν κλήση στο <strong>1252</strong>.</li>
@@ -219,11 +278,11 @@
               </div>
             </div>
           </div>
-          <div class="accordion-item"><a class="panel-link" href="#note-2">
+          <div class="accordion-item"><a class="panel-link" href="#note-4">
               <div class="title">
                 <div class="icon-arrow-head"></div>Όροι χρήσης Online Ανανέωσης Xρόνου Oμιλίας
               </div></a>
-            <div class="panel layer-1" id="note-2">
+            <div class="panel layer-1" id="note-4">
               <div class="nav-header mobile-only">
                 <div class="title">Online Aνανέωση</div>
                 <div class="back-button"></div>
@@ -234,39 +293,60 @@
             </div>
           </div>
         </div>
-        <div class="subnotes">* Το έξτρα bonus ανανέωσης από πιστωτική, χρεωστική, Paypal &amp; κατάστημα ισχύει για την 1η ανανέωση του μήνα από 10€ έως 31/10/2016.</div>
-        <div class="table">
-          <div class="thead">
-            <div class="tr">
-              <div class="th">
+        <div class="subtext">* Το έξτρα bonus ανανέωσης από πιστωτική, χρεωστική, Paypal &amp; κατάστημα ισχύει για την 1η ανανέωση του μήνα από 10€ έως 31/10/2016.</div>
+        <table>
+          <thead>
+            <tr>
+              <th>
                 <div class="phone-icon"></div>
-              </div>
-              <div class="th">
+              </th>
+              <th>
                 <p>Το χρησιμοποιώ για</p>
-              </div>
-            </div>
-          </div>
-          <div class="tbody">
-            <div class="tr">
-              <div class="td">1252</div>
-              <div class="td"> 
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1252</td>
+              <td> 
                 <p><b>Ενημέρωση υπολοίπου</b></p>
                 <p>Με δωρεάν κλήση (επιλογή 1) ή με δωρεάν SMS γράφοντας «Υ» για το χρηματικό υπόλοιπο<br></p>
                 <p><b>Ανανέωση υπολοίπου</b></p>
                 <p>Με δωρεάν κλήση (επιλογή 2) ή με δωρεάν SMS γράφοντας «Α κενό και όλο τον κωδικό της κάρτας»</p>
                 <p><b>Αγορά πακέτων</b></p>
                 <p>Με δωρεάν κλήση (επιλογή 3) ή Με δωρεάν SMS τον κωδικό του πακέτου που θες να αγοράσεις</p>
-              </div>
-            </div>
-            <div class="tr">
-              <div class="td">1392</div>
-              <div class="td"> 
+              </td>
+            </tr>
+            <tr>
+              <td>1392</td>
+              <td> 
                 <p><b>Ρυθμίσεις Internet, Ρυθμίσεις MMS</b></p>
                 <p>Με δωρεάν κλήση ή με δωρεάν αποστολή κενού sms</p>
-              </div>
-            </div>
-          </div>
-        </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1392</td>
+              <td> 
+                <p><b>Ρυθμίσεις Internet, Ρυθμίσεις MMS</b></p>
+                <p>Με δωρεάν κλήση ή με δωρεάν αποστολή κενού sms</p>
+              </td>
+            </tr>
+            <tr>
+              <td>1392</td>
+              <td> 
+                <p><b>Ρυθμίσεις Internet, Ρυθμίσεις MMS</b></p>
+                <p>Με δωρεάν κλήση ή με δωρεάν αποστολή κενού sms</p>
+              </td>
+            </tr>
+            <tr>
+              <td>1392</td>
+              <td> 
+                <p><b>Ρυθμίσεις Internet, Ρυθμίσεις MMS</b></p>
+                <p>Με δωρεάν κλήση ή με δωρεάν αποστολή κενού sms</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <div class="gallery-list">
           <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-01.jpg">
             <figcaption>
@@ -274,55 +354,55 @@
               <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
             </figcaption>
           </figure>
-          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-02.jpg">
+          <figure data-big-size-url="img/party-02.jpg"><img src="img/party-02.jpg">
             <figcaption>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
               <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
             </figcaption>
           </figure>
-          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-03.jpg">
+          <figure data-big-size-url="img/party-03.jpg"><img src="img/party-03.jpg">
             <figcaption>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
               <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
             </figcaption>
           </figure>
-          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-04.jpg">
+          <figure data-big-size-url="img/party-04.jpg"><img src="img/party-04.jpg">
             <figcaption>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
               <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
             </figcaption>
           </figure>
-          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-05.jpg">
+          <figure data-big-size-url="img/party-05.jpg"><img src="img/party-05.jpg">
             <figcaption>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
               <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
             </figcaption>
           </figure>
-          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-06.jpg">
+          <figure data-big-size-url="img/party-06.jpg"><img src="img/party-06.jpg">
             <figcaption>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
               <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
             </figcaption>
           </figure>
-          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-07.jpg">
+          <figure data-big-size-url="img/party-07.jpg"><img src="img/party-07.jpg">
             <figcaption>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
               <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
             </figcaption>
           </figure>
-          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-08.jpg">
+          <figure data-big-size-url="img/party-08.jpg"><img src="img/party-08.jpg">
             <figcaption>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
               <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
             </figcaption>
           </figure>
-          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-09.jpg">
+          <figure data-big-size-url="img/party-09.jpg"><img src="img/party-09.jpg">
             <figcaption>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
               <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
             </figcaption>
           </figure>
-          <figure data-big-size-url="img/party-big-01.jpg"><img src="img/party-10.jpg">
+          <figure data-big-size-url="img/party-10.jpg"><img src="img/party-10.jpg">
             <figcaption>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at vehicula sapien.</p>
               <p>Quisque libero felis, <b>accumsan sodales</b> aliquam ut, viverra non nulla.</p>
@@ -389,7 +469,10 @@
             </figcaption>
           </figure>
         </div>
-        <div class="video-thumb" data-youtube-id="xrzXIaTt99U" data-facebook-video="http://fb.video.com/sfsdfdf"><img src="img/video-frame-01.jpg">
+        <div class="video-thumb" data-youtube-id="RxabLA7UQ9k"><img src="img/video-frame-01.jpg">
+          <div class="video-button"></div>
+        </div>
+        <div class="video-thumb" data-facebook-video="https://www.facebook.com/facebook/videos/10153231379946729/"><img src="img/video-frame-01.jpg">
           <div class="video-button"></div>
         </div>
         <div class="google-map" data-lat="37.9743468" data-long="23.7092112">
@@ -686,7 +769,14 @@
         <div class="current"></div><span> / </span>
         <div class="total"></div>
       </div>
+      <div class="description mobile-only">
+        <div class="description-wrapper"></div>
+      </div>
       <div class="thumbnail-list"></div>
+    </div>
+    <div id="video-underlay">
+      <div class="close-button"></div>
+      <div class="video-wrapper"></div>
     </div>
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
     <script src="js/debounce.js"></script>
@@ -700,6 +790,7 @@
     <script src="js/vendor/jquery.gray.min.js"></script>
     <script src="js/js.cookie.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/inputs.js"></script>
     <script src="js/package-activation.js"></script>
     <script src="js/gallery-list.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTFuFePOLQAiXCDIGbiDRFKZyz8ta5tQk&amp;callback=initGoogleMaps" async defer></script>

@@ -48,6 +48,48 @@
           <div class="detail">Είσαι στην απ’ έξω;</div>
           <div class="title">Μπες στον κόσμο του <b>CU</b></div><a class="action-button" href="#">
             <div class="text">Κάνε Εγγραφή</div></a>
+          <div class="tab-content tab-content-2">
+            <form class="enter" action="#" method="POST">
+              <div class="title">Αλλαγή <b>Password</b></div>
+              <div class="detail">
+                <p>Για λόγους ασφαλείας θα πρέπει να λάβεις νέο password με SMS, στο νούμερο του κινητού που είχες δηλώσει κατά την εγγραφή σου. Μην ανησυχείς, μετά θα σου ζητηθεί να το αλλάξεις ούτως ή άλλως και θα βάλεις ένα δικό σου.</p>
+              </div>
+              <div class="line field name-field"><i class="icon icon-login_username"></i>
+                <input type="text" name="name" required>
+                <label class="movable" for="name">Όνομα Χρήστη</label>
+              </div>
+              <div class="line">
+                <input type="submit" name="Συνέχεια">
+              </div>
+            </form>
+          </div>
+          <div class="tab-content tab-content-3">
+            <form class="enter" action="#" method="POST">
+              <div class="title">Υπενθύμιση <b>Username</b></div>
+              <div class="detail">
+                <p>Ξέχασες το username σου? No problemo! Συμπλήρωσε τα παρακάτω στοιχεία όπως ακριβώς τα είχες δηλώσει κατά την εγγραφή σου στο vodafonecu.gr και το username σου θα αποσταλεί με <b>sms</b>.</p>
+              </div>
+              <div class="line field name-field"><i class="icon icon-login_username"></i>
+                <input type="text" name="last-name" required>
+                <label class="movable" for="last-name">Επώνυμο</label>
+              </div>
+              <div class="line field name-field"><i class="icon icon-login_username"></i>
+                <input type="text" name="name" required>
+                <label class="movable" for="name">Όνομα</label>
+              </div>
+              <div class="line field mobile-field"><i class="icon icon-login_phone"></i>
+                <input type="text" name="mobile" required>
+                <label class="movable" for="mobile">Κινητό Vodafone CU </label>
+              </div>
+              <div class="line field email-field"><i class="icon icon-login_email"></i>
+                <input type="text" name="email" required>
+                <label class="movable" for="email">E-mail</label>
+              </div>
+              <div class="line">
+                <input type="submit" name="Συνέχεια">
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -687,7 +729,14 @@
         <div class="current"></div><span> / </span>
         <div class="total"></div>
       </div>
+      <div class="description mobile-only">
+        <div class="description-wrapper"></div>
+      </div>
       <div class="thumbnail-list"></div>
+    </div>
+    <div id="video-underlay">
+      <div class="close-button"></div>
+      <div class="video-wrapper"></div>
     </div>
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
     <script src="js/debounce.js"></script>
@@ -701,6 +750,7 @@
     <script src="js/vendor/jquery.gray.min.js"></script>
     <script src="js/js.cookie.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/inputs.js"></script>
     <script src="js/package-activation.js"></script>
   </body>
   <script src="js/dashboard-page.js"></script>

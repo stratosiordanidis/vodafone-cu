@@ -757,7 +757,7 @@
 			}
 		}
 
-		console.log('checkNavigable '+index);
+		// console.log('checkNavigable '+index);
 
 		return index;
 	};
@@ -1221,7 +1221,7 @@
 			}
 		}
 
-		console.log('getNavigableIndexes '+indexes);
+		// console.log('getNavigableIndexes '+indexes);
 
 		return indexes;
 

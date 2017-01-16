@@ -46,7 +46,7 @@ figure
 		display: none
 
 
-#gallery-underlay
+#gallery-underlay, #video-underlay
 	display: none
 	// display: block
 	position: fixed
@@ -59,7 +59,6 @@ figure
 	top: 0
 	right: 0
 	bottom: 0
-
 
 	& > .close-button
 		display: inline-block
@@ -85,6 +84,53 @@ figure
 			width: 100%
 
 
+#video-underlay
+	.video-wrapper
+		display: table
+		position: absolute
+		left: 10%
+		right: 10%
+		top: 10%
+		bottom: 10%
+		margin: auto
+		width: 80%
+		height: 80%
+		// max-width: 100%
+		// max-height: 100%
+
+	.fb-video
+		// display: inline-block
+		display: table-cell
+		vertical-align: middle
+		position: relative
+		margin: auto
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		max-width: 100%
+		max-height: 100%
+
+		& > span
+			width: 100% !important
+			height: auto !important
+
+	#yt_player
+		display: inline-block
+		position: relative
+		margin: auto
+		left: 0px
+		right: 0
+		top: 80px
+		bottom: 80px
+		width: 100%
+		height: calc(100% - 160px)
+
+
+#gallery-underlay
+
+
+
 	.img, figure
 		display: inline-block
 		position: relative
@@ -107,8 +153,9 @@ figure
 		position: fixed
 		left: 0
 		right: 0
-		bottom: 10px
-		+rem(font-size, 20px)
+		// bottom: 10px
+		bottom: 80px
+		+rem(font-size, 14px)
 		color: white
 		margin: auto
 
@@ -215,12 +262,19 @@ figure
 			font-weight: 100
 			color: $color-grey
 			+rem(margin-top, 35px)
+			+transition(opacity 0.3s)
+			opacity: 0
 
 			p, ul, li, ol, a
 				color: inherit
 				font-size: inherit
 				font-weight: inherit
 				line-height: inherit
+
+
+		// .slick-current figcaption
+		// 	opacity: 1
+
 
 
 
@@ -293,7 +347,13 @@ figure
 	#gallery-underlay
 		display: block
 		pointer-events: all
-		z-index: 900
+		z-index: 1000
+
+.show-video-player
+	#video-underlay
+		display: block
+		pointer-events: all
+		z-index: 1000
 
 
 

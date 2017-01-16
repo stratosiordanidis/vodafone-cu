@@ -1826,9 +1826,9 @@ function setupGoogleMaps()
 											// ,pixelOffset: new google.maps.Size(0, -offsetY)
 											,zIndex: null
 											,boxStyle: {
-														  padding: "20px 20px 18px",
-														  width: "auto",
-														  height: "auto"
+															padding: "20px 20px 18px",
+															width: "auto",
+															height: "auto"
 														},
 										closeBoxURL : "",
 										infoBoxClearance: new google.maps.Size(1, 1),
@@ -1899,34 +1899,34 @@ function setupGoogleMaps()
 	// });
 }
 
-function setupInputs()
-{
-	$('input')
-		.on('focus', function(e)
-		{
-			$(this).addClass('focused');
-		})
-		.on('blur', function(e)
-		{
-			var $this = $(this);
-			var val = $(this).val() || '';
-			val = val.trim();
-			if (val.length > 0)
-				$this.addClass('has-value');
-			else
-				$this.removeClass('has-value');
-			$this.removeClass('focused');
-		})
-	;
-}
+// function setupInputs()
+// {
+// 	$('input')
+// 		.on('focus', function(e)
+// 		{
+// 			$(this).addClass('focused');
+// 		})
+// 		.on('blur', function(e)
+// 		{
+// 			var $this = $(this);
+// 			var val = $(this).val() || '';
+// 			val = val.trim();
+// 			if (val.length > 0)
+// 				$this.addClass('has-value');
+// 			else
+// 				$this.removeClass('has-value');
+// 			$this.removeClass('focused');
+// 		})
+// 	;
+// }
 
 
 function checkSidebarRoute(url)
 {
 	url = url || '';
 
-	if ( url.indexOf('/sidebar/') > -1 )
-		return url.slice( url.indexOf('/sidebar/') + '/sidebar/'.length );
+	if ( url.indexOf('/paketa/') > -1 )
+		return url.slice( url.indexOf('/paketa/') + '/paketa/'.length );
 
 	if ( url.indexOf('#opensidebar') > -1 )
 		return url.slice( url.indexOf('#opensidebar') );
@@ -2040,6 +2040,251 @@ function setupAccordion()
 
 
 
+function setupFacebookVideo()
+{
+	var _FB_initialised = false;
+	var fbTimer = null;
+	var player = null;
+
+	function _openFBVideo(append)
+	{
+
+		$('#video-underlay .close-button').off('click').on('click', _closeFBVideo);
+		$('#video-underlay .video-wrapper').html('').append(append);
+		$('html').addClass('show-video-player');
+
+		var times = 0;
+		fbTimer = setInterval(function()
+								{
+									times++;
+									if (times > 100)
+									{
+										alert('Could not initialise FB Video');
+										clearInterval(fbTimer);
+										fbTimer = null;
+										return;
+									}
+
+									// if (typeof FB === 'undefined')
+									if (_FB_initialised == false)
+										return;
+
+									clearInterval(fbTimer);
+									fbTimer = null;
+									// force FB to revaluate the dom
+									console.log('forcing FB to add video element');
+									FB.XFBML.parse();
+								}, 
+						100);
+		
+	}
+
+	function _closeFBVideo()
+	{
+		player && player.pause();
+		player = null;
+
+		$('html').removeClass('show-video-player');
+		if (fbTimer)
+		{
+			clearInterval(fbTimer);
+			fbTimer = null;
+		}
+		$('#video-underlay .video-wrapper').html('');
+	}
+
+
+	function _handleClick(e)
+	{
+		var $this = $(this);
+
+		var url = $this.attr('data-facebook-video') || '';
+		//							data-width="'+$(window).width()+'"\
+		var div = '<div class="fb-video"\
+						data-href="'+url+'"\
+						data-allowfullscreen="true"\
+						data-show-captions="true"></div>';
+
+		_openFBVideo(div);
+	}
+
+
+	if ( $('.video-thumb[data-facebook-video]').length > 0 )
+	{
+		console.log('initialising Facebook videos...');
+
+		window.fbAsyncInit = function() {
+					FB.init({
+						appId      : '356556441389437',
+						xfbml      : true,
+						version    : 'v2.5'
+					});
+					_FB_initialised = true;
+					console.log('FB initialised');
+				
+					// Get Embedded Video Player API Instance
+					var my_video_player;
+					FB.Event.subscribe('xfbml.ready', function(msg) {
+						if (msg.type === 'video') 
+						{
+							my_video_player = msg.instance;
+							$(window).trigger('fb-videoplayer-ready', msg);
+						}
+					});
+				};
+
+		var script = '<script>(function(d, s, id) {\
+							var js, fjs = d.getElementsByTagName(s)[0];\
+							if (d.getElementById(id)) return;\
+							js = d.createElement(s); js.id = id;\
+							js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";\
+							fjs.parentNode.insertBefore(js, fjs);\
+						}(document, "script", "facebook-jssdk"));</script>';
+
+		$('body').append('<div id="fb-root"></div>'+script);
+
+		$(window).on('fb-videoplayer-ready', function(e, msg)
+			{
+				if ($('html').hasClass('show-video-player')==false)
+				{
+					return;
+				}
+
+				player = msg.instance;
+				console.log('Playing FB video...');
+
+				player.play();
+				if (player.isMuted())
+					player.unmute();
+			});
+
+		$('.video-thumb').each(function(index, el)
+		{
+			var $this = $(el);
+
+			var url = $this.attr('data-facebook-video') || null;
+
+			if (url)
+				$this.on('click', _handleClick)
+		});
+	}
+}
+
+
+
+var _isYoutubeInitialised = false;
+function onYouTubeIframeAPIReady() 
+{
+	_isYoutubeInitialised = true;
+	$(window).trigger('youtube-initialised');
+}
+
+
+
+function setupYoutubeVideo()
+{
+	var player = null;
+
+	function _onPlayerReady(e)
+	{
+		setTimeout(function()
+		{
+			e.target.playVideo();
+		}, 10);
+	}
+
+	var done = false;
+	function _onPlayerStateChange(e)
+	{
+		// if (event.data == YT.PlayerState.PLAYING && !done) 
+		// {
+		// 	setTimeout(stopVideo, 6000);
+		// 	done = true;
+		// }
+	}
+
+
+	function _playYoutubeVideo(videoID)
+	{
+		var w = Math.floor( $(window).width() );
+		var h = Math.floor( $(window).height() );
+
+		// console.log('opening youtube with dimensions ['+w+', '+h+']');
+
+		player = new YT.Player('yt_player', 
+		{
+			height: ''+h,
+			width: ''+w,
+			videoId: videoID,
+			events: {
+				'onReady': _onPlayerReady,
+				'onStateChange': _onPlayerStateChange
+			},
+			'suggestedQuality': 'large'
+		});
+	}
+
+	function _openYoutubeVideo(videoID)
+	{
+
+		$('#video-underlay .close-button').off('click').on('click', _closeYoutubeVideo);
+		$('#video-underlay .video-wrapper').html('');
+
+		// var tag = document.createElement('script');
+		// tag.src = "https://www.youtube.com/iframe_api";
+
+		$('#video-underlay .video-wrapper').append('<div id="yt_player"></div>');
+		$('html').addClass('show-video-player');
+		if (_isYoutubeInitialised==false)
+		{
+			$('#video-underlay').append('<script src="https://www.youtube.com/iframe_api"/>');
+			$(window).one('youtube-initialised', function()
+			{
+				_playYoutubeVideo(videoID);
+			});
+		}
+		else
+		{
+			_playYoutubeVideo(videoID);
+		}
+		
+	}
+
+	function _closeYoutubeVideo()
+	{
+		player && player.stopVideo() && player.clearVideo();
+		$('html').removeClass('show-video-player');
+		player = null;
+
+		$('#video-underlay .video-wrapper').html('');
+	}
+
+
+	function _handleClick(e)
+	{
+		var $this = $(this);
+		var videoID = $this.attr('data-youtube-id') || '';
+
+		_openYoutubeVideo(videoID);
+	}
+
+	if ( $('.video-thumb[data-youtube-id]').length > 0 )
+	{
+		console.log('initialising Youtube videos...');
+
+
+		$('.video-thumb').each(function(index, el)
+		{
+			var $this = $(el);
+			var videoID = $this.attr('data-youtube-id') || null;
+
+			if (videoID)
+				$this.on('click', _handleClick);
+		});
+	}
+}
+
+
 function setupMobilePanels()
 {
 	var mobileWidth = 960;
@@ -2094,6 +2339,7 @@ function setupMobilePanels()
 		// 	return;
 
 		$('.panel.'+activeClass).removeClass(activeClass);
+		$('.accordion .accordion-item').removeClass(activeClass);
 
 		// $('#base-panel').addClass(activeClass);
 		// if ( hash.length == 0 )
@@ -2113,9 +2359,23 @@ function setupMobilePanels()
 				// var sel = _getSelectorFromPanelHash('#'+parts[i]);
 				var sel = parts[i];
 				var $panel = $( sel );
+				// if ($panel.hasClass('slide-down'))
+				// {
+				// 	// var wasActive = $panel.closest('.accordion-item').hasClass('active');
+				// 	// $panel.closest('.accordion').find('.accordion-item').removeClass('active');
+				// 	// if (wasActive==false)
+				// 	// {
+				// 		$panel.closest('.accordion-item').addClass('active');
+				// 	// }
+				// 	// else
+				// 	// {
+				// 	// 	$panel.removeClass('active');
+				// 	// }
+				// 	panelsOpen = -100;
+				// }
 				console.log(sel+' set to active');
 				$panel.addClass(activeClass);
-				panelsOpen++;	
+				panelsOpen++;
 			}
 		}
 
@@ -2238,16 +2498,18 @@ function setupMobilePanels()
 		var href = ($this.attr('href') || '').trim();
 		var isAccordionItem = $this.parent().hasClass('accordion-item');
 		var winWidth = $(window).width();
+		var isSlideDown = false;
 
-		if (winWidth > mobileWidth)
+		if (isAccordionItem)
 		{
-			if (isAccordionItem)
-			{
-				var wasActive = $this.parent().hasClass('active');
-				$this.closest('.accordion').find('.active').removeClass('active');
-				if (wasActive==false) 
-					$this.parent().addClass('active');
-			}
+			var wasActive = $this.closest('.accordion-item').hasClass('active');
+			isSlideDown = $this.closest('.accordion-item').hasClass('slide-down');
+			$this.closest('.accordion').find('.active').removeClass('active');
+			if (wasActive==false) 
+				$this.closest('.accordion-item').addClass('active');
+		}
+		if (winWidth > mobileWidth || isSlideDown)
+		{
 
 			return;
 		}
@@ -2354,7 +2616,7 @@ function setupHashNavigation()
 		// if (href.indexOf('#') > -1)
 		if (href.length > 0)
 		{
-			if (href.indexOf('#opensidebar') > -1 || href.indexOf('/sidebar/') > -1)
+			if (href.indexOf('#opensidebar') > -1 || href.indexOf('/paketa/') > -1)
 			{
 				var title = $this.attr('data-sidebar-title') || null;
 				if ($this[0].nodeName=='A')
@@ -2372,7 +2634,7 @@ function setupHashNavigation()
 			var path = href.slice(0, href.indexOf('#'));
 			if (path.length > 0 && window.location.href.indexOf(path) > -1)
 			{
-				// if (path.indexOf('#opensidebar') > -1 || path.indexOf('/sidebar/') > -1)
+				// if (path.indexOf('#opensidebar') > -1 || path.indexOf('/paketa/') > -1)
 				// {
 				// 	var title = $this.attr('data-sidebar-title') || null;
 
@@ -2406,7 +2668,7 @@ function setupHashNavigation()
 
 		if (href.length > 0)
 		{
-			if (href.indexOf('#opensidebar') > -1 || href.indexOf('/sidebar/') > -1)
+			if (href.indexOf('#opensidebar') > -1 || href.indexOf('/paketa/') > -1)
 			{
 				var title = $this.attr('data-sidebar-title') || null;
 				if ($this[0].nodeName=='A')
@@ -2495,7 +2757,7 @@ $(document).ready(function()
 	setupGenericCarousel();
 	setupSidebar();
 	setupHashNavigation();
-	setupProgressCircles()
+	setupProgressCircles();
 
 	if (window.frameElement)
 	{
@@ -2504,28 +2766,30 @@ $(document).ready(function()
 	}
 
 
-	// DUMMY handler used during dev. you must remove it on production
-	$(window).on('load-side-url', function(e, href)
-	{
-		// one should load the sidebar at this point
-		// put it inside the aside#sidebar > .sidebar-contents
-		// and call $(window).trigger('sidebar-loaded'); when finished
-		var id = checkSidebarRoute(href);
-		if ( id.indexOf('#opensidebar?') > -1 )
-			id = id.slice( '#opensidebar?'.length );
+	// // DUMMY handler used during dev. you must remove it on production
+	// $(window).on('load-side-url', function(e, href)
+	// {
+	// 	// one should load the sidebar at this point
+	// 	// put it inside the aside#sidebar > .sidebar-contents
+	// 	// and call $(window).trigger('sidebar-loaded'); when finished
+	// 	var id = checkSidebarRoute(href);
+	// 	if ( id.indexOf('#opensidebar?') > -1 )
+	// 		id = id.slice( '#opensidebar?'.length );
 
-		var $el = $('#'+id);
-		var $container = $('aside#sidebar > .sidebar-contents');
-		$container.empty();
-		$container.append($el.children().clone());
+	// 	var $el = $('#'+id);
+	// 	var $container = $('aside#sidebar > .sidebar-contents');
+	// 	$container.empty();
+	// 	$container.append($el.children().clone());
 
-		setTimeout(function()
-		{
-			$(window).trigger('sidebar-loaded');
-		}, 4*1000);
-	});
+	// 	setTimeout(function()
+	// 	{
+	// 		$(window).trigger('sidebar-loaded');
+	// 	}, 4*1000);
+	// });
 
 	setupGoogleMaps();
+	setupFacebookVideo();
+	setupYoutubeVideo();
 
 	$('.not-initialized').removeClass('not-initialized');
 });

@@ -1,6 +1,7 @@
 $pfpremier-font-path: "pf_premier" !default;
 $icomoon-font-path: "fonts" !default;
 
+$icon-sphere: "\e90d";
 $icon-phone: "\e90c";
 $icon-play_button: "\e90b";
 $icon-login_email: "\e907";
@@ -89,6 +90,12 @@ $icon-youtube: "\ea9d";
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-sphere {
+  &:before {
+    content: $icon-sphere;
+  }
+}
 .icon-phone {
   &:before {
     content: $icon-phone;

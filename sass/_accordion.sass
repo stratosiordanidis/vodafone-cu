@@ -56,6 +56,7 @@
 			ul
 				list-style: none
 				+rem(padding, 5px 0px 0px 100px)
+				color: $color-cyan
 				// +opacity(0)
 				// max-height: 0
 				// overflow: hidden
@@ -68,13 +69,21 @@
 					+rem(line-height, 40px)
 
 					&:before
-						content: ''
-						background-color: $color-cyan
-						+rem(width, 6px)
-						+rem(height, 6px)
-						+border-radius(125px)
+						// content: ''
+						// background-color: $color-cyan
+						content: $icon-sphere
+						display: inline-block
 						position: absolute
-						+rem(top, 17px)
+						font-family: 'cu'
+						color: $color-cyan
+						+rem(font-size, 8px)
+
+						// +rem(width, 6px)
+						// +rem(height, 6px)
+						// +border-radius(125px)
+						position: absolute
+						// +rem(top, 17px)
+						top: 0
 						+rem(left, -13px)
 
 			// .paragraph
