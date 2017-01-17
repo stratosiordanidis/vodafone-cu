@@ -28,6 +28,16 @@
 		background-size: cover
 		background-position: center center
 
+	.video-thumb
+		width: 100%
+		height: 100%
+		z-index: unset
+		background-position: center
+		background-size: cover
+
+		&:after
+			content: none
+
 	// .bg
 	// .fg
 	// 	.text-wrapper
@@ -383,10 +393,19 @@
 	@extend .columns
 	+rem(margin-top, 60px)
 	+rem(width, 1680px)
+	display: block
 	max-width: 100%
 
 	.article-box+.article-box
 		+rem(top, 80px)
+
+	.article-box
+		$sidegap: (80 + 40)/16 *1rem
+		width: calc(50% - #{$sidegap} )
+
+		&.fullwidth
+			$sidegap: (125 + 110)/16 *1rem
+			width: calc(100% - #{$sidegap} )
 
 
 .article-box-carousel

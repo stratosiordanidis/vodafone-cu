@@ -2252,7 +2252,14 @@ function setupYoutubeVideo()
 
 	function _closeYoutubeVideo()
 	{
-		player && player.stopVideo() && player.clearVideo();
+		try
+		{
+			player && player.stopVideo() && player.clearVideo();
+		}
+		catch (e)
+		{
+			console.log(e);
+		}
 		$('html').removeClass('show-video-player');
 		player = null;
 

@@ -15,6 +15,7 @@ html(lang="el").logged-in.open-sidebar-
 
 		//- link(href="img/fav_icon.png" rel="icon")
 
+		link(href="css/normalize.css" rel="stylesheet")
 		link(href="css/tooltipster.bundle.min.css" rel="stylesheet")
 		link(href="css/fonts.css" rel="stylesheet")
 			
@@ -23,6 +24,9 @@ html(lang="el").logged-in.open-sidebar-
 
 		link(href="css/styles.css" rel="stylesheet")
 		link(href="css/responsive.css" rel="stylesheet")
+
+		link(href="css/gallery.css" rel="stylesheet")
+		link(href="css/responsive-gallery.css" rel="stylesheet")
 
 		link(href="css/responsive-panels.css" rel="stylesheet")
 
@@ -82,8 +86,9 @@ html(lang="el").logged-in.open-sidebar-
 
 				.article-box.category-cyan.layout-left-top.col.fullwidth
 					
-					.bg.video-thumb(style="background-image: url('img/article-img-3.jpg')" data-youtube-id="xrzXIaTt99U"  data-facebook-video="http://fb.video.com/sfsdfdf")
-						.video-button
+					.bg
+						.video-thumb(style="background-image: url('img/article-img-3.jpg')" data-youtube-id="xrzXIaTt99U"  )
+							.video-button
 					.fg
 						.text-wrapper
 							.category-title CU Around
