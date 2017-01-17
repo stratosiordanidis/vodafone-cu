@@ -2793,6 +2793,7 @@ $(document).ready(function()
 	setupSidebar();
 	setupHashNavigation();
 	setupProgressCircles();
+	setupUserInfoDashboard();
 
 	if (window.frameElement)
 	{
