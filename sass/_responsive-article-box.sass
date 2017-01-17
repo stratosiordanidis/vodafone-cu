@@ -47,6 +47,17 @@
 @media all and (max-width: $mobile-breakpoint)
 
 	.article-box
+
+
+		img.dummy
+
+			&.desktop-only
+				display: none
+
+			&.mobile-only
+				display: inline-block
+
+
 		&, &.fullwidth
 			display: block
 			width: 100%
@@ -288,19 +299,119 @@
 		// display: block
 		// white-space: nowrap
 
-		.article-box+.article-box
-			+rem(margin-left, 10px)
+		// .article-box+.article-box
+		// 	+rem(margin-left, 10px)
 
 		.article-box
 			display: inline-block
-			+rem(width, 250px)
-			+rem(margin-left, 10px)
-			+rem(margin-right, 10px)
+			// +rem(width, 250px)
+			// width: (250/16*1rem)  !important
+			width: auto !important
+			// +rem(margin-left, 10px)
+			// +rem(margin-right, 10px)
+			+rem(padding-left, 10px)
+			+rem(padding-right, 10px)
 			margin-top: 0
 			// outline: none
 			
 			& > .fg
 				+rem(width, 155px)
+
+
+			&.layout-left-top
+				text-align: left
+				
+				& > .bg
+					left: (15px + 10px)
+					right: 10px
+					top: 10px
+					bottom: 0
+
+					width: auto
+
+					// left: 25%
+					// +rem(top, $gap-updown)
+
+				& > .fg
+					left: 10px
+					right: unset
+					width: (155/250)*100%
+					top: 0
+					bottom: 10px
+					
+					// +rem(margin-bottom, $gap-updown)
+
+
+			&.layout-left-bottom
+				text-align: left
+				
+				& > .bg
+					top: 0
+					bottom: 10px
+					left: (15px + 10px)
+					right: 0
+
+					width: auto
+
+					// left: 25%
+					// +rem(bottom, $gap-updown)
+
+				& > .fg
+					left: 10px
+					right: unset
+					width: (155/250)*100%
+					top: 10px
+					bottom: 0
+					// +rem(margin-top, $gap-updown)
+
+			&.layout-right-top
+				text-align: right
+
+				& > .bg
+					left: 10px
+					right: (15px + 10px)
+					top: 10px
+					bottom: 0
+
+					width: auto
+
+					// +rem(top, $gap-updown)
+
+				& > .fg
+					right: 10px
+					left: unset
+					width: (155/250)*100%
+					top: 0
+					bottom: 10px
+
+					text-align: right
+					// +rem(margin-bottom, $gap-updown)
+
+			&.layout-right-bottom
+				text-align: right
+
+				& > .bg
+					// left: 0
+					// top: 0
+					// right: 25%
+					left: 10px
+					right: (15px + 10px)
+					top: 0
+					bottom: 10px
+
+					width: auto
+
+					// +rem(bottom, $gap-updown)
+
+				& > .fg
+					right: 10px
+					left: unset
+					width: (155/250)*100%
+					top: 0
+					bottom: 0
+					// width: auto
+
+					// +rem(margin-top, $gap-updown)
 
 		.article-box > .fg > .text-wrapper
 			+rem(height, 210px)

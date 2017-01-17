@@ -1145,31 +1145,59 @@ function setupArticleBoxCarousels()
 	var $carousel = $('.article-box-carousel');
 	var changeEvent = 'beforeChange';//'afterChange';
 
-	$carousel.each(function(index, el)
+
+	if ($.fn.slick)
 	{
-		var $el = $(el);
-
-		if ($.fn.slick)
+		$carousel.each(function(index, el)
 		{
-			$el.slick({
-				slidesToShow: (isMobile ? 1 : 2),
-				slidesToScroll: 1,
-				// variableWidth: true,
-				infinite: false,
-				arrows: true,
-				dots: true,
-				// swipe: !isNonDesktop
-			});
+			var $el = $(el);
 
-			if ($el.hasClass('slick-dotted')==false)
+			// if ($.fn.slick)
 			{
-				// $el.find('.slick-track').css('width', '');
-				$el.find('.slick-track').attr('style', '');
-			}
+				$el.slick({
+					slidesToShow: (isMobile ? 1 : 2),
+					slidesToScroll: 1,
+					// variableWidth: true,
+					infinite: false,
+					arrows: true,
+					dots: true,
+					// swipe: !isNonDesktop
+				});
 
-			// $el.on(changeEvent, function(event, slick, currentSlide, nextSlide) { setTimeout(function(){_handleCarouselChange(event, slick, currentSlide, nextSlide); }); });
+				if ($el.hasClass('slick-dotted')==false)
+				{
+					// $el.find('.slick-track').css('width', '');
+					$el.find('.slick-track').attr('style', '');
+				}
+
+				// $el.on(changeEvent, function(event, slick, currentSlide, nextSlide) { setTimeout(function(){_handleCarouselChange(event, slick, currentSlide, nextSlide); }); });
+			}
+		});
+
+		function _calcBoxSizes(e)
+		{
+			$carousel.each(function(index, el)
+			{
+				var $el = $(el);
+
+				var $slicklist = $el.find('.slick-list');
+				var $children = $el.find('.slick-track').children();
+
+				var listWidth = $slicklist.width();
+
+				// var half = Math.floor(listWidth*0.5 - 5);
+				// var half = Math.floor(listWidth*0.5 - 40);
+				var half = Math.floor(listWidth*0.455);
+				// console.log('['+listWidth+'] half width: '+half);
+
+				$children.width(half);
+			});
 		}
-	});
+
+		$(window).on('resize', _calcBoxSizes);
+		_calcBoxSizes();
+	}
+
 }
 
 function setupTabbedControls()

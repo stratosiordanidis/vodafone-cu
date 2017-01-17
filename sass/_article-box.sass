@@ -16,6 +16,22 @@
 	height: 0
 	padding-bottom: (420/760)*0.5*100%
 
+	
+	img.dummy
+		visibility: hidden
+		// display: inline-block
+		position: relative
+		width: 100%
+		height: auto
+
+		&.desktop-only
+			display: inline-block
+
+		&.mobile-only
+			display: none
+
+
+
 	&:first-child
 		+rem(margin-left, 80px)
 
@@ -414,21 +430,52 @@
 
 	.article-box
 		display: inline-block
-		+rem(width, 760px)
-		+rem(height, 420px)
-		outline: none
+		// +rem(width, 760px)
+		+rem(width, 800px)
+		+rem(max-width, 800px)
+		// +rem(height, 420px)
+		// height: 0
+		height: auto
 		padding: 0
+		// padding-top: (765/800)*0.5*100%
+		+rem(padding-left, 20px)
+		+rem(padding-right, 20px)
+		outline: none
+
+		&, &:first-child, &:last-child
+			margin: 0
+
+
+		// &:before
+		// 	content: "url('../img/box-ratio.png')"
+		// 	visibility: hidden
+		// 	position: relative
+		// 	display: inline-block
+		// 	width: 100%
+		// 	height: auto
 
 		.action-button
 			position: absolute
 			+rem(bottom, 20px)
 			margin-bottom: 0
 
+	.article-box > .fg
+		position: absolute
+		left: auto
+		left: unset
+		+rem(right, 20px)
+
+	.article-box > .bg
+		position: absolute
+		// left: auto
+		// left: unset
+		+rem(left, 20px)
+
 	.article-box > .fg > .text-wrapper
 		+rem(height, 315px)
 
-	.article-box+.article-box
-		+rem(margin-left, 40px)
+	// .article-box+.article-box
+	// 	+rem(margin-left, 40px)
 
 	.slick-list
 		overflow: visible
