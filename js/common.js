@@ -71,6 +71,9 @@ var _googleMapsInitialized = false;
 function initGoogleMaps()
 {
 	console.log('Google Maps Init done!');
+	if (typeof _googleMapsQueue === 'undefined')
+		_googleMapsQueue = [];
+	
 	for (var i = 0; i < _googleMapsQueue.length; i++)
 	{
 		_googleMapsQueue[i] && _googleMapsQueue[i].call();
