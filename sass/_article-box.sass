@@ -13,8 +13,9 @@
 	+rem(margin-right, 40px)
 
 	position: relative
-	height: 0
-	padding-bottom: (420/760)*0.5*100%
+	// height: 0
+	// padding-bottom: (420/760)*0.5*100%
+	height: auto
 
 	
 	img.dummy
@@ -41,6 +42,7 @@
 		+rem(margin-right, 120px)
 
 	& > .bg, & > .fg
+		position: absolute
 		background-size: cover
 		background-position: center center
 
@@ -50,6 +52,8 @@
 		z-index: unset
 		background-position: center
 		background-size: cover
+		margin: 0
+		max-width: 100%
 
 		&:after
 			content: none
@@ -71,18 +75,21 @@
 		z-index: 1
 
 		width: (480/760)*100%
+		// width: (480/760)*100%
 		// +rem(height, 255px)
-		height: auto
+		// height: auto
+		height: (380/420)*100%
 
 		left: 0%
 		// right: 0%
+		right: unset
 		top: 0
 		bottom: 0
 
 		& > img
 			display: none
 
-	& > .fg
+	& > .fg        
 		display: inline-block
 		position: relative
 		z-index: 2
@@ -95,6 +102,7 @@
 		// +rem(height, 380px)
 
 		width: (400/760)*100%
+		height: (380/420)*100%
 
 		position: absolute
 		// left: 0%
@@ -184,14 +192,17 @@
 	&.fullwidth
 		// +rem(margin-right, 80px)
 		+rem(margin-right, 110px)
-		+rem(margin-top, 40px)
+		// +rem(margin-top, 40px)
+		+rem(margin-top, 40px-9px)
 
-		// padding-bottom: (590/1440)*100%
-		padding-bottom: 34.9%
+		// // padding-bottom: (590/1440)*100%
+		// padding-bottom: 34.9%
 
 		& > .bg
 			// width: (1280/1440)*100%
-			width: auto
+			// width: auto
+			width: (1280/1440)*100%
+			height: (533/594)*100%
 
 		& > .fg 
 			// // +rem(max-width, 40rem)
@@ -199,8 +210,9 @@
 			// +rem(width, 560px)
 			// +rem(max-width, 560px)
 
-			width: (560/1440)*100%
+			width: (561/1440)*100%
 			// width: auto
+			height: (553/594)*100%
 			
 		& > .fg > .text-wrapper
 			+rem(height, 400px - 50px)
@@ -318,18 +330,23 @@
 
 			// +rem(left, 280px)
 
-			left: 25%
+			// left: 25%
+			left: unset
 			right: 0
-			top: 0
+			// top: 0
+			// +rem(top, 40px)
 			bottom: 0
-			+rem(top, 40px)
+			top: unset
+
 
 		& > .fg
 			left: 0
-			right: 25%
+			// right: 25%
+			right: unset
 			top: 0
-			bottom: 0
-			+rem(margin-bottom, $gap-updown)
+			// bottom: 0
+			bottom: unset
+			// +rem(margin-bottom, $gap-updown)
 
 	&.layout-left-bottom
 		text-align: left
@@ -341,17 +358,21 @@
 			// +rem(left, 280px)
 
 			top: 0
-			bottom: 0
-			left: 25%
+			// bottom: 0
+			// left: 25%
+			left: unset
 			right: 0
-			+rem(bottom, 40px)
+			// +rem(bottom, 40px)
+			bottom: unset
 
 		& > .fg
-			top: 0
+			// top: 0
+			top: unset
 			bottom: 0
-			left: 25%
+			// left: 25%
+			left: unset
 			right: 0
-			+rem(margin-top, $gap-updown)
+			// +rem(margin-top, $gap-updown)
 
 	&.layout-right-top
 		text-align: right
@@ -363,19 +384,23 @@
 			// +rem(right, 280px)
 
 			left: 0
-			right: 25%
-			top: 0
+			// right: 25%
+			right: unset
+			// top: 0
+			top: unset
 			bottom: 0
-			+rem(top, 40px)
+			// +rem(top, 40px)
 
 		& > .fg
 			right: 0
-			left: 50%
+			// left: 50%
+			left: unset
 			top: 0
 			bottom: 0
+			bottom: unset
 
 			text-align: right
-			+rem(margin-bottom, $gap-updown)
+			// +rem(margin-bottom, $gap-updown)
 
 	&.layout-right-bottom
 		text-align: right
@@ -387,18 +412,22 @@
 			// +rem(right, 280px)
 
 			left: 0
-			right: 25%
+			// right: 25%
+			right: unset
 			top: 0
 			bottom: 0
-			+rem(bottom, 40px)
+			// +rem(bottom, 40px)
+			bottom: unset
 
 		& > .fg
+			// left: 50%
+			left: unset
+			// top: 0
+			top: unset
 			right: 0
-			left: 50%
-			top: 0
 			bottom: 0
 
-			+rem(margin-top, $gap-updown)
+			// +rem(margin-top, $gap-updown)
 
 
 	// & > .fg
@@ -411,12 +440,14 @@
 	+rem(width, 1680px)
 	display: block
 	max-width: 100%
+	font-size: 0
 
 	.article-box+.article-box
 		+rem(top, 80px)
 
 	.article-box
-		$sidegap: (80 + 40)/16 *1rem
+		// $sidegap: (80 + 40)/16 *1rem
+		$sidegap: (80 )/16 *1rem
 		width: calc(50% - #{$sidegap} )
 
 		&.fullwidth

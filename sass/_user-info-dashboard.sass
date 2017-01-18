@@ -168,6 +168,8 @@
 
 
 	.remaining-col
+		& > .detail 
+			+rem(margin-top, 5px)
 		& > .detail > p
 			margin-top: 0
 			// +rem(font-size, 24px)
@@ -182,6 +184,8 @@
 
 		& > .cost
 			color: $color-black
+			// +rem(margin-top, 25px)
+			+rem(margin-top, 35px)
 			+rem(font-size, 64px)
 			// font-weight: bold
 			font-weight: 400
@@ -190,6 +194,7 @@
 		& > .action-button
 			background-color: $color-red
 			border-color: $color-red
+			+rem(margin-top, 3px)
 
 			& > .text
 				color: white
@@ -226,7 +231,8 @@
 
 	.usage-col
 		& > .widgets
-			+rem(margin-top, 15px)
+			// +rem(margin-top, -15px)
+			+rem(margin-top, -10px)
 
 	.mobile-only > .tabs 
 		.usage-col > .widgets
